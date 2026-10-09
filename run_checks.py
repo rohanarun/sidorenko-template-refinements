@@ -34,4 +34,6 @@ manifest=json.loads(Path('source-manifest.json').read_text())
 source=Path('upstream')/manifest['files'][0]['path']
 python('audit_residual.py','--complex-source',str(source),'--output','build/residual.json')
 identical('build/residual.json','experiments/residual-expected.json')
-print('All enumeration, exact certificates, rejection controls, and residual checks passed.')
+python('audit_support.py','--output','build/support.json')
+identical('build/support.json','experiments/support-expected.json')
+print('All enumeration, exact certificates, rejection controls, residual and active-support checks passed.')
