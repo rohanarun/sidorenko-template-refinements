@@ -34,7 +34,7 @@ An independent exact verifier uses Held–Karp dynamic programming, checks 16,94
 
 At 13 points, a further enumeration leaves exactly two feasible isomorphism classes within the finite template. One is the original; the other is a different 35-vertex finite certificate. Both pass the combinatorial and support checks. **The alternative is not claimed as a newly proved counterexample:** its full analytic transfer has not been independently verified.
 
-### Residual constant: 1641 to 1032
+### Residual constant: 1641 to 978
 
 The original proof's equality stratum forces zero pair dimension wherever cut coverage exceeds $1/3$. Its published cuts exclude five pairs, leaving only 28 potentially active pairs. This tightens the local dimension caps.
 
@@ -42,11 +42,11 @@ Writing $d=\sum_i k_i-2k\ge1$, the original counting exponent, including the gai
 
 $$-Dd-k^2+2mk-2m+\sum_i\binom{k_i}{2}.$$
 
-The new caps first bound the remainder by 1196. For $d=1$, a convexity bound and 54 exact integer cases improve it to 1032; $d\ge2$ is already covered by the coarser bound. Thus this nondirect residual contribution is
+The new caps first bound the remainder by 1196. The earlier relaxation gave 1032. Tracking the active vertex support further requires every supported local dimension to be at least two and uses the degrees of its induced allowed graph. A convexity argument and independent integer dynamic program check all 55,173 feasible defect-one cases over all 8,192 vertex subsets, obtaining **978**. Defects at least two remain covered by the coarser bound. See [support-refinement.md](support-refinement.md) for the full new argument. Thus this nondirect residual contribution is
 
-$$O_D(q^{-D+1032})\qquad(D\ge1032).$$
+$$O_D(q^{-D+978})\qquad(D\ge978).$$
 
-Even dimension **1034**, instead of 1642, suffices for this one step. Earlier residue and transverse thresholds remain required and may dominate. The graph, cuts, and activation laws are unchanged.
+Even dimension **980**, instead of the earlier 1034 or source 1642, suffices for this one step. Earlier residue and transverse thresholds remain required and may dominate. The graph, cuts, and activation laws are unchanged.
 
 ## Reproduce
 
@@ -70,6 +70,7 @@ The Sidorenko runner also requires a C compiler (`cc`, or set `CC`) and network 
 - [Exact obstruction witnesses](experiments/cut-obstructions/summary.json), [independent minimum check](experiments/minimality-independent.json).
 - [Order-13 classification](experiments/order-13-classification-independent.json) and [two feasible certificates](experiments/order-13-cuts/).
 - [Residual arithmetic expectations](experiments/residual-expected.json), including every span case.
+- [Active-support expectations](experiments/support-expected.json) and [independent support audit](audit_support.py), included in the standard runner.
 - [verify_minimality.py](verify_minimality.py) reconstructs faces and refinement separately from the proposal code and optimizes Hamiltonian-cycle weights exactly, without SciPy.
 - [check_complex.py](check_complex.py) checks pair multiplicity, connectedness, exposure orders, coverage, refinement, and support intersections. Duplicate-face and incomplete-exposure mutations are rejected.
 - A corrupted edge-weight certificate is rejected. Floating-point LP success or failure is never used as the final infeasibility certificate.

@@ -208,6 +208,36 @@ thresholds may dominate. The arithmetic certificate is supplementary to
 the proof and does not verify those imported arguments.
 
 
+\section{Active-support refinement of the residual bound}
+Let $S$ consist of the vertices incident to an active pair space, and
+let $m_S$ count allowed graph edges induced by $S$. Each active pair
+space has dimension two. Therefore
+\[
+ m\le m_S,\qquad 2\le k_i\le\min\{k,2\deg_S(i)\}\quad(i\in S),
+ \qquad k_i=0\quad(i\notin S).
+\]
+For defect one, $\sum_i k_i=2k+1$. Since $2k-2>0$, the remainder is
+at most $-k^2+2m_Sk-2m_S+\sum_i\binom{k_i}{2}$.
+Sort the caps decreasingly, start each supported coordinate at two,
+then fill the largest caps first to the required total. This vector
+majorizes every feasible vector: the first $j$ sorted entries are bounded
+by both the first-$j$ cap sum and the total minus two for each remaining
+entry. The greedy vector attains these bounds. Convexity gives the
+maximum binomial sum. An independent integer convolution confirms it.
+
+The support audit checks all $8192$ vertex subsets and $55{,}173$
+feasible relaxed defect-one cases, obtaining a maximum remainder of
+$978$. A maximizing relaxation has full support, $m_S=28$, $k=33$,
+and dimensions $(12,12,12,12,3,2,2,2,2,2,2,2,2)$; its binomial sum
+is $275$, so $-33^2+56\cdot33-56+275=978$.
+Realizability of the maximizing relaxation is not required for an upper
+bound. For defect at least two, the earlier bound $1196$ yields
+$-2D+1196\le-D+978$ when $D\ge978$. Consequently this one residual
+contribution is $O_D(q^{-D+978})$ and vanishes for even $D\ge980$.
+All earlier thresholds in the original analytic argument remain required.
+The detailed derivation is in \texttt{support-refinement.md}; the audit
+is \texttt{audit\_support.py}, now included in the standard check runner.
+
 \paragraph{Reproducibility.}
 The accompanying README documents \texttt{python -B run\_checks.py}.
 The scripts, source manifest, and test expectations are in this repository.
