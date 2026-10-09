@@ -1,0 +1,215 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\title{Finite-template refinements for the Sidorenko construction}
+\author{AI-generated research draft prepared with Codex}
+\date{October 9, 2026}
+\begin{document}
+\maketitle
+\paragraph{Scope and attribution.}
+This is an independent follow-up to
+\href{https://github.com/openai/math/tree/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026}{OpenAI's original manuscript},
+pinned at commit \texttt{fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb}.
+It is not an official OpenAI publication. Mathematical priority and
+independent formal verification are not claimed. Exact checks supplement
+the proofs below and do not verify the imported source lemmas.
+\section{Sidorenko: a structural reduction and a certified finite minimum}
+\label{sec:sidorenko-minimum}
+This section refers to OpenAI's
+\href{https://github.com/openai/math/tree/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026}{Sidorenko manuscript},
+particularly its finite-complex proposition and the exposure and pinning arguments.
+We now allow any finite probability distribution on admissible cuts,
+not just three equally weighted cuts. All faces remain distinct triples.
+An admissible cut partitions the faces into two classes, each exposing
+all $n$ points by starting with one triangle and successively adding a
+triangle sharing a pair with the existing complex and introducing one
+new point. Every point pair occurring in the full complex belongs to
+exactly two faces.
+
+\begin{lemma}\label{lem:hamilton-reduction}
+The existence of one admissible cut makes the complex a simple
+triangulation of the sphere with $2n-4$ faces and $3n-6$ point pairs.
+The point pairs crossed by each admissible cut form a Hamiltonian cycle
+in its point graph. Conversely every Hamiltonian cycle in this sphere
+triangulation gives an admissible cut.
+\end{lemma}
+\begin{proof}
+In one exposure class, the shared edge of an added face is on the boundary:
+an interior edge already has its two incident faces and cannot belong to
+another face. Its third vertex is new. Starting from a triangle, this
+operation preserves a triangulated disk whose boundary contains every
+vertex exactly once. The class has $n-2$ triangles and a boundary cycle
+of length $n$. An edge is internal to this disk if and only if its two
+incident faces are in this class. The two classes therefore have exactly
+the same boundary edges and no shared interior edges. Gluing the disks
+along their common boundary gives a triangulated sphere. Distinct triples
+and pairs give a simple point graph; the usual sphere counts follow.
+The common boundary is precisely the cut's crossing set.
+Conversely a Hamiltonian cycle separates the sphere into two triangulated
+polygons without interior vertices. The dual graph of each polygon's
+triangulation is a tree. Removing leaf triangles and then reversing that
+order gives the required exposure. Each removed leaf has a vertex which
+occurs in no remaining triangle, so each reverse step introduces one
+new point.
+\end{proof}
+
+Let $a_e$ be the probability that a random admissible cut crosses $e$.
+Every boundary cycle has degree two at each point, whence
+\[
+ \sum_{e\ni v}a_e=2,\qquad \sum_ea_e=n.
+\]
+The source's requirement $a_e\ge1/3$ consequently implies
+$\deg(v)\le6$. At a degree-six point every incident edge must have
+$a_e=1/3$. Also
+\[
+ \sum_e(a_e-1/3)=n-(3n-6)/3=2,
+\]
+so strict inequality somewhere follows automatically.
+
+\begin{proposition}[Computer-assisted minimum within the finite template]
+Subject to completeness of the plantri enumeration and the exact checks
+described below, no distinct-triple complex on fewer than $13$ points
+simultaneously has the paired exposure property, two occurrences of every
+point pair, a distribution of cuts with $a_e\ge1/3$, and discrete color
+refinement of its incidence graph starting from its two part colors.
+Thus the smallest incidence graph in this template has $35$ vertices.
+The original $13$-point, $22$-face certificate attains that size.
+\end{proposition}
+\begin{proof}[Enumeration and certificate argument]
+By Lemma~\ref{lem:hamilton-reduction}, it suffices to enumerate simple
+sphere triangulations, first filter by maximum degree six, and then
+apply incidence color refinement. For $n\le3$ there cannot be the
+required distinct $2n-4$ faces with every pair in two faces. For
+$4\le n\le12$, plantri 5.8 gives the following counts:
+\begin{center}\small
+\begin{tabular}{@{}rrrrr@{}}
+\toprule
+$n$&All triangulations&Degree at most six&Discrete refinement&Obstructions\\
+\midrule
+4&1&1&0&0\\
+5&1&1&0&0\\
+6&2&2&0&0\\
+7&5&5&0&0\\
+8&14&10&0&0\\
+9&50&15&1&1\\
+10&233&30&4&4\\
+11&1249&44&12&12\\
+12&7595&77&23&23\\
+\bottomrule
+\end{tabular}
+\end{center}
+For each of the $40$ surviving graphs, a rational vector $y_e\ge0$,
+$\sum_ey_e=1$, satisfies
+\[
+ \max_{C\text{ Hamiltonian}}\sum_{e\in C}y_e<1/3.
+\]
+A putative cut distribution would instead give
+$\mathbb E_C\sum_{e\in C}y_e=\sum_ey_ea_e\ge1/3$, a contradiction.
+The smallest verified separation margin is $1/75$.
+
+The proposal computation enumerates cycles and uses floating-point linear
+programming only to suggest edge weights. A separate verifier uses exact
+rational arithmetic and Held--Karp dynamic programming to maximize cycle
+weight and count all Hamiltonian cycles, without importing the proposal
+or exposure code. It checks $16{,}941$ cycles in aggregate, reconstructs
+faces independently from rotations, repeats refinement by partition
+splitting, and rejects a corrupted witness. Generator output counts and
+hashes are retained. This is a computer-assisted certificate conditional
+on the generator's completeness, not a Lean proof or a minimality theorem
+for arbitrary Sidorenko counterexamples.
+\end{proof}
+
+The enumeration also inspected all $49{,}566$ triangulations at $n=13$.
+Of $115$ with degree at most six, $49$ have discrete incidence refinement.
+The cut feasibility pass produced $47$ exact obstruction witnesses and
+two exactly checked feasible finite objects. One is isomorphic to the
+original complex; the other is not, as distinguished by the canonical
+adjacency encoding from their discrete refinement colors. Both have
+$35$ incidence vertices and $66$ edges. The alternative has not undergone
+an independent transfer of the full analytic kernel argument and is not
+claimed here as a newly proved Sidorenko counterexample.
+
+\section{Sidorenko: a smaller nondirect residual bound}
+\label{sec:residual-improvement}
+The original tail section's lemma ``Costs for the remaining profiles''
+bounds the nondirect contribution by $O_D(q^{-D+1641})$. Its equality
+profiles already require the excess-separation term
+\[
+ \mathcal E=\tfrac12\sum_e(a_e-1/3)b(h_e)
+\]
+to vanish, with every $h_e$ either zero or two. Hence $h_e=0$ whenever
+$a_e>1/3$. For the original manuscript's exact three bit cuts, those
+five excluded pairs are
+\[
+ \{0,2\},\ \{7,12\},\ \{4,8\},\ \{5,6\},\ \{5,10\}.
+\]
+Only $28$ pairs can therefore be active. The degrees in this allowed
+pair graph, in the original point order, are
+\[
+ (3,6,3,6,4,2,4,4,4,6,4,6,4).
+\]
+This uses the published cuts, without changing the graph or its laws.
+
+\begin{proposition}\label{prop:residual-1032}
+Within the source's nondirect residual stratum, for fixed even
+$D\ge1032$, the contribution is $O_D(q^{-D+1032})$.
+In particular that stratum vanishes for even $D\ge1034$.
+All other dimension thresholds in the source remain required.
+\end{proposition}
+\begin{proof}
+Retain the source's notation: $m$ active pairs, global span dimension $k$,
+local span dimensions $k_i$, and defect
+$d=\sum_i k_i-2k\ge1$. Including the source's gain bound $2m$, its
+counting exponent is
+\[
+ -Dd+R,\qquad
+ R=-k^2+2mk-2m+\sum_i\binom{k_i}{2}.
+\]
+Nondirectness implies $2\le k\le2m-1$, and now $m\le28$.
+The local caps are twice the displayed degrees, so
+\[
+ \sum_i\binom{k_i}{2}\le468,\qquad
+ R\le m^2-2m+468\le1196.
+\]
+For $d\ge2$ this is already sufficient, since for $D\ge1032$,
+$-Dd+R\le-2D+1196\le-D+1032$.
+
+It remains to handle $d=1$, when $\sum_i k_i=2k+1$.
+Sort the local caps into
+\[
+ c=(12,12,12,12,8,8,8,8,8,8,6,6,4).
+\]
+For total $S$, let $G(S)$ be the sum of $\binom{x_i}{2}$ obtained by
+filling these caps in order until total $S$ is reached. This bounds every
+feasible local sum: the sorted greedy vector majorizes any vector with
+these caps and total, and $x\mapsto\binom{x}{2}$ is convex.
+Since $2k-2>0$, replacing $m$ by $28$ only increases the remainder.
+Consequently
+\[
+ R\le-k^2+56k-56+G(2k+1)\le1032
+ \quad(2\le k\le55).
+\]
+The last inequality is a finite integer calculation over $54$ cases;
+its maxima occur at $k=31,32$. For example $G(63)=313$ and $G(65)=320$,
+giving $1032$ in both cases. The exact audit checks every case and
+independently computes $G$ by integer dynamic programming for every
+possible total. It also exhausts all relaxed positive defects, obtaining
+the same maximum $R/d=1032$. Thus each stratum has the asserted exponent.
+There are only finitely many strata for fixed $D$, as in the source.
+\end{proof}
+
+This improves the sufficient threshold for this one counting step from
+$1642$ to $1034$ among even dimensions. It is not a sufficient dimension
+for the entire rank-layer theorem, whose earlier residue and transverse
+thresholds may dominate. The arithmetic certificate is supplementary to
+the proof and does not verify those imported arguments.
+
+
+\paragraph{Reproducibility.}
+The accompanying README documents \texttt{python -B run\_checks.py}.
+The scripts, source manifest, and test expectations are in this repository.
+The LaTeX source was compiled successfully with the Codex document editor.
+\end{document}
