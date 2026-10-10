@@ -1,6 +1,6 @@
 # Sidorenko: finite-template minimum and a smaller residual bound
 
-An independent, AI-generated research draft prepared with Codex, following OpenAI's *A counterexample to Sidorenko's conjecture*. This repository contains three refinements of its method, proofs, exact certificates, and a reproducible enumeration.
+An independent, AI-generated research draft prepared with Codex, following OpenAI's *A counterexample to Sidorenko's conjecture*. This repository contains four refinements of its method, proofs, exact certificates, and a reproducible enumeration.
 
 **Scope:** a computer-assisted minimum within a specified finite construction template, and a smaller constant in one counting step. This is **not** a minimum for all Sidorenko counterexamples, a smaller general counterexample, or a verified bound on the full construction's dimension. The results depend on the stated source arguments and, for enumeration completeness, plantri. Mathematical priority and formal verification are not claimed.
 
@@ -34,7 +34,15 @@ An independent exact verifier uses Held–Karp dynamic programming, checks 16,94
 
 At 13 points, a further enumeration leaves exactly two feasible isomorphism classes within the finite template. One is the original; the other is a different 35-vertex finite certificate. Both pass the combinatorial and support checks. **The alternative is not claimed as a newly proved counterexample:** its full analytic transfer has not been independently verified.
 
-### Residual constant: 1641 to 189
+### Residual constant: 1641 to 28
+
+The overlap of the two endpoint spans at a basis vector can only come from earlier *defect* vectors — those that are globally dependent yet raise the local span at the shared point — because globally new vectors are jointly independent and vectors inside both spans add nothing. Along a fixed order of the 28 active pairs this turns the remainder into a function of a few per-point counts, and an exact dynamic program (about two million states, 45 seconds) maximizes it for every defect up to 38; the averaging bound below covers larger defects. The maxima are $-11$ at defect one, $38$ at defect two, and the ratio $R/d$ peaks at **28** at defect ten. See [overlap-refinement.md](overlap-refinement.md). Thus this nondirect residual contribution is
+
+$$O_D(q^{-D+28})\qquad(D\ge28),$$
+
+and **even dimension 30** suffices for this one step, instead of the earlier 190, 980, 1034, or source 1642. Defect-one strata in fact decay like $q^{-D-11}$. Earlier residue and transverse thresholds remain required and may dominate. The graph, cuts, and activation laws are unchanged. The three earlier refinements below are retained as the history of the bound.
+
+### Earlier refinement: 189 by averaging the overlaps
 
 The latest refinement redoes the nondirect residual count one basis vector at a time, as the original paper already does in its direct case. Every new vector is symplectically orthogonal to everything already placed at either endpoint, which cancels the containment cross terms, and the defect $d=\sum_i k_i-2k$ counts exactly the vectors that raise a local span without raising the global one. Averaging the remaining intersection terms over the 28-pair allowed graph gives
 
@@ -44,7 +52,7 @@ and defects at least two give ratio at most $122$. An exhaustive audit over all 
 
 $$O_D(q^{-D+189})\qquad(D\ge189),$$
 
-and **even dimension 190** suffices for this one step, instead of the earlier 980, 1034, or source 1642. Earlier residue and transverse thresholds remain required and may dominate. The graph, cuts, and activation laws are unchanged. The two earlier refinements below are retained as the history of the bound.
+and even dimension 190 sufficed for this one step at that stage; the overlap refinement above now lowers it to 30.
 
 ### Earlier refinements: 1641 to 1032 to 978
 
@@ -83,7 +91,8 @@ The Sidorenko runner also requires a C compiler (`cc`, or set `CC`) and network 
 - [Order-13 classification](experiments/order-13-classification-independent.json) and [two feasible certificates](experiments/order-13-cuts/).
 - [Residual arithmetic expectations](experiments/residual-expected.json), including every span case.
 - [Active-support expectations](experiments/support-expected.json) and [independent support audit](audit_support.py), included in the standard runner.
-- [Sequential-count expectations](experiments/sequential-expected.json) and [independent sequential audit](audit_sequential.py), included in the standard runner; see [progress.md](progress.md) for the bound over time.
+- [Sequential-count expectations](experiments/sequential-expected.json) and [independent sequential audit](audit_sequential.py), included in the standard runner.
+- [Overlap-refinement expectations](experiments/overlap-expected.json) and [exact dynamic-program audit](audit_overlap.py), included in the standard runner; see [progress.md](progress.md) for the bound over time.
 - [verify_minimality.py](verify_minimality.py) reconstructs faces and refinement separately from the proposal code and optimizes Hamiltonian-cycle weights exactly, without SciPy.
 - [check_complex.py](check_complex.py) checks pair multiplicity, connectedness, exposure orders, coverage, refinement, and support intersections. Duplicate-face and incomplete-exposure mutations are rejected.
 - A corrupted edge-weight certificate is rejected. Floating-point LP success or failure is never used as the final infeasibility certificate.
