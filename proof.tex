@@ -369,6 +369,93 @@ local dimension at or one below full rank, matching the closed form. It
 also verifies the defect-at-least-two ratio $122$. Even dimension $190$
 therefore suffices for this one counting step, instead of $980$.
 
+\section{Overlaps come only from defect vectors}
+\label{sec:overlap}
+The averaging step at the end of Section~\ref{sec:sequential} bounds the
+overlap $\pi(x)=\dim(V'_i(x)\cap V'_j(x))$ by the smaller endpoint span.
+The overlap is in fact controlled by the defect alone. For a vector $y$ at a
+pair containing the point $a$ write $\tau_a(y)=\ell_a(y)-g(y)\in\{0,1\}$,
+so that $\varepsilon(y)=\tau_i(y)+\tau_j(y)$ is its contribution to $d$.
+
+\begin{lemma}\label{lem:overlap}
+Let $x$ be a basis vector of the pair $e_t=\{i,j\}$ and let $F$ be the set
+of earlier pairs sharing a point with $e_t$. Then
+\[
+ \pi(x)\le\sum_{y\in F}\tau_{a(y)}(y)
+ +\bigl[x=w_t\bigr]\bigl(\varepsilon(u_t)+g(u_t)\bigr),
+\]
+where $a(y)$ is the point that the pair of $y$ shares with $e_t$ and the sum
+runs over both basis vectors of every pair in $F$.
+\end{lemma}
+\begin{proof}
+No earlier pair contains both $i$ and $j$, so $F$ splits as $F_i\sqcup F_j$
+and $V_{i,t}$ is spanned by the vectors of $F_i$, with
+$v_{i,t}=\sum_{y\in F_i}\ell_i(y)$. The vectors with $g=1$ are linearly
+independent, because each lies outside the span of all its predecessors,
+and those belonging to pairs in $F$ lie in $V_{i,t}+V_{j,t}$. Hence
+$\dim(V_{i,t}+V_{j,t})\ge\#\{y\in F:g(y)=1\}$ and
+\[
+ \dim(V_{i,t}\cap V_{j,t})
+ =v_{i,t}+v_{j,t}-\dim(V_{i,t}+V_{j,t})
+ \le\sum_{y\in F}\bigl(\ell_{a(y)}(y)-g(y)\bigr).
+\]
+This is the claim for $u_t$. For $w_t$ the spans gain $u_t$: the dimensions
+of $V'_i,V'_j$ grow by $\ell_i(u_t),\ell_j(u_t)$, and the dimension of the
+sum grows by at least $g(u_t)$, which adds $\varepsilon(u_t)+g(u_t)$.
+\end{proof}
+
+In particular a vector of type $(1,1,1)$ or $(0,0,0)$ creates no overlap
+at any later pair; only defect vectors do, and only at pairs through the
+point whose span they raised. In the direct case the lemma gives
+$\pi(u_t)=0$ and $\pi(w_t)\le1$, recovering the exact exponent $-m$.
+
+\begin{proposition}\label{prop:residual-28}
+Within the source's nondirect residual stratum, for fixed even $D\ge28$,
+the contribution is $O_D(q^{-D+28})$. In particular that stratum vanishes
+for even $D\ge30$. The defect-one strata contribute $O_D(q^{-D-11})$.
+All other dimension thresholds in the source remain required.
+\end{proposition}
+\begin{proof}
+Fix the order of the active pairs obtained by listing the points as
+$2,1,4,3,0,9,11,10,7,6,12,8,5$ and taking each pair at the later of its
+two points, earlier points first. By Equation~\eqref{eq:sequential-remainder}
+and Lemma~\ref{lem:overlap}, the remainder is at most
+\begin{align*}
+ R\le{}&-2m+\sum_{x\notin\mathcal D}\min\{N_i(x),N_j(x),T_i(x)+T_j(x)+[x=w_t]g(u_t)\}\\
+ &+\sum_{x\in\mathcal D}\Bigl(N_i(x)+N_j(x)+[\text{type }(0,1,1)]\,\bigl(p(x)-\lceil d(x)/2\rceil\bigr)\Bigr),
+\end{align*}
+where $\mathcal D$ is the set of defect vectors, $N_a(x)$ counts the
+earlier vectors at pairs through $a$, $T_a(x)=\sum\tau_a(y)$ over those
+vectors, $p(x)$ is the position of $x$ in the list, and $d(x)$ is the
+defect accumulated before $x$. Here $v'_a\le N_a$; the overlap of a
+non-defect vector is at most the smaller endpoint span; the sum in
+Lemma~\ref{lem:overlap} equals $T_i+T_j-\varepsilon(u_t)$ when $x=w_t$;
+and $w'\le p-\lceil d/2\rceil$ because every defect vector lies in the
+earlier global span and contributes at most two to the defect.
+
+The right-hand side depends on the type sequence only through the counts
+$T_a$ at points that still have unprocessed pairs, the previous vector's
+$g$, and the defect so far. The chosen order keeps at most five points open
+at any time, so an exact dynamic program over these quantities maximizes
+the bound for every $d\le38$ through at most $2.2$ million states. The
+maxima are $-11$ for $d=1$, $38$ for $d=2$, then $54$, $101$, $116$, $163$,
+$177$, $222$, $235$ and $280$ for $d=3,\dots,10$; the ratio $R/d$ is
+largest at $d=10$, where it equals $28$, and decreases afterwards. For
+$d>38$ the averaging bound of Section~\ref{sec:sequential}, sharpened by
+$w'\le2m-n_1-n_2$ for type $(0,1,1)$, gives
+$R\le178+\tfrac{23}2n_1+(67-n_1-n_2)n_2$, whose ratio to $d$ is below $28$.
+Hence $R\le28d$ for every $d\ge1$, and $-Dd+R\le-D+28$ once $D\ge28$. The
+number of strata and type patterns is finite at fixed $D$, as before.
+\end{proof}
+
+The audit \texttt{audit\_overlap.py} implements this dynamic program in
+standard-library Python: it reconstructs the pair order, exhausts all type
+sequences for $d\le38$, and checks the tail bound. An integer program over
+the same vector types, keeping the exact local-dimension accounting instead
+of the relaxation $v'_a\le N_a$ and the exact count of earlier defect
+vectors, returned the same maxima for every defect tried up to $26$ (not
+part of the runner; the dynamic program is the certificate).
+
 \paragraph{Reproducibility.}
 The accompanying README documents \texttt{python -B run\_checks.py}.
 The scripts, source manifest, and test expectations are in this repository.
