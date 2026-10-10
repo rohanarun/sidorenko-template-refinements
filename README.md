@@ -1,6 +1,6 @@
 # Sidorenko: finite-template minimum and a smaller residual bound
 
-An independent, AI-generated research draft prepared with Codex, following OpenAI's *A counterexample to Sidorenko's conjecture*. This repository contains two refinements of its method, proofs, exact certificates, and a reproducible enumeration.
+An independent, AI-generated research draft prepared with Codex, following OpenAI's *A counterexample to Sidorenko's conjecture*. This repository contains three refinements of its method, proofs, exact certificates, and a reproducible enumeration.
 
 **Scope:** a computer-assisted minimum within a specified finite construction template, and a smaller constant in one counting step. This is **not** a minimum for all Sidorenko counterexamples, a smaller general counterexample, or a verified bound on the full construction's dimension. The results depend on the stated source arguments and, for enumeration completeness, plantri. Mathematical priority and formal verification are not claimed.
 
@@ -34,7 +34,19 @@ An independent exact verifier uses Held–Karp dynamic programming, checks 16,94
 
 At 13 points, a further enumeration leaves exactly two feasible isomorphism classes within the finite template. One is the original; the other is a different 35-vertex finite certificate. Both pass the combinatorial and support checks. **The alternative is not claimed as a newly proved counterexample:** its full analytic transfer has not been independently verified.
 
-### Residual constant: 1641 to 978
+### Residual constant: 1641 to 189
+
+The latest refinement redoes the nondirect residual count one basis vector at a time, as the original paper already does in its direct case. Every new vector is symplectically orthogonal to everything already placed at either endpoint, which cancels the containment cross terms, and the defect $d=\sum_i k_i-2k$ counts exactly the vectors that raise a local span without raising the global one. Averaging the remaining intersection terms over the 28-pair allowed graph gives
+
+$$R\le\sum_i\deg(i)^2-3m+\left\lfloor\tfrac{k_i+k_j-1}{2}\right\rfloor=262-84+11=189,$$
+
+and defects at least two give ratio at most $122$. An exhaustive audit over all $8{,}192$ supports and $55{,}173$ relaxed defect-one strata attains exactly $189$, only on the full support with every local dimension at or one below full rank. See [sequential-refinement.md](sequential-refinement.md). Thus this nondirect residual contribution is
+
+$$O_D(q^{-D+189})\qquad(D\ge189),$$
+
+and **even dimension 190** suffices for this one step, instead of the earlier 980, 1034, or source 1642. Earlier residue and transverse thresholds remain required and may dominate. The graph, cuts, and activation laws are unchanged. The two earlier refinements below are retained as the history of the bound.
+
+### Earlier refinements: 1641 to 1032 to 978
 
 The original proof's equality stratum forces zero pair dimension wherever cut coverage exceeds $1/3$. Its published cuts exclude five pairs, leaving only 28 potentially active pairs. This tightens the local dimension caps.
 
@@ -46,7 +58,7 @@ The new caps first bound the remainder by 1196. The earlier relaxation gave 1032
 
 $$O_D(q^{-D+978})\qquad(D\ge978).$$
 
-Even dimension **980**, instead of the earlier 1034 or source 1642, suffices for this one step. Earlier residue and transverse thresholds remain required and may dominate. The graph, cuts, and activation laws are unchanged.
+Even dimension **980** sufficed for this one step at that stage; the sequential count above now lowers it to 190.
 
 ## Reproduce
 
@@ -63,7 +75,7 @@ GitHub Actions runs the same command on pushes and pull requests. Do not enable 
 
 The full argument is in [proof.tex](proof.tex), which has been compiled successfully with the Codex document editor. No compiled PDF is bundled. The tests supplement the mathematical argument; they are not a formal proof of the original papers or an independent review.
 
-The Sidorenko runner also requires a C compiler (`cc`, or set `CC`) and network access to retrieve one hash-verified original source file. It builds the included unmodified plantri source into ignored `build/`, reruns the enumeration through 13 points, checks the saved certificates independently, verifies the original finite certificate, and recomputes the residual bound from the original published table. Outputs go to `build/`; the saved evidence is preserved.
+The Sidorenko runner also requires a C compiler (`cc`, or set `CC`) and network access to retrieve one hash-verified original source file. It builds the included unmodified plantri source into ignored `build/`, reruns the enumeration through 13 points, checks the saved certificates independently, verifies the original finite certificate, and recomputes the residual bounds from the original published table. Outputs go to `build/`; the saved evidence is preserved.
 
 ## Evidence and tests
 
@@ -71,6 +83,7 @@ The Sidorenko runner also requires a C compiler (`cc`, or set `CC`) and network 
 - [Order-13 classification](experiments/order-13-classification-independent.json) and [two feasible certificates](experiments/order-13-cuts/).
 - [Residual arithmetic expectations](experiments/residual-expected.json), including every span case.
 - [Active-support expectations](experiments/support-expected.json) and [independent support audit](audit_support.py), included in the standard runner.
+- [Sequential-count expectations](experiments/sequential-expected.json) and [independent sequential audit](audit_sequential.py), included in the standard runner; see [progress.md](progress.md) for the bound over time.
 - [verify_minimality.py](verify_minimality.py) reconstructs faces and refinement separately from the proposal code and optimizes Hamiltonian-cycle weights exactly, without SciPy.
 - [check_complex.py](check_complex.py) checks pair multiplicity, connectedness, exposure orders, coverage, refinement, and support intersections. Duplicate-face and incomplete-exposure mutations are rejected.
 - A corrupted edge-weight certificate is rejected. Floating-point LP success or failure is never used as the final infeasibility certificate.

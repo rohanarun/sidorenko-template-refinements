@@ -36,4 +36,6 @@ python('audit_residual.py','--complex-source',str(source),'--output','build/resi
 identical('build/residual.json','experiments/residual-expected.json')
 python('audit_support.py','--output','build/support.json')
 identical('build/support.json','experiments/support-expected.json')
-print('All enumeration, exact certificates, rejection controls, residual and active-support checks passed.')
+python('audit_sequential.py','--output','build/sequential.json')
+identical('build/sequential.json','experiments/sequential-expected.json')
+print('All enumeration, exact certificates, rejection controls, residual, active-support and sequential-count checks passed.')
