@@ -1,4 +1,4 @@
-"""Render the residual-constant progress chart (charts/progress.png, charts/progress.svg)."""
+"""Render the residual-constant progress chart (charts/support33-progress.png, charts/support33-progress.svg)."""
 from datetime import date
 from pathlib import Path
 import matplotlib
@@ -14,7 +14,7 @@ ours = [
     (date(2026, 10, 9), 1034, "initial draft"),
     (date(2026, 10, 9), 980, "PR #1 active supports"),
     (date(2026, 10, 10), 190, "PR #2 sequential count"),
-    (date(2026, 10, 10), 30, "PR #3 defect overlaps"),
+    (date(2026, 10, 10), 34, "PR #3 support-uniform correction"),
 ]
 
 fig, ax = plt.subplots(figsize=(9, 5.2), dpi=160)
@@ -57,6 +57,6 @@ fig.text(0.01, 0.012, "Sources: openai/math preprint (Sept 23, 2026); github.com
          color=INK2, fontsize=7.5)
 fig.tight_layout(rect=(0, 0.05, 1, 1))
 out = Path(__file__).resolve().parent
-fig.savefig(out / "progress.png", facecolor=SURFACE)
-fig.savefig(out / "progress.svg", facecolor=SURFACE)
-print("wrote", out / "progress.png")
+fig.savefig(out / "support33-progress.png", facecolor=SURFACE)
+fig.savefig(out / "support33-progress.svg", facecolor=SURFACE)
+print("wrote", out / "support33-progress.png")

@@ -1,0 +1,85 @@
+Independent root review of the proposed support-uniform 33 repair
+2026-10-10. Static mathematical and code review; finite replay recorded separately.
+
+Source: Sidorenko refinement PR3 head
+9aecdfbd987ecda60b7c5e0b382849d67c6bbc2f.
+Reviewed original DP SHA256:
+ea039289878ed689fd4746f2710d8427c3355a970b2a42facd0c675e64b9a09f.
+Reviewed bounded driver SHA256:
+0ecd828480f167bed8495d32de7ee314a2444202cd059042206945e791f92fdd.
+
+This review does not claim the finite replay succeeded. It establishes the
+implication from the stated finite maxima to a corrected support-uniform bound.
+
+1. Support completion.
+Restrict the fixed full-graph star order to any nonempty active subset. For
+each missing pair insert two consecutive type-111 vectors in its full-order
+position. This is a relaxed type sequence, not an asserted geometric extension.
+The inserted vectors have tau=0 and defect=0. Therefore the old T coordinates
+and accumulated defect are unchanged, while old N coordinates and positions
+can only increase. Old within-pair adjacency and the first-vector g used at
+the second vector are preserved. The previous g before an old first vector
+is immaterial, since the corresponding indicator is zero.
+
+Every old objective term thus stays the same or grows. The inserted first
+nondefect term is nonnegative. At the inserted second vector both N coordinates
+are at least one, and T_i+T_j+g(first) is at least one. Its min term is at least
+one. The -2m penalty loses two, so each insertion changes the relaxed objective
+by at least minus one. Consequently
+
+  B_partial(d) <= B_full(d) + (28-m) <= B_full(d)+28.
+
+No realizability premise is imposed by the full DP, so this inserted sequence
+is admissible there. This argument does not justify transferring -11 unchanged.
+
+2. Required finite arithmetic.
+For d=1,...,5 the saved full-support values are -11,38,54,101,116. Adding28
+gives17,66,82,129,144, each at most33d. For6<=d<=26 it suffices to replay
+B_full(d)<=28d, since28<=5d. In particular the corrected defect-one estimate
+obtained by this argument is at most17, not minus11. The bounded replay must
+recompute the full prefix and compare it to the pinned saved table; loading
+the table alone is not verification.
+
+3. Support-uniform tail.
+The connected allowed graph has28 edges, maximum degree6 and full degree-square
+baseline178. Any nonempty subgraph can be extended along paths with each new
+edge touching a nonisolated endpoint; the baseline increment2a+2b-1 is positive.
+Thus178 bounds every support. The source's averaging argument, using actual
+global rank k<=2m-n1-n2<=56-n1-n2, yields
+
+  R <=178+(23/2)n1+(67-n1-n2)n2.
+
+For d=n1+2n2 and t=n2 this is
+
+  178+(23/2)d+(44-d)t+t^2,  0<=t<=floor(d/2).
+
+This convex quadratic has its maximum on that interval at an endpoint. At
+t=0, 33d minus the bound is (43/2)d-178, positive for d>=9. For even d=2t>=28,
+the other endpoint difference is t^2-t-178, at least4 at t=14 and increasing.
+For odd d=2t+1>=27 it is t^2-313/2, at least25/2 at t=13 and increasing.
+Hence the support-uniform tail is at most33d for every d>=27.
+
+4. Counting implication and boundary.
+Together the replayed finite prefix and this proof imply R<=33d for every
+active support. Under the source's retained residual classification and
+containment inputs, summing complete ordered-basis patterns before dividing
+by the common basis multiplicity gives O_D(q^(-D+33)) for fixed even D>=34.
+This is a sufficient threshold for this counting step only. All other
+dimension/geometric/transverse conditions remain required. The basis
+multiplicity correction was already supplied in L2 and is not new here.
+No claim is made that33 is optimal or that28 is false.
+
+5. Execution review.
+Root read all141 original source lines and the entire bounded driver before
+authorizing the cap5 and cap26 jobs. Original code imports only the standard
+library and operates on finite integer dictionaries. The driver verifies
+three fixed file hashes before and after execution, calls the source via
+runpy under a non-main name, permits only caps5/26, checks exact prefix equality,
+and emits bounded JSON. No downloaded CLI or arbitrary argument is executed.
+The source's push sentinel -1 is safe: before the final pair penalty every
+term is nonnegative, since accumulated defect<=2*position. State forgetting
+retains exactly the coordinates needed by future transitions. The transient
+live list can have6 entries, one newly opened and zero, so the prose's claim
+'at most five at any time' should be limited to retained states.
+
+This is conventional AI review, not formal verification or human review.

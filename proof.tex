@@ -409,52 +409,95 @@ at any later pair; only defect vectors do, and only at pairs through the
 point whose span they raised. In the direct case the lemma gives
 $\pi(u_t)=0$ and $\pi(w_t)\le1$, recovering the exact exponent $-m$.
 
-\begin{proposition}\label{prop:residual-28}
-Within the source's nondirect residual stratum, for fixed even $D\ge28$,
-the contribution is $O_D(q^{-D+28})$. In particular that stratum vanishes
-for even $D\ge30$. The defect-one strata contribute $O_D(q^{-D-11})$.
+\begin{proposition}\label{prop:residual-33}
+Within the source's nondirect residual stratum, for fixed even $D\ge34$,
+the contribution is $O_D(q^{-D+33})$ and therefore vanishes as $q\to\infty$.
+The defect-one strata contribute $O_D(q^{-D+17})$.
 All other dimension thresholds in the source remain required.
 \end{proposition}
 \begin{proof}
-Fix the order of the active pairs obtained by listing the points as
-$2,1,4,3,0,9,11,10,7,6,12,8,5$ and taking each pair at the later of its
-two points, earlier points first. By Equation~\eqref{eq:sequential-remainder}
-and Lemma~\ref{lem:overlap}, the remainder is at most
+Order the full allowed graph by the vertex sequence
+$2,1,4,3,0,9,11,10,7,6,12,8,5$, taking each pair at its later endpoint,
+earlier endpoints first. Order any active subset by restriction.
+For an active set $E'$ of size $m$, write $B_{E'}$ for the relaxed bound
 \begin{align*}
- R\le{}&-2m+\sum_{x\notin\mathcal D}\min\{N_i(x),N_j(x),T_i(x)+T_j(x)+[x=w_t]g(u_t)\}\\
- &+\sum_{x\in\mathcal D}\Bigl(N_i(x)+N_j(x)+[\text{type }(0,1,1)]\,\bigl(p(x)-\lceil d(x)/2\rceil\bigr)\Bigr),
+ B_{E'}={}&-2m+\sum_{x\notin\mathcal D}
+ \min\{N_i(x),N_j(x),T_i(x)+T_j(x)+[x=w_t]g(u_t)\}\\
+ &+\sum_{x\in\mathcal D}\left(N_i(x)+N_j(x)
+ +[\text{type }(0,1,1)]\bigl(p(x)-\lceil d(x)/2\rceil\bigr)\right),
 \end{align*}
-where $\mathcal D$ is the set of defect vectors, $N_a(x)$ counts the
-earlier vectors at pairs through $a$, $T_a(x)=\sum\tau_a(y)$ over those
-vectors, $p(x)$ is the position of $x$ in the list, and $d(x)$ is the
-defect accumulated before $x$. Here $v'_a\le N_a$; the overlap of a
-non-defect vector is at most the smaller endpoint span; the sum in
-Lemma~\ref{lem:overlap} equals $T_i+T_j-\varepsilon(u_t)$ when $x=w_t$;
-and $w'\le p-\lceil d/2\rceil$ because every defect vector lies in the
-earlier global span and contributes at most two to the defect.
+where $N_a$ counts earlier vectors at $a$, $T_a$ their accumulated
+$\ell_a-g$, $p$ is the zero-based position, and $d(x)$ is the earlier
+defect. Equation~\eqref{eq:sequential-remainder} and
+Lemma~\ref{lem:overlap} give $R\le B_{E'}$.
 
-The right-hand side depends on the type sequence only through the counts
-$T_a$ at points that still have unprocessed pairs, the previous vector's
-$g$, and the defect so far. The chosen order keeps at most five points open
-at any time, so an exact dynamic program over these quantities maximizes
-the bound for every $d\le38$ through at most $2.2$ million states. The
-maxima are $-11$ for $d=1$, $38$ for $d=2$, then $54$, $101$, $116$, $163$,
-$177$, $222$, $235$ and $280$ for $d=3,\dots,10$; the ratio $R/d$ is
-largest at $d=10$, where it equals $28$, and decreases afterwards. For
-$d>38$ the averaging bound of Section~\ref{sec:sequential}, sharpened by
-$w'\le2m-n_1-n_2$ for type $(0,1,1)$, gives
-$R\le178+\tfrac{23}2n_1+(67-n_1-n_2)n_2$, whose ratio to $d$ is below $28$.
-Hence $R\le28d$ for every $d\ge1$, and $-Dd+R\le-D+28$ once $D\ge28$. The
-number of strata and type patterns is finite at fixed $D$, as before.
+To compare supports, insert two consecutive type-$(1,1,1)$ vectors at
+each missing pair's position in the full order. This is a completion of
+a relaxed type sequence; no geometric realization of the added vectors
+is asserted. The inserted vectors add no defect and do not change any old
+$T_a$. At every old vector the earlier defect and the first vector's $g$
+within its pair are unchanged, while $N_i,N_j$ and $p$ can only increase.
+Every old summand therefore stays the same or increases. For an inserted
+pair its first summand is nonnegative and its second is at least one,
+because both endpoint counts are at least one and its first vector has
+$g=1$. Its two summands, after the new $-2$ pair cost, contribute at least
+$-1$. If $M_d$ denotes the maximum relaxed bound at defect $d$ for the
+full allowed graph, it follows that
+\[
+ R\le B_{E'}\le M_d+(28-m)\le M_d+28.
+\]
+
+The full-graph dynamic program retains exactly the live $T_a$ values,
+the previous vector's $g$, and accumulated defect. It discards additional
+realizability constraints, so the completed sequences are included.
+Defect never decreases; truncation at $26$ thus retains every path ending
+with defect at most $26$. An independent bounded replay of the pinned
+program gives
+\[
+ (M_1,M_2,M_3,M_4,M_5)=(-11,38,54,101,116),
+\]
+and $M_d\le28d$ for $6\le d\le26$. The first five values plus $28$ are
+$17,66,82,129,144$, each at most $33d$. For $6\le d\le26$,
+$M_d+28\le28d+28\le33d$. This also gives the stated defect-one bound.
+The implementation can transiently retain six vertices when opening a
+new zero coordinate; no claim of five vertices at every intermediate
+instant is needed.
+
+For $d\ge27$ use the support-uniform averaging bound directly. The
+connected full allowed graph maximizes $\sum_i\delta_i^2-3m$ among
+nonempty subgraphs, with value $178$: missing edges can first be added
+along paths from an existing edge, so each increment $2a+2b-1$ is
+positive, and then the remaining edges are added. Endpoint degrees are
+at most six. If there are $n_1$ one-defect and $n_2$ two-defect vectors,
+then $d=n_1+2n_2$ and $k\le2m-n_1-n_2\le56-n_1-n_2$.
+Section~\ref{sec:sequential}'s averaging argument gives
+\[
+ R\le178+\tfrac{23}{2}n_1+(67-n_1-n_2)n_2.
+\]
+Putting $t=n_2$, the right side is
+$178+\tfrac{23}{2}d+(44-d)t+t^2$. This convex quadratic has its maximum
+on $0\le t\le\lfloor d/2\rfloor$ at an endpoint. At $t=0$ it is at most
+$33d$ for $d\ge9$. At the other endpoint, for even $d=2t\ge28$ the
+required inequality is $t^2-t-178\ge0$, true for $t\ge14$; for odd
+$d=2t+1\ge27$ it is $t^2\ge313/2$, true for $t\ge13$.
+Thus $R\le33d$ for every active support and every $d\ge1$.
+
+For the counting passage, sum the bounds on ordered vector lists over
+all complete type patterns before dividing by the common lower bound
+for the number of ordered bases of each pair-space family. The finite
+number of patterns is absorbed into the fixed-$D$ constant. Together
+with the source's retained gain and containment estimates this yields
+$-Dd+R\le-(D-33)d\le-D+33$ when $D\ge34$. This is a bound for this
+residual counting step only.
 \end{proof}
 
-The audit \texttt{audit\_overlap.py} implements this dynamic program in
-standard-library Python: it reconstructs the pair order, exhausts all type
-sequences for $d\le38$, and checks the tail bound. An integer program over
-the same vector types, keeping the exact local-dimension accounting instead
-of the relaxation $v'_a\le N_a$ and the exact count of earlier defect
-vectors, returned the same maxima for every defect tried up to $26$ (not
-part of the runner; the dynamic program is the certificate).
+The source program \texttt{audit\_overlap.py} computes full-support relaxed
+maxima. Those maxima do not themselves quantify over all active subsets;
+the support-completion argument above supplies that missing implication.
+A separately hash-pinned, standard-library replay through defect $26$
+checks every needed maximum and the inequalities $M_d+28\le33d$.
+No claim is made that $33$ is optimal or that a support-uniform bound $28$
+is false; the original defect-one assertion $-11$ does not follow.
 
 \paragraph{Reproducibility.}
 The accompanying README documents \texttt{python -B run\_checks.py}.

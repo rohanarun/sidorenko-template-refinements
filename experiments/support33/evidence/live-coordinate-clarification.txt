@@ -1,0 +1,22 @@
+Additive clarification after the original static reviews
+
+The live tuple has six coordinates not only immediately after opening a
+new vertex, but also after the first vector of some pairs has completed
+and the usual forgetting step has run. In zero-based vector positions:
+
+12, pair(2,9): live[2,4,3,1,0,9]
+38, pair(1,12): live[1,9,11,7,6,12]
+44, pair(8,9): live[9,11,7,6,12,8]
+
+The new coordinate starts at zero but can rise on that first vector's
+defect transition. Therefore merely qualifying the original 'at most
+five points at any time' as 'five retained coordinates' is insufficient.
+Six coordinates must be permitted in both implementation sizing and
+accurate prose. The proposed proof-text correction does so and does not
+rely on a five-coordinate bound.
+
+This observation was checked by an independently authored traversal of
+the pinned pair-order metadata, not by another DP execution. It changes
+neither the recurrence nor its finite results, completion lemma, tail
+argument or coefficient33. The historical root review remains unchanged
+and this note records the later clarification explicitly.

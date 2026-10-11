@@ -1,0 +1,19 @@
+{
+  "baseline_sha256": "5644bdbe73a51cf4aa2bc52ff1f0492263bae1785948bd9f359291453095d916",
+  "best_remainder_by_defect": {
+    "1": -11,
+    "2": 38,
+    "3": 54,
+    "4": 101,
+    "5": 116
+  },
+  "driver_version": "pr3-reviewed-cap-driver-1.0",
+  "max_defect": 5,
+  "max_dp_states_after_forgetting": 1134,
+  "producer_expected_sha256": "903cddaa07d67f8787c4b629fed0a1d4549d19f4f6b230c6b135b8399ef66a04",
+  "repaired_bound_33d_for_replayed_defects": true,
+  "saved_table_prefix_matches": true,
+  "scope": "Full-support relaxed DP through the stated defect cap only; support completion and analytic counting need their separate proofs.",
+  "source_sha256": "ea039289878ed689fd4746f2710d8427c3355a970b2a42facd0c675e64b9a09f",
+  "support_uniform_claim_verified_by_this_run": false
+}

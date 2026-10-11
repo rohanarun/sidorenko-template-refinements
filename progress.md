@@ -5,7 +5,10 @@ nondirect residual counting step in OpenAI's Sidorenko construction
 (Lemma "Costs for the remaining profiles"). Lower is better. Only this
 step is lowered; the other dimension thresholds in the proof are unchanged.
 
-![Residual constant over time](charts/progress.png)
+The table below is the current record. The existing `charts/progress.png` and
+`charts/progress.svg` are historical PR #3 assets displaying the uncorrected
+even-dimension claim 30, so they are not displayed as current evidence. See
+[chart provenance](charts/README.md).
 
 | Date | Source | Remainder | Even $D$ sufficient | Method |
 |---|---|---:|---:|---|
@@ -13,30 +16,36 @@ step is lowered; the other dimension thresholds in the proof are unchanged.
 | 2026-10-09 | this repository, initial draft | 1032 | 1034 | 28 allowed pairs, greedy/convex local caps |
 | 2026-10-09 | this repository, PR #1 | 978 | 980 | active vertex supports |
 | 2026-10-10 | this repository, PR #2 | 189 | 190 | sequential basis count with orthogonality |
-| 2026-10-10 | this repository, PR #3 | 28 | 30 | overlaps come only from defect vectors; exact DP over a fixed pair order |
+| 2026-10-10 | corrected PR #3 proposal | 33 | 34 | full-support overlap DP through defect 26, support completion, and a separate averaging tail |
 
-Regenerate the chart with `python3 charts/make_progress_chart.py`
-(requires matplotlib; not part of the certificate runner).
+The old full-support DP still reports ratio 28 and defect-one maximum -11.
+The support-uniform correction gives 33 and defect-one upper bound 17. These
+are different scopes, not revised values in the same expected-output table.
+External adversarial review of the correction remains pending.
 
-## Tweet draft for PR #3 (explain-like-I'm-25)
+Generate corrected `charts/support33-progress.png` and `.svg` with
+`python3 charts/make_progress_chart.py` (requires matplotlib; not part of the
+certificate runner). These corrected images were not generated for this
+integration; matplotlib was unavailable. No installation was performed.
 
-> Follow-up on the Sidorenko constant: this morning 1641 → 189, now 189 → 28.
+## Corrected draft for PR #3 (external review pending)
+
+> The Sidorenko residual count now has a proposed support-uniform constant 33.
+> The full 28-pair DP reports 28, but its `-2m` cost means that number does not
+> automatically transfer to smaller active supports.
 >
-> The morning count placed basis vectors one at a time and paid for the "overlap"
-> between the two endpoint spans at each step. The new observation: that overlap
-> can only be created by *defect* vectors — ones that are already in the global
-> span but still new at one endpoint. Ordinary new vectors are jointly independent,
-> and vectors already inside both endpoint spans add nothing. With defect one there
-> is exactly one such vector, so the overlap sum is tiny and those strata decay
-> like q^(−D−11), i.e. faster than the paper needs.
+> Insert two nondefect vectors at each missing pair. Every old contribution
+> stays the same or increases, and each inserted pair loses at most one after
+> its pair cost. This gives R <= M_d + 28. A fresh, hash-pinned Python replay
+> verifies the needed full-support maxima for defects 1 through 26; a separate
+> averaging proof covers every larger defect. The resulting bound is R <= 33d,
+> with defect-one bound 17.
 >
-> The surviving cost is a rarer defect type (new at both endpoints). Along a fixed
-> order of the 28 active pairs, the whole bound becomes a function of a handful of
-> per-point counters, and an exact dynamic program (2M states, 45 s, plain Python)
-> maximizes it for every defect. The worst ratio is 28, at defect ten.
->
-> 1642 → 1034 → 980 → 190 → 30 (even D for this one counting step). CI reruns the
-> program. Same scope caveat: one step of one proof, not a smaller counterexample.
+> 1642 → 1034 → 980 → 190 → 34 (even D for this residual step only). The original
+> cap-38 DP output and CI workflow are preserved, but were not freshly rerun
+> for this correction. Other analytic thresholds remain required. This is an
+> AI-generated correction with Codex, awaiting external adversarial review;
+> it does not establish a smaller counterexample or claim optimality.
 > github.com/rohanarun/sidorenko-template-refinements
 
 ## Tweet draft for PR #2 (explain-like-I'm-25)

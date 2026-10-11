@@ -1,0 +1,166 @@
+PR3 support completion: proof/code/resource review, version 1.0
+This is a separate potential-repair note. It does not alter the established
+support-gap packet or withdraw its counterexample to the original claim.
+
+Reviewed object
+Repository: rohanarun/sidorenko-template-refinements
+Head: 9aecdfbd987ecda60b7c5e0b382849d67c6bbc2f
+Original 141-line audit_overlap.py SHA256:
+ea039289878ed689fd4746f2710d8427c3355a970b2a42facd0c675e64b9a09f
+Baseline SHA256:
+5644bdbe73a51cf4aa2bc52ff1f0492263bae1785948bd9f359291453095d916
+Original expected-result SHA256:
+903cddaa07d67f8787c4b629fed0a1d4549d19f4f6b230c6b135b8399ef66a04
+
+Review provenance
+The parallel reviewer read all 141 source lines as text, and the overlap,
+sequential-count and averaging derivations, before authoring the bounded
+driver. Root independently read the original source and then the entire
+driver. Root explicitly approved driver hash
+0ecd828480f167bed8495d32de7ee314a2444202cd059042206945e791f92fdd
+and authorized the cap5 pilot, followed by cap26 if sizing remained local.
+That approval occurred before either replay. This written record was saved
+after the cap5 pilot, so its file-write time is not the pre-run review time.
+Tool/conversation history supplies the chronological review evidence.
+
+Static disposition
+The support-completion argument is valid for the relaxed DP objective,
+conditional on the separately reviewed sequential counting inequality.
+It gives B_partial(d) <= B_full(d) + 28 - m, hence <= B_full(d)+28.
+The arithmetic averaging bound handles every d>=27 with coefficient33.
+Therefore an exact replay of the original full-support DP through d=26
+suffices for a support-uniform coefficient33. At the time this record was
+first written, only cap5 had run. Do not label33 established until cap26
+passes and the conventional completion/tail arguments are accepted.
+
+Completion proof
+Fix a nonempty active pair set E' contained in the 28 allowed pairs.
+Its order is the restriction of the full star order; this follows because
+both are sorted by the same vertex-position key. Write B_E'(tau) for the
+displayed relaxed right-hand side, including its -2|E'| term, for any
+type sequence tau. A type is 111,000,001,010 or011. Its defect contribution
+is respectively0,0,1,1 or2. For every missing pair insert, at that pair's
+place in the full order, two consecutive vectors of type111.
+
+The total defect and the accumulated defect before each old vector do
+not change. Every old T_a count is unchanged because inserted vectors
+have tau_a=ell_a-g=0. The old two vectors of a pair stay adjacent, so the
+previous-vector g used at its second vector is unchanged. Every old N_a
+can only increase, and every old zero-based position p can only increase.
+Consequently each old nondefect term
+min(N_i,N_j,T_i+T_j+[second]*lastg) does not decrease. Neither does an
+old one-defect contribution N_i+N_j, nor an old two-defect contribution
+N_i+N_j+p-ceil(d_previous/2).
+
+For an inserted pair the first nondefect contribution is nonnegative.
+At the second inserted vector both endpoint N counts are at least1,
+and lastg=1, so its minimum is at least1. The two contributions thus
+sum to at least1 while the new pair costs2 in the initial -2m term.
+Each inserted pair lowers the relaxed objective by at most1. This proves
+B_full(extended tau) >= B_E'(tau) -(28-m), and maximization proves the
+claimed inequality.
+
+No geometric realization of the extended sequence is asserted or needed.
+The DP intentionally drops such constraints. The inserted sequence is
+accepted by the relaxed transitions: T starts at zero, only defect
+transitions raise it, defect never decreases, and a111 transition always
+exists. Forgetting a point is lossless because it has no later occurrence;
+an insertion can keep a point live longer but leaves its T value intact.
+The max-defect cutoff26 cannot remove a path ending at defect<=26.
+
+All-profile scope
+This covers every active edge subset and every realizable type pattern
+within the stated equality/nondirect stratum: h_e is0 or2, excluded edges
+have h_e=0, every active two-dimensional pair space supplies two basis
+vectors, and d>=1. It does not claim to cover profiles outside that
+stratum, or establish the imported gain/containment/counting inequalities.
+If counting is organized by basis-type patterns, sums over the finitely
+many patterns must be taken consistently before applying the uniform
+basis multiplicity, as in the existing review of the sequential argument.
+
+Tail proof independent of the DP
+For any active support, write n1 for one-defect vectors and n2 for
+two-defect vectors, so d=n1+2*n2. The existing averaging calculation gives
+R <= 178 +(23/2)n1 +(67-n1-n2)n2.
+Support uniformity follows as follows. The full allowed graph is connected
+and has degree vector(3,6,3,6,4,2,4,4,4,6,4,6,4). For a nonempty subgraph,
+add missing edges by first reaching all vertices from an existing edge,
+then filling remaining edges. Every insertion has at least one previously
+nonisolated endpoint, so sum(delta_i^2)-3m does not decrease. Its full-graph
+value is178. The endpoint surplus is at most23. Also global k is at most
+2m-n1-n2, because every defect vector is globally dependent; m<=28.
+These are exactly the ingredients of the stated tail inequality.
+
+Put t=n2. The bound is
+  178 +(23/2)d +(44-d)t +t^2,  0<=t<=floor(d/2).
+It is convex in t, so its maximum over the allowed integers is at an
+endpoint. At t=0 it is <=33d for d>=9. If d=2t is even, the other endpoint
+is <=33d exactly when t^2-t-178>=0, true for t>=14. If d=2t+1 is odd,
+the condition is t^2>=313/2, true for t>=13. Hence R<=33d for every d>=27,
+without a finite tail execution or reliance on the saved cap38 output.
+
+Finite requirement
+Replaying full-support maxima through26 is sufficient. The supplied
+first-five values produce (B_full(d)+28)/d equal to
+17,33,82/3,129/4,144/5. For6<=d<=26 the supplied table has B_full(d)<=28d,
+and28+28/d<=98/3<33. The cap26 driver checks the stronger direct inequality
+B_full(d)+28<=33d separately for each d, as well as exact equality of
+every maximum with the pinned table. No saved PASS substitutes for replay.
+The repaired defect-one bound from this simple completion is R<=17,
+not the original support-uniform -11. No optimization of33 is claimed.
+
+Code review
+The original source uses only standard-library parsing, exact integers,
+Fractions for its separate tail formula, dictionaries and fixed graph
+enumeration. run_dp has no network, subprocess, import of repository
+modules, file I/O, mutation of the baseline, or external side effect.
+The new driver uses runpy with a non-main name, so the original main's
+output write does not execute. It invokes only allowed_pairs, star_order
+and run_dp with the fixed graph and cap5 or26. Every source/data file is
+SHA-pinned before and after execution. It emits one small JSON result.
+
+The recurrence exactly matches the displayed relaxed objective. States
+contain the live T tuple, previous g and accumulated d. Independent111
+and dependent000 preserve T/d;001/010 increment one T and d;011 increments
+both T and d by2 and contributes x-ceil(d_before/2)+N_i+N_j. The code's
+(d+1)//2 is the correct ceiling. No realizability condition is required
+to use a larger relaxed maximum as an upper bound. The -1 sentinel in
+push/merge cannot discard a valid candidate: all pre-cost sums are
+nonnegative, since reachable d<=2*x implies x-ceil(d/2)>=0. The -2m cost
+is applied only after the last vector. Removing closed coordinates by
+maximization is sufficient and exact for future transitions.
+
+Resource review and small independent metadata check
+An independently authored tiny graph calculation, not execution of the
+supplied DP, checked the exact baseline hash, allowed pairs/order,
+connectivity, degree vector, base178 and excess23. A counting bound on
+possible (T,g,d) tuples gives the following conservative estimates:
+ cap26: <=1,210,746 input-layer states; sum of input layers<=12,771,260;
+        <=63,856,300 attempted transitions; <=1,758,624 states in the
+        transient new dictionary before forgetting a closed point.
+ cap38: <=2,963,520 input-layer states; sum<=27,156,922;
+        <=135,784,610 transitions; <=4,574,936 transient new states.
+These are combinatorial bounds, not measured reachable-state counts.
+Python keeps both old and new dictionaries temporarily; cap26 is assigned
+a2GiB memory estimate. The existing runner records actual peak RSS but
+does not enforce this estimate as a memory sandbox.
+
+The prose's 'at most five points open at any time' needs qualification:
+the live list transiently contains six vertices. A newly opened coordinate
+initially equals zero. This does not invalidate the recurrence or the
+support-completion proof, but matters for honest resource sizing.
+
+No complex within-vector checkpoint machinery was added. Each capped DP
+is one durable campaign unit. On interruption it restarts from its own
+beginning; completed pilot/cap26 units are reused by their immutable pins.
+Cap5 passed in0.0294 worker seconds,0.05994 CPU seconds, peak24,870,912B,
+with1,134 retained states. Scaling is comfortably local and does not
+justify AWS. Cap26 remains bounded by its registered CPU/wall limits;
+its duration was not promised below one minute before measurement.
+
+Cap5 evidence at first write
+Manifest27220d0eda07182c85a2e67c1239073f06d14515d9631fc26a1b154a12ff1e36
+Receipt d975439f2bce66ac5b14575021dec420b510922bf9688487d8f84d2fc36a93eb
+Maxima[-11,38,54,101,116], exact pinned-prefix equality.
+Cap26 evidence and the separate proof addendum will be recorded after its
+fresh replay. Neither repairs the original support-uniform28 assertion.

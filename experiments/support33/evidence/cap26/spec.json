@@ -1,0 +1,94 @@
+{
+  "assumptions": [
+    "Exact Python integer arithmetic and dict maxima are correct.",
+    "Pinned original baseline and allowed pair graph are the intended finite object.",
+    "DP relaxes all omitted realizability constraints; support-completion and analytic implications are separately reviewed."
+  ],
+  "claim_id": "SID-PR3-FULL-DP-CAP26",
+  "estimate": {
+    "checkpoint_unit": "One completed capped DP; interrupted unit restarts. Pilot first. Cap26 duration is unmeasured, not guaranteed under one minute.",
+    "logical_cpus": 1,
+    "output_bytes_pre_run": 8192,
+    "ram_mb": 2048,
+    "wall_seconds_pre_run": 180
+  },
+  "job_id": "SID-PR3-overlap-cap26-v1",
+  "limits": {
+    "cpu_seconds": 120,
+    "output_bytes": 1048576,
+    "wall_seconds": 180
+  },
+  "review": {
+    "independent_checker_version": "original pinned DP plus pr3-reviewed-cap-driver-1.0",
+    "notes": "Root explicitly authorized staged cap5 then cap26 local replay after source review; all sources pinned.",
+    "reviewer": "L1 parallel reviewer and root reviewed all141DP lines; root reviewed and approved fixed driver unchanged.",
+    "status": "reviewed-independent-small-checker",
+    "trust_boundary": "Operator-reviewed code, not a hostile-code sandbox."
+  },
+  "role": "claim",
+  "scope": "Full-support relaxed PR3 DP only through cap26; support-uniform33 remains separate until replay and proof approval.",
+  "source_pins": {
+    "adapter_sha256": "9a97c6cf405031148693e7df5df6847b99ee42b3ad354196aa277c52b4303f27",
+    "baseline_sha256": "5644bdbe73a51cf4aa2bc52ff1f0492263bae1785948bd9f359291453095d916",
+    "driver_sha256": "0ecd828480f167bed8495d32de7ee314a2444202cd059042206945e791f92fdd",
+    "head": "9aecdfbd987ecda60b7c5e0b382849d67c6bbc2f",
+    "pre_run_review_path": "upstream/sidorenko/pr3-support-publication/potential-repair-review.txt",
+    "pre_run_review_sha256": "79720177714793763bd44cf2dd7a4e946be1f597458fd311b5b9848eeca0d2c1",
+    "producer_expected_sha256": "903cddaa07d67f8787c4b629fed0a1d4549d19f4f6b230c6b135b8399ef66a04",
+    "repository": "rohanarun/sidorenko-template-refinements",
+    "root_static_review_path": "reports/PR3-support33-root-review.txt",
+    "root_static_review_sha256": "17025bc481a2f257c441732ed389b5c53718ce25f7b57e0bb2bd051bbc0069da",
+    "source_sha256": "ea039289878ed689fd4746f2710d8427c3355a970b2a42facd0c675e64b9a09f"
+  },
+  "units": [
+    {
+      "expect": {
+        "kind": "json",
+        "subset": {
+          "result": {
+            "best_remainder_by_defect": {
+              "1": -11,
+              "10": 280,
+              "11": 292,
+              "12": 335,
+              "13": 346,
+              "14": 389,
+              "15": 399,
+              "16": 441,
+              "17": 450,
+              "18": 491,
+              "19": 499,
+              "2": 38,
+              "20": 538,
+              "21": 545,
+              "22": 583,
+              "23": 589,
+              "24": 626,
+              "25": 631,
+              "26": 668,
+              "3": 54,
+              "4": 101,
+              "5": 116,
+              "6": 163,
+              "7": 177,
+              "8": 222,
+              "9": 235
+            },
+            "max_defect": 26,
+            "repaired_bound_33d_for_replayed_defects": true,
+            "saved_table_prefix_matches": true,
+            "support_uniform_claim_verified_by_this_run": false
+          },
+          "status": "passed"
+        }
+      },
+      "input": "../upstream/sidorenko/pr3-support-publication/replay-proposals/inputs/SID-PR3-overlap-cap26-v1.json",
+      "source": "../checkers/reviewed_bundle_adapter.py",
+      "unit_id": "full-support-dp"
+    }
+  ],
+  "unproved_implications": [
+    "This finite run alone does not prove the support-uniform33 correction or general analytic theorem.",
+    "No adoption of the original support-uniform28 or defect-one -11 assertions."
+  ]
+}
