@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "discovery_author": "GPT-6 Pro",
+  "source_task": "second-wave research Task 9",
+  "original_archive_sha256": "aad1032de53ffa6ed2e4f6a9ea6d8ea27fdb0ad471e208ab9ffaf665477b48c8",
+  "original_proof_sha256": "f110399cbc4592610e2b70965536ddd9a3705390e811e1805dda54ded9d68bee",
+  "checker_unmodified": true,
+  "sources": [
+    {
+      "repository": "openai/math",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "path": "preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/complex.tex",
+      "git_blob": "178b0e9da21867a727ea847dae8e537b9d719a70",
+      "sha256": "b7023c77ec390b3392617c51b1ca3d3ee70d707af6c71e82b0b56547513bbe8a"
+    },
+    {
+      "repository": "rohanarun/sidorenko-template-refinements",
+      "commit": "d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d",
+      "path": "experiments/order-13-cuts/candidate-13-49243.json",
+      "git_blob": "7d33c2ad101e4aedc57ea1eb2baab5db0c6f6778",
+      "sha256": "72c49464a658f88e160d7c39de06015b0c8130f88fb9fda29ffa9d2c75c7ce1b"
+    }
+  ],
+  "files": {
+    "check_global_residual.py": {
+      "bytes": 13032,
+      "sha256": "89d506983eaf7ad0d81fcf92d7c00df3a49b408e72545dd976a1d406de57ec31"
+    },
+    "template_data.json": {
+      "bytes": 7532,
+      "sha256": "e203ce4af0f902fc774272a5e374a323527b9c566e4b49e1af562bdb81ba5b2a"
+    },
+    "certificates.json": {
+      "bytes": 75708,
+      "sha256": "dd51b323ebba3fd69ea3795ad3a2e4f06c3f84109faaf2b535c1b9a5b9bd1b02"
+    },
+    "checker_output.txt": {
+      "bytes": 1164,
+      "sha256": "94d1be493dbc87d3cfe656adebbdffba6fb0fb6714fc79c6d02ce8227a121a33"
+    }
+  }
+}

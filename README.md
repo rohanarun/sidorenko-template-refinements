@@ -1,8 +1,8 @@
 # Sidorenko: finite-template minimum and a smaller residual bound
 
-An independent, AI-generated research draft prepared with Codex, following OpenAI's *A counterexample to Sidorenko's conjecture*. This repository contains three refinements of its method, proofs, exact certificates, and a reproducible enumeration.
+An independent, AI-generated research draft prepared with Codex, following OpenAI's *A counterexample to Sidorenko's conjecture*. This repository contains refinements of its method, proofs, exact certificates, and a reproducible enumeration.
 
-**Scope:** a computer-assisted minimum within a specified finite construction template, and a smaller constant in one counting step. This is **not** a minimum for all Sidorenko counterexamples, a smaller general counterexample, or a verified bound on the full construction's dimension. The results depend on the stated source arguments and, for enumeration completeness, plantri. Mathematical priority and formal verification are not claimed.
+**Scope:** a computer-assisted minimum within a specified finite construction template, and a smaller constant in one counting step. This is **not** a minimum for all Sidorenko counterexamples, a smaller general counterexample, or a fully effective construction of a finite host. The separately reviewed rank-layer dimension bounds below retain their stated geometric and transverse inputs. The results depend on the stated source arguments and, for enumeration completeness, plantri. Mathematical priority and formal verification are not claimed.
 
 ## Results and proof ideas
 
@@ -33,6 +33,16 @@ For each surviving graph, the saved nonnegative rational edge weights sum to one
 An independent exact verifier uses Held–Karp dynamic programming, checks 16,941 cycles in aggregate, and obtains a minimum separating margin of $1/75$. The original 13-point, 22-face certificate gives the matching 35-vertex incidence graph. Completeness remains dependent on plantri's enumeration algorithm; the certificates are not Lean proofs.
 
 At 13 points, a further enumeration leaves exactly two feasible isomorphism classes within the finite template. One is the original; the other is a different 35-vertex finite certificate. Both pass the combinatorial and support checks. **The alternative is not claimed as a newly proved counterexample:** its full analytic transfer has not been independently verified.
+
+### Rank-layer dimensions: 7296 and 7644
+
+[Global edge energy and exact mode removal](global-residual-dimension.md) give sufficient even rank-layer dimensions **D >= 7296** for the original template and **D >= 7644** for candidate 49243, with the stated geometric and transverse inputs retained. The proof replaces the earlier propagation/common-mode estimates; its support-uniform nondirect residual constants are **189** and **197**, respectively. It does not use the separate residual-28 proposal or claim an optimal dimension, mathematical priority, or a fully effective finite host.
+
+GPT-6 Pro supplied the discovery, proof, checker and exact certificates. Codex independently reviewed the argument and checker, then replayed the unchanged checker with both pinned source comparisons and two rejected certificate mutations. See [the experiment and verification evidence](experiments/global-residual-energy/). The finite replay supports the separate conventional proof; it is not proof-assistant verification. The checker is standalone and uses only Python's standard library:
+
+```sh
+python3 -I -B experiments/global-residual-energy/check_global_residual.py
+```
 
 ### Residual constant: 1641 to 189
 

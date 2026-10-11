@@ -1,0 +1,26 @@
+PASS symbolic identities, both scalar branches, and common-mode certificates
+PASS original: cuts=3; 33x33 integer inverse certificate; B=609, M<=608, even D=7296
+  allowed degrees=[3, 6, 3, 6, 4, 2, 4, 4, 4, 6, 4, 6, 4]; nondirect remainder=189; higher-defect ratio=122
+  unsigned error <= 2^162962 (7297)^231 q^(-1/6), q>=3
+  signed-chart singular error <= 2^163195 (7297)^231 q^(-1/6), q>=2D
+PASS candidate_49243: cuts=20; 33x33 integer inverse certificate; B=638, M<=637, even D=7644
+  allowed degrees=[4, 6, 6, 6, 6, 2, 2, 4, 4, 4, 3, 3, 6]; nondirect remainder=197; higher-defect ratio=126
+  unsigned error <= 2^170618 (7645)^231 q^(-1/6), q>=3
+  signed-chart singular error <= 2^170851 (7645)^231 q^(-1/6), q>=2D
+PASS all-D proof certificates and both finite input certificates; no bounded-D sweep
+[
+  {
+    "template": "original",
+    "M": 608,
+    "D": 7296,
+    "non_direct_saving": 7107,
+    "min_certificate_margin": "392731950442990003623245857651838268217491456"
+  },
+  {
+    "template": "candidate_49243",
+    "M": 637,
+    "D": 7644,
+    "non_direct_saving": 7447,
+    "min_certificate_margin": "245352450284876763812602384886045741313687552"
+  }
+]

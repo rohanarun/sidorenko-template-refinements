@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "discovery_author": "GPT-6 Pro, second-wave research Task 9",
+  "independent_review_and_replay": "Codex: conventional proof review; complete static review followed by independent execution of the unchanged supplied checker",
+  "scope": "Verified finite/symbolic certificates support separately reviewed all-D mathematics; no full effective witness, analytic proof certification or novelty claim follows from these runs.",
+  "source_literal_comparisons_executed": true,
+  "stdout_sha256": "94d1be493dbc87d3cfe656adebbdffba6fb0fb6714fc79c6d02ce8227a121a33",
+  "jobs": [
+    {
+      "attempt_count_after_resume": 1,
+      "exit_code": 0,
+      "expected_assertion_line_confirmed": null,
+      "job_id": "R2-T09-global-residual-v1",
+      "manifest_sha256": "f951086fb1032a9a208b27463ef8cfc69d07ca9234364b9826567a5f2566c985",
+      "mutation": null,
+      "outer_wall_seconds": 0.1139323340030387,
+      "receipt_sha256": "a44eb64cb5cb69e4aaf9c81f16a2f26bb827113b5cbd8e5e2f929ee980458fa5",
+      "resume_reused_units": 1,
+      "role": "claim",
+      "staged_input_post_hashes_match": true,
+      "status": "verified_finite_arithmetic",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "1495ca0e40ee621658f1aa606403df56f8d901a7788d6e90900bf3431097963c",
+      "worker_usage": {
+        "exit_code": 0,
+        "peak_rss_bytes": 27082752,
+        "system_cpu_seconds": 0.012296,
+        "user_cpu_seconds": 0.041817,
+        "wall_seconds": 0.024355791974812746
+      }
+    },
+    {
+      "attempt_count_after_resume": 1,
+      "exit_code": 1,
+      "expected_assertion_line_confirmed": 242,
+      "job_id": "CTRL-R2-T09-adjugate-v1",
+      "manifest_sha256": "8bfe13307cfc967901fb908237b47c79e4a843835c8c18339c4cc19ffde546ac",
+      "mutation": {
+        "all_other_semantic_data_preserved": true,
+        "expected_failure_site": "check_global_residual.py:242 inverse equation; diagonal entry preserves symmetry",
+        "field": "templates.original.adjugate[0][0]",
+        "mutated_certificates_sha256": "82cd6957085cf4d5222d62988b07a50f34479d6cb0fca25d408e9f25b7a6715a",
+        "new": 364968420797853057025,
+        "old": 364968420797853057024,
+        "original_certificates_sha256": "dd51b323ebba3fd69ea3795ad3a2e4f06c3f84109faaf2b535c1b9a5b9bd1b02"
+      },
+      "outer_wall_seconds": 0.11391095793806016,
+      "receipt_sha256": "bf0a5a5b569be06f9c6548f7aa65aa5731e7e001dda24af6136bc4af7b0ca82b",
+      "resume_reused_units": 1,
+      "role": "control",
+      "staged_input_post_hashes_match": true,
+      "status": "control_passed",
+      "stderr_sha256": "2c40e3380b39969e64879bc36e598e0349781c3e756b19f65ce4db2162b73124",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "worker_usage": {
+        "exit_code": 1,
+        "peak_rss_bytes": 27148288,
+        "system_cpu_seconds": 0.012477,
+        "user_cpu_seconds": 0.03895,
+        "wall_seconds": 0.021591374999843538
+      }
+    },
+    {
+      "attempt_count_after_resume": 1,
+      "exit_code": 1,
+      "expected_assertion_line_confirmed": 248,
+      "job_id": "CTRL-R2-T09-bound-v1",
+      "manifest_sha256": "073263fa550045593d32b689751e06a7fdbf2976feb2ec71c8fd9756c4183b8f",
+      "mutation": {
+        "all_other_semantic_data_preserved": true,
+        "expected_failure_site": "check_global_residual.py:248 strict coordinate bound, before M/D metadata checks",
+        "field": "templates.original.strict_bound_B",
+        "mutated_certificates_sha256": "e8a771fa7b7f802f0637c397f7ee09d9dc3e044c44a2828dcaa97016072b6ed9",
+        "new": 1,
+        "old": 609,
+        "original_certificates_sha256": "dd51b323ebba3fd69ea3795ad3a2e4f06c3f84109faaf2b535c1b9a5b9bd1b02"
+      },
+      "outer_wall_seconds": 0.11229370906949043,
+      "receipt_sha256": "61bf5ed1644db9c0e41117f9ba96a7e7bad39a8089453a69375841112e016d68",
+      "resume_reused_units": 1,
+      "role": "control",
+      "staged_input_post_hashes_match": true,
+      "status": "control_passed",
+      "stderr_sha256": "fbeec83fafe4bbdf2d8e96d9e949257935becb635e7917fd6d132a288db943f1",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "worker_usage": {
+        "exit_code": 1,
+        "peak_rss_bytes": 27394048,
+        "system_cpu_seconds": 0.012503,
+        "user_cpu_seconds": 0.041079,
+        "wall_seconds": 0.02092812501359731
+      }
+    }
+  ],
+  "assertions_enabled": true,
+  "no_formal_verification": true,
+  "canonical_resume_reused_existing_receipts": true
+}
