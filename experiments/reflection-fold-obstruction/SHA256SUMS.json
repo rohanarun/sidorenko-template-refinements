@@ -1,0 +1,26 @@
+{
+  "files": {
+    "NOTICE.md": {
+      "bytes": 1245,
+      "sha256": "672d39780edae86261134eeabe7046661959bf314914a0061fd1a47d19141c0e"
+    },
+    "PROOF.md": {
+      "bytes": 16461,
+      "sha256": "42c10c307951bc13c8160292e5b5f8a754ab74572d1bd638a91c4cea8dbeb987"
+    },
+    "README.md": {
+      "bytes": 2099,
+      "sha256": "da50578f3f1b488f8d514d8a1fecbf5edd7c86826f2442aab50c8f3077b414c5"
+    },
+    "SOURCE.json": {
+      "bytes": 2277,
+      "sha256": "1aff657bd2d1e032cf0fcc01598df122fb0001399dfefcd14a5d9a85a9ed2b28"
+    },
+    "check_reflection.py": {
+      "bytes": 8473,
+      "sha256": "5c4fab22b1a200901ede7ffc2ce0a22e8d7e01e7ce2da0abc00051bf698f3fcf"
+    }
+  },
+  "external_anchor_required": true,
+  "is_mathematical_certificate": false
+}

@@ -1,0 +1,40 @@
+{
+  "sources": [
+    {
+      "repository": "openai/math",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "path": "preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/kernel.tex",
+      "git_blob": "bbe11be8fffe968012060ec43e6aff597e922831",
+      "bytes": 28526,
+      "sha256": "ad58e1e12522ae296a6ff7213afee0098338577013f15e152d6ccc2990df2742",
+      "access": "Immutable complete Git object, independently hashed",
+      "included_in_public_candidate": false,
+      "immutable_url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/kernel.tex"
+    },
+    {
+      "repository": "rohanarun/sidorenko-template-refinements",
+      "commit": "d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d",
+      "path": "proof.tex",
+      "git_blob": "66fc5eb655e6471df0c266c986c0ab47d943fe0f",
+      "bytes": 18382,
+      "sha256": "925da34d72debee26551c1b0110ada0c8e70afa6bfd7877c2258aad0fe2a8a5b",
+      "access": "Immutable complete Git object, independently hashed",
+      "included_in_public_candidate": false,
+      "immutable_url": "https://github.com/rohanarun/sidorenko-template-refinements/blob/d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d/proof.tex"
+    }
+  ],
+  "parameter": "Chosen specialization theta=1/2 of the source family 0<theta<1; one negative corner",
+  "input_interface": "Positive common independent per-part priors and pair thinning",
+  "admitted": "Finite sign/feature criterion and strict reflection-double obstruction",
+  "retained_for_large_q_consequence": "Separate rank-layer limit for the chosen template and both difference orientations",
+  "existing_repository_comparison": {
+    "base": "d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d",
+    "PR4": "Existing global dimensions; not changed",
+    "PR6": "Existing seven-point orbit transfer; not changed",
+    "PR7": "Existing original-template effective host; not changed"
+  },
+  "global_priority_established": false,
+  "new_Lean_or_kernel_or_host": false,
+  "new_external_model_call": false,
+  "release_review": "Version-bound review status is recorded in the PR body and retained review receipts; this source manifest does not certify acceptance or CI."
+}
