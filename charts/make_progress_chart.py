@@ -14,6 +14,7 @@ ours = [
     (date(2026, 10, 9), 1034, "initial draft"),
     (date(2026, 10, 9), 980, "PR #1 active supports"),
     (date(2026, 10, 10), 190, "PR #2 sequential count"),
+    (date(2026, 10, 10), 30, "PR #3 defect overlaps"),
 ]
 
 fig, ax = plt.subplots(figsize=(9, 5.2), dpi=160)
@@ -38,13 +39,13 @@ ys = [openai[1]] + [v for _, v, _ in ours]
 ax.step(xs, ys, where="post", color=BLUE, linewidth=2, zorder=3, label="rohanarun/sidorenko-template-refinements")
 ax.plot([d for d, _, _ in ours], [v for _, v, _ in ours], marker="o", markersize=9, color=BLUE,
         markeredgecolor=SURFACE, markeredgewidth=2, linestyle="none", zorder=4)
-offsets = [(8, 6), (8, -16), (-10, -18)]
+offsets = [(8, 6), (8, -16), (-10, 8), (10, 4)]
 for (d, v, name), off in zip(ours, offsets):
     ax.annotate(f"{v}  {name}", (d, v), textcoords="offset points", xytext=off,
                 ha="left" if off[0] > 0 else "right", color=INK, fontsize=10, fontweight="bold")
 
 ax.set_ylim(0, 1800)
-ax.set_xlim(date(2026, 9, 20), date(2026, 10, 13))
+ax.set_xlim(date(2026, 9, 20), date(2026, 10, 14))
 ax.xaxis.set_major_formatter(mdates.DateFormatter("%b %d"))
 ax.xaxis.set_major_locator(mdates.DayLocator(interval=4))
 ax.set_ylabel("Even dimension D sufficient for the\nnondirect residual step (lower is better)", color=INK2, fontsize=10)
