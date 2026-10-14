@@ -1,0 +1,30 @@
+{
+  "obstructions": 47,
+  "independent_cycle_count": 53054,
+  "feasible": [
+    {
+      "plantri_index": 25902,
+      "finite_checks": {
+        "vertices": 35,
+        "edges": 66,
+        "cuts": 19,
+        "min_pair_coverage": "1/3",
+        "support_intersections": "passed",
+        "discrete_refinement": "passed"
+      },
+      "isomorphic_to_original": true
+    },
+    {
+      "plantri_index": 49243,
+      "finite_checks": {
+        "vertices": 35,
+        "edges": 66,
+        "cuts": 20,
+        "min_pair_coverage": "1/3",
+        "support_intersections": "passed",
+        "discrete_refinement": "passed"
+      },
+      "isomorphic_to_original": false
+    }
+  ]
+}

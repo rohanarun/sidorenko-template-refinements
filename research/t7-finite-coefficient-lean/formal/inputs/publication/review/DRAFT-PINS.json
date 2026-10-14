@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-11T06:01:26.541338+00:00",
+  "scope": "Exact prepared publication prose, finite proof interfaces, retained dependency and custody review; no new mathematical computation",
+  "review": {
+    "path": "upstream/sidorenko/t7-publication/review/DRAFT-REVIEW.txt",
+    "bytes": 4235,
+    "sha256": "d8ebe302bb8bb9f31f3fa47d44e8b9a3822ede9750facdbc872d97dfec425b7c"
+  },
+  "inspected_files": [
+    {
+      "path": "upstream/sidorenko/t7-publication/theorem.md",
+      "bytes": 21920,
+      "sha256": "a4996ac29fdc54e31f7ebb25bffe233fe4f4caa164d557ad9e7dd7fbd89fb960"
+    },
+    {
+      "path": "upstream/sidorenko/t7-publication/DEPENDENCIES.txt",
+      "bytes": 20758,
+      "sha256": "22510d9b0fe49b2cb4864f07c9cae3777be3da46712ed0ec3259c1bf9cd3b47a"
+    },
+    {
+      "path": "upstream/sidorenko/t7-publication/proposed-pr-title.txt",
+      "bytes": 66,
+      "sha256": "78a02e218f1b97ee8b6cf9719f1206396278d0ed844480089d4bcab5a37cf95f"
+    },
+    {
+      "path": "upstream/sidorenko/t7-publication/proposed-pr-body.md",
+      "bytes": 2002,
+      "sha256": "9c73d19a9c90208d9bc1477e00f9a619234d7de50cd498c76560c79c35074116"
+    },
+    {
+      "path": "upstream/sidorenko/t7-publication/proposed/README.md",
+      "bytes": 10590,
+      "sha256": "7508caf12cc809cc3a6e4e8db8e9d2b45134b2b01236ddacb38bcb27bc9d062c"
+    },
+    {
+      "path": "upstream/sidorenko/t7-publication/validation/base-README.md",
+      "bytes": 9358,
+      "sha256": "6d27cab5b9cde46521654f9227b7d167a9a3b48cfa9d9d8e8c50c57b364c6f9a"
+    },
+    {
+      "path": "upstream/sidorenko/t7-publication/proposed/experiments/t7-orbit/README.md",
+      "bytes": 6019,
+      "sha256": "7c2b9160dffecd16070d9c0f4737624928c639d36e26ed66735de02ad9c784eb"
+    },
+    {
+      "path": "upstream/sidorenko/t7-publication/PUBLIC-NOVELTY-BOUNDARY.txt",
+      "bytes": 2256,
+      "sha256": "7ccaa104c02136c7a4a6067877f29c9e6d84b5c36c7d0218121ea145afe905fe"
+    },
+    {
+      "path": "upstream/sidorenko/t7-publication/proposed/experiments/t7-orbit/SOURCE-MANIFEST.json",
+      "bytes": 6028,
+      "sha256": "9b3e632d8742f695bafee266c4c447befec7fc741b35e5d591fce123a8968681"
+    },
+    {
+      "path": "upstream/sidorenko/t7-publication/validation/portable-check-receipt.json",
+      "bytes": 1232,
+      "sha256": "06099925ec728f5847d1dba105fe93c5de41a559ca193c367ab6ee1c3a41b72f"
+    },
+    {
+      "path": "upstream/sidorenko/t7-publication/validation/portable-check-stdout.json",
+      "bytes": 2765,
+      "sha256": "4bb7495f02e996b412cb3dc8e87d6cb974dbfc0c9e3c440bdaefebb948710710"
+    },
+    {
+      "path": "upstream/sidorenko/t7-publication/review/BOUNDARY-REVIEW.txt",
+      "bytes": 6276,
+      "sha256": "dd7451549808df0588f427d54e4a4aa98d6fb8159cc3a36643b75e8c5ff75eba"
+    }
+  ],
+  "manifest_copy_checks": [
+    {
+      "path": "dependencies/l3-template-transfer-proof.md",
+      "sha256": "2d286841535e86965dd1af937a85c65ae11ed73281184636ccc5375b3526cba4",
+      "bytes": 63949,
+      "original_equal": true
+    },
+    {
+      "path": "dependencies/task04-orbit-transfer-theorem.md",
+      "sha256": "9afd06cf6911763965e15b57a83805828c0c680e9a88ae2942a4bb63ef346362",
+      "bytes": 32184,
+      "original_equal": true
+    },
+    {
+      "path": "dependencies/task11-response.md",
+      "sha256": "87944a5c592d904a1b79855e5bfc99d26a82e7cc07ec5f178daaec8743755914",
+      "bytes": 30579,
+      "original_equal": true
+    },
+    {
+      "path": "checks/check_t7.py",
+      "sha256": "66e4b0490ac03e727019f1047e14a09bbfca4bf0d440e090238c5d793454919f",
+      "bytes": 8970,
+      "original_equal": true
+    },
+    {
+      "path": "inputs/t7-literals.json",
+      "sha256": "583719581922454280d360875e7cb0ef0178477a5084a8b222da86744e0c7f7e",
+      "bytes": 3878,
+      "original_equal": true
+    },
+    {
+      "path": "evidence/original-result.json",
+      "sha256": "4bb7495f02e996b412cb3dc8e87d6cb974dbfc0c9e3c440bdaefebb948710710",
+      "bytes": 2765,
+      "original_equal": true
+    },
+    {
+      "path": "evidence/original-execution-receipt.json",
+      "sha256": "af76dd63ea0b5f1680805b9311fa9fa97a3b7616c55f214a57e9180c627253fd",
+      "bytes": 285,
+      "original_equal": true
+    },
+    {
+      "path": "reviews/integration.txt",
+      "sha256": "6e36dc193585633e5d1412db034fab0f8bc09dfadb153542089c8c47e2b61b43",
+      "bytes": 7247,
+      "original_equal": true
+    },
+    {
+      "path": "reviews/t7-specialization-challenge.txt",
+      "sha256": "750fdb190a57d9e23328ac0a4d29781cec3e3841646a53368c36b34f24febf29",
+      "bytes": 11952,
+      "original_equal": true
+    },
+    {
+      "path": "reviews/l3-local-review.txt",
+      "sha256": "a4305456c861bb646708ae813a9752a196a8d99e4104335bcf0c6632a1311fa5",
+      "bytes": 16102,
+      "original_equal": true
+    },
+    {
+      "path": "reviews/l3-tail-review.txt",
+      "sha256": "2213a713bf2e8c247bda4a7a14c0eb2661dc6bcb6ba5edf1ba506507156e4eca",
+      "bytes": 4398,
+      "original_equal": true
+    },
+    {
+      "path": "reviews/l3-global-review.txt",
+      "sha256": "a8c7463b12b830afbe81d877a75e1804b32dbeed3a0417e567837ecfda43e57f",
+      "bytes": 15316,
+      "original_equal": true
+    },
+    {
+      "path": "reviews/source-comparison.txt",
+      "sha256": "e26587679421730a5e483aab13fc4d42848ccd441367a7f125fc1bcb71d8b9b9",
+      "bytes": 10999,
+      "original_equal": true
+    },
+    {
+      "path": "reviews/TASK04-REVIEW.txt",
+      "sha256": "b612ddcb871877dbe0f639d9379eedb8780b3f946b3106f0682e47d28278990c",
+      "bytes": 12256,
+      "original_equal": true
+    },
+    {
+      "path": "reviews/TASK11-REVIEW.txt",
+      "sha256": "fc99bdbae897e9c1e5d0b8e76f514d685037b28e68b332a346f495f8de202f09",
+      "bytes": 11634,
+      "original_equal": true
+    },
+    {
+      "path": "reviews/source-pins.json",
+      "sha256": "7e2477f15e97e1b1925dc457b6ad031a374a395c4cb418e9b86dc1256f212d47",
+      "bytes": 6391,
+      "original_equal": true
+    },
+    {
+      "path": "reviews/acceptance-boundary.txt",
+      "sha256": "dd7451549808df0588f427d54e4a4aa98d6fb8159cc3a36643b75e8c5ff75eba",
+      "bytes": 6276,
+      "original_equal": true
+    },
+    {
+      "path": "reviews/public-novelty-boundary.txt",
+      "sha256": "7ccaa104c02136c7a4a6067877f29c9e6d84b5c36c7d0218121ea145afe905fe",
+      "bytes": 2256,
+      "original_equal": true
+    }
+  ],
+  "portable_stdout_equal_to_original": true,
+  "supplied_program_execution": false,
+  "proof_checker_execution_in_this_pass": false,
+  "network_access_in_this_pass": false,
+  "publication": false
+}

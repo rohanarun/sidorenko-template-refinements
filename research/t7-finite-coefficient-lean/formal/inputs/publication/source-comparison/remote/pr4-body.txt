@@ -1,0 +1,13 @@
+The previous propagation and common-mode estimates leave very large sufficient dimensions. This adds GPT-6 Pro's global edge-energy argument and exact mode-removal proof, giving sufficient even rank-layer dimensions **D >= 7296** for the original template and **D >= 7644** for candidate 49243, with the stated geometric and transverse inputs retained.
+
+The standalone theorem note covers all activity patterns and active supports. It uses support-uniform nondirect residual constants **189 and 197**, preserves the 1/6 saving lattice, and includes conservative singular-error envelopes. It does not use the separate residual-28 proposal. No optimal dimension, global novelty, or fully effective finite host is claimed.
+
+GPT-6 Pro receives discovery, proof, checker and certificate credit. Codex independently reviewed the conventional argument and complete checker, then replayed the unchanged supplied checker with both immutable source-literal comparisons. Exact finite certificates and all 1,164 expected output bytes passed; inverse-entry and strict-bound mutations were rejected. The finite receipt is `a44eb64cb5cb69e4aaf9c81f16a2f26bb827113b5cbd8e5e2f929ee980458fa5`; all three exact receipts and mutation definitions accompany the experiment. A resume reused the durable results without another attempt.
+
+```sh
+python3 -I -B experiments/global-residual-energy/check_global_residual.py
+```
+
+The checker and certificate bytes are unchanged from the reviewed Task 9 bundle. This adds a standalone experiment and a narrow README entry; the existing full enumeration runner remains unchanged. The finite checks support the separately reviewed proof and do not constitute formal verification.
+
+Review requested: the all-domain scalar estimate, integer equality cases at D >= 12M, extension to lower activities and arbitrary active supports, retained source assumptions, and attribution/scope. The publication packet records exact input pins, semantic edits, canonical evidence, and fresh patch-application validation against `d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d`.

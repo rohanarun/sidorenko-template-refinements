@@ -1,0 +1,75 @@
+L3 complete manuscript, independent tail review — 2026-10-10
+
+Source: source-artifacts/l3-manuscript-transfer-20261010/template_transfer_proof.md
+63,949 ASCII bytes; SHA256
+2d286841535e86965dd1af937a85c65ae11ed73281184636ccc5375b3526cba4.
+Title: A parameterized sphere-template transfer theorem.
+Scope: conventional proof review of sections 7–8, with sections 1–2's
+template assumptions and sections 3–6's local counting/gain inputs.
+This is separate from the prior ten exact polynomial-identity replays.
+
+No substantive tail-proof gap found in this pass.
+
+Coercivity (lines 619–685, equations 7.4–7.5).
+From w>=0, v_0>=max(0,P-(d-3delta)/2)=a; v_0<=p_l+delta gives
+a<=P/3+delta, and d>=P+T gives a<=(P-T+3delta)/2. Both caps are
+nonnegative on the feasible domain. Completing the v_0 square thus has
+the claimed direction. The c coefficient is nonnegative since
+d>=P+T and P+3delta>=T>=0; replacing c by |delta| is valid.
+On the first positive branch F'(T)=-(2P-T)/9-delta/6<=0 up to the
+breakpoint P/3+delta. On the second branch F''=1/9-1/4<0.
+For negative delta=-y, first-branch G'(T)=-y/3-(2x-T)/9<=0 up to x/3;
+the second derivative is the same negative constant. Thus the two
+endpoint calculations in each branch do cover their entire intervals.
+Their displayed coefficients dominate (P^2+delta^2)/18 or (x^2+y^2)/18.
+The stated norm comparison with factor 19 is conservative, so 1/342
+is valid uniformly, including zero-length intervals.
+
+Propagation (lines 687–724).
+The linear loss in 7.4 is at most 3c/4+P/3+v_0/2, which is at most
+3M/2 using P<=3(M-c), v_0<=M. The negative delta case only helps.
+Equation 7.6 then yields (P+T)^2<=1026 f M. Lower-activity faces have
+h^2<=36 f M, smaller than the common K^2 M bound. The dual-path induction
+uses a strictly large shared dimension to exclude a lower-activity next
+face. M>4(ell+1)^2 K^2 yields all edge dimensions >M/2. Keeping the total
+excess sigma=2 gives E>=M^2/8, contradicting E<=3fM/2 and M>M_*.
+No minimum positive individual excess or cut-weight denominator is used.
+
+Positive-mode elimination (lines 726–778).
+The four absolute bounds on R sum to 11.75 M_*^2+1.75 M_*, below C_*.
+For example n_l=2p_l-t_l lies in [-M_*,2M_*], and the entire second group
+is at most 6M_*^2+M_* in absolute value. A=(c-u+v_0)/2 is nonnegative;
+if positive it is at least 1/2. Thus D>M_*+2fC_* excludes every positive
+A. When A=0, completing squares bounds the c>=2 case by
+(c-1)(5c+1)/8>0. The c=1 and c=0 integer equality cases are correctly
+listed. A c=1 face propagates across every adjacent edge; lower-activity
+or c=0 equality faces cannot accept an edge of dimension 1. Connectedness
+and sigma=2 rule out the all-one case. The remaining c=0,h in {0,2}
+classification and gain identity follow from zero total slack and E=0.
+
+Span counts (lines 780–842).
+The incremental argument gives delta_0>=0. In an inclusion-minimal
+nondirect subfamily, choose the last edge and an endpoint absent from
+another member; the subfamily through that endpoint is proper and direct.
+Its last local increment is the full plane dimension whereas the global
+increment is smaller. This proves strict defect; adding the remaining
+spaces cannot lower the accumulated defect.
+The global span is allowed to be nonisotropic. Its ambient Grassmann
+count, internal plane choices, and independent local isotropic containment
+factors give exactly 8.1. Local degree <=6 gives sum binom(d_i,2)<=22s;
+completing -d_0^2+2s d_0 gives the support-uniform B=m^2+20m.
+The direct-family count divides the full globally independent ordered
+basis count, without a fixed-pattern division problem. Independent
+orthogonality equations, GL basis factors and containment terms cancel
+to q^-sum b(h_e), yielding q^-s after the residual gain.
+
+The original L3 dimension 10,334,421,363,697,202 is a conservative
+sufficient dimension under these arguments, not a minimum. It is an
+existence bound, not a workload request. The new second-wave energy
+argument is a separate proposed improvement and does not change this
+historical manuscript's bytes or its verification classification.
+
+Boundaries: this review is not formal proof verification, prime selection,
+finite-field enumeration, kernel evaluation, a host construction, or a
+novelty claim. Other sections are reviewed in the two additive local/global
+reports. Exact finite evidence remains in the finite claim ledger.

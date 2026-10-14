@@ -1,0 +1,6 @@
+/var/folders/cl/sgzctzgx30n6qffwk1g56pv80000gn/T/t7-repair-negative-i2rcp_mf/Mutant.lean:108:2: error: 'change' tactic failed, pattern
+  decay 8314 * decay (5066 - score g.fst g.snd).toNat / (pointNormalizer ^ 7 * faceNormalizer ^ 10) =
+    decay 8314 / (pointNormalizer ^ 7 * faceNormalizer ^ 10) * decay (5066 - score g.fst g.snd).toNat
+is not definitionally equal to target
+  decay 8314 * decay (5066 - score g.fst g.snd).toNat / (pointNormalizer ^ 7 * faceNormalizer ^ 10) =
+    2 * (decay 8314 / (pointNormalizer ^ 7 * faceNormalizer ^ 10)) * (1 / beta ^ (5066 - score g.fst g.snd).toNat)

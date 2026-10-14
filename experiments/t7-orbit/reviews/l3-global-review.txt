@@ -1,0 +1,277 @@
+L3 full manuscript: additive review of sections 9-12
+Review scope: global kernel transfer and candidate application
+Campaign date: 2026-10-10 UTC
+
+OUTCOME
+
+No substantive new mathematical gap was found in sections 9-12. Their
+global transfer agrees with the earlier complete-answer review and the
+pinned upstream kernel proof. The manuscript now supplies the previously
+missing full coordinate expansion and the explicit rational pinning
+details. The old reports remain unchanged; their missing-manuscript
+limitation is superseded for the sections reviewed here.
+
+This is a conventional static proof review, not a program run or a formal
+verification. Its input is the fixed-template, fixed-D rank-layer estimate
+(3.1), including every activity/sign assignment and reversed differences.
+The proofs of that analytic input in sections 1-8 are a separate review
+track, not silently re-proved or assumed unproved by this addendum. The
+manuscript's assertion at line 1219 that every local analytic lemma is
+proved above is not independently certified by this bounded global review.
+
+PINS AND SCOPE
+
+Primary artifact:
+  source-artifacts/l3-manuscript-transfer-20261010/template_transfer_proof.md
+  63,949 bytes; SHA256
+  2d286841535e86965dd1af937a85c65ae11ed73281184636ccc5375b3526cba4
+The byte count and SHA256 were rechecked. All manuscript line references
+below refer to this exact file. Sections 9-12 (844-1225) were read in full;
+the theorem domain (29-108), kernel/limit definition (114-132), and reversed
+difference statement (840-842) were also read.
+
+Comparison source:
+  openai/math @ fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb
+  upstream/sidorenko/pinned/kernel.tex
+  SHA256 ad58e1e12522ae296a6ff7213afee0098338577013f15e152d6ccc2990df2742
+  Coordinate expansion 102-235; support 245-361; pinning 383-511;
+  dilution/symmetrization/finite hosts 520-678.
+The relevant source text was reread; its specific sizes 13,22,66,35,595
+are replaced by n,f,k,v,binom(v,2) using the proof's actual hypotheses.
+
+Preserved earlier reports:
+  L3-complete-answer-review.txt
+  SHA256 dc26e90ccfa23ca1ee56951842f1e35947a7adbbf182cd7e3705d261687bfaf0
+  L3-complete-answer-claims.json
+  SHA256 8891503cc278c57b5f9189661c448bf68a4858d359acd99b1388aad91b601b09
+Both match their prior hashes. No main ledger or old report was edited.
+No checker, model-generated program, repository program, symbolic script,
+or mathematical experiment was executed for this review.
+
+EXACT DEPENDENCIES OF THE GLOBAL IMPLICATION
+
+The domain is a fixed simple sphere triangulation on n>=5 points with
+distinct triangular faces, exactly two faces per point edge, connected
+face dual, and discrete incidence color refinement from the two part
+colors. A fixed Hamiltonian-cycle distribution has a_e>=1/3. It supplies
+f=2n-4, k=3f, positive source degrees and f>n. It also implies point
+degrees at most six, used for the displayed pinning-score bound.
+
+For fixed even D satisfying (1.1), the analytic input is (3.1) for every
+activity set A and incidence sign assignment, with a q-independent finite
+limit and error O(q^(-1/(2Q))). Each signed rank layer has nonzero finite
+mass and is normalized to mean one. The coordinate set has fixed size k.
+All activation laws, priors, scores and dilution parameters are fixed
+before q tends through sufficiently large odd primes. None of sections
+9-11 needs enumeration completeness, a classification theorem, a minimum
+dimension result, or an explicit finite host.
+
+1. COORDINATE EXPANSION AND REPEATED TYPES: SUPPORTED
+
+Lines 850-865 integrate each independent eta_e. An edge is incident to
+exactly two faces, so it has zero, one or two occurrences in the parity
+product. One occurrence averages to one; two give the four-corner factor
+with c_0^2=1. This also explains why the eventual coefficient is independent
+of the prime's congruence class.
+
+Lines 868-899 use product probability spaces. At each source incidence,
+the expectation defining that W factor is expanded with a fresh auxiliary
+draw, even if another source incidence has the same type pair. Matrix
+variables remain indexed by source vertices and coordinates. Conditioning
+on repeated types does not identify those variables. The explicit statement
+at 917 is therefore correct; it includes all part-preserving maps, with
+repetitions and with source edges sent to nonincident type pairs.
+
+At fixed parameters there are finitely many coordinates and activation/
+sign configurations. Each coordinate integral tends to a bounded parity
+model expectation. Finite products of bounded convergent quantities and
+finite averages preserve the error rate. Pointwise bounds on W_q uniform
+in q are unnecessary. This justifies the finite interchange at 899.
+
+At 885-914, a disjoint nonempty union of labels has zero moment. Within a
+triangle any empty/nonempty pair of edge labels meets at a corner, so a
+nonzero face is either all empty or all nonempty. Shared labels and dual
+connectivity propagate that choice. Thus only the all-empty contribution
+one and the all-nonempty coefficient (9.5) survive. The transpose uses the
+same source incidence graph and reversed differences, covered by 840.
+
+2. SUPPORT LAW AND THE NEGATIVE IDENTITY TERM: SUPPORTED
+
+Lines 928-941 use exactly the stated simplicial assumptions. Opposite
+faces on two edges through a corner cannot coincide, since distinct
+triangular faces cannot share two edges. Therefore the two U-sets meet
+only at that corner, giving sizes seven and six.
+
+The proof of (9.7) is general. For gamma=(i,j), availability consists of
+the three corners of j and the two endpoint corners in each opposite
+face. If U_g uses the two opposite faces, both endpoints of g would have
+to be i, impossible for a simple edge. The only alternatives force g to
+be one of the two edges through gamma. No numerical fact about 66 or
+the original template enters this argument.
+
+The two sign laws at 945-963 are positive rational probabilities. Under
+either branch, every nonempty sign monomial except Delta_kappa averages
+to zero; the two Delta biases cancel after the equally weighted branch
+choice. A label containing the central corner has zero first moment as
+well. The overlap moment A(U_e,U_f), however, comes only from the larger
+activation branch and is sigma_kappa*theta/2.
+
+For an identity-type nonzero term, (9.7) forces alpha_g subset U_g.
+At every corner its two incident nonempty labels must intersect, and
+their possible supports meet only at that corner. Each alpha_g therefore
+contains all four corners of U_g and equals U_g. This excludes local
+diagonal alternatives globally. The one surviving term is exactly
+-(theta/2)^k as claimed at 969-979. This is a universal combinatorial
+proof; the candidate's finite support checks are additional evidence.
+
+3. ALL-MAP PINNING AND RATIONAL PARAMETERS: SUPPORTED
+
+At 985-998 the score sums are over source vertices and source edges.
+Regrouping by endpoints counts source multiplicities, so the square-loss
+identity (10.2) needs only preservation of earlier colors. It does not
+require injectivity or adjacency preservation.
+
+The explicit bound at 1000 is valid: each histogram has norm squared at
+most Delta_H^2, each nonnegative pair score is at most 4 Delta_H, and
+there are at most v Delta_H/2 source edges. Hence
+  -v Delta_H^2 <= F_t(g) <= 2v Delta_H^2,
+while F_t(id)=sum_u ||h_t(u)||^2 lies in [0,v Delta_H^2]. Thus
+|F_t(g)-F_t(id)|<=2v Delta_H^2. Integer lexicographic weights L=M+2
+make a loss of at least one at the first violated color round dominate
+every later score advantage. Discreteness ensures every nonidentity
+part-preserving map has such a round.
+
+At 1010-1041 integer powers of integer T give rational priors even if a
+vertex score is negative. The thinning exponent is nonpositive, so its
+probability lies in (0,1]. Each all-nonempty term receives exactly one
+thinning factor per source incidence; it receives no extra factor for
+each coordinate in a label. This produces the common normalization in
+(10.4) and the score exponent for each of all n^n f^f maps.
+
+The finite competitor bound is sufficient: |C|<=(2^k-1)^m and the
+integer gap gives T^(Q(g)-Q(id))<=T^-1 for every competitor. The displayed
+strict bound on T makes their absolute sum less than c/2, leaving the
+identity coefficient -c. No competitor-sign assumption or omitted
+noninjective-map class is needed. This is a useful explicit detail beyond
+the earlier source's real-exponential presentation.
+
+4. DILUTION AND ORDER OF LIMITS: SUPPORTED
+
+Lines 1045-1079 correctly leave the opposite-orientation coefficient t_1
+unrestricted in sign. In the all-nonempty expansion, an inactive type
+has zero moment at every incident source corner. Because every vertex
+has positive degree, each source draw from the point-type space must
+be active. There are n such draws forward and f after transposition,
+regardless of whether their type values repeat. This yields epsilon^n
+and epsilon^f, with the empty-label baseline still one.
+
+Since f-n=n-4>0, the fixed negative t_0 dominates. The explicit absolute
+bound at 1065-1071 controls both t_1 and t_0*t_1. A small positive rational
+epsilon exists, including the separate harmless case t_1=0. With epsilon
+fixed first, the strict limiting gap survives for large enough q.
+
+The order D, theta, integer scores/T, epsilon, q is explicitly correct.
+Large asymptotic constants are permitted because they are fixed before
+q grows. The argument does not allow these parameters to vary with q
+without fresh uniform estimates. Every resulting atom mass and kernel
+entry is rational, since the signed layer probabilities are ratios of
+finite counts. No rational approximation step is hidden here.
+
+5. SYMMETRIZATION AND ALL-HOMOMORPHISM HOST TRANSFER: SUPPORTED
+
+Lines 1083-1101 use independent coordinates in Omega=X times Y. In the
+H-product, (x_i for points,y_j for faces) and (y_i for points,x_j for
+faces) are disjoint coordinate families. Their integrals therefore
+factor as t(W)t(W^T), even when independently sampled labels happen to
+coincide. Symmetry, mean one, finite rational maximum L>=1 and scaling
+U=V/L give the asserted rational [0,1] kernel with strict deficit.
+
+At 1103-1134, an injective map of the simple source graph uses distinct
+unordered host pairs. Conditional Bernoulli independence and independent
+vertex labels give homomorphism probability tau. This statement does
+not require distinct labels in Omega. The fraction of noninjective maps
+is at most binom(v,2)/N. Their true indicators lie in [0,1]; repeated host
+edges use their actual single trials and source-edge collapses give zero.
+Thus the absolute error bound (11.3) counts all maps without claiming
+independence for collision maps.
+
+The normalization p(G)=2|E(G)|/N^2 gives E p=(1-1/N)mu. The displayed N
+bound, Bernoulli's inequality (1-1/N)^k>=1-k/N and Jensen's inequality
+yield E t(H,G_N)<E p(G_N)^k. Hence one actual simple graph has the strict
+deficit. It cannot be edgeless. The strict gap is essential; neither
+an explicit prime nor a computable numerical host bound is supplied.
+
+6. CANDIDATE APPLICATION: EXISTING FINITE EVIDENCE, NOT A NEW REPLAY
+
+Lines 1138-1215 agree with the source-bound candidate summary reviewed
+earlier. reports/sidorenko-candidate-source-binding.json binds the full
+parsed candidate input to refinement commit
+d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d and Git blob
+7d33c2ad101e4aedc57ea1eb2baab5db0c6f6778. The source SHA256 is
+72c49464a658f88e160d7c39de06015b0c8130f88fb9fda29ffa9d2c75c7ce1b.
+Complete parsed equality, not raw-byte equality, is the recorded binding.
+
+The preserved SID-finite-v1 output was reread at
+state/jobs/SID-finite-v1/attempts/finite-0ae4973d2a4945a7ae00dea8ba6dcf97/sidorenko-output.json.
+It confirms 13 points, 22 faces, 33 point edges, 66 incidences, 20 cuts,
+400 exposure steps, 33 support checks, dual diameter 6, the displayed
+refinement cell counts, and the stated strict-coverage edges. In
+particular Q=3 is the reduced coverage denominator, not the cut-weight
+denominator 11544. It records M_*=4424112, C_*=234873212710752 and
+D=10334421363697202. This matches the stated sufficient bound, not a
+feasible witness size. The distinct source/candidate degree multisets
+prove nonisomorphism without enumeration-completeness assumptions.
+
+The manuscript's statements about its own companion independent_audit.py
+and ten symbolic checks (1150,1158,1192,1221) are execution-history claims.
+This track neither inspected that companion package nor replayed it.
+Existing independent finite evidence supports the required combinatorial
+hypotheses; it does not newly authenticate that claimed run history. The
+incidental identities of the round-three nonsingleton cells at 1190 are
+not emitted by the preserved finite output and were not recomputed here.
+They are unnecessary once discreteness is established.
+
+PRECISE PR3 SUPPORT-COVERAGE CORRECTION
+
+Reconfirmed against the saved exact PR3 head
+9aecdfbd987ecda60b7c5e0b382849d67c6bbc2f:
+  refresh-pr3/proof.tex:412-448 claims all active residual supports;
+  audit_overlap.py.source.txt:42-96 places two vectors at every supplied
+  pair, and 114-120 supplies the entire allowed 28-edge graph once.
+There is no inactive-pair transition or enumeration of active supports.
+
+Both (3,11) and (6,11) occur in overlap-expected.json's allowed pairs.
+Take these two active pairs in that order, independent a,b,c in a totally
+isotropic 3-space, pair planes span(a,b) and span(a,c), and ordered bases
+(a,b),(c,a). The global rank is 3, local ranks are 2,2,3 and defect is
+d=2+2+3-2*3=1. The first three vectors are globally new; their local
+overlap dimensions are 0,1,0. The last a is globally dependent, new at
+6 and already in the span at 11; the preceding endpoint dimensions are
+1 and 3. The exact sequential remainder and PR3's relaxed objective give
+  R=-2*2+(0+1+0)+(1+3)=1.
+
+This contradicts extending the full-support d=1 maximum -11 to every
+active support. It does NOT refute R<=28d: this example satisfies 1<=28.
+It does NOT, by itself, prove a lower bound for a fully conditioned kernel
+event or disprove the final residual O(q^(-D+28)) claim. The precise issue
+is that the provided full-support certificate has not proved the stated
+support-uniform conclusion. Padding with inactive pairs is not justified:
+the objective contains -2m and full-support transitions still impose two
+basis vectors at every pair. A support-aware proof/certificate is needed.
+
+The previous SCREEN-20261010.txt remains unchanged, SHA256
+3d73415747036fe2810ba57c498271962b5d5d9ddb037757843ac76361981649.
+This PR3 issue does not change the reviewed L3 global implication. L3
+uses its separate support-uniform B=m^2+20m argument (see 840-842), not
+the proposed PR3 constant 28. The larger preceding D constraint still
+dominates the displayed candidate bound.
+
+REMAINING LIMITS
+
+No new global-transfer correction is required in sections 9-12. Their
+mathematical implication is supported subject to the separately reviewed
+rank-layer proof and verified finite candidate hypotheses. This addendum
+closes the missing text limitation for these sections only. It establishes
+no global novelty, formal proof, classification completeness, explicit
+prime, kernel table, density gap, or host adjacency matrix. No finite
+experiment is used as a substitute for the universal global argument.

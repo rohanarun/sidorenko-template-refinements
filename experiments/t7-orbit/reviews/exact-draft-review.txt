@@ -1,0 +1,67 @@
+T7 exact publication-draft review — 2026-10-11
+
+Verdict: No new concrete proof defect or omitted analytic premise found in the
+scoped draft review. The inspected prose accurately separates the conditional
+finite implication from the proposed source-dependent corollary. This is a
+separate AI-agent review, not human referee acceptance or formal verification.
+The earlier BOUNDARY-REVIEW.txt remains unchanged and supplies the fuller list
+of inherited analytic obligations. This report is additive to it.
+
+Exact theorem reviewed:
+  a4996ac29fdc54e31f7ebb25bffe233fe4f4caa164d557ad9e7dd7fbd89fb960
+Exact dependency register reviewed:
+  22510d9b0fe49b2cb4864f07c9cae3777be3da46712ed0ec3259c1bf9cd3b47a
+All other inspected prose/evidence hashes are in DRAFT-PINS.json.
+
+Reviewed in full: theorem sections 1–9 and dependency register A0–A12/F0–F5;
+PR title/body; focused packet README; public novelty boundary; and the narrow
+new root-README section/scope edit against validation/base-README.md.
+
+The conditional theorem explicitly assumes RL(T7,D) for fixed even D>=12
+and concludes a finite rational symmetric [0,1] kernel with positive mean
+and strict H-density deficit, then a finite simple host with an edge.
+The proposed corollary retains the complete unpublished L3 analytic argument
+at fixed even D>=103482288426242. Accepting that proof chain would discharge
+RL; finite checker PASS does not do so. The draft does not claim that merely
+being unpublished leaves a mathematical conjecture, or that this reviewer
+re-proved every generic L3 lemma. The analytic prefactor, numerical q, kernel
+table and host adjacency list remain unevaluated, explicitly and consistently.
+
+Fresh draft checks covered repeated type images and independent source draws,
+whole-orbit coefficient uniqueness/reindexing, common rational priors and
+score domination, fixed-before-q thinning/dilution and error accounting,
+crossed-product symmetrization, bounded rational scaling, and the 136/N
+collision allowance with the strict expectation/Jensen finite-host argument.
+No unclosed residual arithmetic obligation requiring a new computation arose.
+Generic local finite-field/orbit/planted/profile arguments remain inherited
+from L3 and earlier scoped reviews, as the register explicitly records.
+
+Concrete corrections requested during review are now applied:
+- PR body makes discharge by the L3 proof conditional on its acceptance.
+- The absence claim is bounded to the pinned comparison and saved PR1–5 bodies.
+- Theorem section 7 explicitly enlarges X to include the inactive type.
+- Packet README identifies preserved ChatGPT/sandbox links as historical
+  provenance, not working public attachments or additional verified evidence.
+- Dependency register removes an invented mandatory external-review gate and
+  separates proof/review status from publication authorization.
+
+Custody and scope: All 18 entries in the inspected source manifest match their
+declared hashes, lengths and original local bytes. The unchanged Task11 source
+retains one conversation URL and three sandbox attachment links. Its invalid
+classification archive and unverified 9,149-class census are excluded from the
+theorem; no global minimum or broad priority claim is made. The root README
+diff changes only its scope paragraph and adds the T7 section, preserving the
+historical discrete-template discussion. The new positive-class-screen link
+states its limited scope and correctly avoids treating exclusions as a proof
+of the negative analytic claim; this pass did not re-review that separate
+screen. Its scratch-copy guidance matches the checker's adjacent receipt write.
+
+The portable replay receipt reports 0.046539 s and 21,331,968 bytes peak RSS.
+Its actual saved stdout is byte-identical to the original finite result,
+SHA256 4bb7495f02e996b412cb3dc8e87d6cb974dbfc0c9e3c440bdaefebb948710710.
+This pass read/hash-checked that evidence; it did not rerun a proof checker,
+execute supplied code, access the network, or publish anything.
+
+No further prose correction remains in this inspected snapshot. Final packet
+copying/link resolution and its final manifest are root's packaging step;
+this report does not certify an unseen later snapshot or authorize publishing.

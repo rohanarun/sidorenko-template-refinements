@@ -1,0 +1,22 @@
+{
+  "scope": "Finite type-averaged, thinned, all-nonempty coefficient; source section 6 formula (5)",
+  "headline": "T7Weighted.source_weighted_negativity",
+  "headline_must_be_paired_with": "T7Weighted.eta_source",
+  "hypotheses": [],
+  "beta": "2^564",
+  "t0_definition": "T7Gap.averagedCoefficient",
+  "density_coefficient_identification_claimed": false,
+  "kernel_density_deficit_claimed": false,
+  "full_non_sidorenko_claimed": false,
+  "finite_host_claimed": false,
+  "priority_or_minimality_claimed": false,
+  "opus_reviewed_core_modules": 37,
+  "core_theorems": 312,
+  "core_owned_declarations": 1187,
+  "opus_review_kind": "static source and mathematical review; no execution",
+  "new_packaging_reviewed_by_opus": false,
+  "historical_beta_control": "inconclusive reduction; excluded from semantic rejection count",
+  "new_beta_control": "four kernel-proved arithmetic statements including strict inequality and disequality; proof-budget claim only",
+  "newer_rl_and_host_extensions_included": false,
+  "external_actions": []
+}

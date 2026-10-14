@@ -1,0 +1,224 @@
+Round 2 Task 11: independent smaller-template review
+Review date: 2026-10-11 UTC
+
+OUTCOME
+
+The full response supplies enough literal data and hand proof to establish
+the seven-point sphere satisfying A and B and its finite negative pinned
+coefficient, independently of its invalid archive. An independently authored
+stdlib checker verified the literal witness, including every stable point
+map. The hand minimality proof at n=5,6 is sound. Thus n_min=7 within the
+specified simple-sphere A/B target is supported.
+
+The 9,149-class census through n=12 is NOT independently certified here:
+its purported archive is invalid/truncated and its catalogs/certificates/
+programs are unavailable. This is missing evidence, not a demonstrated
+mathematical counterexample to those reported census values.
+
+Task11 alone explicitly retains RL(T7). Combining the verified T7 with
+Task4's orbit transfer and L3's previously reviewed analytic proof closes
+that dependency at the conventional-proof level. See INTEGRATION.txt.
+This is not a numerical finite-field check or a concrete host construction.
+
+SOURCE BINDING
+
+R below is the complete 769-line response:
+ source-artifacts/round2-unindexed-20261011/task-11/round2-11-response.md
+ 30,579 bytes; SHA256
+ 87944a5c592d904a1b79855e5bfc99d26a82e7cc07ec5f178daaec8743755914.
+
+The supplied orbit_pinnable_classification.zip is 2,107,267 bytes, SHA256
+7f83ec9b26066b4effdc71a2e97c7ee81f9aa18526c9efaab82b6b4460793021.
+Its exact bytes were hash-verified. The parent source record identifies
+BadZipFile; it was not extracted or executed. No contents were inferred.
+
+The named standalone certificate hash at R:740 is merely a source claim:
+8599d47e7168e03ca7d86fa5c2e046175503c041b9fd81eb7aaf55041431e330.
+That artifact itself is not present. Our inputs/t7-literals.json is a
+fresh, labeled transcription from the response, not that missing artifact.
+
+1. THE SPHERE, COVERAGE AND EXPOSURES
+
+R:58-133 gives all ten faces, a sequence of three face-stellar insertions
+into the tetrahedron, three Hamiltonian cycles and six face exposure
+orders. The insertions reproduce the face list exactly, proving sphere
+topology without a graph-search classification. The point graph is P7^3,
+with 15 edges and degree vector (3,4,5,6,5,4,3).
+
+The three cycles are permutations of all seven vertices with valid
+closing edges. Their equal weights give a01=a56=1, a02=a46=2/3,
+and coverage 1/3 on the other eleven edges. Every listed exposure starts
+with a triangle, then adds exactly one fresh point along an already
+present edge; each side's boundary equals its Hamiltonian cycle.
+Their weights give total excess 2 and coverage denominator Q=3.
+
+These facts were freshly checked by checks/check_t7.py, without importing
+any supplied code. Exact finite data checks support, but do not replace,
+the topological insertion proof.
+
+2. STABLE COLORS AND ALL ENDOMORPHISMS
+
+R:135-197 gives the actual stable cells. The degree refinement separates
+point classes {0,6},{1,5},{2,4},{3}. Face degree histograms distinguish
+{F0,F9},{F1,F8},{F2,F7},{F3,F6},{F4,F5}. Their displayed equitable counts
+show no later split. Fresh refinement produced cell counts 2,5,9,9.
+
+The forcing proof is complete and permits repetitions. After composing
+with reversal so f(0)=0, the face F0 forces f(1)=1,f(2)=2.
+The singleton already fixes 3. F4 then forces 4, F5 forces 5, and F7
+forces 6. Faces become uniquely determined. Hence exactly identity and
+i->6-i, F_j->F_(9-j) are endomorphisms preserving stable colors.
+
+Fresh exhaustive enumeration checked all 64 stable point maps, including
+56 noninjective maps. Face domains were computed using SET containment,
+so repeated images were genuinely permitted. Exactly those two point maps
+had all face domains nonempty, with unique face extensions. Every graph
+automorphism preserves refinement colors, so this is also the entire
+part-preserving automorphism group. Unequal connected bipartition sizes
+exclude a part swap.
+
+3. MINIMALITY USES NO LARGE CENSUS
+
+R:203-235's elementary classification is adequate.
+At n=5, minimum degree 3 and average degree 18/5 give a degree-3 vertex.
+Deleting it and capping its triangular hole gives the tetrahedron, and
+all tetrahedral faces are equivalent.
+At n=6, absent a universal degree-5 vertex, average degree 4 and maximum
+degree<=4 force every degree to be 4. The complement is a perfect matching,
+so the octahedral graph is unique. With a universal vertex its link is a
+pentagon; the complementary triangulated pentagon has two diagonals
+sharing an endpoint, unique up to its dihedral symmetry.
+The listed spherical embeddings are therefore the three smaller cases.
+
+All three literal noninjective point/face maps at R:223-229 preserve
+incidences and stabilized colors; the independent checker verifies this.
+Each identifies 2 and 3. Thus B fails on every n=5 or n=6 sphere, whether
+or not A holds. This establishes n_min=7 for the requested n>=5 class,
+not a minimum over all non-Sidorenko bipartite graphs.
+
+4. WHOLE NEGATIVE COEFFICIENT
+
+R:243-338 uses the original seven/six-coordinate activation law. Its
+two-branch Fourier calculation gives zero nonempty first moments and
+the stated Gram matrices. The structural support intersection is valid
+for a simple sphere (see Task4 review, section C). It forces a unique
+nonzero identity labeling alpha_e=U_e and product -(theta/2)^30.
+The fresh check verifies all 15 support intersections and all 30 local
+seven/six and singleton-intersection identities.
+
+R:329's phrase "transporting coordinates by reversal" should be read
+precisely as the source reindexing proved in Task4 P:259-269.
+No invariance of the distinguished negative target corner is available
+or needed. The unique labeling for reversal is alpha_e=U_{r(e)};
+its local signs are sigma_{r(kappa)}, whose product is still negative.
+The checker verifies the two canonical products exactly as -4^(-30)
+for theta=1/2. Full-sum uniqueness is a conventional support proof;
+it was not obtained by enumerating (2^30-1)^15 label tuples.
+
+Any type map sending an incidence to a nonincidence has zero full
+nonempty coefficient. Within the maximum-score stable maps, only the
+two automorphisms can therefore contribute; their sum is -2^-59.
+This argument handles possible nonendomorphism stable maps rather than
+mistaking all stable maps for automorphisms.
+
+5. SCORE GAP AND RATIONAL PRIORS
+
+R:347-467 is correct. The degree-square sum is 136. Each face histogram
+has norm-square 3 or 5, with multiplicities 8 and 2, so their total is 34.
+For any three image-point degrees, including repetitions, the maximum
+of 2<m_b,h>-||m_b||^2 is 7. Thus all ten faces contribute at most 70.
+A failed point-degree match loses at least 37 and gives
+37*135+70=5065 < 5066.
+With point degrees preserved, each source histogram is the original one;
+the remaining square-loss identity gives maximum exactly 5066 when face
+histograms are also preserved. These are exactly the stable cells above.
+Every nonmaximum has an integer gap at least one.
+
+The maximum pair score is 446. The two normalizers Z_I,Z_J and all
+negative exponents agree with the degree/histogram multiplicities.
+Thinning once per source incidence subtracts 30*446=13380, hence the
+final prefactor exponent 5066-13380=-8314.
+
+The number of maps 7^7*10^10 is <2^54. Each coefficient has <2^450
+unit-bounded summands. Beta=2^564 makes the total lower-score contribution
+strictly smaller than 2^-60 after normalization. The two orbit terms
+sum to -2^-59. Hence
+ t0 < - beta^(-8314)/(2^60 Z_I^7 Z_J^10) < 0.
+Every prior is common to its part and source draws stay independent.
+None of the enormous symbolic parameters were instantiated.
+
+6. REFLECTION CLAIMS
+
+R:581-597's specified barycentric partition gives a stable-color-preserving
+fold: every incidence is a comparable-simplex edge in the barycentric
+subdivision; with no cross-half edge, folding the negative half by the
+simplicial involution preserves incidence. Every image is either itself
+or its automorphic partner, so colors are preserved. An original point
+in each half guarantees noninjectivity.
+
+The square argument at R:615-643 keeps common independent per-part priors.
+A nonidentity simplicial automorphism cannot fix a face pointwise in a
+connected triangulated sphere: adjacency propagates that fixing over
+the dual. Thus at a fixed corner the two incident point edges are swapped.
+The Gram factorization splits its two half-label factors as required.
+Fixed-edge labels and fixed original point/face types belong to boundary
+data; paired half variables carry identical independent priors. This
+justifies the reflected square without requiring target-law symmetry.
+
+For T7 the only nonidentity automorphism is reversal. Its barycentric
+fixed set consists of the point {3} and edge {2,4}. The independently
+constructed barycentric graph remains connected on the other 30 vertices.
+Therefore the specified no-cross-edge half partition cannot exist.
+This is not absence of all folds or all possible positivity obstructions.
+
+The missing archive prevents review of the asserted catalog example
+12-7564 or its literal endomorphism. That example remains a source claim.
+
+7. FULL CENSUS: LOGICAL METHOD VERSUS MISSING EXECUTION EVIDENCE
+
+R:513-523's contractible-edge and canonicalization outline is mathematically
+reasonable and no substantive gap was identified in the outline:
+a minimal positive-interior side of a separating triangle supplies an
+edge in no separating triangle; with more than four vertices the
+tetrahedral closed-component obstruction is absent. Complete inverse
+splits and invariant rooted traversals can then certify coverage.
+
+The positive A and rational separating-dual certificate formats are sound.
+The d>6 degree obstruction is immediate. The B face-domain reduction
+correctly admits repeated point images and makes independent face choices.
+These are sound verification methods; they are not the missing finite
+catalog and certificates themselves.
+
+Consequently the census totals, 179,583 closure checks, 63,399 cycle count,
+44 primal/140 dual certificates, 49-node maximum branching claim and
+8,119 B-positive outcomes are preserved only as producer assertions.
+The malformed ZIP cannot establish any of them here. No approximate
+optimization result is promoted to an exact certificate.
+
+Required for that separate census deliverable: recover a complete archive,
+its byte manifest, all catalogs, primal/dual and branching certificates,
+and verifier source; review code and then arrange bounded replay. Preserve
+the present invalid archive as historical evidence. The standalone T7
+artifact would improve provenance but is not needed for the proof and
+fresh small witness checks already completed.
+
+8. COMPUTATION AND LIMITS
+
+Independent input:
+ inputs/t7-literals.json, SHA256
+ 583719581922454280d360875e7cb0ef0178477a5084a8b222da86744e0c7f7e.
+Independent checker:
+ checks/check_t7.py, SHA256
+ 66e4b0490ac03e727019f1047e14a09bbfca4bf0d440e090238c5d793454919f.
+Result, raw stdout/stderr and execution receipt are retained in checks/.
+
+Declared limits: 64 stable point maps, <=35 vertices, 10 wall seconds,
+64 MiB estimated memory and 2 MiB output. Actual run: 0.0331 seconds,
+0.0305 child CPU seconds, 21,200,896-byte peak RSS, status PASS.
+No supplied/downloaded program, ZIP member code, GUI, network write,
+installation, large finite field or host was executed/constructed.
+
+The full response proof is supported within the boundaries above; no
+substantive counterexample was found. The unavailable full classification
+is a remaining deliverable, not a reason to discard the independently
+established smallest witness.

@@ -1,0 +1,17 @@
+{
+  "scope": "Two sources relevant to the focused T7 proposal. Full original five-repository refresh receipt remains in the local campaign archive.",
+  "receipt_sha256": "ae2773039667196e6f7c1bf92316be29b4d39c274a585a990e632d740ee3a2fc",
+  "finished_at": "2026-10-11T05:30:08.127497+00:00",
+  "sources": [
+    {
+      "repository": "openai/math",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "status": "unchanged"
+    },
+    {
+      "repository": "rohanarun/sidorenko-template-refinements",
+      "commit": "d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d",
+      "status": "unchanged"
+    }
+  ]
+}

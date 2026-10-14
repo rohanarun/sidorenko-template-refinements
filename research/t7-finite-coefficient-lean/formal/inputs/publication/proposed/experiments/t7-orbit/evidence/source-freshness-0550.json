@@ -1,0 +1,28 @@
+{
+  "purpose": "Additive freshness observation; does not rewrite the frozen detailed source comparison or certify full current PR contents.",
+  "receipt_sha256": "888c7c7f1acc7d522dae4963e815695eabd22cedb68af79e1b522e6571027ff5",
+  "finished_at": "2026-10-11T05:51:40.964466+00:00",
+  "baseline_receipt_sha256": "ae2773039667196e6f7c1bf92316be29b4d39c274a585a990e632d740ee3a2fc",
+  "observations": [
+    {
+      "main": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "pr_metadata_baseline_receipt_sha256": "ae2773039667196e6f7c1bf92316be29b4d39c274a585a990e632d740ee3a2fc",
+      "pr_metadata_changes": [],
+      "pr_ref_baseline_receipt_sha256": "ae2773039667196e6f7c1bf92316be29b4d39c274a585a990e632d740ee3a2fc",
+      "pr_ref_changes": [],
+      "slug": "openai-math",
+      "status": "unchanged"
+    },
+    {
+      "main": "d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d",
+      "pr_metadata_baseline_receipt_sha256": "ae2773039667196e6f7c1bf92316be29b4d39c274a585a990e632d740ee3a2fc",
+      "pr_metadata_changes": [],
+      "pr_ref_baseline_receipt_sha256": "ae2773039667196e6f7c1bf92316be29b4d39c274a585a990e632d740ee3a2fc",
+      "pr_ref_changes": [],
+      "slug": "sidorenko-template-refinements",
+      "status": "unchanged"
+    }
+  ],
+  "bounded_metadata_scope": "Existing refresher records all PR refs and at most100 recently updated PR metadata objects per repository. No body or code execution in this addendum.",
+  "outcome": "No relevant source-head or recorded PR-metadata change to the T7 comparison."
+}

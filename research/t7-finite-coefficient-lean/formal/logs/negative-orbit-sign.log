@@ -1,0 +1,21 @@
+/var/folders/cl/sgzctzgx30n6qffwk1g56pv80000gn/T/t7-repair-negative-stusw8zf/Mutant.lean:119:67: error: Tactic `decide` failed for proposition
+  term support = -(1 / 4 ^ 30)
+because its `Decidable` instance
+  instDecidableEqRat (term support) (-(1 / 4 ^ 30))
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match ((↑(termNumerator support)).mul (4 ^ 30).inv).num, -(1 / 4 ^ 30).num with
+  | Int.ofNat a, Int.ofNat b =>
+    match decEq a b with
+    | isTrue h => isTrue ⋯
+    | isFalse h => isFalse ⋯
+  | Int.ofNat a, Int.negSucc a_1 => isFalse ⋯
+  | Int.negSucc a, Int.ofNat a_1 => isFalse ⋯
+  | Int.negSucc a, Int.negSucc b =>
+    match decEq a b with
+    | isTrue h => isTrue ⋯
+    | isFalse h => isFalse ⋯
+/var/folders/cl/sgzctzgx30n6qffwk1g56pv80000gn/T/t7-repair-negative-stusw8zf/Mutant.lean:121:63: error: Tactic `decide` proved that the proposition
+  termNumerator support = -1
+is false

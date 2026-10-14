@@ -1,0 +1,42 @@
+{
+  "verdict": "PASS_FINITE_STOCHASTIC_COEFFICIENT_NEGATIVITY",
+  "exact_theorem": "T7Weighted.source_weighted_negativity : 0 < T7Weighted.eta ∧ T7Gap.averagedCoefficient < -T7Weighted.eta",
+  "hypotheses": [],
+  "domain": "Rat",
+  "lean_version": "Lean (version 4.33.0, arm64-apple-darwin24.6.0, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "trust_level": 0,
+  "fresh_modules": 37,
+  "authored_theorems": 312,
+  "new_authored_theorems": 85,
+  "all_owned_declarations_audited": 1187,
+  "axiom_union": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "toolchain_file_hashes_matched": 17466,
+  "source_packet_files_matched": 105,
+  "manifest_entries_matched": 222,
+  "original_package_files_preserved": 268,
+  "all_type_maps": 8235430000000000,
+  "repeated_images_included": true,
+  "scores_priors_independent_of_q": true,
+  "stochastic_laws_constructed_and_normalized": true,
+  "negative_controls_total": 11,
+  "control_expectations_passed": true,
+  "prior_mutation_fails_at": "T7Weighted.ActualWeights",
+  "headline_project_dependencies": 603,
+  "source_correspondence": "PASS against pinned theorem.md section 6",
+  "gaps": [
+    "All-mask expansion and empty/nonempty propagation to the parity product",
+    "Formal finite-field rank-layer family and RL(T7,D) asymptotics",
+    "RL-to-density, reverse/dilution/symmetric-deficit and prime-selection transfer",
+    "Actual finite-host sampling and collision bounds"
+  ],
+  "full_non_sidorenko_theorem_validated": false,
+  "blockers_for_completed_finite_claim": [],
+  "network_or_install": false,
+  "repository_scripts_executed": false,
+  "other_agents_used": false,
+  "source_archive_sha256": "df4fde3b3a4a6aaaa6ab08ccb5a6d0c8481fb2bafbcab46f5e6b0294551cb205"
+}

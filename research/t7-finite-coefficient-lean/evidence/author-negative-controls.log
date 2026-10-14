@@ -1,0 +1,46 @@
+[
+  {
+    "name": "score-penalty",
+    "status": "EXPECTED_REJECTION",
+    "explanation": "Changed the actual degree mismatch penalty from 37 to 36; retained the claimed penalty gap and score proofs.",
+    "source": "T7Weighted/Scores.lean",
+    "lean_exit_code": 1,
+    "original_sha256": "59fc2b4b9829daedab03301b10806f462515038c79059c911037f0c5ca8c0552",
+    "mutant_sha256": "c19a16d91a411d9cfc8b88e1fda4796670ba3f20256e3ce19bf04e5e609e719e",
+    "project_modified": false,
+    "failed_mutant_used_as_proof": false
+  },
+  {
+    "name": "actual-weight-scale",
+    "status": "EXPECTED_REJECTION",
+    "explanation": "Inserted a spurious factor of two in the exact actual-weight bridge; retained its proof.",
+    "source": "T7Weighted/ActualWeights.lean",
+    "lean_exit_code": 1,
+    "original_sha256": "e330d50340303047244ca7a86a681103a0d1a0f5545f8d301e970bc230325c67",
+    "mutant_sha256": "1252d69624c477d6a7a582a08010b86742b016eee2f2a6fbb60e0dfc1933f1f6",
+    "project_modified": false,
+    "failed_mutant_used_as_proof": false
+  },
+  {
+    "name": "orbit-sign",
+    "status": "EXPECTED_REJECTION",
+    "explanation": "Changed distinguished sign; retained original coefficient claims and proofs.",
+    "source": "T7/Coefficient.lean",
+    "lean_exit_code": 1,
+    "original_sha256": "ca425ee10023167c8d8ae1695e7a5f713d5a134af5df31efdaf2ec5705f03ea0",
+    "mutant_sha256": "cd8f04f76cb6e4ec3a08a72e7db166920f4fafe7d77acbc3619ab5a301052c21",
+    "project_modified": false,
+    "failed_mutant_used_as_proof": false
+  },
+  {
+    "name": "activation-mass",
+    "status": "EXPECTED_REJECTION",
+    "explanation": "Changed each branch mass from one half to one third; retained expectation/normalization proofs.",
+    "source": "T7Gap/Activation.lean",
+    "lean_exit_code": 1,
+    "original_sha256": "534f6a5ff0285460d8400d3c891a2fb282997510a16145032d8f01dd81151175",
+    "mutant_sha256": "8309ac7885345ff1aee7e9b3aaf1aeb55cb088f832c0ca1d45270bab8ea54b1a",
+    "project_modified": false,
+    "failed_mutant_used_as_proof": false
+  }
+]

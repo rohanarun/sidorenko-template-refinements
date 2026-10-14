@@ -1,0 +1,86 @@
+{
+  "created_utc_date": "2026-10-11",
+  "graph_input": {
+    "provenance": "literal graph in root delegation",
+    "points": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "faces": [
+      "012",
+      "013",
+      "023",
+      "124",
+      "134",
+      "235",
+      "245",
+      "346",
+      "356",
+      "456"
+    ]
+  },
+  "local_context_inputs": [
+    {
+      "path": "upstream/round2-independent-20261011/orbit-transfer/INTEGRATION.txt",
+      "bytes": 7247,
+      "sha256": "6e36dc193585633e5d1412db034fab0f8bc09dfadb153542089c8c47e2b61b43"
+    },
+    {
+      "path": "upstream/round2-independent-20261011/orbit-transfer-challenge/REVIEW.txt",
+      "bytes": 11952,
+      "sha256": "750fdb190a57d9e23328ac0a4d29781cec3e3841646a53368c36b34f24febf29"
+    },
+    {
+      "path": "upstream/sidorenko/t7-publication/review/BOUNDARY-REVIEW.txt",
+      "bytes": 6276,
+      "sha256": "dd7451549808df0588f427d54e4a4aa98d6fb8159cc3a36643b75e8c5ff75eba"
+    }
+  ],
+  "remote_primary_sources": [
+    {
+      "title": "Finite reflection groups and graph norms",
+      "authors": "David Conlon and Joonkyung Lee",
+      "url": "https://www.its.caltech.edu/~dconlon/norming.pdf",
+      "locations": "Theorem 1.2; Section 3; Section 5.3, Theorem 5.12"
+    },
+    {
+      "title": "Weakly norming graphs are edge-transitive",
+      "author": "Alexander Sidorenko",
+      "url": "https://arxiv.org/html/2003.13598v1",
+      "locations": "Theorem 4 (Hatami necessary biregularity); Theorem 1"
+    },
+    {
+      "title": "Some advances on Sidorenko's conjecture",
+      "authors": "David Conlon, Jeong Han Kim, Choongbum Lee, Joonkyung Lee",
+      "url": "https://arxiv.org/html/1510.06533v2",
+      "locations": "Definition of strong tree decomposition; Theorem 1.2 and following tree-arrangeability paragraph"
+    },
+    {
+      "title": "Sidorenko's conjecture for higher tree decompositions",
+      "authors": "David Conlon, Jeong Han Kim, Choongbum Lee, Joonkyung Lee",
+      "url": "https://www.its.caltech.edu/~dconlon/HigherTree.pdf",
+      "locations": "Recursive definition; Theorem 5"
+    },
+    {
+      "title": "Biregularity in Sidorenko's Conjecture",
+      "authors": "Leonardo N. Coregliano and Alexander A. Razborov",
+      "url": "https://arxiv.org/html/2108.06599v2",
+      "locations": "Definition 2.2; Remark 3; Theorem 3.5"
+    }
+  ],
+  "remote_overview_sources": [
+    {
+      "title": "Graph Homomorphism Inequalities",
+      "author": "Yufei Zhao",
+      "url": "https://yufeizhao.com/gtacbook/5.pdf",
+      "locations": "Overview context only; no decisive structural exclusion relies on it"
+    }
+  ],
+  "remote_source_binding": "URLs and theorem locations only. Read through web tool on 2026-10-11; remote document bytes are not archived or cryptographically pinned by this lane.",
+  "execution_boundary": "No supplied/downloaded program was imported or executed. Independent checker only, standalone finite replay. No graphon-density test and no exhaustive decomposition decision."
+}

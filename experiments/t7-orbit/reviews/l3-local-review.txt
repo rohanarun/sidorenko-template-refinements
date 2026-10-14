@@ -1,0 +1,272 @@
+L3 complete manuscript: local finite-field and weighted-exposure review
+Version: l3-manuscript-local-review-1
+Date: 2026-10-10 UTC
+
+OUTCOME AND SCOPE
+
+No substantive mathematical gap was found in sections 3--6 of the recovered
+manuscript, read as conventional finite-dimensional proofs with the fixed
+parameters of its theorem. These sections now supply the actual local proof
+text, including the previously important conditioning and shared-form
+details. Their support is not inferred from a finite arithmetic grid or
+from an assertion that the upstream fixed-template result generalizes.
+
+One minor statement-domain clarification remains: (3.2) must say 1<=s<=N.
+The signed-rank leading coefficient 1/2 is false at rank zero. All uses in
+the rank layer have s=r>=6, so this has no effect on the claimed theorem.
+See L3-LOCAL-E01 below. No counterexample to an in-scope conclusion was found.
+
+This is an additive conventional proof review, not formal verification or
+a claim that sections 3--6 alone prove the global singular-tail estimate.
+Sections 7--8, the strict profile saving, and the rest of the transfer are
+assigned separately. The singular contribution is explicitly left open
+within section 3 itself (line 271), as it should be. Existing reports and
+ledgers were not edited. No model/repository program or checker was run.
+Local Python was used only to read and hash bytes.
+
+SOURCE PIN AND REVIEW BASIS
+
+Primary source:
+  source-artifacts/l3-manuscript-transfer-20261010/template_transfer_proof.md
+  63,949 ASCII bytes; 1,225 lines
+  SHA256 2d286841535e86965dd1af937a85c65ae11ed73281184636ccc5375b3526cba4
+The hash was recomputed. All manuscript anchors below refer to these bytes.
+Sections 3--6 are lines 112--559; theorem hypotheses at 29--84 and structural
+consequences at 86--110 were also read to identify the actual quantifiers.
+
+Pinned upstream comparison: openai/math at
+  fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb
+  preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/
+  build/sections/
+Local files and recomputed SHA256:
+  pinned/transverse.tex (27,978 bytes)
+    fa9b058eb9a2b9b35c2fc479ee4367bd4ba6e4fdc01994180fc10af26a5a13c3
+  pinned/orbits.tex (24,078 bytes)
+    2092e51b78953d3fce5fa30fb1c5b5436f0cd158a291a5aeb180c98133b5333f
+  pinned/planted.tex (21,612 bytes)
+    2336147f1d032c3d8b114883c593a2d98d03598d190256667ded2a4aee0c6c46
+  pinned/tail.tex (29,882 bytes)
+    fd2417f6efa4394fc8ba410f0ecb79f260a204c911957c9789a7d9d1ae0e6150
+Paths above are relative to upstream/sidorenko. Git blob provenance remains
+in provenance.json; no new repository fetch was needed.
+
+Prior scoped review inputs, preserved as history:
+  L3-complete-answer-review.txt
+    dc26e90ccfa23ca1ee56951842f1e35947a7adbbf182cd7e3705d261687bfaf0
+  track-transverse.md
+    ad54f2c053db8284e5c32c57d7af0bb420f3cdd35c5aa4f1e4a5e2dc9976204d
+  track-orbits-tail.md
+    1725212ca0df505ffe90dce1a9574486a2c51a86c263203e3755645af40ca9ed
+Their earlier missing-manuscript limitation is closed for this section
+range. Their historical statement that the manuscript was then unavailable
+is not altered. The new text was actually read; it is not being represented
+as another copy of the compressed browser answer.
+
+QUANTIFIERS AND DEPENDENCY MAP
+
+The template Gamma and all exposure weights are fixed; Gamma is a simple
+sphere triangulation, n>=5, with a_e>=1/3. Averaged Hamiltonian degree two
+gives maximum point degree six. D=2r is fixed before q tends through odd
+primes and has D>=12; hence r>=6. The local constants may depend on D, and
+joint-sign/product/exposure constants may additionally depend on the fixed
+template and weights. Activity sets and sign choices range over a finite
+set. No proof here asserts bounds uniform as D or the template grows with q.
+
+Elementary symmetric/symplectic counts
+  -> restriction-sign L1 balance, local rank-center counts, joint signs
+  -> transverse-locus parity approximation, error O(q^-1/2).
+Individual ordered-orbit masses + actual planted density ratio
+  -> shared-form image/codimension and finite relaxed gain maximum.
+Fresh-vertex exposure + fixed-pair transitivity + event containment
+  -> weighted profile cost C, then contribution O(q^(sum g_j-C)).
+Integral gains + rational coverage denominator Q
+  -> any independently proved positive saving is at least 1/(2Q).
+The remaining global proof must establish that positive saving or otherwise
+handle its equality profiles; sections 3--6 do not assume it already holds.
+
+REVIEWED CLAIMS
+
+L3-LOCAL-01: Symmetric counts and restriction signs. Supported, with E01.
+Manuscript 134--181, equations (3.2)--(3.4).
+Comparison: transverse.tex 38--107 and 196--250.
+The image parameterization PRP^T is valid even if the image has degenerate
+ambient dot product: P is a full-column-rank matrix, and the quotient-form
+determinant character is that of R. Counting radicals of dimension u gives
+q^[u(N-u)-Nu+u(u-1)/2]=q^-b(u). For two distinct r-spaces, a basis through
+their common subspace exposes precisely one shared symmetric block; all
+other coefficients needed by their restrictions are independent conditional
+on that block. The common block of dimension zero is nonsingular by the
+empty convention. Their remaining Schur-complement dimensions are positive,
+so the covariance is O(q^-1). A nonempty family then has variance
+O(q^-1+1/|family|), including its diagonal terms.
+Conditioning on Q0 and Q0-L being nonsingular costs only division of the
+nonnegative L1 error by probability 1-O_D(q^-1), uniformly in fixed L.
+No determinant-sign match is added to that conditioning.
+
+L3-LOCAL-02: Local transverse factors. Supported.
+Manuscript 183--229, equations (3.5)--(3.8).
+Comparison: transverse.tex 124--189 and 258--442.
+The split maximal-isotropic count includes both families and is
+2*q^[r(r-1)/2]*(1+O(q^-1)); its recurrence has N0=1. Complementary rank-r
+images prove AB^-1 A=A. Line 201 now states the signs of A and A-B, so the
+c0 factor in (3.7) has the correct orientation for X_i-Y.
+Writing A=PRP^T gives P^T L P=0 and R=(P^T Q0 P)^-1, a bijection, rather
+than only a necessary condition. Pair-sign matches force L split. Given
+nonsingular L, (Q0,Q0-L) parameterizes the inverse pair bijectively, so Q0
+is uniform subject to those two nonsingularity conditions. Line 220 keeps
+the matching indicator inside the error expectation. Thus the normalization
+16 times a sign fraction tends to 8 on matches; for two active corners the
+corresponding factors are 4 and 2. The exponents cancel exactly, and the
+fractions in [0,1] give uniform transverse pointwise bounds at fixed D.
+There is no r=1 issue under r>=6. Zero/one-active factors are exactly one.
+
+L3-LOCAL-03: Joint edge signs and transverse assembly. Supported.
+Manuscript 231--271. Comparison: transverse.tex 459--641.
+For a selected edge subset, one incident vertex has 1<=s<=6 selected
+neighbors. Conditional on its lower-right block, the s differences are
+independent uniform symmetric matrices. Conditioning them nonsingular and
+inverting preserves the product nonsingular law. For N=D-1, the rank union
+bound is O(q^[s-b(N-s)]); its worst permitted exponent is 6-b(5)=-9.
+The good event depends only on lower-right blocks. Conditioning all other
+entries only afterward leaves z_i uniform. Each nonzero Fourier frequency
+has quadratic rank at least s+1, so Parseval/Cauchy--Schwarz give the stated
+q^-1/2 total-variation bound. Factors on nonincident selected edges are fixed;
+edge independence is never assumed. Replacing determinant zeros affects
+only O(q^-1) mass, and finitely many sign moments determine the joint law.
+Conditionally independent center matrices give a product of local factors;
+deterministic telescoping handles overlapping faces. Removing the transverse
+indicator only from the bounded sign model is justified. Removing it from
+the potentially large normalized original kernel is deliberately not done.
+
+L3-LOCAL-04: Individual ordered-orbit lower bounds. Supported.
+Manuscript 275--356, equations (4.1)--(4.3).
+Comparison: orbits.tex 91--188 and 264--527.
+The common-space quotient and direct opposite-pair sum give the displayed
+profile upper exponent. For the lower bound, H_l pairs fully with L_l since
+H_l intersect L_l=0. A dual Q_l inside L_l produces a symplectic block. Each
+of the three Lagrangians contains a Lagrangian of that block; isotropy forces
+its orthogonal projection into that contained subspace. All three therefore
+split, and the other pair spaces remain in the orthogonal complement.
+Iteration reduces the orbit to a transverse triple, classified by congruence
+of a nonsingular symmetric residual form. This rules out hidden extension
+invariants rather than merely counting dimensional profiles.
+The isometry bound gives every occurring residual orbit a uniformly positive
+mass at fixed residual dimension, including dimension zero. Each avoidance
+event concerns one independent sample alone. Its failure probability is
+at most (q^s-1)/[(q-1)(q^(z+s)+1)]<=1/2 for odd q. Quotient invariance makes
+the three residual reductions independent uniform Lagrangians. Residual
+transversality forces exact original pair intersections; the successful
+common/pair spaces can be uniquely recovered, so summing these choices does
+not overcount. Pair transitivity then makes the conditional completion bound
+valid for a particular exposed pair, not just for an average pair.
+
+L3-LOCAL-05: Matrix-chart comparison. Supported.
+Manuscript 358--379. Comparison: orbits.tex 190--228.
+The chart fraction beta_D and rank/intersection identity are exact. The
+pointwise signed-to-unsigned inequality has factor pi_(D,r)/pi_xi per active
+incidence. Conditioning all n+f independent Lagrangians costs beta_D^(-n-f).
+The chart indicator can be dropped from a nonnegative integral even when
+the normalized integrand is large. At fixed D/template the total comparison
+factor stays bounded, so singular-profile estimates transfer as required.
+
+L3-LOCAL-06: Actual planted density, quotient and lift law. Supported.
+Manuscript 383--450, equations (5.1)--(5.2) and the exact sequence.
+Comparison: planted.tex 25--51, 91--139 and 178--262.
+Symplectic invariance makes the planted/independent density constant on each
+actual ordered orbit; hence its denominator must be the individual-orbit
+mass from LOCAL-04. The quotient intersection identity at 399--403 is exact:
+if y+c lies in L_i, with c in C0 subset L_i, then y lies in L_i as well.
+This gives r'=r-u, with independent uniform quotient samples before mutual
+profile constraints. Choosing a u-space in C0 and containing it in Y costs
+q^[u(c-u)-Du+u(u-1)/2]=q^[-u(D-c)-b(u)]. The three center normalizations then
+give g_C=(r+c+1)u-2u^2.
+Prospective spans and direct pair spaces give exactly
+-delta*P-sum p_l^2-v0*w. Dropping exact span/intersection conditions is an
+upper bound. Pair-relation spaces are independent when the triple common
+intersection is zero, so w>=0. The symmetric-form lift parameterization
+is bijective. The projected simultaneous-lift condition is agreement in
+Y'/(R_j+R_k), giving the radical exact sequence and t_l=nullity(D_l).
+
+L3-LOCAL-07: Shared-form image and nullity cost. Supported.
+Manuscript 452--467, equations (5.3)--(5.4).
+Comparison: planted.tex 268--329.
+The cyclic sum constraint is necessary, and its sufficiency is actually
+proved. On the common V0, choose F1=0,F2=-D3,F3=D2. Extend compatible values
+to each relevant Q_l; the target differences prescribe the other member.
+For each F_i there are only two prescribed subspaces, intersecting in V0.
+Agreement there suffices for a symmetric-form extension by a free mixed
+block. Thus no additional incidence relation among the three A_i imposes
+an uncounted constraint. The difference map is linear and onto the stated
+subspace; uniform source forms have uniform image. Its codimension is b(v0).
+Independent target nullity bounds can be multiplied before conditioning on
+that subspace, whose probability is q^-b(v0). This gives (5.4) without ever
+declaring the actual three differences independent. Dimension-zero targets
+and V0=0 obey the same empty-form conventions.
+
+L3-LOCAL-08: Relaxed maxima and lower activity. Supported.
+Manuscript 469--500, equations (5.5)--(5.7).
+Comparison: planted.tex 359--484.
+Every actual tuple satisfies (5.6); the listed u bounds also imply
+-c<=delta<=c. The constraints t_l,v0<=delta+p_l are dimension constraints
+of the target forms. P+T=sum s_l<=d and w>=0 are the already justified
+geometric necessary conditions. Maximizing over a larger, possibly
+nonrealizable, finite integer set is safe for an upper bound and yields a
+q-independent integer gain. Line 489 correctly treats an empty set as a
+zero local factor, not a finite maximum assigned to the empty set.
+For two active corners, the successive difference h-3p-1 is negative from
+p=ceil(h/2). Evaluation there gives b(floor(h/2)) for both parities and
+all 0<=h<=2r. The zero/one-active gain is zero with factor exactly one.
+
+L3-LOCAL-09: Weighted exposure and exponent lattice. Supported.
+Manuscript 502--559, equations (6.1)--(6.5).
+Comparison: tail.tex 52--110; orbits.tex 520--526.
+A later exposed point is fresh and independent uniform conditional on the
+full prior point configuration. LOCAL-04 applies uniformly to its specific
+old pair. Iterating gives each side cost. The weak dual of a polygon
+triangulation is a tree, so its attaching edges are exactly its internal
+edges. The full-profile event is contained in every side event; their
+probability upper bounds may be multiplied with weights lambda_t/2 summing
+to one. This is event containment, not independence of cuts. Zero-weight
+cuts can simply be omitted from the product. Counting faces and internal
+edges gives precisely (sum C_j-sum(1-a_e)b(h_e))/2.
+Pointwise center gains apply afterward and do not change the earlier
+conditional law. All gains are integers, and 2Q*C is integral when Q is
+the denominator of the coverage numbers. Therefore a positive saving is
+at least 1/(2Q); the number of cuts and the raw weight denominator do not
+add an exponent loss. The numerical Q=3, Q_w=11544 example at line 559 is
+not freshly recomputed by this review; its finite certificate evidence is
+recorded separately in the existing complete-answer/finite-job reports.
+
+MINOR CLARIFICATION AND EFFECT
+
+L3-LOCAL-E01 -- Explicit positive-rank domain for (3.2).
+Location: manuscript 151--156.
+The formula should state 1<=s<=N. At s=0 the only matrix is zero. With
+empty determinant sign +1, its probabilities are q^-b(N) for xi=+1 and
+zero for xi=-1, not (1/2+O(q^-1))*q^-b(N) for both signs.
+Severity/effect: local statement-domain clarification only. The theorem's
+signed rank layer uses r=D/2>=6. The residual zero-dimensional orbit is
+handled explicitly at line 346, and zero-dimensional common blocks at 179.
+This does not identify an unproved mathematical implication in the theorem.
+
+COMPARISON WITH PRIOR COMPLETE-ANSWER REVIEW
+
+The new full manuscript expressly supplies the details formerly checked
+through the pinned proofs: A and A-B at 201, match indicator inside L1 at
+220, individual rather than averaged orbit lower bounds at 308--356, exact
+shared-form image at 452--458, and empty relaxed-domain treatment at 489.
+Its v0 notation at 412--416 avoids collision with incidence-vertex count v.
+These are actual self-contained derivations supported by the comparison,
+not merely named unproved imports. The positive-rank qualifier remains the
+small literal caveat above. No change to the previously supported local
+mathematical conclusions was needed after reading the complete text.
+
+LIMITS AND HANDOFF
+
+The full source is now bound and reviewed for sections 3--6. No source
+blocker remains for this assigned range. This report does not certify the
+later coercivity/equality-profile argument, host construction, candidate
+combinatorics, or a numerical field-size threshold; those are separate
+review scopes/evidence. It does not install packages, claim a SymPy replay,
+run the generated audit code, or turn saved finite outputs into universal
+proof evidence. Full formalization is unstarted and separately scoped.

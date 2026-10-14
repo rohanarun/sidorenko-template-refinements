@@ -1,0 +1,8 @@
+/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/Activation.lean:45:41: warning: This simp argument is unused:
+  ite_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [activationExpectation, activationOutcomes, List.flatMap_cons, List.flatMap_nil, List.append_nil,
+    List.map_append, List.sum_append, List.map_map, Function.comp_def, activationWeight, branchBias, ite_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

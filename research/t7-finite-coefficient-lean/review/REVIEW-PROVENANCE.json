@@ -1,0 +1,34 @@
+{
+  "model_requested": "claude-opus-5-5",
+  "effort": "xhigh",
+  "fallback_model": null,
+  "tools_used_for_review": [
+    "Read",
+    "Glob",
+    "Grep"
+  ],
+  "review_executed_lean_or_checkers": false,
+  "full_review_sha256": "731c73762aebc92867fa8323be36d2f4ddcde2ce3f14ac60d5f5294941bf9d30",
+  "full_review_bytes": 25574,
+  "invocation_receipt_sha256": "111d48255ca9e76caec92501168f4ca9177c4341954a619ed6c8094dbae5b905",
+  "frozen_review_packet_manifest_sha256": "b6ed252e3440812a461aa9553fb63e56f87a7c8712c17ad07b4e45bc5916057d",
+  "reviewed_proof_modules": 37,
+  "proof_bytes_match_frozen_review_packet": true,
+  "excerpt_section": "Contribution B only",
+  "new_packaging_and_beta_controls_reviewed_by_Opus": false,
+  "newer_RL_and_host_extensions_included": false,
+  "actual_model_init": "claude-opus-5-5",
+  "actual_assistant_models": [
+    "claude-opus-5-5"
+  ],
+  "canonical_models_from_usage": [
+    "claude-opus-5-5"
+  ],
+  "model_receipt_sha256": "dd2bd377b80786e0c8ba51d471996e862514240c51ac507ba9387e5ddfe92fbe",
+  "effort_evidence": {
+    "explicit_cli_selection": "xhigh",
+    "cli_accepted_request": true,
+    "independent_server_effort_echo": null,
+    "note": "The installed CLI documents xhigh and accepted --effort xhigh. Response metadata confirms the model; the stream does not independently echo effort. No effort substitution was requested."
+  }
+}

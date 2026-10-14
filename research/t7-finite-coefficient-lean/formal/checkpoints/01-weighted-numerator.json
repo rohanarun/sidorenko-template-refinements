@@ -1,0 +1,14 @@
+{
+  "status": "INDIVIDUALLY_KERNEL_CHECKED",
+  "time_utc": "2026-10-11T07:58:46.296396+00:00",
+  "milestone": "Source-realizable exact score maximum, stochastic coefficient bounds, finite remainder < 2^-60 and normalized weighted sum < -2^-60 without assumed negativity",
+  "source_hashes": {
+    "T7Weighted/Scores.lean": "59fc2b4b9829daedab03301b10806f462515038c79059c911037f0c5ca8c0552",
+    "T7Weighted/ScoreCorrespondence.lean": "c2b61d7db71b596e397157e9792af50def3b0a9c24bc36d202e0a8ae5caa60f9",
+    "T7Weighted/CoefficientBounds.lean": "1a15d4724f2b444dfe23f72caabc5990285059069481c8602f90dc3d9e8a8742",
+    "T7Weighted/WeightedNumerator.lean": "e4a38499bbf82833ea6dfa1fd6aa89920381310847eac966b4340edd97c49b06"
+  },
+  "actual_average_connection": "in progress",
+  "RL": "open",
+  "sampling": "open"
+}

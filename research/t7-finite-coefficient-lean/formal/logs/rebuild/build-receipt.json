@@ -1,0 +1,691 @@
+{
+  "status": "PASS",
+  "trust_level": 0,
+  "lean_version": "Lean (version 4.33.0, arm64-apple-darwin24.6.0, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "full_toolchain_hash_verified": true,
+  "source_packet_files_verified": 105,
+  "modules": [
+    "T7.Finite",
+    "T7.Maps",
+    "T7.Automorphisms",
+    "T7.Coefficient",
+    "T7.Enumeration",
+    "T7.Orbit",
+    "T7.MomentBridge",
+    "T7.Transfer",
+    "T7.FiniteHost",
+    "T7.ProbabilityBounds",
+    "T7.HostConclusion",
+    "T7",
+    "T7Gap.Hypercube",
+    "T7Gap.TiltedLaw",
+    "T7Gap.Activation",
+    "T7Gap.Marginal",
+    "T7Gap.StochasticCoefficient",
+    "T7Gap.FiniteProbability",
+    "T7Gap.ActivationKernel",
+    "T7Gap.ProductLaw",
+    "T7Gap.Priors",
+    "T7Gap.TypedKernel",
+    "T7Gap.KernelDensity",
+    "T7Gap.ThinningLaw",
+    "T7Gap.GeneralCoefficient",
+    "T7Gap.KernelScale",
+    "T7Gap.AveragedCoefficient",
+    "T7Gap",
+    "T7Weighted.Scores",
+    "T7Weighted.ScoreCorrespondence",
+    "T7Weighted.CoefficientBounds",
+    "T7Weighted.WeightedNumerator",
+    "T7Weighted.ActualWeights",
+    "T7Weighted.Negativity",
+    "T7Weighted.SourceConstants",
+    "T7Weighted.RemainderBounds",
+    "T7Weighted"
+  ],
+  "theorem_count": 312,
+  "new_authored_theorems": 85,
+  "project_declarations_audited": 1187,
+  "axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "source_hashes": {
+    "T7.lean": "cb90f8491be16fc42290a89622f0d44121d42bc734d406581dbcbcade6a96fe2",
+    "T7Gap.lean": "bcc9a0c50bcd0200f3e5ad02fe522e501972a707da4c0395296be68ba7fc4228",
+    "T7Weighted.lean": "3de633701abf17f2eee433bb64b498f4dc157d0089cf4e7041c42ebf81f19c69",
+    "T7/Automorphisms.lean": "7905934f8023afc87e9228d1a9e493887d613f3c4fd7088ffbb01c37a700c586",
+    "T7/Coefficient.lean": "ca425ee10023167c8d8ae1695e7a5f713d5a134af5df31efdaf2ec5705f03ea0",
+    "T7/Enumeration.lean": "6e2e863a203e597c05bc3feb543436254910dcc2eebddf77856661a8cb45d7ef",
+    "T7/Finite.lean": "57ca5ddaeb613cec8036e9b8a78d518af1aecc1e885f50ef5baf643f816d5452",
+    "T7/FiniteHost.lean": "afa6f53df483090dc1c6e18fb6114b0218ca56036e9682ab2a9950a16bba5cbf",
+    "T7/HostConclusion.lean": "831b1780ba60243fbbaeb847d40c389d1ae9be6cd33b5bc563dad99827c7cdf4",
+    "T7/Maps.lean": "7752c5a49528147f3a81a31aa83a1dc905245f5e6f606f7e88d7fb4cc493a904",
+    "T7/MomentBridge.lean": "7829d698bb77247fbb0767e9cf68170c49bdcd645a9bfdf312920344cafe81ce",
+    "T7/Orbit.lean": "eab1f2e7c9a44eefefc259562cd138b4eed7c7cd30f6af86da7ba5611c322d05",
+    "T7/ProbabilityBounds.lean": "37314d9301b03cdf31b2e611fae460a8c73f0d7dd8846112f3140115671f87ce",
+    "T7/Transfer.lean": "a50d644020428debd06b63b53fccdf910ca94a7002e0d8a0b51b9b70c523a7e3",
+    "T7Gap/Activation.lean": "534f6a5ff0285460d8400d3c891a2fb282997510a16145032d8f01dd81151175",
+    "T7Gap/ActivationKernel.lean": "d089198a8c6a9f18e46c13b2fbedcf0de5d2e0a673bc5daf31e306916080e710",
+    "T7Gap/AveragedCoefficient.lean": "eab4f40f2de14f95ede916235e7fd9b608b3b9f58cbc3c58809889b2c3cbf606",
+    "T7Gap/FiniteProbability.lean": "5cbe4f4c30f66f597fee05df505df9a2ccb3872be1b03d9d50c93ab29fde7e55",
+    "T7Gap/GeneralCoefficient.lean": "e00b5cc84eaa236882bf90496f330f2ab6c1d1e1bb68ddfce68de1d926ee21c0",
+    "T7Gap/Hypercube.lean": "7510f2978a172c4ccccf5b6bf670b3eb594458360e033f318cbe96f4e2022811",
+    "T7Gap/KernelDensity.lean": "3eb74230f88229b66a349071cd5ef5760b21c33b22563ed4ff9f42d4277ce8b3",
+    "T7Gap/KernelScale.lean": "cb5b7d134844a8d74a242e281e0bd9614b5e496dfe876174ddf753d26a9ec826",
+    "T7Gap/Marginal.lean": "a5edae94724a44156853a7a21600cab0be701879285dd19a9fa8c776325fb2aa",
+    "T7Gap/Priors.lean": "88e65d1c1cc30d20555cebe4e389e396d6ba6fef57aa22631b09789e2261819f",
+    "T7Gap/ProductLaw.lean": "985cc84b84af23c6b50fda2c6aeafaa7213df60adde8e06f529e5044368f5d1f",
+    "T7Gap/StochasticCoefficient.lean": "b071dd4af9ef3b0a7a36ca5867bc058b5852fa73009df3ac1fc354e969f88c13",
+    "T7Gap/ThinningLaw.lean": "4cf2dd3267d9c5fbe615c4f6097f8b0c4822e2465e51d0a99d67c08c31cd7b08",
+    "T7Gap/TiltedLaw.lean": "3a8bf7667cc20669810717deb48710265c18fea12c12a2284b89ce9ce674b9cb",
+    "T7Gap/TypedKernel.lean": "ea0ab56e564b5b10658c80d429f4f2070e8166e0ac803cd91dae85a419a013fd",
+    "T7Weighted/ActualWeights.lean": "e330d50340303047244ca7a86a681103a0d1a0f5545f8d301e970bc230325c67",
+    "T7Weighted/CoefficientBounds.lean": "1a15d4724f2b444dfe23f72caabc5990285059069481c8602f90dc3d9e8a8742",
+    "T7Weighted/Negativity.lean": "1cd43b1ff1ddebc815accb2e8f9cdc112696ba7bbae3625c1e064209d9b28a04",
+    "T7Weighted/RemainderBounds.lean": "3ea3bedf63ae6d4d1376d75cd83de6d552b3ff78a7f8a14654592826974a3c5f",
+    "T7Weighted/ScoreCorrespondence.lean": "c2b61d7db71b596e397157e9792af50def3b0a9c24bc36d202e0a8ae5caa60f9",
+    "T7Weighted/Scores.lean": "59fc2b4b9829daedab03301b10806f462515038c79059c911037f0c5ca8c0552",
+    "T7Weighted/SourceConstants.lean": "794031faa084e149aa72d284fcd4b249645c397fba831ba9868c2b6da8d3b58d",
+    "T7Weighted/WeightedNumerator.lean": "e4a38499bbf82833ea6dfa1fd6aa89920381310847eac966b4340edd97c49b06"
+  },
+  "runs": [
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7/Finite.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7/Finite.lean"
+      ],
+      "log": "logs/rebuild/T7.Finite.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.935
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7/Maps.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7/Maps.lean"
+      ],
+      "log": "logs/rebuild/T7.Maps.log",
+      "exit_code": 0,
+      "elapsed_seconds": 4.062
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7/Automorphisms.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7/Automorphisms.lean"
+      ],
+      "log": "logs/rebuild/T7.Automorphisms.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.168
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7/Coefficient.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7/Coefficient.lean"
+      ],
+      "log": "logs/rebuild/T7.Coefficient.log",
+      "exit_code": 0,
+      "elapsed_seconds": 7.834
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7/Enumeration.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7/Enumeration.lean"
+      ],
+      "log": "logs/rebuild/T7.Enumeration.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.164
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7/Orbit.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7/Orbit.lean"
+      ],
+      "log": "logs/rebuild/T7.Orbit.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.451
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7/MomentBridge.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7/MomentBridge.lean"
+      ],
+      "log": "logs/rebuild/T7.MomentBridge.log",
+      "exit_code": 0,
+      "elapsed_seconds": 3.508
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7/Transfer.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7/Transfer.lean"
+      ],
+      "log": "logs/rebuild/T7.Transfer.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.506
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7/FiniteHost.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7/FiniteHost.lean"
+      ],
+      "log": "logs/rebuild/T7.FiniteHost.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.45
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7/ProbabilityBounds.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7/ProbabilityBounds.lean"
+      ],
+      "log": "logs/rebuild/T7.ProbabilityBounds.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.869
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7/HostConclusion.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7/HostConclusion.lean"
+      ],
+      "log": "logs/rebuild/T7.HostConclusion.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.234
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7.lean"
+      ],
+      "log": "logs/rebuild/T7.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.009
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Gap/Hypercube.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/Hypercube.lean"
+      ],
+      "log": "logs/rebuild/T7Gap.Hypercube.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.427
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Gap/TiltedLaw.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/TiltedLaw.lean"
+      ],
+      "log": "logs/rebuild/T7Gap.TiltedLaw.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.96
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Gap/Activation.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/Activation.lean"
+      ],
+      "log": "logs/rebuild/T7Gap.Activation.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.41
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Gap/Marginal.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/Marginal.lean"
+      ],
+      "log": "logs/rebuild/T7Gap.Marginal.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.003
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Gap/StochasticCoefficient.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/StochasticCoefficient.lean"
+      ],
+      "log": "logs/rebuild/T7Gap.StochasticCoefficient.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.029
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Gap/FiniteProbability.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/FiniteProbability.lean"
+      ],
+      "log": "logs/rebuild/T7Gap.FiniteProbability.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.278
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Gap/ActivationKernel.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/ActivationKernel.lean"
+      ],
+      "log": "logs/rebuild/T7Gap.ActivationKernel.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.966
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Gap/ProductLaw.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/ProductLaw.lean"
+      ],
+      "log": "logs/rebuild/T7Gap.ProductLaw.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.014
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Gap/Priors.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/Priors.lean"
+      ],
+      "log": "logs/rebuild/T7Gap.Priors.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.576
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Gap/TypedKernel.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/TypedKernel.lean"
+      ],
+      "log": "logs/rebuild/T7Gap.TypedKernel.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.088
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Gap/KernelDensity.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/KernelDensity.lean"
+      ],
+      "log": "logs/rebuild/T7Gap.KernelDensity.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.953
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Gap/ThinningLaw.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/ThinningLaw.lean"
+      ],
+      "log": "logs/rebuild/T7Gap.ThinningLaw.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.249
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Gap/GeneralCoefficient.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/GeneralCoefficient.lean"
+      ],
+      "log": "logs/rebuild/T7Gap.GeneralCoefficient.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.122
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Gap/KernelScale.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/KernelScale.lean"
+      ],
+      "log": "logs/rebuild/T7Gap.KernelScale.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.991
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Gap/AveragedCoefficient.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/AveragedCoefficient.lean"
+      ],
+      "log": "logs/rebuild/T7Gap.AveragedCoefficient.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.956
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Gap.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap.lean"
+      ],
+      "log": "logs/rebuild/T7Gap.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.987
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Weighted/Scores.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Weighted/Scores.lean"
+      ],
+      "log": "logs/rebuild/T7Weighted.Scores.log",
+      "exit_code": 0,
+      "elapsed_seconds": 3.259
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Weighted/ScoreCorrespondence.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Weighted/ScoreCorrespondence.lean"
+      ],
+      "log": "logs/rebuild/T7Weighted.ScoreCorrespondence.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.25
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Weighted/CoefficientBounds.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Weighted/CoefficientBounds.lean"
+      ],
+      "log": "logs/rebuild/T7Weighted.CoefficientBounds.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.145
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Weighted/WeightedNumerator.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Weighted/WeightedNumerator.lean"
+      ],
+      "log": "logs/rebuild/T7Weighted.WeightedNumerator.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.25
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Weighted/ActualWeights.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Weighted/ActualWeights.lean"
+      ],
+      "log": "logs/rebuild/T7Weighted.ActualWeights.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.038
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Weighted/Negativity.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Weighted/Negativity.lean"
+      ],
+      "log": "logs/rebuild/T7Weighted.Negativity.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.009
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Weighted/SourceConstants.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Weighted/SourceConstants.lean"
+      ],
+      "log": "logs/rebuild/T7Weighted.SourceConstants.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.059
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Weighted/RemainderBounds.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Weighted/RemainderBounds.lean"
+      ],
+      "log": "logs/rebuild/T7Weighted.RemainderBounds.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.198
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean/T7Weighted.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Weighted.lean"
+      ],
+      "log": "logs/rebuild/T7Weighted.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.968
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/Audit.lean"
+      ],
+      "log": "logs/rebuild/axioms.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.05
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/Statements.lean"
+      ],
+      "log": "logs/rebuild/theorem-statements.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.054
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/DeclarationAudit.lean"
+      ],
+      "log": "logs/rebuild/all-declarations.log",
+      "exit_code": 0,
+      "elapsed_seconds": 16.993
+    }
+  ],
+  "isolated_lean_path": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/build/lean",
+  "baseline_proofs_unchanged": true,
+  "network_actions": [],
+  "actual_averaged_coefficient_negative_proved": true,
+  "kernel_deficit_proved": false,
+  "sampling_estimates_proved": false,
+  "analytic_rank_layer_law_proved": false,
+  "full_non_sidorenko_theorem_proved": false
+}

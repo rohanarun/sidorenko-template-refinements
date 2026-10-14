@@ -1,0 +1,85 @@
+{
+  "screen_date": "2026-10-10",
+  "repository": "rohanarun/sidorenko-template-refinements",
+  "head": "9aecdfbd987ecda60b7c5e0b382849d67c6bbc2f",
+  "base": "d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d",
+  "retrieval": "read-only GitHub connector at exact head; content saved as inert text",
+  "source_files": [
+    {
+      "repository_path": "overlap-refinement.md",
+      "local_path": "upstream/sidorenko/refresh-pr3/overlap-refinement.md",
+      "git_blob_sha1": "46b742c0a9ce27d00346466ad75b46848f4f6d31",
+      "sha256": "f006035af24e2b081350edce6f8634e2cd515bed28efb758ca152b427dd159c9",
+      "bytes": 3638,
+      "url": "https://github.com/rohanarun/sidorenko-template-refinements/blob/9aecdfbd987ecda60b7c5e0b382849d67c6bbc2f/overlap-refinement.md"
+    },
+    {
+      "repository_path": "proof.tex",
+      "local_path": "upstream/sidorenko/refresh-pr3/proof.tex",
+      "git_blob_sha1": "860974fe611dea5e00886594f08074c48e231bad",
+      "sha256": "766a3923bd42834d8d4f77bd5a7baa69f64a7c468aeb793eb5ff8a186680057c",
+      "bytes": 23108,
+      "url": "https://github.com/rohanarun/sidorenko-template-refinements/blob/9aecdfbd987ecda60b7c5e0b382849d67c6bbc2f/proof.tex"
+    },
+    {
+      "repository_path": "audit_overlap.py",
+      "local_path": "upstream/sidorenko/refresh-pr3/audit_overlap.py.source.txt",
+      "git_blob_sha1": "6bad01dbe03c5d886577e9447b8e3cbef7511ee7",
+      "sha256": "ea039289878ed689fd4746f2710d8427c3355a970b2a42facd0c675e64b9a09f",
+      "bytes": 6488,
+      "url": "https://github.com/rohanarun/sidorenko-template-refinements/blob/9aecdfbd987ecda60b7c5e0b382849d67c6bbc2f/audit_overlap.py"
+    },
+    {
+      "repository_path": "experiments/overlap-expected.json",
+      "local_path": "upstream/sidorenko/refresh-pr3/overlap-expected.json",
+      "git_blob_sha1": "d28b5f37e0c62cc97dbfdb2d3c928c11d7069545",
+      "sha256": "903cddaa07d67f8787c4b629fed0a1d4549d19f4f6b230c6b135b8399ef66a04",
+      "bytes": 3381,
+      "url": "https://github.com/rohanarun/sidorenko-template-refinements/blob/9aecdfbd987ecda60b7c5e0b382849d67c6bbc2f/experiments/overlap-expected.json"
+    }
+  ],
+  "context_pins": [
+    {
+      "path": "source-mirrors/receipts/00000006-74d0b89a240df6fd02236f9e12d451acdd63261bdaf8fd7b35b5ad62e9b9c1be.json",
+      "bytes": 102712,
+      "sha256": "74d0b89a240df6fd02236f9e12d451acdd63261bdaf8fd7b35b5ad62e9b9c1be"
+    },
+    {
+      "path": "source-mirrors/sidorenko-template-refinements/tracking/experiments/original-baseline.json",
+      "bytes": 7005,
+      "sha256": "5644bdbe73a51cf4aa2bc52ff1f0492263bae1785948bd9f359291453095d916"
+    },
+    {
+      "path": "source-mirrors/sidorenko-template-refinements/tracking/proof.tex",
+      "bytes": 18382,
+      "sha256": "925da34d72debee26551c1b0110ada0c8e70afa6bfd7877c2258aad0fe2a8a5b"
+    },
+    {
+      "path": "upstream/sidorenko/L2-complete-review.txt",
+      "bytes": 20943,
+      "sha256": "50d51dc6ef1f785e55238150a7a071cb1b998d412625f21d28c66075407f7cb8"
+    },
+    {
+      "path": "upstream/sidorenko/L3-complete-answer-review.txt",
+      "bytes": 24875,
+      "sha256": "dc26e90ccfa23ca1ee56951842f1e35947a7adbbf182cd7e3705d261687bfaf0"
+    },
+    {
+      "path": "upstream/sidorenko/L3-complete-answer-claims.json",
+      "bytes": 15760,
+      "sha256": "8891503cc278c57b5f9189661c448bf68a4858d359acd99b1388aad91b601b09"
+    },
+    {
+      "path": "upstream/sidorenko/pinned/tail.tex",
+      "bytes": 29882,
+      "sha256": "fd2417f6efa4394fc8ba410f0ecb79f260a204c911957c9789a7d9d1ae0e6150"
+    }
+  ],
+  "report": {
+    "path": "upstream/sidorenko/refresh-pr3/SCREEN-20261010.txt",
+    "bytes": 8268,
+    "sha256": "3d73415747036fe2810ba57c498271962b5d5d9ddb037757843ac76361981649"
+  },
+  "scope": "Bounded static screen; no source code executed; no finite DP results independently replayed.",
+  "outcome": "Overlap lemma plausible; support-coverage gap blocks adoption of universal residual constant 28; exact two-edge remainder 1 contradicts claimed support-uniform defect-one maximum -11; previous L2/L3 conclusions and sizing unchanged."
+}

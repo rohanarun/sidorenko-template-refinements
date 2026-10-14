@@ -1,0 +1,3 @@
+/var/folders/cl/sgzctzgx30n6qffwk1g56pv80000gn/T/t7-repair-negative-1nfer6k9/Mutant.lean:27:78: error: Tactic `decide` proved that the proposition
+  ∀ (p q : Point), degree q ≠ degree p → 37 ≤ pointLoss p q
+is false

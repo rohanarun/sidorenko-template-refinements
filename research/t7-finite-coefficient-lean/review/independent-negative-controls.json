@@ -1,0 +1,691 @@
+[
+  {
+    "control": "RepeatedImagesIncluded",
+    "command": [
+      "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+      "-t",
+      "0",
+      "-R",
+      "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls",
+      "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/RepeatedImagesIncluded.lean"
+    ],
+    "exit_code": 0,
+    "axioms": [],
+    "accepted": true,
+    "expected": true,
+    "seconds": 0.368,
+    "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/RepeatedImagesIncluded.log"
+  },
+  {
+    "control": "RepeatedImagesExcluded",
+    "command": [
+      "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+      "-t",
+      "0",
+      "-R",
+      "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls",
+      "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/RepeatedImagesExcluded.lean"
+    ],
+    "exit_code": 1,
+    "axioms": [],
+    "accepted": false,
+    "expected": false,
+    "seconds": 0.322,
+    "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/RepeatedImagesExcluded.log"
+  },
+  {
+    "control": "EmptyPrior",
+    "command": [
+      "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+      "-t",
+      "0",
+      "-R",
+      "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls",
+      "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/EmptyPrior.lean"
+    ],
+    "exit_code": 1,
+    "axioms": [],
+    "accepted": false,
+    "expected": false,
+    "seconds": 0.321,
+    "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/EmptyPrior.log"
+  },
+  {
+    "control": "WrongScoreMaximum",
+    "command": [
+      "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+      "-t",
+      "0",
+      "-R",
+      "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls",
+      "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/WrongScoreMaximum.lean"
+    ],
+    "exit_code": 1,
+    "axioms": [],
+    "accepted": false,
+    "expected": false,
+    "seconds": 0.408,
+    "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/WrongScoreMaximum.log"
+  },
+  {
+    "control": "InsufficientBeta",
+    "command": [
+      "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+      "-t",
+      "0",
+      "-R",
+      "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls",
+      "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/InsufficientBeta.lean"
+    ],
+    "exit_code": 1,
+    "axioms": [],
+    "accepted": false,
+    "expected": false,
+    "seconds": 0.324,
+    "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/InsufficientBeta.log"
+  },
+  {
+    "control": "WrongHeadlineType",
+    "command": [
+      "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+      "-t",
+      "0",
+      "-R",
+      "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls",
+      "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/WrongHeadlineType.lean"
+    ],
+    "exit_code": 1,
+    "axioms": [],
+    "accepted": false,
+    "expected": false,
+    "seconds": 0.305,
+    "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/WrongHeadlineType.log"
+  },
+  {
+    "control": "ExactHeadlineAndThinning",
+    "command": [
+      "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+      "-t",
+      "0",
+      "-R",
+      "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls",
+      "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/ExactHeadlineAndThinning.lean"
+    ],
+    "exit_code": 0,
+    "axioms": [],
+    "accepted": true,
+    "expected": true,
+    "seconds": 0.318,
+    "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/ExactHeadlineAndThinning.log"
+  },
+  {
+    "control": "AbsentInBaseline",
+    "command": [
+      "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+      "-t",
+      "0",
+      "-R",
+      "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls",
+      "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/AbsentInBaseline.lean"
+    ],
+    "exit_code": 1,
+    "axioms": [],
+    "accepted": false,
+    "expected": false,
+    "seconds": 0.307,
+    "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/AbsentInBaseline.log"
+  },
+  {
+    "control": "InjectedAxiom",
+    "command": [
+      "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+      "-t",
+      "0",
+      "-R",
+      "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls",
+      "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/InjectedAxiom.lean"
+    ],
+    "exit_code": 0,
+    "axioms": [
+      "auditInjectedFalse",
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "accepted": false,
+    "expected": false,
+    "seconds": 0.295,
+    "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/InjectedAxiom.log"
+  },
+  {
+    "control": "InjectedSorry",
+    "command": [
+      "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+      "-t",
+      "0",
+      "-R",
+      "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls",
+      "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/InjectedSorry.lean"
+    ],
+    "exit_code": 0,
+    "axioms": [
+      "sorryAx"
+    ],
+    "accepted": false,
+    "expected": false,
+    "seconds": 0.308,
+    "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/InjectedSorry.log"
+  },
+  {
+    "control": "MutatedPointPrior36",
+    "accepted": false,
+    "expected": false,
+    "first_failure": "T7Weighted.ActualWeights",
+    "changes": [
+      {
+        "path": "T7Gap/Priors.lean",
+        "edit": "All point-prior exponent factors 37* become 36* in Priors.lean only; score and correspondence proofs unchanged.",
+        "before_sha256": "88e65d1c1cc30d20555cebe4e389e396d6ba6fef57aa22631b09789e2261819f",
+        "after_sha256": "a31b3e8d9ad7670820f3152687ff8e45737e809d318539a0825cdb0859face9b"
+      }
+    ],
+    "runs": [
+      {
+        "module": "T7.Finite",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7/Finite.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7/Finite.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7.Finite.log"
+      },
+      {
+        "module": "T7.Maps",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7/Maps.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7/Maps.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7.Maps.log"
+      },
+      {
+        "module": "T7.Automorphisms",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7/Automorphisms.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7/Automorphisms.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7.Automorphisms.log"
+      },
+      {
+        "module": "T7.Coefficient",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7/Coefficient.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7/Coefficient.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7.Coefficient.log"
+      },
+      {
+        "module": "T7.Enumeration",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7/Enumeration.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7/Enumeration.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7.Enumeration.log"
+      },
+      {
+        "module": "T7.Orbit",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7/Orbit.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7/Orbit.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7.Orbit.log"
+      },
+      {
+        "module": "T7.MomentBridge",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7/MomentBridge.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7/MomentBridge.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7.MomentBridge.log"
+      },
+      {
+        "module": "T7.Transfer",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7/Transfer.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7/Transfer.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7.Transfer.log"
+      },
+      {
+        "module": "T7.FiniteHost",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7/FiniteHost.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7/FiniteHost.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7.FiniteHost.log"
+      },
+      {
+        "module": "T7.ProbabilityBounds",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7/ProbabilityBounds.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7/ProbabilityBounds.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7.ProbabilityBounds.log"
+      },
+      {
+        "module": "T7.HostConclusion",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7/HostConclusion.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7/HostConclusion.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7.HostConclusion.log"
+      },
+      {
+        "module": "T7",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7.log"
+      },
+      {
+        "module": "T7Gap.Hypercube",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Gap/Hypercube.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Gap/Hypercube.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Gap.Hypercube.log"
+      },
+      {
+        "module": "T7Gap.TiltedLaw",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Gap/TiltedLaw.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Gap/TiltedLaw.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Gap.TiltedLaw.log"
+      },
+      {
+        "module": "T7Gap.Activation",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Gap/Activation.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Gap/Activation.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Gap.Activation.log"
+      },
+      {
+        "module": "T7Gap.Marginal",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Gap/Marginal.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Gap/Marginal.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Gap.Marginal.log"
+      },
+      {
+        "module": "T7Gap.StochasticCoefficient",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Gap/StochasticCoefficient.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Gap/StochasticCoefficient.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Gap.StochasticCoefficient.log"
+      },
+      {
+        "module": "T7Gap.FiniteProbability",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Gap/FiniteProbability.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Gap/FiniteProbability.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Gap.FiniteProbability.log"
+      },
+      {
+        "module": "T7Gap.ActivationKernel",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Gap/ActivationKernel.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Gap/ActivationKernel.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Gap.ActivationKernel.log"
+      },
+      {
+        "module": "T7Gap.ProductLaw",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Gap/ProductLaw.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Gap/ProductLaw.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Gap.ProductLaw.log"
+      },
+      {
+        "module": "T7Gap.Priors",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Gap/Priors.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Gap/Priors.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Gap.Priors.log"
+      },
+      {
+        "module": "T7Gap.TypedKernel",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Gap/TypedKernel.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Gap/TypedKernel.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Gap.TypedKernel.log"
+      },
+      {
+        "module": "T7Gap.KernelDensity",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Gap/KernelDensity.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Gap/KernelDensity.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Gap.KernelDensity.log"
+      },
+      {
+        "module": "T7Gap.ThinningLaw",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Gap/ThinningLaw.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Gap/ThinningLaw.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Gap.ThinningLaw.log"
+      },
+      {
+        "module": "T7Gap.GeneralCoefficient",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Gap/GeneralCoefficient.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Gap/GeneralCoefficient.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Gap.GeneralCoefficient.log"
+      },
+      {
+        "module": "T7Gap.KernelScale",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Gap/KernelScale.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Gap/KernelScale.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Gap.KernelScale.log"
+      },
+      {
+        "module": "T7Gap.AveragedCoefficient",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Gap/AveragedCoefficient.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Gap/AveragedCoefficient.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Gap.AveragedCoefficient.log"
+      },
+      {
+        "module": "T7Gap",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Gap.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Gap.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Gap.log"
+      },
+      {
+        "module": "T7Weighted.Scores",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Weighted/Scores.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Weighted/Scores.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Weighted.Scores.log"
+      },
+      {
+        "module": "T7Weighted.ScoreCorrespondence",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Weighted/ScoreCorrespondence.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Weighted/ScoreCorrespondence.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Weighted.ScoreCorrespondence.log"
+      },
+      {
+        "module": "T7Weighted.CoefficientBounds",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Weighted/CoefficientBounds.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Weighted/CoefficientBounds.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Weighted.CoefficientBounds.log"
+      },
+      {
+        "module": "T7Weighted.WeightedNumerator",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Weighted/WeightedNumerator.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Weighted/WeightedNumerator.lean"
+        ],
+        "exit_code": 0,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Weighted.WeightedNumerator.log"
+      },
+      {
+        "module": "T7Weighted.ActualWeights",
+        "command": [
+          "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+          "-t",
+          "0",
+          "-R",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src",
+          "-o",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/olean/T7Weighted/ActualWeights.olean",
+          "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/src/T7Weighted/ActualWeights.lean"
+        ],
+        "exit_code": 1,
+        "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/controls/prior36/T7Weighted.ActualWeights.log"
+      }
+    ],
+    "interpretation": "ActualWeights no longer proves that the changed actual prior corresponds to the unchanged source score; fully fresh mutant outputs prevent stale imports."
+  }
+]

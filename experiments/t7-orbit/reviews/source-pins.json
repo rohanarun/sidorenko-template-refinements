@@ -1,0 +1,168 @@
+{
+  "sources": [
+    {
+      "task": "04",
+      "path": "source-artifacts/round2-unindexed-20261011/task-04/round2-04-prompt.txt",
+      "sha256": "64820d7dca1c56bc41db7ac98c6e5956c79cfeaa3f62c49fb1afde2ad39b023c",
+      "bytes": 5468
+    },
+    {
+      "task": "04",
+      "path": "source-artifacts/round2-unindexed-20261011/task-04/round2-04-response.md",
+      "sha256": "30c82cd58b1d8c76f839da308aeffe75726c0f72e87409919d66ac87f856da99",
+      "bytes": 22548
+    },
+    {
+      "task": "04",
+      "path": "source-artifacts/round2-unindexed-20261011/task-04/orbit_transfer_proof_and_certificates.zip",
+      "sha256": "7f1d1c8d14a8333ba8c0509289a76703b198f9d6687478dac77f9fde5f98ef9b",
+      "bytes": 47651
+    },
+    {
+      "task": "04",
+      "path": "source-artifacts/round2-unindexed-20261011/task-04/files/orbit_transfer/README.md",
+      "sha256": "0928a9bbc5609b664a374ad2de61b9c87c83d161f6fa9260f151c725a9c6194e",
+      "bytes": 796
+    },
+    {
+      "task": "04",
+      "path": "source-artifacts/round2-unindexed-20261011/task-04/files/orbit_transfer/SHA256SUMS",
+      "sha256": "82a60639feae11a3b4895148cb5eeb2a967469f89b2bfdbb2ad9f0f757efe09e",
+      "bytes": 734
+    },
+    {
+      "task": "04",
+      "path": "source-artifacts/round2-unindexed-20261011/task-04/files/orbit_transfer/check_orbit_transfer.py",
+      "sha256": "851794b2db1f6e49f5f25d45a623703acf0a2ceded88d55a74dd902c0b824c5d",
+      "bytes": 13783
+    },
+    {
+      "task": "04",
+      "path": "source-artifacts/round2-unindexed-20261011/task-04/files/orbit_transfer/dependencies/template_transfer_proof.md",
+      "sha256": "2d286841535e86965dd1af937a85c65ae11ed73281184636ccc5375b3526cba4",
+      "bytes": 63949
+    },
+    {
+      "task": "04",
+      "path": "source-artifacts/round2-unindexed-20261011/task-04/files/orbit_transfer/exact_check_report.json",
+      "sha256": "523ad829d5d260e877ccaa5f78755339d30ae264e9bc73a9421f5af8f8822adc",
+      "bytes": 2844
+    },
+    {
+      "task": "04",
+      "path": "source-artifacts/round2-unindexed-20261011/task-04/files/orbit_transfer/orbit_transfer_theorem.md",
+      "sha256": "9afd06cf6911763965e15b57a83805828c0c680e9a88ae2942a4bb63ef346362",
+      "bytes": 32184
+    },
+    {
+      "task": "04",
+      "path": "source-artifacts/round2-unindexed-20261011/task-04/files/orbit_transfer/separating_example.json",
+      "sha256": "0aa5cc5a8773f6682dd45b1b83628bd0a8c25fef5cfa17c88f3deea4b7f0d980",
+      "bytes": 785
+    },
+    {
+      "task": "04",
+      "path": "source-artifacts/round2-unindexed-20261011/task-04/files/orbit_transfer/source_manifest.json",
+      "sha256": "93d2c1ec671d94c6ecffd512c7e429c2f7fc34ed2847353b96a68d49243dea5c",
+      "bytes": 2009
+    },
+    {
+      "task": "04",
+      "path": "source-artifacts/round2-unindexed-20261011/task-04/files/orbit_transfer/stable_endomorphism_certificate.json",
+      "sha256": "09f4c6406e9317f12d8ae62de50fed22176add3536976940a22558a11b7bb0bb",
+      "bytes": 50923
+    },
+    {
+      "task": "11",
+      "path": "source-artifacts/round2-unindexed-20261011/task-11/round2-11-prompt.txt",
+      "sha256": "6ffe47b6d266a0a216fc90540b3bbb1de3df5eb0cc5dd919ff74a94920416ad6",
+      "bytes": 5261
+    },
+    {
+      "task": "11",
+      "path": "source-artifacts/round2-unindexed-20261011/task-11/round2-11-response.md",
+      "sha256": "87944a5c592d904a1b79855e5bfc99d26a82e7cc07ec5f178daaec8743755914",
+      "bytes": 30579
+    },
+    {
+      "task": "11",
+      "path": "source-artifacts/round2-unindexed-20261011/task-11/orbit_pinnable_classification.zip",
+      "sha256": "7f83ec9b26066b4effdc71a2e97c7ee81f9aa18526c9efaab82b6b4460793021",
+      "bytes": 2107267
+    }
+  ],
+  "exact_L3_dependency_matches_prior_recovered_manuscript": true,
+  "task11_zip": "hash verified but invalid/truncated, not extracted",
+  "independent_input": {
+    "path": "upstream/round2-independent-20261011/orbit-transfer/inputs/t7-literals.json",
+    "sha256": "583719581922454280d360875e7cb0ef0178477a5084a8b222da86744e0c7f7e"
+  },
+  "supplied_program_execution": false,
+  "comparison_sources": [
+    {
+      "path": "upstream/sidorenko/pinned/kernel.tex",
+      "sha256": "ad58e1e12522ae296a6ff7213afee0098338577013f15e152d6ccc2990df2742",
+      "bytes": 28526
+    },
+    {
+      "path": "upstream/sidorenko/pinned/tail.tex",
+      "sha256": "fd2417f6efa4394fc8ba410f0ecb79f260a204c911957c9789a7d9d1ae0e6150",
+      "bytes": 29882
+    },
+    {
+      "path": "upstream/sidorenko/pinned/complex.tex",
+      "sha256": "b7023c77ec390b3392617c51b1ca3d3ee70d707af6c71e82b0b56547513bbe8a",
+      "bytes": 7236
+    },
+    {
+      "path": "upstream/sidorenko/pinned/transverse.tex",
+      "sha256": "fa9b058eb9a2b9b35c2fc479ee4367bd4ba6e4fdc01994180fc10af26a5a13c3",
+      "bytes": 27978
+    },
+    {
+      "path": "upstream/sidorenko/pinned/orbits.tex",
+      "sha256": "2092e51b78953d3fce5fa30fb1c5b5436f0cd158a291a5aeb180c98133b5333f",
+      "bytes": 24078
+    },
+    {
+      "path": "upstream/sidorenko/pinned/planted.tex",
+      "sha256": "2336147f1d032c3d8b114883c593a2d98d03598d190256667ded2a4aee0c6c46",
+      "bytes": 21612
+    },
+    {
+      "path": "upstream/sidorenko/refinement/proof.tex",
+      "sha256": "925da34d72debee26551c1b0110ada0c8e70afa6bfd7877c2258aad0fe2a8a5b",
+      "bytes": 18382
+    },
+    {
+      "path": "upstream/sidorenko/L3-manuscript-local-review.txt",
+      "sha256": "a4305456c861bb646708ae813a9752a196a8d99e4104335bcf0c6632a1311fa5",
+      "bytes": 16102
+    },
+    {
+      "path": "upstream/sidorenko/L3-manuscript-tail-review.txt",
+      "sha256": "2213a713bf2e8c247bda4a7a14c0eb2661dc6bcb6ba5edf1ba506507156e4eca",
+      "bytes": 4398
+    },
+    {
+      "path": "upstream/sidorenko/L3-manuscript-global-review.txt",
+      "sha256": "a8c7463b12b830afbe81d877a75e1804b32dbeed3a0417e567837ecfda43e57f",
+      "bytes": 15316
+    },
+    {
+      "path": "upstream/sidorenko/L2-complete-review.txt",
+      "sha256": "50d51dc6ef1f785e55238150a7a071cb1b998d412625f21d28c66075407f7cb8",
+      "bytes": 20943
+    },
+    {
+      "path": "upstream/sidorenko/round2-task06/REVIEW.txt",
+      "sha256": "69a4790b6de19d17330073305a7152bd410273a1009ca112cf38eb7947297dc8",
+      "bytes": 17171
+    },
+    {
+      "path": "upstream/sidorenko/round2-task09/proof-review-kernel.txt",
+      "sha256": "650018f1b4e7abccb1fdf8d50d5c8ec4db3b4a991c06445c7fe92c36ba3bdc08",
+      "bytes": 17593
+    }
+  ]
+}

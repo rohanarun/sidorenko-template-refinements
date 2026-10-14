@@ -1,0 +1,277 @@
+INDEPENDENT T7 WEIGHTED-NEGATIVITY AUDIT — 2026-10-11
+
+VERDICT
+
+PASS for the exact finite stochastic coefficient claim in source theorem.md
+section 6. The extension proves, without hypotheses,
+
+  T7Weighted.source_weighted_negativity :
+    0 < T7Weighted.eta ∧ T7Gap.averagedCoefficient < -T7Weighted.eta
+
+A fresh isolated Lean 4.33.0 build at trust level zero passed for all 37 modules.
+All 312 authored theorems, including 85 new theorems, and all 1,187 project-owned
+declarations were audited. Their transitive axiom union is exactly
+{propext, Classical.choice, Quot.sound}. No project axiom, sorryAx or unapproved
+axiom was found. An independent explicit type assignment confirms the headline
+has no hidden auto-implicit hypotheses. Its elaborated type uses ordinary Rat
+ordering and negation, not an overridden relation.
+
+The author has correctly scoped this extension. A rank-layer density limit,
+kernel-density deficit, finite-host sampling result and full non-Sidorenko theorem
+are still unproved. The package explicitly records these obligations in NEXT-RL.
+They are not assumptions hidden inside the finite weighted-negativity theorem.
+
+EXACT MATHEMATICAL CONTENT
+
+Let beta=2^564, and set
+
+  Z_I = 2/beta^333 + 2/beta^592 + 2/beta^925 + 1/beta^1332,
+  Z_J = 8/beta^3 + 2/beta^5,
+  eta = beta^(-8314) / (2^60 * Z_I^7 * Z_J^10).
+
+The bound is an inequality of exact rational numbers, with eta>0 proved.
+pointNormalizer_source, faceNormalizer_source and eta_source identify the exact
+source constants, so eta is not a freely chosen or assumed positive parameter.
+
+For every point map a:Fin 7 -> Fin 7 and face map b:Fin 10 -> Fin 10, let C(a,b)
+be the full all-nonempty coefficient: sum over all assignments of a nonempty
+subset of the thirty corners to each of fifteen point edges, of the product of
+the thirty actual local pair moments. Let
+
+  Q(a,b) = -sum_i 37*d(a(i))^2 - sum_j ||m(b(j))||^2
+           + sum_(i,j in K) [74*d(a(i))+2*m(b(j))(d(a(i)))].
+
+The theorem proves strict negativity for the literal finite expectation
+
+  t0 = averagedCoefficient
+     = E_(a from pointPrior^7) E_(b from facePrior^10)
+         [thinnedCoefficient(a,b)]
+     = (Z_I^7 Z_J^10)^(-1) * beta^(-13380)
+         * sum_(all a,b) C(a,b) * beta^(Q(a,b))
+     < -eta.
+
+Lean expresses negative exponents through positive reciprocal powers; its
+exponentCost_gap proves cost=8314+(5066-Q).toNat after establishing Q<=5066.
+Thus Nat subtraction/toNat do not silently truncate an unproved positive score.
+
+WHY THE NEGATIVITY IS SUBSTANTIVE
+
+The actual source score satisfies Q<=5066, with equality exactly for stable-color
+maps. This is proved for arbitrary functions, without injectivity assumptions.
+Among these maximum-score maps, all non-incidence maps have zero coefficient.
+The previous stable-incidence classification leaves exactly identity and reversal;
+their actual stochastic coefficients each equal -4^(-30), giving -2^(-59).
+
+Each local feature takes values in {-1,0,1}. The normalized nonnegative laws then
+give |pairMoment|<=1, and the full coefficient is bounded in magnitude by 2^450.
+The exhaustive, duplicate-free type-map list has length
+7^7*10^10 = 8,235,430,000,000,000 < 2^54. Every lower-score term has relative
+weight <=1/beta. The concrete remainder, with the two orbit terms removed, is
+proved to satisfy
+
+  -2^(-60) < finiteRemainder < 2^(-60).
+
+The normalized full sum is therefore less than -2^(-60). The actual prior and
+thinning weight for EVERY type map is proved to equal its relative score weight
+times the common positive scale beta^(-8314)/(Z_I^7 Z_J^10). Multiplying yields
+the displayed negative bound. No negativity, coefficient bound, score-realization
+or remainder estimate is supplied as a premise to the headline theorem.
+
+PRIORITY CHECKS REQUESTED BY THE DELEGATION
+
+1. Scores and priors fixed before q: PASS for the formal finite model.
+   beta, pointPrior, facePrior, pairScore, score and eta are closed definitions
+   depending only on the literal finite template and rational arithmetic.
+   They have no q, field, matrix, kernel or limiting-parameter input. The source
+   formulas match section 6 exactly. The constructedKernel takes an abstract
+   SignedBase later and uses these same fixed priors. Dependency closures for
+   the fixed definitions are recorded in semantic-checks.json.
+   No theorem currently formalizes an eventual-in-q assertion: q and the
+   rank-layer asymptotics remain in the unformalized next stage. This distinction
+   does not weaken the finite coefficient theorem, but limits what it establishes.
+
+2. All maps and repetitions: PASS.
+   allTypeMaps is the Cartesian product of exhaustive function enumerations,
+   not a list of permutations, embeddings or injective maps. Membership,
+   duplicate-freeness and exact cardinality are proved. Independent enumeration
+   recovered 64 stable point maps, 56 noninjective, and exactly two stable
+   incidence extensions. A fresh Lean control explicitly admits constant point
+   and face maps to allTypeMaps. A control asserting their exclusion was rejected.
+   independentLaw uses product weights indexed by source vertices, so repeated
+   target types do not merge the corresponding source draws.
+
+3. Actual stochastic law: PASS.
+   FiniteLaw stores nonnegative weights and a proved normalization equal to one.
+   The actual point and face priors have seven and ten outcomes, with positive
+   denominators. The activation law is a normalized mixture of the M and D
+   branches. Its implementation extends sign assignments to all thirty coordinates;
+   activation_M_sign_marginal and activation_D_sign_marginal prove the exact
+   seven-/six-coordinate source marginals, eliminating auxiliary signs.
+   activation_moment_eq_formula derives the displayed source moment formula.
+   Nonincident pairs use the empty activity law as seen by the features.
+   thinnedActivationLaw has ONE Bernoulli trial for the entire corner. The theorem
+   thinnedMoment_factor gives one lambda per source incidence, not one factor per
+   activated coordinate. averagedCoefficient is the actual nested expectation
+   over these normalized point/face distributions.
+
+4. Empty or inconsistent premises: no such gap found in the headline.
+   The exact exported type is a closed conjunction; it has no premises at all.
+   Its proof is accepted with only the permitted standard axioms. Actual laws,
+   their normalization and positive normalizers are constructed, not hypothetical
+   structures introduced as uninhabited assumptions. Finite cardinalities are
+   nonzero and every type map has positive raw weight. The eta denominator is
+   proved positive, so totalized rational division does not make the claim vacuous.
+   Generic helper theorems have ordinary component hypotheses, which are
+   discharged at the concrete application. Unrelated conditional baseline host
+   and transfer theorems are not in the headline's dependency closure.
+
+SOURCE BINDING AND BASELINE COMPARISON
+
+Source project:
+/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-weighted-extension
+
+The extension archive SHA-256 is
+df4fde3b3a4a6aaaa6ab08ccb5a6d0c8481fb2bafbcab46f5e6b0294551cb205.
+All 222 supplied manifest entries matched. All 268 existing package files were
+hashed before and after the audit and remained unchanged.
+
+All 26 copied T7/T7Gap proof files match the live t7-gap-repair baseline and its
+PARENT pins; all 11 original T7 proof files also match t7-formal and BASELINE pins.
+The two copied root import modules match the live gap-repair baseline as well.
+Both predecessor archive hashes matched their pins. The extension adds eight
+T7Weighted proof modules and its root import, without editing predecessor proofs.
+
+All 105 retained publication-packet files matched their expected SHA-256 values
+and the original packet at the supplied source_root. The exact T7 theorem source
+hash is a4996ac29fdc54e31f7ebb25bffe233fe4f4caa164d557ad9e7dd7fbd89fb960;
+the literal graph input hash is
+583719581922454280d360875e7cb0ef0178477a5084a8b222da86744e0c7f7e.
+This establishes equality to the pinned local packet, not any new remote status.
+
+The source comparison matches the ten ordered faces, 17 vertices, 30 incidences,
+15 point edges, corner supports, distinguished negative corner, degree histogram,
+score coefficients 37/74/2, pair bound 446, maximum score 5066, beta exponent 564,
+and exact normalizers and margin. The semantic-checks driver independently checks
+the finite geometry, 3,430 local score bounds, stable maps, branch probabilities,
+canonical moments and remainder arithmetic.
+
+Relative to t7-gap-repair, the new achievement is the connection between the
+already-defined actual averagedCoefficient and the score-dominated finite sum,
+followed by strict negativity with a positive source margin. It is not merely
+renaming the previous signed-orbit coefficient or assuming the full remainder.
+An import restricted to T7Gap does not expose the new headline theorem.
+
+BUILD AND TRUST EVIDENCE
+
+The installed compiler reports Lean 4.33.0, arm64-apple-darwin24.6.0,
+commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release.
+Its executable SHA-256 is
+1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554.
+All 17,466 files listed in the supplied toolchain manifest matched the installed
+release tree. This is a hash/provenance consistency check; no network download or
+signature service was used.
+
+Only inspected proof modules were copied to a fresh snapshot and compiled.
+No package Python scripts or supplied custom DeclarationAudit command was run.
+Their source was read before execution decisions; effectful build/check scripts
+were cataloged as unexecuted. Project proof modules contain no custom elaborator,
+macro, initialization hook, #eval, unsafe declaration, sorry/admit, native_decide,
+custom axiom or kernel-skip option. Ordinary finite-predicate/classical
+decidability instances do not redefine the mathematical relations. All nonproject
+proof imports are the installed Std closure. The audit driver additionally imports
+the same installed Lean library and only reads/logs the environment.
+
+Independent build command shape, recorded separately for every module:
+  /Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean
+    -t 0 -R <fresh snapshot> -o <fresh olean path> <copied Module.lean>
+
+The environment is restricted to PATH=/usr/bin:/bin, LC_ALL=C, a task-local
+TMPDIR and LEAN_PATH pointing solely to the fresh outputs. No preexisting project
+.olean, .lake build, Lake hooks, elan auto-install or downloaded program is used.
+The topological 37-module build took approximately 24 seconds of compiler time.
+
+The auditor-authored IndependentAudit.lean identifies declarations by their
+actual defining project module, including generated/private declarations. It
+calls collectAxioms for all 1,187 owned constants, records elaborated raw types
+and direct type/body dependencies, and separately assigns the claimed headline
+to its exact explicit closed type. Every one of the 312 authored theorem names
+appears in the resulting declaration audit. The headline closure contains 603
+project declarations. Exact commands and logs are retained, rather than relying
+on the author's receipts.
+
+CONTROLS
+
+Eleven independent controls behaved as expected: two positive fixtures and nine
+negative controls. These cover inclusion/exclusion of repeated maps, a false
+empty-prior claim, wrong maximum score 5065, insufficient beta exponent 563,
+wrong headline type, the theorem's absence from a baseline-only import, an
+injected custom axiom, an injected sorry, and a changed actual point prior.
+The injected axiom and sorry examples compile but fail the axiom allowlist;
+they are not mislabeled as Lean compilation failures.
+
+The strongest source-correspondence control changes every point-prior exponent
+factor 37 to 36 in a separate copied Priors module, leaving the claimed score
+unchanged. A second entirely fresh build of that mutated project fails at
+T7Weighted.ActualWeights:87, where rfl no longer establishes
+
+  pointPrior.weight x = decay (37 * degree x ^ 2) / pointNormalizer.
+
+Thus a changed stochastic prior cannot retain the original score correspondence
+through stale outputs or a decorative theorem statement. Original package files
+were untouched.
+
+No exhaustive evaluation of 8.2 quadrillion type maps or the 2^450 label bound was
+attempted. Their universal finite proofs were kernel checked; the independent
+arithmetic checks validate the tractable structural tables and local laws.
+
+REMAINING MATHEMATICAL OBLIGATIONS
+
+1. The all-mask expansion identity is absent. The existing coefficient sums only
+   all-nonempty masks. To connect it to the rank-layer product expansion, prove
+   that the actual independent activation expectation of the product of all
+   coordinate/edge parity factors equals 1+thinnedCoefficient. This requires
+   including empty masks, proving first-moment cancellation, and propagating
+   all-empty/all-nonempty status through the connected face dual.
+2. There is no formal rank-layer finite-field family, quotient-form sign law,
+   RL(T7,D) limit, uniform error, or forward/reverse limiting transfer. Ordinary
+   mean-one SignedBase hypotheses alone do not supply these analytic identities.
+3. Consequently constructedKernel.density -> 1+averagedCoefficient is unproved.
+   Actual dilution, reverse orientation, eventual prime choice, symmetric deficit
+   and bounded scaling still need to be connected to the available interfaces.
+4. The iid finite-host construction, expected edge density and collision estimate
+   remain to be proved. The baseline finite_host_conditional has not been
+   instantiated by this extension.
+
+These are real proof-development gaps beyond the validated finite claim; no
+missing toolchain or dependency blocks the result audited here. Installing
+Mathlib would not by itself discharge them. No defect was found in the stated
+weighted-negativity claim, and no discrepancy was found with source section 6.
+
+DELIVERABLES AND REPRODUCTION
+
+REPORT.txt                           This assessment and exact validated claim.
+summary.json                         Machine-readable verdict and open obligations.
+build-evidence.json                  Source hashes, compiler/pins and 37 commands.
+all-declarations.json                1,187 full axiom/type/dependency records.
+theorems.json                        312 authored theorem records with source hash.
+headline-dependency-closure.json      Complete named project/library closure.
+semantic-checks.json                 Independent finite and quantifier checks.
+negative-controls.json               Eleven control commands, statuses and logs.
+source-binding.json                  Baseline and original-packet comparisons.
+preservation-and-manifest-checks.json  Manifest, archive and preservation results.
+unexecuted-script-review.json        Repository script inspection inventory.
+source-inputs/                       Exact copied source packet inputs and pins.
+snapshot/                           Fresh copied proof sources and own audit shim.
+olean/                              Fresh successful original project outputs.
+controls/                           Isolated control sources and mutated build.
+logs/                               Original rebuild and full declaration output.
+
+Auditor-authored drivers in the parent task directory:
+  audit_t7_weighted.py       — inspect/bind and build into a new output directory
+  t7_semantic_checks.py      — independent finite checks and theorem evidence
+  t7_negative_controls.py   — targeted fixtures and isolated prior mutation
+
+The independent declaration command is snapshot/IndependentAudit.lean; its exact
+invocation is in audit-command.json. Preserve a fresh output directory when
+replaying, since the build driver deliberately refuses to reuse an existing one.
+All activity was offline, with no installation, publication or other agents.

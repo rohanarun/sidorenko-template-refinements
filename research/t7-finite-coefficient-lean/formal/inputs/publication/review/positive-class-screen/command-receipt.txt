@@ -1,0 +1,7 @@
+Working directory: /Users/artus/LocalData/Codex-LYTiQ/2026-10-10/task-3/twelve-pro-verification-20261010
+Command: python3 -B upstream/sidorenko/t7-publication/review/positive-class-screen/check_graph.py
+Exit code: 0
+Result: PASS: every asserted finite structural fact holds
+Receipt scope: independent standalone finite replay; not the existing auditable runner.
+No supplied or downloaded program executed/imported; only independently authored stdlib code.
+All generated files were confined to this lane.

@@ -1,0 +1,37 @@
+Bounded public novelty screen — 2026-10-11
+
+This is a retrieval boundary, not a certification of mathematical priority.
+The substantive comparison is the separately pinned source-comparison/REVIEW.txt:
+OpenAI's exact 35-vertex/66-edge construction, refinement main at d1df2a5,
+and the current full bodies of all five refinement pull requests. No T7
+orbit-pinning result was found there. The earlier minimum is explicitly
+restricted to discrete refinement; T7 changes that premise.
+
+Additional public searches were made for Sidorenko together with "17",
+"30", "17-vertex", "30-edge", "seven", "sphere", "orbit", and
+"counterexample", including arXiv- and GitHub-qualified variants. Many
+returned results were irrelevant or did not satisfy the requested terms.
+That poor retrieval is not evidence of comprehensive absence. No matching
+prior 17-vertex graph was located by these searches, but no broad priority
+claim follows from them.
+
+The primary arXiv search page was read directly:
+https://arxiv.org/search/?query=Sidorenko&searchtype=all&abstracts=show&order=-announced_date_first&size=50
+The latest read displayed 1–50 of 294 results, ordered by original
+announcement date. Page-wide text searches found neither "counterexample"
+nor "disprov" in that returned page. This checks only the displayed page,
+not all papers, revisions, unindexed work, or equivalent graph descriptions.
+The earlier cached read displayed 293 results; the changed count illustrates
+why this observation is a frozen screen rather than a standing guarantee.
+
+Primary positive-class literature is examined separately in
+review/positive-class-screen/. Any inability to fit a known sufficient
+condition is not evidence that the graph fails Sidorenko's inequality.
+
+Publication wording supported here: "a source-bound proposed reduction from
+35 vertices and 66 edges to 17 vertices and 30 edges by replacing discrete
+pinning with stable-endomorphism orbit pinning." Do not use "first",
+"smallest", "priority established", or "independently accepted proof".
+The unconditional corollary still depends on accepting the full supplied
+analytic proof; the exact rank-layer-conditional implication is separately
+stated and reviewed. No external publication was performed by this screen.

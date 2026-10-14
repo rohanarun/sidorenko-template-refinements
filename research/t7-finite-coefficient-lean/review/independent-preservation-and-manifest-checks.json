@@ -1,0 +1,20 @@
+{
+  "supplied_manifest_entries_checked": 222,
+  "missing": [],
+  "mismatches": [],
+  "all_original_package_files_unchanged": true,
+  "original_files_checked": 268,
+  "extension_archive_sha256": "df4fde3b3a4a6aaaa6ab08ccb5a6d0c8481fb2bafbcab46f5e6b0294551cb205",
+  "source_theorem_sha256": "a4996ac29fdc54e31f7ebb25bffe233fe4f4caa164d557ad9e7dd7fbd89fb960",
+  "source_literals_sha256": "583719581922454280d360875e7cb0ef0178477a5084a8b222da86744e0c7f7e",
+  "new_source_hashes": {
+    "T7Weighted/ActualWeights.lean": "e330d50340303047244ca7a86a681103a0d1a0f5545f8d301e970bc230325c67",
+    "T7Weighted/CoefficientBounds.lean": "1a15d4724f2b444dfe23f72caabc5990285059069481c8602f90dc3d9e8a8742",
+    "T7Weighted/Negativity.lean": "1cd43b1ff1ddebc815accb2e8f9cdc112696ba7bbae3625c1e064209d9b28a04",
+    "T7Weighted/RemainderBounds.lean": "3ea3bedf63ae6d4d1376d75cd83de6d552b3ff78a7f8a14654592826974a3c5f",
+    "T7Weighted/ScoreCorrespondence.lean": "c2b61d7db71b596e397157e9792af50def3b0a9c24bc36d202e0a8ae5caa60f9",
+    "T7Weighted/Scores.lean": "59fc2b4b9829daedab03301b10806f462515038c79059c911037f0c5ca8c0552",
+    "T7Weighted/SourceConstants.lean": "794031faa084e149aa72d284fcd4b249645c397fba831ba9868c2b6da8d3b58d",
+    "T7Weighted/WeightedNumerator.lean": "e4a38499bbf82833ea6dfa1fd6aa89920381310847eac966b4340edd97c49b06"
+  }
+}

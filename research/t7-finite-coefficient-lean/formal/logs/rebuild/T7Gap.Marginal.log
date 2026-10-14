@@ -1,0 +1,21 @@
+/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/Marginal.lean:53:34: warning: This simp argument is unused:
+  ht
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hs, bitCount, cubeSum_const, ih, Rat.pow_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/Marginal.lean:54:24: warning: This simp argument is unused:
+  cubeSum_const
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hs, bitCount, ih, Rat.pow_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/Marginal.lean:107:13: warning: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [true_and, Bool.true_eq_false, false_and, ite_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

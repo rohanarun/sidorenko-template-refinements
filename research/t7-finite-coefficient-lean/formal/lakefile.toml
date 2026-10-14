@@ -1,0 +1,12 @@
+name = "t7weighted"
+version = "0.1.0"
+defaultTargets = ["T7Weighted"]
+
+[[lean_lib]]
+name = "T7"
+
+[[lean_lib]]
+name = "T7Gap"
+
+[[lean_lib]]
+name = "T7Weighted"

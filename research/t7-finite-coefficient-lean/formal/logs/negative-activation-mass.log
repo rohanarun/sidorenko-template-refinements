@@ -1,0 +1,98 @@
+/var/folders/cl/sgzctzgx30n6qffwk1g56pv80000gn/T/t7-repair-negative-qgn29f5_/Mutant.lean:48:70: error: `grind` failed
+case grind
+c : Corner
+f : ActivationOutcome → Rat
+s : Bits 30
+h : s ∈ functions [false, true] 30
+h_1 :
+  ¬3⁻¹ * tiltedWeight (D c) (IntCast.intCast (sigma c) * 2⁻¹) s * f (true, s) =
+      2⁻¹ * (tiltedWeight (D c) (IntCast.intCast (sigma c) * 2⁻¹) s * f (true, s))
+⊢ False
+[grind] Goal diagnostics
+  [facts] Asserted facts
+    [prop] s ∈ functions [false, true] 30
+    [prop] ¬3⁻¹ * tiltedWeight (D c) (IntCast.intCast (sigma c) * 2⁻¹) s * f (true, s) =
+            2⁻¹ * (tiltedWeight (D c) (IntCast.intCast (sigma c) * 2⁻¹) s * f (true, s))
+    [prop] 2 * 2⁻¹ = 1
+    [prop] 3 * 3⁻¹ = 1
+  [eqc] True propositions
+    [prop] s ∈ functions [false, true] 30
+  [eqc] False propositions
+    [prop] 3⁻¹ * tiltedWeight (D c) (IntCast.intCast (sigma c) * 2⁻¹) s * f (true, s) =
+          2⁻¹ * (tiltedWeight (D c) (IntCast.intCast (sigma c) * 2⁻¹) s * f (true, s))
+  [eqc] Equivalence classes
+    [eqc] {1,
+        2 * 2⁻¹,
+        3 * 3⁻¹,
+        (3⁻¹ * tiltedWeight (D c) (IntCast.intCast (sigma c) * 2⁻¹) s * f (true, s) -
+            2⁻¹ * (tiltedWeight (D c) (IntCast.intCast (sigma c) * 2⁻¹) s * f (true, s))) *
+          (3⁻¹ * tiltedWeight (D c) (IntCast.intCast (sigma c) * 2⁻¹) s * f (true, s) -
+              2⁻¹ * (tiltedWeight (D c) (IntCast.intCast (sigma c) * 2⁻¹) s * f (true, s)))⁻¹}
+  [cutsat] Assignment satisfying linear constraints
+    [assign] sigma c := 4
+  [linarith] Linarith assignment for `Rat`
+    [assign] f (true, s) := 10
+    [assign] 「IntCast.intCast (sigma c)」 := 8
+    [assign] tiltedWeight (D c) (IntCast.intCast (sigma c) * 2⁻¹) s := 7
+  [ring] Ring `Rat`
+    [basis] Basis
+      [_] tiltedWeight (D c) (IntCast.intCast (sigma c) * 2⁻¹) s * f (true, s) *
+                (3⁻¹ * tiltedWeight (D c) (IntCast.intCast (sigma c) * 2⁻¹) s * f (true, s) -
+                    2⁻¹ * (tiltedWeight (D c) (IntCast.intCast (sigma c) * 2⁻¹) s * f (true, s)))⁻¹ +
+              6 =
+            0
+      [_] 2 * 2⁻¹ + -1 = 0
+      [_] 3 * 3⁻¹ + -1 = 0
+/var/folders/cl/sgzctzgx30n6qffwk1g56pv80000gn/T/t7-repair-negative-qgn29f5_/Mutant.lean:48:70: error: `grind` failed
+case grind
+c : Corner
+f : ActivationOutcome → Rat
+s : Bits 30
+h : s ∈ functions [false, true] 30
+h_1 :
+  ¬3⁻¹ * tiltedWeight (D c) (-IntCast.intCast (sigma c) * 2⁻¹) s * f (false, s) =
+      2⁻¹ * (tiltedWeight (D c) (-IntCast.intCast (sigma c) * 2⁻¹) s * f (false, s))
+⊢ False
+[grind] Goal diagnostics
+  [facts] Asserted facts
+    [prop] s ∈ functions [false, true] 30
+    [prop] ¬3⁻¹ * tiltedWeight (D c) (-IntCast.intCast (sigma c) * 2⁻¹) s * f (false, s) =
+            2⁻¹ * (tiltedWeight (D c) (-IntCast.intCast (sigma c) * 2⁻¹) s * f (false, s))
+    [prop] 2 * 2⁻¹ = 1
+    [prop] 3 * 3⁻¹ = 1
+  [eqc] True propositions
+    [prop] s ∈ functions [false, true] 30
+  [eqc] False propositions
+    [prop] 3⁻¹ * tiltedWeight (D c) (-IntCast.intCast (sigma c) * 2⁻¹) s * f (false, s) =
+          2⁻¹ * (tiltedWeight (D c) (-IntCast.intCast (sigma c) * 2⁻¹) s * f (false, s))
+  [eqc] Equivalence classes
+    [eqc] {1,
+        2 * 2⁻¹,
+        3 * 3⁻¹,
+        (3⁻¹ * tiltedWeight (D c) (-IntCast.intCast (sigma c) * 2⁻¹) s * f (false, s) -
+            2⁻¹ * (tiltedWeight (D c) (-IntCast.intCast (sigma c) * 2⁻¹) s * f (false, s))) *
+          (3⁻¹ * tiltedWeight (D c) (-IntCast.intCast (sigma c) * 2⁻¹) s * f (false, s) -
+              2⁻¹ * (tiltedWeight (D c) (-IntCast.intCast (sigma c) * 2⁻¹) s * f (false, s)))⁻¹}
+  [cutsat] Assignment satisfying linear constraints
+    [assign] sigma c := 4
+  [linarith] Linarith assignment for `Rat`
+    [assign] f (false, s) := 11
+    [assign] 「IntCast.intCast (sigma c)」 := 9
+    [assign] tiltedWeight (D c) (-IntCast.intCast (sigma c) * 2⁻¹) s := 7
+  [ring] Ring `Rat`
+    [basis] Basis
+      [_] tiltedWeight (D c) (-IntCast.intCast (sigma c) * 2⁻¹) s * f (false, s) *
+                (3⁻¹ * tiltedWeight (D c) (-IntCast.intCast (sigma c) * 2⁻¹) s * f (false, s) -
+                    2⁻¹ * (tiltedWeight (D c) (-IntCast.intCast (sigma c) * 2⁻¹) s * f (false, s)))⁻¹ +
+              6 =
+            0
+      [_] 2 * 2⁻¹ + -1 = 0
+      [_] 3 * 3⁻¹ + -1 = 0
+/var/folders/cl/sgzctzgx30n6qffwk1g56pv80000gn/T/t7-repair-negative-qgn29f5_/Mutant.lean:45:41: warning: This simp argument is unused:
+  ite_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [activationExpectation, activationOutcomes, List.flatMap_cons, List.flatMap_nil, List.append_nil,
+    List.map_append, List.sum_append, List.map_map, Function.comp_def, activationWeight, branchBias, ite_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

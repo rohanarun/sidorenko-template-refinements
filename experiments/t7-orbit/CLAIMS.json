@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "claims": [
+    {
+      "claim_id": "T7-FINITE-WITNESS",
+      "status": "verified_exact_finite_arithmetic",
+      "scope": "Literal seven-point sphere, cycles/exposures, coverage,64 stable point maps including56 noninjective maps, support intersections, canonical products and finite score/dimension arithmetic.",
+      "not_established": "Generic analytic lemmas, full coefficient-sum uniqueness by enumeration, larger classification census or finite host density."
+    },
+    {
+      "claim_id": "T7-RL-CONDITIONAL-TRANSFER",
+      "status": "conventional_proof_review_supported_under_explicit_RL",
+      "scope": "Uniform signed-rank parity limit RL(T7,D) at fixed even D>=12 implies a finite rational symmetric [0,1] kernel U with positive mean and t(H,U)<mean(U)^30, hence a finite simple graph G with t(H,G)<p(G)^30.",
+      "retained_dependency": "The exact uniform all-activity/all-sign rank-layer premise, including reversed differences."
+    },
+    {
+      "claim_id": "T7-PROPOSED-UNCONDITIONAL-COROLLARY",
+      "status": "source_dependent_proposed_corollary_pending_external_mathematical_review",
+      "scope": "Accepting the full unpublished L3 §§2–8 analytic proof, extracted before discrete pinning, supplies RL(T7,D) for fixed even D>=103482288426242.",
+      "retained_dependency": "All generic analytic lemmas enumerated in DEPENDENCIES.txt, plus the Task4/Task11 finite transfer proofs.",
+      "formal_verification": false,
+      "independent_human_acceptance_evidenced": false,
+      "computed_numerical_prime_kernel_or_host": false
+    },
+    {
+      "claim_id": "T7-CLASSIFICATION-CENSUS",
+      "status": "unverified_and_excluded",
+      "reason": "Supplied classification ZIP is invalid/truncated; no full census was recovered or replayed."
+    },
+    {
+      "claim_id": "T7-NOVELTY",
+      "status": "bounded_source_comparison_only",
+      "scope": "No competing orbit-pinning T7 result found in pinned OpenAI/refinement sources and saved refinement PR1–5 bodies. Original discrete-template minimum remains consistent.",
+      "not_established": "Global priority, smallest non-Sidorenko graph, complete literature coverage or complete classification of positive graph classes."
+    }
+  ],
+  "publication_status": "local_review_proposal_not_submitted"
+}

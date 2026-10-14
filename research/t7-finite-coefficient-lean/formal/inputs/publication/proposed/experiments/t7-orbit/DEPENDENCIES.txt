@@ -1,0 +1,395 @@
+T7 conditional theorem and source-dependent corollary: dependency register
+2026-10-11 UTC
+Companion: t7-orbit-theorem.md
+Portable source root: experiments/t7-orbit/
+Line numbers below refer to the exact unchanged source texts, not this register.
+
+STATUS AND LOGICAL BOUNDARY
+
+Main theorem:
+  RL(T7,D), for one fixed even D>=12, implies a finite rational symmetric
+  [0,1] kernel U of positive mean mu with t(H,U)<mu^30, hence a finite
+  simple graph G with an edge and t(H,G)<(2e(G)/|V(G)|^2)^30.
+
+Proposed source-dependent corollary:
+  Accept the complete analytic proof in unpublished L3 sections 2-8,
+  with the pre-coloring hypothesis extraction in Task4 section 2.
+  This supplies RL(T7,D) for every fixed even D>=103482288426242.
+  The corollary then has no remaining conjectural analytic hypothesis.
+
+Unpublished status is provenance, not a mathematical assumption.
+The current independent template checks do not prove RL. The manuscript
+contains arguments intended as self-contained re-proofs of its analytic
+lemmas; this register does not label them unproved merely because they
+are unpublished or inherited. Acceptance of their complete arguments is
+nevertheless retained, rather than replaced by finite checker output or
+an assertion that the public original already covers T7.
+
+SOURCE PINS AND ACCESS
+
+[L3] Complete unpublished campaign manuscript:
+  Portable: dependencies/l3-template-transfer-proof.md
+  Title: A parameterized sphere-template transfer theorem
+  SHA256 2d286841535e86965dd1af937a85c65ae11ed73281184636ccc5375b3526cba4
+  63949 bytes, 1225 lines.
+  Original local: source-artifacts/l3-manuscript-transfer-20261010/
+                 template_transfer_proof.md
+  Identical byte-for-byte to the L3 dependency included in Task4's ZIP.
+  Full source is included for review; no inaccessible hash-only import.
+
+[T4] Complete orbit-transfer proof:
+  Portable: dependencies/task04-orbit-transfer-theorem.md
+  SHA256 9afd06cf6911763965e15b57a83805828c0c680e9a88ae2942a4bb63ef346362
+  32184 bytes, 570 lines.
+  Original local: source-artifacts/round2-unindexed-20261011/task-04/
+                 files/orbit_transfer/orbit_transfer_theorem.md
+  Complete answer SHA256
+  30c82cd58b1d8c76f839da308aeffe75726c0f72e87409919d66ac87f856da99
+  (22548 bytes).
+  ZIP SHA256
+  7f1d1c8d14a8333ba8c0509289a76703b198f9d6687478dac77f9fde5f98ef9b
+  (47651 bytes); archive safety and content hashes separately checked.
+
+[T11] Complete response containing the literal T7 argument:
+  Portable: dependencies/task11-response.md
+  SHA256 87944a5c592d904a1b79855e5bfc99d26a82e7cc07ec5f178daaec8743755914
+  30579 bytes, 770 logical lines (769 newline characters).
+  Original local: source-artifacts/round2-unindexed-20261011/task-11/
+                 round2-11-response.md
+  Its own conclusion retains RL(T7) conditionally (lines 657-705).
+  Combining the extracted L3 analytic proof with T4/T11 is this note's
+  source-dependent deduction; it does not change what T11 itself proved.
+
+[O] Public construction and analytic ancestry:
+  openai/math commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb
+  preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/
+  build/sections/
+  kernel.tex SHA256
+  ad58e1e12522ae296a6ff7213afee0098338577013f15e152d6ccc2990df2742
+  complex.tex SHA256
+  b7023c77ec390b3392617c51b1ca3d3ee70d707af6c71e82b0b56547513bbe8a
+  transverse.tex SHA256
+  fa9b058eb9a2b9b35c2fc479ee4367bd4ba6e4fdc01994180fc10af26a5a13c3
+  orbits.tex SHA256
+  2092e51b78953d3fce5fa30fb1c5b5436f0cd158a291a5aeb180c98133b5333f
+  planted.tex SHA256
+  2336147f1d032c3d8b114883c593a2d98d03598d190256667ded2a4aee0c6c46
+  tail.tex SHA256
+  fd2417f6efa4394fc8ba410f0ecb79f260a204c911957c9789a7d9d1ae0e6150
+
+[R] Public refinement ancestry:
+  rohanarun/sidorenko-template-refinements commit
+  d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d
+  proof.tex SHA256
+  925da34d72debee26551c1b0110ada0c8e70afa6bfd7877c2258aad0fe2a8a5b
+  Used for provenance of Hamiltonian polygon reduction and residual
+  methods; the theorem here retains L3's complete re-proofs and its
+  m^2+20m count, not the refinement's template-specific constant 189.
+
+All paths in the portable dependency directory identify complete exact
+source texts. Hashes establish source binding, not mathematical truth.
+Root's separate source-comparison manifest pins the bounded public corpus.
+
+EVERY RETAINED ANALYTIC DEPENDENCY FOR THE PROPOSED COROLLARY
+
+A0. Fixed-template combinatorics and quantifiers.
+    L3 lines 29-84 state the combined theorem and dimension bound;
+    lines 86-110 derive the sphere/cycle reductions.
+    T4 lines 59-104 extract the analytic component.
+    Required: finite simple sphere triangulation; each edge has two
+    distinct incident faces; connected face dual; Hamiltonian polygon
+    exposures; rational coverages a_e>=1/3; sum incident a_e=2;
+    total excess sum(a_e-1/3)=2; maximum point degree <=6.
+    T7 supplies all these in theorem section 3. Degree-three vertices
+    and separating triangles are permitted. No minimum degree four,
+    no thirteen-point count, and no discrete refinement are imported.
+
+A1. Rank-layer definitions and exact normalization.
+    L3 lines 112-132; T4 lines 74-88.
+    Symmetric matrices, positive half-rank r=D/2, quotient-form sign,
+    positive rational signed-layer probability and mean-one K.
+    Reversed differences are handled with c0=chi((-1)^r), unchanged
+    four-sign parity. Theorem section 2 states the complete premise.
+
+A2. Elementary symmetric-matrix counts.
+    L3 section 3.1, lines 134-168, equations (3.2)-(3.3).
+    Gaussian-subspace leading counts; nonsingularity and determinant
+    character balance by Schur complements; rank/sign normalization;
+    nullity tail from counting prospective radicals.
+    Equation (3.2)'s sign-balance claim requires positive rank.
+    All uses here have r>=6, so rank zero is not silently included.
+
+A3. Restriction-sign balance with valid conditioning.
+    L3 section 3.2, lines 170-181, equation (3.4).
+    Variance/covariance bound over distinct r-spaces after conditioning
+    on their exact common symmetric block; conditional bounds given
+    Q nonsingular or Q and Q-L nonsingular, uniform in fixed L.
+    No independence of restrictions on overlapping subspaces and no
+    extra sign-matching condition is assumed.
+
+A4. Local transverse centers.
+    L3 section 3.3, lines 183-229, equations (3.5)-(3.8).
+    Classification/count of split even-dimensional forms and maximal
+    isotropic spaces (both families); projection equation AB^-1 A=A;
+    determinant-sign relation; isotropic-space center bijection;
+    normalization constant and conditional L1 estimate retaining the
+    matching indicator; two-active and zero/one-active cases.
+    D>=12 gives r>1 for the maximal-isotropic-family error estimate.
+
+A5. Joint determinant signs and transverse assembly.
+    L3 sections 3.4-3.5, lines 231-274.
+    Maximum degree six; inverse-matrix rank union bound; quadratic
+    Gauss-sum differencing, Parseval and total variation; expansion
+    of all sign moments. Then local center L1 bounds and deterministic
+    product telescoping, with centers independent conditional on points.
+    No edge-sign independence is postulated as an exact finite-q fact.
+    The singular contribution is separately bounded by A6-A11.
+
+A6. Individual ordered Lagrangian orbit lower bounds.
+    L3 section 4, lines 275-357.
+    Lagrangian counts; ordered triple orbit invariants and parametrized
+    counting sufficient for the individual lower bound, with pair/triple
+    intersections and extension data accounted for in that bound.
+    This is an analytic counting argument, not checked by T7 enumeration.
+
+A7. Matrix-chart comparison.
+    L3 section 4, lines 358-382.
+    Passage from symplectic/Lagrangian orbits to uniform symmetric-matrix
+    charts with the stated comparison loss. It is retained before
+    profile-exposure probabilities are converted into density bounds.
+
+A8. Planted common-space/shared-form law and relaxed gains.
+    L3 section 5, lines 383-501, including subsections 5.1 and 5.2.
+    Parametrization of lifts over the common subspace; exact pair
+    compatibility sequence; cyclic difference-image constraint and
+    shared symmetric-form codimension; four component costs; passage
+    from the actual domain to the explicitly relaxed finite gain domain.
+    The two-active-incidence gain is included. No independently sampled
+    shared forms or discarded compatibility constraint is substituted.
+
+A9. Weighted global profile cost and denominator bookkeeping.
+    L3 section 6, lines 502-560, especially (6.3)-(6.5).
+    Hamiltonian polygon exposures; event-containment use of weighted
+    cuts, without cut independence; cost
+      C=1/2[sum_j C_j - sum_e(1-a_e)b(h_e)].
+    Coverage denominator Q_cov, rather than the denominator of cycle
+    weights alone, controls the exponent lattice and the saving
+    1/(2 Q_cov). For this input Q_cov=3.
+
+A10. Uniform residual classification and positive-mode elimination.
+     L3 section 7, lines 561-779: slack inequalities (579-686),
+     propagation via total excess (687-725), elimination of positive
+     common modes (726-779).
+     Local slack is not assumed nonnegative before the argument.
+     The propagation uses f and the face-dual diameter and yields
+       M*=4104 f(ell+1)^2, C*=12M*^2+2M*.
+     The boundary and positive-common-mode cases leave residual profiles
+     c_j=0 and h_e in {0,2} under the stated strict dimension bound.
+
+A11. Final direct and nondirect span counts; full RL conclusion.
+     L3 section 8, lines 780-842.
+     Direct residuals have at least one saving; nondirect exponent
+     <= -D+(m^2+20m). Only local endpoint spans need be isotropic;
+     the global span is not incorrectly made isotropic.
+     Includes strict span loss and support-uniform residual counting,
+     with the degree-six bound sum_i binom(d_i,2)<=22|E'|.
+     Combining the transverse and singular parts gives uniform RL at
+     lines 834-842, before color refinement appears in the proof.
+     For T7, B_res=525 and the strict bound is discharged by D*.
+
+A12. Fixed-parameter asymptotic passage.
+     L3 lines 51-84 and 834-842; T4 lines 365-416.
+     The graph, D, laws, scores, priors and epsilon remain fixed before
+     q tends through odd primes. T7 has finite activity/sign choices.
+     The error rate is O_{T7,D,lambda}(q^-1/6); its prefactor is not
+     numerically evaluated. Sufficiently large odd primes exist.
+     No L2/Task6 effective constant is silently used for their size.
+
+This A0-A12 list is the retained analytic proof chain. Standard elementary
+tools within that chain include finite-dimensional linear algebra over
+odd finite fields, rank/nullity, quadratic characters, Schur complements,
+subspace counting, elementary probability, Cauchy-Schwarz, finite Fourier
+orthogonality/Parseval, and quadratic Gauss-sum differencing. The L3 text
+gives its intended proofs; no additional external conjecture is being
+added by this register.
+
+EVERY FINITE TRANSFER DEPENDENCY FOR THE CONDITIONAL THEOREM
+
+F0. Literal T7 and its stable endomorphism orbit.
+    T11 lines 58-197. Theorem sections 1, 3 and 4 reproduce its faces,
+    sphere/cycles/exposures, stable cells and forcing proof with repeated
+    images allowed. End_stable={identity,reversal}=Aut.
+    The conditional finite implication needs the literal support and
+    connected-face properties; cycle/dimension facts are used to
+    discharge the analytic premise, not to replace it.
+
+F1. Two-branch activation, moments and support forcing.
+    T11 lines 239-338; T4 lines 184-269;
+    ancestry L3 lines 844-980 and O kernel.tex.
+    Theorem section 5 states the law and exact moment formula, proves
+    support intersection and uniqueness for the entire nonempty sum,
+    and obtains C(id)=-4^-30. This is not just one negative summand.
+    Source reindexing gives the same whole coefficient for reversal
+    without assuming invariance of the distinguished negative corner.
+
+F2. Common priors and finite competitor domination.
+    T11 lines 343-469; T4 lines 108-180 and 275-336.
+    Theorem section 6 uses T11's specific scores, not T4's more general
+    histogram hierarchy: max Q=5066, max pair score 446, beta=2^564,
+    eta=beta^-8314/(2^60 Z_I^7 Z_J^10).
+    Nonendomorphic maximum-score maps have zero coefficient. Every
+    other nonzero map has an integer score gap; fewer than 2^54 maps
+    and 2^450 labelings bound all competitors. Repeated images are
+    included. Whole-law thinning gives one factor per incidence.
+
+F3. Coordinate expansion and independence.
+    T4 lines 338-363; L3 lines 848-917.
+    Theorem section 7 expands RL in each coordinate. Source-vertex
+    matrix variables and source-incidence law draws are independent,
+    even for repeated types or repeated type pairs. Empty/nonempty
+    propagation uses zero nonempty first moments and connected dual.
+    Forward and reverse coefficients are each bounded by B_label.
+    No source-dependent prior or correlated type assignment is used.
+
+F4. Dilution and explicit finite-error passage.
+    T4 lines 365-416. Theorem section 7 specializes n=7<f=10.
+    Epsilon is rational and fixed before q; forward/reverse corrections
+    are epsilon^7 and epsilon^10. The full product error is bounded by
+    (3+2B_label)*30(2^15+1)^29*e_q under the stated e_q and a_q bounds.
+    Uniform averaging adds no count factor. This leaves a strict gap.
+
+F5. Rational symmetrization, bounded scaling, finite-host existence.
+    T4 lines 418-466; L3 lines 1081-1134.
+    Theorem section 8 proves the crossed product uses disjoint variable
+    families; signed layer size >=1 bounds K and the support size <=7
+    bounds V. Scaling by q^(14b(D)) gives [0,1] rational entries and
+    rational atom masses with positive mean.
+    Independent atom sampling and Bernoulli edge sampling use no loops.
+    A 136/N collision allowance handles all noninjective source maps;
+    Bernoulli's inequality and Jensen's inequality give a realization
+    violating the ordinary homomorphism-density inequality.
+    Only existence is asserted; no evaluated kernel or host is supplied.
+
+No application of the generic Task4 stable-orbit score theorem is needed
+beyond this fully written T7 specialization. The general theorem is an
+attributed source and comparison; its unrelated 18-vertex separating
+example is not a premise. Elementary tools used in F0-F5 are the stated
+finite combinatorics, character cancellation, sum/product identities,
+integer score gaps, triangle inequality, probability conditioning,
+telescoping, Bernoulli's inequality and convexity of x^30.
+
+FINITE EVIDENCE AND WHAT IT DOES NOT ESTABLISH
+
+Portable input: inputs/t7-literals.json
+  SHA256 583719581922454280d360875e7cb0ef0178477a5084a8b222da86744e0c7f7e
+Separately authored stdlib checker: checks/check_t7.py
+  SHA256 66e4b0490ac03e727019f1047e14a09bbfca4bf0d440e090238c5d793454919f
+Original result:
+  upstream/round2-independent-20261011/orbit-transfer/checks/result.json
+  SHA256 4bb7495f02e996b412cb3dc8e87d6cb974dbfc0c9e3c440bdaefebb948710710
+  PASS; wall 0.033059 s, user 0.021704 s, system 0.008813 s,
+  reported peak RSS 21200896 bytes.
+
+Checks: exact sphere construction; graph and face dual; cycle coverage;
+six exposures; stable cells; all 64 stable point maps including 56
+noninjective maps; all 15 support intersections; the two canonical orbit
+products; score arithmetic and conservative dimension arithmetic.
+The checker also contains small excluded-from-theorem checks for
+low-order folds and a reflection fixed-set diagnostic; those do not
+supply a census premise.
+
+Not checked numerically: RL; any generic analytic lemma; all terms of
+the full nonempty-label sum; a finite-field density; a numerical prime
+threshold; a full kernel table; any complete host adjacency list.
+The full-sum sign is justified by proof, not huge enumeration.
+
+The Task4 producer script was statically read but was not executed in
+the orbit-transfer review lane. Its producer reports are distinct from
+the independently authored checker result. No supplied program was run
+to create the mathematical draft.
+
+REVIEW EVIDENCE AND ACCEPTANCE BOUNDARY
+
+Earlier generic L3 AI-agent reviews:
+  local (sections 3-6):
+    SHA256 a4305456c861bb646708ae813a9752a196a8d99e4104335bcf0c6632a1311fa5
+  tail (sections 7-8):
+    SHA256 2213a713bf2e8c247bda4a7a14c0eb2661dc6bcb6ba5edf1ba506507156e4eca
+  global (sections 9-12):
+    SHA256 a8c7463b12b830afbe81d877a75e1804b32dbeed3a0417e567837ecfda43e57f
+Original paths: upstream/sidorenko/L3-manuscript-{local,tail,global}-review.txt.
+
+T7-specific conventional review lane:
+  upstream/round2-independent-20261011/orbit-transfer/TASK04-REVIEW.txt
+    SHA256 b612ddcb871877dbe0f639d9379eedb8780b3f946b3106f0682e47d28278990c
+  TASK11-REVIEW.txt
+    SHA256 fc99bdbae897e9c1e5d0b8e76f514d685037b28e68b332a346f495f8de202f09
+  INTEGRATION.txt
+    SHA256 6e36dc193585633e5d1412db034fab0f8bc09dfadb153542089c8c47e2b61b43
+
+These report no substantive gap in their stated scopes. The fresh T7
+specialization review audits the extraction and finite argument; it does
+not purport to reconstruct every generic finite-field lemma again.
+A separate skeptical reviewer challenges the exact draft and acceptance
+boundary. Its final pinned report belongs in reviews/.
+Independent here means a separate AI-agent review/checker pass.
+No independent human referee acceptance or formal verification is
+evidenced. No authorization to publish is conveyed by these reviews.
+
+SOURCE-RELATIVE CONTRIBUTION; NO GLOBAL PRIORITY CLAIM
+
+The compared original construction has 35 vertices, 66 incidences and
+discrete refinement. T7 has 17 vertices, 30 incidences and non-discrete
+stable cells, but all stable endomorphisms are automorphisms. The
+contribution being proposed is this literal orbit-pinnable specialization
+and its finite transfer, retaining the complete unpublished analytic
+generalization. It is not a claim to have independently re-proved every
+generic local lemma in this note.
+
+The public refinement's enumeration under discrete refinement concerns
+a different class. It cannot exclude T7's weaker orbit property.
+Root's bounded source/novelty comparison is separately pinned; neither
+it nor these sources establishes global priority or global minimality.
+
+EXPLICITLY EXCLUDED DEPENDENCIES AND CLAIMS
+
+- Task11 full n<=12 census, its 9149/44/8119/15 tallies, or a global
+  minimum over non-Sidorenko graphs. The supplied classification ZIP
+  (2107267 bytes, SHA256
+   7f83ec9b26066b4effdc71a2e97c7ee81f9aa18526c9efaab82b6b4460793021)
+  was invalid/truncated and not extracted. The complete response is
+  bound and its literal T7 proof is independently reviewable.
+- Task11's elementary n=5,6 exclusion/minimum among a specified template
+  class. It is not needed for the theorem and no minimum is claimed.
+- Any reflection-positivity assertion or lower bound from a reflection
+  fixed-set computation.
+- L2's original-template effective constants or Task6's explicit local
+  finite-field constants; no numerical T7 q bound follows from them.
+- Task9's 13-point energy certificates, dimensions 7296/7644, or residual
+  constants 189/197. No T7 energy certificate is used.
+- Refinement PR3's disputed constant 28, the separate support33 repair,
+  or pattern-before-basis-division changes. L3's support-uniform
+  B_res=m^2+20m is retained instead.
+- A numerical prime, instantiated matrices in dimension D*, computed
+  kernel density, full kernel, explicit adjacency-list host, or optimized D.
+- Supplied-code replay as a proof of analytic statements.
+- A historical priority claim, completed proof-assistant formalization,
+  or publication/remote-write authorization.
+
+SMALL RESIDUAL CHECKS AND REMAINING DELIVERABLES
+
+All named literal T7 obligations already have exact finite checks and
+the proof above. A canonical rerun of the independently authored checker
+in the portable packet, with source/input/output hashes verified, can
+confirm packaging did not alter that evidence. Small mutation controls
+(removing a face, breaking one cycle, or replacing a stable-map witness)
+could separately test rejection behavior if desired. None is needed to
+turn finite evidence into an analytic proof, and none should be presented
+that way. No giant-q, giant-host or census computation is recommended.
+
+The final draft review is retained separately; external mathematical
+review is not evidenced by this workspace. Publication authorization is
+separate from mathematical proof and review status. A complete census
+archive is a separate deliverable only for a future census claim. The
+present existence theorem requires acceptance of the stated proof chain,
+not that archive or any further finite computation.

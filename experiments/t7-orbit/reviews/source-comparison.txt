@@ -1,0 +1,196 @@
+T7 source and bounded repository-novelty comparison
+2026-10-11 UTC; source_mirrors review lane
+
+RESULT
+
+No T7 / 17-vertex, 30-edge counterexample or automorphism-orbit pinning
+replacement was found in the pinned OpenAI Sidorenko construction,
+refinement main, or the current full descriptions of refinement PRs 1–5.
+The substantive change is a weaker pinning hypothesis, not a violation
+of the existing finite-template minimum. The local Task4 + Task11 + L3
+integration supports a smaller graph at the conventional-proof level;
+this comparison does not independently repeat that analytic audit.
+
+BASELINE AND COVERAGE
+
+Source-refresh receipt 76, finished 2026-10-11T05:30:08.127497+00:00:
+ae2773039667196e6f7c1bf92316be29b4d39c274a585a990e632d740ee3a2fc.
+OpenAI math main: fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb.
+Refinement main: d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d.
+The receipt records both clean tracking checkouts at those exact heads.
+A subsequent read-only GitHub main-branch read confirms the refinement
+head. Full PR metadata and bodies were fetched separately for PRs 1–5.
+A following state=all, created-descending, per_page=100 collection returns
+exactly those five PRs, with matching heads, bases, state, draft status
+and updated_at values. No pagination truncation is indicated by this
+five-item result. All five full metadata objects report zero issue
+comments and zero review comments; separate reviews were not fetched.
+These are observations as of this bounded read, not a continuing watch.
+
+The remote JSON responses and extracted metadata/body text are saved in
+remote/. Sources and prior independent review evidence are copied or
+hash-referenced in source-pins.json. No Git fetch, ref mutation, repository
+program, supplied checker, installation, GUI action or remote write was
+used for this comparison. No source packet was changed.
+
+1. WHAT THE ORIGINAL CONSTRUCTION ACTUALLY ESTABLISHES
+
+The pinned introduction states a finite bipartite H with 35 vertices and
+66 edges and a finite simple host violating t(H,G) >= p(G)^66. The
+complex section supplies 13 points, 22 distinct triangular faces, 33
+point pairs and 66 incidences. Each point pair lies in exactly two faces;
+the face dual is connected. Three equally weighted bit cuts each give
+two exposure orders spanning the points. Their edge coverages are at
+least 1/3 and some are larger. Point degrees are
+(4,6,4,6,5,4,5,5,5,6,5,6,5).
+
+The fourth finite-complex condition is DISCRETE incidence color refinement
+from the two part colors. The kernel section's pinning lemma explicitly
+uses this condition to give the identity a strict score advantage over
+every other part-preserving map, including maps with repeated images
+and maps that do not preserve adjacency. This is stronger than merely
+distinguishing automorphisms or injective embeddings. Dilution controls
+the two orientations using different exponents 13 and 22. Nothing in
+this source asserts that 35 is a minimum among all non-Sidorenko graphs.
+
+2. THE REFINEMENT MINIMUM AND THE TWO 13-POINT OBJECTS
+
+Main proof.tex and README enlarge the cut choice to any finite weighted
+distribution. Paired spanning exposures plus distinct triples and pair
+multiplicity two imply a simple sphere with 2n-4 faces and 3n-6 point
+pairs; admissible cuts correspond to Hamiltonian cycles. Coverage at
+least 1/3 implies maximum point degree six. Discrete incidence refinement
+remains an explicit additional hypothesis of the minimum proposition.
+
+The source's counts are:
+ n    all spheres    degree <= 6    discrete    obstructions
+ 4          1              1           0             0
+ 5          1              1           0             0
+ 6          2              2           0             0
+ 7          5              5           0             0
+ 8         14             10           0             0
+ 9         50             15           1             1
+10        233             30           4             4
+11       1249             44          12            12
+12       7595             77          23            23
+13      49566            115          49            47
+
+For n<=12, all 40 discrete candidates have rational separating edge
+weights; the stated independent verifier counts 16,941 Hamiltonian cycles
+in aggregate, with minimum separation margin 1/75. At n=13, 47
+obstructions leave TWO feasible finite isomorphism classes, not 49
+counterexamples and not two smaller graphs:
+ 25902: isomorphic to the original; saved certificate uses 19 cuts.
+ 49243: not isomorphic to the original; saved certificate uses 20 cuts.
+Both have 13 points + 22 faces = 35 incidence vertices, and 66 edges.
+The independent order-13 result records 53,054 cycles for its obstruction
+checks. These source-reported generator/classification checks were not
+rerun in this review. The minimum remains conditional on plantri's
+enumeration completeness and the stated exact certificates. Main does
+not claim an independently transferred full counterexample theorem for
+the alternative finite object, or minimum size among arbitrary graphs.
+
+3. WHY T7 IS A DIFFERENT HYPOTHESIS, WITH A SMALLER GRAPH
+
+The Task11 literal faces are
+012, 013, 023, 124, 134, 235, 245, 346, 356, 456.
+There are seven points, ten faces, fifteen point pairs, and thirty
+incidences: H has 17 vertices and 30 edges. The point graph is P7^3,
+with degree vector (3,4,5,6,5,4,3). Its three equal-weight Hamiltonian
+cuts meet the coverage requirement and have total excess two.
+
+Stable refinement has FOUR point cells {0,6},{1,5},{2,4},{3} and FIVE
+face cells. It is not discrete. Thus T7 is excluded by the existing
+minimum theorem's hypothesis, consistently with the five n=7 spheres
+and zero discrete survivors in the source table.
+
+Task4 instead assumes every stable-color-preserving endomorphism is an
+automorphism. Task11 proves and the saved independent finite check
+confirms End_stable(H) = Aut(H) = {identity, reversal}; the enumeration
+includes all 64 stable point maps and permits repeated images. Task4
+controls the ENTIRE nonempty coefficient for the maximizing orbit and
+every lower-score map. The two orbit coefficients are equal and
+negative by source reindexing, without requiring the distinguished
+negative target corner to be reversal-invariant. This is the new
+pinning implication needed by the smaller graph.
+
+The local integration extracts the analytic proof from recovered L3
+sections 2–8, before its discrete-pinning stage, and checks its actual
+sphere/exposure, degree-upper-bound, connected-dual and excess premises.
+The separate challenge review found no dependency gap for degree-three
+vertices, nondiscrete colors, separating triangles or the unequal parts.
+This is a previously completed conventional proof review, supported by
+small exact finite checks; this source comparison relies on its pinned
+record and does not call it formal verification. The conservative even
+dimension is 103482288426242. No numerical field prime, full finite
+kernel or host adjacency matrix has been instantiated.
+
+T7 therefore improves graph size within the broadened orbit-pinning
+method. It does NOT refute the 13-point discrete-template classification,
+does not invalidate its two feasible 13-point certificates, and does not
+establish minimum order among all non-Sidorenko graphs. Task11's elementary
+n=5,6 obstruction supports n_min=7 only in its specified n>=5 simple-
+sphere A/B class. The malformed large classification ZIP cannot certify
+the separately asserted full census; that missing deliverable is not
+needed for the literal T7 witness and the elementary smaller-case proof.
+
+4. CURRENT PR CONTENT, INCLUDING OUR TWO PUBLISHED DRAFTS
+
+PR1, merged, head e68124868f55bba9ed791ff4379c7a42ab48955b:
+https://github.com/rohanarun/sidorenko-template-refinements/pull/1
+1032 -> 978 residual constant using active-support caps; sufficient even
+D=980 for that step only. Graph and other analytic thresholds retained.
+
+PR2, merged, head b513fb4576b30443d0f41df556d378b676723e06:
+https://github.com/rohanarun/sidorenko-template-refinements/pull/2
+978 -> 189 via sequential basis accounting on the original allowed
+pair graph, even D=190 for one residual step. This is already in main.
+
+PR3, open, nondraft, head 9aecdfbd987ecda60b7c5e0b382849d67c6bbc2f:
+https://github.com/rohanarun/sidorenko-template-refinements/pull/3
+Producer asserts residual constant 28 / even D=30 and defect-one -11,
+using a full 28-pair DP. The exact-head saved proof retains the discrete
+minimum and the same two 35-vertex objects. Our prior support-transfer
+finding is the subject of PR5; neither proposal is a T7 pinning theorem.
+
+PR4, OUR open draft, head 9922b05bf2c3418e1a46378d4ebac60e8a34ce51:
+https://github.com/rohanarun/sidorenko-template-refinements/pull/4
+GPT-6 Pro's global-edge-energy argument gives rank-layer dimensions
+7296 for the original and 7644 for candidate 49243, with retained
+geometric/transverse inputs and support-uniform constants 189/197.
+The local published theorem text explicitly addresses these two
+13-point/22-face templates. It does not instantiate T7 or prove orbit
+pinning. These dimension certificates cannot simply be assigned to T7.
+
+PR5, OUR open draft, head c3088e0bf0d5e694d84e00ff6c9b9e852e32ae97,
+stacked on PR3's 9aecdfbd head:
+https://github.com/rohanarun/sidorenko-template-refinements/pull/5
+Corrects transfer of full-support DP output to arbitrary active support;
+proposes 33d / defect-one 17 and even D=34 for this residual step only.
+It retains the same graph and discrete-template minimum. Neither
+optimality of 33 nor a smaller counterexample is claimed.
+
+PR1–3 replay statements above remain producer descriptions in this
+comparison. PR4/5 are our known publications, not third-party novelty.
+All current bodies were read in full. No title or dimension is treated
+as evidence that a new theorem is proved or that two constructions are
+identical. Their scopes do not supersede the T7 result or supply the
+missing orbit-pinning implication for it.
+
+5. PUBLICATION BOUNDARIES
+
+Credit OpenAI for the original construction and analytic/kernel method;
+credit the refinement authors for the sphere/cut reduction and specified
+classification/counting refinements; retain GPT-6 Pro attribution for
+the supplied orbit-transfer and seven-point proof and the recovered L3
+dependency. Describe Codex's actual independent review and finite checks.
+
+A defensible relative statement is: a 17-vertex, 30-edge construction
+obtained by replacing discrete identity pinning with automorphism-orbit
+pinning under an explicit endomorphism condition, using the reviewed
+analytic transfer. Avoid saying that the 35-vertex minimum was disproved,
+that 17 is globally minimal, that the missing census was replayed, or
+that an effective finite host was constructed. General literature and
+mathematical-priority search is owned by the parent and is not certified
+by these repository reads. No newly relevant PR was observed; an unseen
+later update remains outside this frozen comparison.

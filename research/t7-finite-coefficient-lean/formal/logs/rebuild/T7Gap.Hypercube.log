@@ -1,0 +1,14 @@
+/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/Hypercube.lean:82:61: warning: This simp argument is unused:
+  ite_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [bitFactor, bitSign, ite_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/formal/T7Gap/Hypercube.lean:102:12: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hz, Rat.pow_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

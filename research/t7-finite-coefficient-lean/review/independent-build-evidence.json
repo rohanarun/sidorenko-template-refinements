@@ -1,0 +1,983 @@
+{
+  "source_root": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-weighted-extension",
+  "compiler_version": "Lean (version 4.33.0, arm64-apple-darwin24.6.0, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "compiler_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "trust_level": 0,
+  "network": false,
+  "repository_programs_executed": false,
+  "source_files": {
+    "T7.lean": {
+      "sha256": "cb90f8491be16fc42290a89622f0d44121d42bc734d406581dbcbcade6a96fe2",
+      "module": "T7",
+      "imports": [
+        "T7.Automorphisms",
+        "T7.MomentBridge",
+        "T7.HostConclusion"
+      ],
+      "local_hooks": []
+    },
+    "T7Gap.lean": {
+      "sha256": "bcc9a0c50bcd0200f3e5ad02fe522e501972a707da4c0395296be68ba7fc4228",
+      "module": "T7Gap",
+      "imports": [
+        "T7",
+        "T7Gap.AveragedCoefficient"
+      ],
+      "local_hooks": []
+    },
+    "T7Weighted.lean": {
+      "sha256": "3de633701abf17f2eee433bb64b498f4dc157d0089cf4e7041c42ebf81f19c69",
+      "module": "T7Weighted",
+      "imports": [
+        "T7Weighted.RemainderBounds"
+      ],
+      "local_hooks": []
+    },
+    "T7/Automorphisms.lean": {
+      "sha256": "7905934f8023afc87e9228d1a9e493887d613f3c4fd7088ffbb01c37a700c586",
+      "module": "T7.Automorphisms",
+      "imports": [
+        "T7.Maps"
+      ],
+      "local_hooks": []
+    },
+    "T7/Coefficient.lean": {
+      "sha256": "ca425ee10023167c8d8ae1695e7a5f713d5a134af5df31efdaf2ec5705f03ea0",
+      "module": "T7.Coefficient",
+      "imports": [
+        "T7.Maps"
+      ],
+      "local_hooks": []
+    },
+    "T7/Enumeration.lean": {
+      "sha256": "6e2e863a203e597c05bc3feb543436254910dcc2eebddf77856661a8cb45d7ef",
+      "module": "T7.Enumeration",
+      "imports": [
+        "T7.Coefficient"
+      ],
+      "local_hooks": []
+    },
+    "T7/Finite.lean": {
+      "sha256": "57ca5ddaeb613cec8036e9b8a78d518af1aecc1e885f50ef5baf643f816d5452",
+      "module": "T7.Finite",
+      "imports": [
+        "Std"
+      ],
+      "local_hooks": []
+    },
+    "T7/FiniteHost.lean": {
+      "sha256": "afa6f53df483090dc1c6e18fb6114b0218ca56036e9682ab2a9950a16bba5cbf",
+      "module": "T7.FiniteHost",
+      "imports": [
+        "T7.Transfer"
+      ],
+      "local_hooks": []
+    },
+    "T7/HostConclusion.lean": {
+      "sha256": "831b1780ba60243fbbaeb847d40c389d1ae9be6cd33b5bc563dad99827c7cdf4",
+      "module": "T7.HostConclusion",
+      "imports": [
+        "T7.ProbabilityBounds"
+      ],
+      "local_hooks": []
+    },
+    "T7/Maps.lean": {
+      "sha256": "7752c5a49528147f3a81a31aa83a1dc905245f5e6f606f7e88d7fb4cc493a904",
+      "module": "T7.Maps",
+      "imports": [
+        "T7.Finite"
+      ],
+      "local_hooks": []
+    },
+    "T7/MomentBridge.lean": {
+      "sha256": "7829d698bb77247fbb0767e9cf68170c49bdcd645a9bfdf312920344cafe81ce",
+      "module": "T7.MomentBridge",
+      "imports": [
+        "T7.Orbit"
+      ],
+      "local_hooks": []
+    },
+    "T7/Orbit.lean": {
+      "sha256": "eab1f2e7c9a44eefefc259562cd138b4eed7c7cd30f6af86da7ba5611c322d05",
+      "module": "T7.Orbit",
+      "imports": [
+        "T7.Enumeration"
+      ],
+      "local_hooks": []
+    },
+    "T7/ProbabilityBounds.lean": {
+      "sha256": "37314d9301b03cdf31b2e611fae460a8c73f0d7dd8846112f3140115671f87ce",
+      "module": "T7.ProbabilityBounds",
+      "imports": [
+        "T7.FiniteHost"
+      ],
+      "local_hooks": []
+    },
+    "T7/Transfer.lean": {
+      "sha256": "a50d644020428debd06b63b53fccdf910ca94a7002e0d8a0b51b9b70c523a7e3",
+      "module": "T7.Transfer",
+      "imports": [
+        "T7.Orbit"
+      ],
+      "local_hooks": []
+    },
+    "T7Gap/Activation.lean": {
+      "sha256": "534f6a5ff0285460d8400d3c891a2fb282997510a16145032d8f01dd81151175",
+      "module": "T7Gap.Activation",
+      "imports": [
+        "T7Gap.TiltedLaw"
+      ],
+      "local_hooks": []
+    },
+    "T7Gap/ActivationKernel.lean": {
+      "sha256": "d089198a8c6a9f18e46c13b2fbedcf0de5d2e0a673bc5daf31e306916080e710",
+      "module": "T7Gap.ActivationKernel",
+      "imports": [
+        "T7Gap.FiniteProbability"
+      ],
+      "local_hooks": []
+    },
+    "T7Gap/AveragedCoefficient.lean": {
+      "sha256": "eab4f40f2de14f95ede916235e7fd9b608b3b9f58cbc3c58809889b2c3cbf606",
+      "module": "T7Gap.AveragedCoefficient",
+      "imports": [
+        "T7Gap.KernelScale"
+      ],
+      "local_hooks": []
+    },
+    "T7Gap/FiniteProbability.lean": {
+      "sha256": "5cbe4f4c30f66f597fee05df505df9a2ccb3872be1b03d9d50c93ab29fde7e55",
+      "module": "T7Gap.FiniteProbability",
+      "imports": [
+        "T7Gap.StochasticCoefficient"
+      ],
+      "local_hooks": []
+    },
+    "T7Gap/GeneralCoefficient.lean": {
+      "sha256": "e00b5cc84eaa236882bf90496f330f2ab6c1d1e1bb68ddfce68de1d926ee21c0",
+      "module": "T7Gap.GeneralCoefficient",
+      "imports": [
+        "T7Gap.ThinningLaw"
+      ],
+      "local_hooks": []
+    },
+    "T7Gap/Hypercube.lean": {
+      "sha256": "7510f2978a172c4ccccf5b6bf670b3eb594458360e033f318cbe96f4e2022811",
+      "module": "T7Gap.Hypercube",
+      "imports": [
+        "T7.HostConclusion"
+      ],
+      "local_hooks": []
+    },
+    "T7Gap/KernelDensity.lean": {
+      "sha256": "3eb74230f88229b66a349071cd5ef5760b21c33b22563ed4ff9f42d4277ce8b3",
+      "module": "T7Gap.KernelDensity",
+      "imports": [
+        "T7Gap.TypedKernel"
+      ],
+      "local_hooks": []
+    },
+    "T7Gap/KernelScale.lean": {
+      "sha256": "cb5b7d134844a8d74a242e281e0bd9614b5e496dfe876174ddf753d26a9ec826",
+      "module": "T7Gap.KernelScale",
+      "imports": [
+        "T7Gap.GeneralCoefficient"
+      ],
+      "local_hooks": []
+    },
+    "T7Gap/Marginal.lean": {
+      "sha256": "a5edae94724a44156853a7a21600cab0be701879285dd19a9fa8c776325fb2aa",
+      "module": "T7Gap.Marginal",
+      "imports": [
+        "T7Gap.Activation"
+      ],
+      "local_hooks": []
+    },
+    "T7Gap/Priors.lean": {
+      "sha256": "88e65d1c1cc30d20555cebe4e389e396d6ba6fef57aa22631b09789e2261819f",
+      "module": "T7Gap.Priors",
+      "imports": [
+        "T7Gap.ProductLaw"
+      ],
+      "local_hooks": []
+    },
+    "T7Gap/ProductLaw.lean": {
+      "sha256": "985cc84b84af23c6b50fda2c6aeafaa7213df60adde8e06f529e5044368f5d1f",
+      "module": "T7Gap.ProductLaw",
+      "imports": [
+        "T7Gap.ActivationKernel"
+      ],
+      "local_hooks": []
+    },
+    "T7Gap/StochasticCoefficient.lean": {
+      "sha256": "b071dd4af9ef3b0a7a36ca5867bc058b5852fa73009df3ac1fc354e969f88c13",
+      "module": "T7Gap.StochasticCoefficient",
+      "imports": [
+        "T7Gap.Marginal",
+        "T7.MomentBridge"
+      ],
+      "local_hooks": []
+    },
+    "T7Gap/ThinningLaw.lean": {
+      "sha256": "4cf2dd3267d9c5fbe615c4f6097f8b0c4822e2465e51d0a99d67c08c31cd7b08",
+      "module": "T7Gap.ThinningLaw",
+      "imports": [
+        "T7Gap.KernelDensity"
+      ],
+      "local_hooks": []
+    },
+    "T7Gap/TiltedLaw.lean": {
+      "sha256": "3a8bf7667cc20669810717deb48710265c18fea12c12a2284b89ce9ce674b9cb",
+      "module": "T7Gap.TiltedLaw",
+      "imports": [
+        "T7Gap.Hypercube"
+      ],
+      "local_hooks": []
+    },
+    "T7Gap/TypedKernel.lean": {
+      "sha256": "ea0ab56e564b5b10658c80d429f4f2070e8166e0ac803cd91dae85a419a013fd",
+      "module": "T7Gap.TypedKernel",
+      "imports": [
+        "T7Gap.Priors"
+      ],
+      "local_hooks": []
+    },
+    "T7Weighted/ActualWeights.lean": {
+      "sha256": "e330d50340303047244ca7a86a681103a0d1a0f5545f8d301e970bc230325c67",
+      "module": "T7Weighted.ActualWeights",
+      "imports": [
+        "T7Weighted.WeightedNumerator"
+      ],
+      "local_hooks": []
+    },
+    "T7Weighted/CoefficientBounds.lean": {
+      "sha256": "1a15d4724f2b444dfe23f72caabc5990285059069481c8602f90dc3d9e8a8742",
+      "module": "T7Weighted.CoefficientBounds",
+      "imports": [
+        "T7Weighted.ScoreCorrespondence"
+      ],
+      "local_hooks": []
+    },
+    "T7Weighted/Negativity.lean": {
+      "sha256": "1cd43b1ff1ddebc815accb2e8f9cdc112696ba7bbae3625c1e064209d9b28a04",
+      "module": "T7Weighted.Negativity",
+      "imports": [
+        "T7Weighted.ActualWeights"
+      ],
+      "local_hooks": []
+    },
+    "T7Weighted/RemainderBounds.lean": {
+      "sha256": "3ea3bedf63ae6d4d1376d75cd83de6d552b3ff78a7f8a14654592826974a3c5f",
+      "module": "T7Weighted.RemainderBounds",
+      "imports": [
+        "T7Weighted.SourceConstants"
+      ],
+      "local_hooks": []
+    },
+    "T7Weighted/ScoreCorrespondence.lean": {
+      "sha256": "c2b61d7db71b596e397157e9792af50def3b0a9c24bc36d202e0a8ae5caa60f9",
+      "module": "T7Weighted.ScoreCorrespondence",
+      "imports": [
+        "T7Weighted.Scores"
+      ],
+      "local_hooks": []
+    },
+    "T7Weighted/Scores.lean": {
+      "sha256": "59fc2b4b9829daedab03301b10806f462515038c79059c911037f0c5ca8c0552",
+      "module": "T7Weighted.Scores",
+      "imports": [
+        "T7Gap"
+      ],
+      "local_hooks": []
+    },
+    "T7Weighted/SourceConstants.lean": {
+      "sha256": "794031faa084e149aa72d284fcd4b249645c397fba831ba9868c2b6da8d3b58d",
+      "module": "T7Weighted.SourceConstants",
+      "imports": [
+        "T7Weighted.Negativity"
+      ],
+      "local_hooks": []
+    },
+    "T7Weighted/WeightedNumerator.lean": {
+      "sha256": "e4a38499bbf82833ea6dfa1fd6aa89920381310847eac966b4340edd97c49b06",
+      "module": "T7Weighted.WeightedNumerator",
+      "imports": [
+        "T7Weighted.CoefficientBounds"
+      ],
+      "local_hooks": []
+    }
+  },
+  "runs": [
+    {
+      "module": "T7.Finite",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7/Finite.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7/Finite.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.71,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7.Finite.log",
+      "source_sha256": "57ca5ddaeb613cec8036e9b8a78d518af1aecc1e885f50ef5baf643f816d5452"
+    },
+    {
+      "module": "T7.Maps",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7/Maps.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7/Maps.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.439,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7.Maps.log",
+      "source_sha256": "7752c5a49528147f3a81a31aa83a1dc905245f5e6f606f7e88d7fb4cc493a904"
+    },
+    {
+      "module": "T7.Automorphisms",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7/Automorphisms.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7/Automorphisms.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.756,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7.Automorphisms.log",
+      "source_sha256": "7905934f8023afc87e9228d1a9e493887d613f3c4fd7088ffbb01c37a700c586"
+    },
+    {
+      "module": "T7.Coefficient",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7/Coefficient.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7/Coefficient.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.707,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7.Coefficient.log",
+      "source_sha256": "ca425ee10023167c8d8ae1695e7a5f713d5a134af5df31efdaf2ec5705f03ea0"
+    },
+    {
+      "module": "T7.Enumeration",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7/Enumeration.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7/Enumeration.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.493,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7.Enumeration.log",
+      "source_sha256": "6e2e863a203e597c05bc3feb543436254910dcc2eebddf77856661a8cb45d7ef"
+    },
+    {
+      "module": "T7.Orbit",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7/Orbit.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7/Orbit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.55,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7.Orbit.log",
+      "source_sha256": "eab1f2e7c9a44eefefc259562cd138b4eed7c7cd30f6af86da7ba5611c322d05"
+    },
+    {
+      "module": "T7.MomentBridge",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7/MomentBridge.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7/MomentBridge.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.948,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7.MomentBridge.log",
+      "source_sha256": "7829d698bb77247fbb0767e9cf68170c49bdcd645a9bfdf312920344cafe81ce"
+    },
+    {
+      "module": "T7.Transfer",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7/Transfer.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7/Transfer.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.592,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7.Transfer.log",
+      "source_sha256": "a50d644020428debd06b63b53fccdf910ca94a7002e0d8a0b51b9b70c523a7e3"
+    },
+    {
+      "module": "T7.FiniteHost",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7/FiniteHost.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7/FiniteHost.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.784,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7.FiniteHost.log",
+      "source_sha256": "afa6f53df483090dc1c6e18fb6114b0218ca56036e9682ab2a9950a16bba5cbf"
+    },
+    {
+      "module": "T7.ProbabilityBounds",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7/ProbabilityBounds.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7/ProbabilityBounds.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.978,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7.ProbabilityBounds.log",
+      "source_sha256": "37314d9301b03cdf31b2e611fae460a8c73f0d7dd8846112f3140115671f87ce"
+    },
+    {
+      "module": "T7.HostConclusion",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7/HostConclusion.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7/HostConclusion.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.482,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7.HostConclusion.log",
+      "source_sha256": "831b1780ba60243fbbaeb847d40c389d1ae9be6cd33b5bc563dad99827c7cdf4"
+    },
+    {
+      "module": "T7",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.319,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7.log",
+      "source_sha256": "cb90f8491be16fc42290a89622f0d44121d42bc734d406581dbcbcade6a96fe2"
+    },
+    {
+      "module": "T7Gap.Hypercube",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Gap/Hypercube.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Gap/Hypercube.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.53,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Gap.Hypercube.log",
+      "source_sha256": "7510f2978a172c4ccccf5b6bf670b3eb594458360e033f318cbe96f4e2022811"
+    },
+    {
+      "module": "T7Gap.TiltedLaw",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Gap/TiltedLaw.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Gap/TiltedLaw.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.482,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Gap.TiltedLaw.log",
+      "source_sha256": "3a8bf7667cc20669810717deb48710265c18fea12c12a2284b89ce9ce674b9cb"
+    },
+    {
+      "module": "T7Gap.Activation",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Gap/Activation.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Gap/Activation.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.533,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Gap.Activation.log",
+      "source_sha256": "534f6a5ff0285460d8400d3c891a2fb282997510a16145032d8f01dd81151175"
+    },
+    {
+      "module": "T7Gap.Marginal",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Gap/Marginal.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Gap/Marginal.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.699,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Gap.Marginal.log",
+      "source_sha256": "a5edae94724a44156853a7a21600cab0be701879285dd19a9fa8c776325fb2aa"
+    },
+    {
+      "module": "T7Gap.StochasticCoefficient",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Gap/StochasticCoefficient.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Gap/StochasticCoefficient.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.368,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Gap.StochasticCoefficient.log",
+      "source_sha256": "b071dd4af9ef3b0a7a36ca5867bc058b5852fa73009df3ac1fc354e969f88c13"
+    },
+    {
+      "module": "T7Gap.FiniteProbability",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Gap/FiniteProbability.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Gap/FiniteProbability.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.49,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Gap.FiniteProbability.log",
+      "source_sha256": "5cbe4f4c30f66f597fee05df505df9a2ccb3872be1b03d9d50c93ab29fde7e55"
+    },
+    {
+      "module": "T7Gap.ActivationKernel",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Gap/ActivationKernel.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Gap/ActivationKernel.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.421,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Gap.ActivationKernel.log",
+      "source_sha256": "d089198a8c6a9f18e46c13b2fbedcf0de5d2e0a673bc5daf31e306916080e710"
+    },
+    {
+      "module": "T7Gap.ProductLaw",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Gap/ProductLaw.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Gap/ProductLaw.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.377,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Gap.ProductLaw.log",
+      "source_sha256": "985cc84b84af23c6b50fda2c6aeafaa7213df60adde8e06f529e5044368f5d1f"
+    },
+    {
+      "module": "T7Gap.Priors",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Gap/Priors.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Gap/Priors.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.481,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Gap.Priors.log",
+      "source_sha256": "88e65d1c1cc30d20555cebe4e389e396d6ba6fef57aa22631b09789e2261819f"
+    },
+    {
+      "module": "T7Gap.TypedKernel",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Gap/TypedKernel.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Gap/TypedKernel.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.431,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Gap.TypedKernel.log",
+      "source_sha256": "ea0ab56e564b5b10658c80d429f4f2070e8166e0ac803cd91dae85a419a013fd"
+    },
+    {
+      "module": "T7Gap.KernelDensity",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Gap/KernelDensity.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Gap/KernelDensity.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.439,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Gap.KernelDensity.log",
+      "source_sha256": "3eb74230f88229b66a349071cd5ef5760b21c33b22563ed4ff9f42d4277ce8b3"
+    },
+    {
+      "module": "T7Gap.ThinningLaw",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Gap/ThinningLaw.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Gap/ThinningLaw.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.369,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Gap.ThinningLaw.log",
+      "source_sha256": "4cf2dd3267d9c5fbe615c4f6097f8b0c4822e2465e51d0a99d67c08c31cd7b08"
+    },
+    {
+      "module": "T7Gap.GeneralCoefficient",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Gap/GeneralCoefficient.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Gap/GeneralCoefficient.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.422,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Gap.GeneralCoefficient.log",
+      "source_sha256": "e00b5cc84eaa236882bf90496f330f2ab6c1d1e1bb68ddfce68de1d926ee21c0"
+    },
+    {
+      "module": "T7Gap.KernelScale",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Gap/KernelScale.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Gap/KernelScale.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.376,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Gap.KernelScale.log",
+      "source_sha256": "cb5b7d134844a8d74a242e281e0bd9614b5e496dfe876174ddf753d26a9ec826"
+    },
+    {
+      "module": "T7Gap.AveragedCoefficient",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Gap/AveragedCoefficient.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Gap/AveragedCoefficient.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.408,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Gap.AveragedCoefficient.log",
+      "source_sha256": "eab4f40f2de14f95ede916235e7fd9b608b3b9f58cbc3c58809889b2c3cbf606"
+    },
+    {
+      "module": "T7Gap",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Gap.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Gap.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.36,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Gap.log",
+      "source_sha256": "bcc9a0c50bcd0200f3e5ad02fe522e501972a707da4c0395296be68ba7fc4228"
+    },
+    {
+      "module": "T7Weighted.Scores",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Weighted/Scores.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Weighted/Scores.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.174,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Weighted.Scores.log",
+      "source_sha256": "59fc2b4b9829daedab03301b10806f462515038c79059c911037f0c5ca8c0552"
+    },
+    {
+      "module": "T7Weighted.ScoreCorrespondence",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Weighted/ScoreCorrespondence.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Weighted/ScoreCorrespondence.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.782,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Weighted.ScoreCorrespondence.log",
+      "source_sha256": "c2b61d7db71b596e397157e9792af50def3b0a9c24bc36d202e0a8ae5caa60f9"
+    },
+    {
+      "module": "T7Weighted.CoefficientBounds",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Weighted/CoefficientBounds.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Weighted/CoefficientBounds.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.474,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Weighted.CoefficientBounds.log",
+      "source_sha256": "1a15d4724f2b444dfe23f72caabc5990285059069481c8602f90dc3d9e8a8742"
+    },
+    {
+      "module": "T7Weighted.WeightedNumerator",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Weighted/WeightedNumerator.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Weighted/WeightedNumerator.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.532,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Weighted.WeightedNumerator.log",
+      "source_sha256": "e4a38499bbf82833ea6dfa1fd6aa89920381310847eac966b4340edd97c49b06"
+    },
+    {
+      "module": "T7Weighted.ActualWeights",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Weighted/ActualWeights.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Weighted/ActualWeights.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.426,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Weighted.ActualWeights.log",
+      "source_sha256": "e330d50340303047244ca7a86a681103a0d1a0f5545f8d301e970bc230325c67"
+    },
+    {
+      "module": "T7Weighted.Negativity",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Weighted/Negativity.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Weighted/Negativity.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.42,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Weighted.Negativity.log",
+      "source_sha256": "1cd43b1ff1ddebc815accb2e8f9cdc112696ba7bbae3625c1e064209d9b28a04"
+    },
+    {
+      "module": "T7Weighted.SourceConstants",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Weighted/SourceConstants.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Weighted/SourceConstants.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.426,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Weighted.SourceConstants.log",
+      "source_sha256": "794031faa084e149aa72d284fcd4b249645c397fba831ba9868c2b6da8d3b58d"
+    },
+    {
+      "module": "T7Weighted.RemainderBounds",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Weighted/RemainderBounds.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Weighted/RemainderBounds.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.491,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Weighted.RemainderBounds.log",
+      "source_sha256": "3ea3bedf63ae6d4d1376d75cd83de6d552b3ff78a7f8a14654592826974a3c5f"
+    },
+    {
+      "module": "T7Weighted",
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/olean/T7Weighted.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/snapshot/T7Weighted.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.359,
+      "log": "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-11/audit-t7-weighted-20261011/logs/T7Weighted.log",
+      "source_sha256": "3de633701abf17f2eee433bb64b498f4dc157d0089cf4e7041c42ebf81f19c69"
+    }
+  ],
+  "toolchain_files_hash_matched": 17466,
+  "modules": [
+    "T7.Finite",
+    "T7.Maps",
+    "T7.Automorphisms",
+    "T7.Coefficient",
+    "T7.Enumeration",
+    "T7.Orbit",
+    "T7.MomentBridge",
+    "T7.Transfer",
+    "T7.FiniteHost",
+    "T7.ProbabilityBounds",
+    "T7.HostConclusion",
+    "T7",
+    "T7Gap.Hypercube",
+    "T7Gap.TiltedLaw",
+    "T7Gap.Activation",
+    "T7Gap.Marginal",
+    "T7Gap.StochasticCoefficient",
+    "T7Gap.FiniteProbability",
+    "T7Gap.ActivationKernel",
+    "T7Gap.ProductLaw",
+    "T7Gap.Priors",
+    "T7Gap.TypedKernel",
+    "T7Gap.KernelDensity",
+    "T7Gap.ThinningLaw",
+    "T7Gap.GeneralCoefficient",
+    "T7Gap.KernelScale",
+    "T7Gap.AveragedCoefficient",
+    "T7Gap",
+    "T7Weighted.Scores",
+    "T7Weighted.ScoreCorrespondence",
+    "T7Weighted.CoefficientBounds",
+    "T7Weighted.WeightedNumerator",
+    "T7Weighted.ActualWeights",
+    "T7Weighted.Negativity",
+    "T7Weighted.SourceConstants",
+    "T7Weighted.RemainderBounds",
+    "T7Weighted"
+  ],
+  "status": "PASS_FRESH_BUILD",
+  "theorem_count": 312
+}

@@ -1,0 +1,1407 @@
+{
+  "T7.vertex_count": [],
+  "T7.incidence_edge_count": [
+    "propext"
+  ],
+  "T7.vertices_nodup": [],
+  "T7.incidence_edges_nodup": [
+    "propext"
+  ],
+  "T7.all_corners": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.corner_bijection": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.adjacency_symmetric": [
+    "propext"
+  ],
+  "T7.adjacency_irreflexive": [
+    "propext"
+  ],
+  "T7.degrees": [
+    "propext"
+  ],
+  "T7.point_cells_by_degree": [
+    "propext"
+  ],
+  "T7.stable_partition": [
+    "propext"
+  ],
+  "T7.face_cells_by_point_signature": [
+    "propext"
+  ],
+  "T7.reversal_incidence": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.reversal_involutions": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.candidate_classification": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.candidate_representation": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.stable_points_classified": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.identity_face_unique": [
+    "propext"
+  ],
+  "T7.reversal_face_unique": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.stable_endomorphisms_exact": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.identity_is_stable_endomorphism": [
+    "propext"
+  ],
+  "T7.reversal_is_stable_endomorphism": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.enumeration_size": [
+    "propext"
+  ],
+  "T7.enumeration_unique": [
+    "propext"
+  ],
+  "T7.noninjective_count": [
+    "propext"
+  ],
+  "T7.vertices_complete": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.automorphism_perm": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.automorphism_count": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.automorphism_degree": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.automorphism_neighbor_degree": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.signature_color": [
+    "propext"
+  ],
+  "T7.automorphism_color": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.point_color_lt_four": [],
+  "T7.auto_point_meaning": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.auto_face_meaning": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.all_automorphisms_exact": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.support_incidence": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.supports_intersect": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.support_intersection": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.support_sizes": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.law_sizes": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.diff_subset_union": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.diff_nonempty": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.canonical_moment": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.canonical_product": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.canonical_numerator": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.moment_support": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.disjoint_moment_zero": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.moment_overlap": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.factor_ne_zero": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.term_factors_nonzero": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.term_support": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.nonzero_labeling_unique": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.noncanonical_term_zero": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.functions_mem": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.functions_nodup": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.all_masks_complete": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.nonempty_masks_mem": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.labelings_mem": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.labelings_nodup": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.support_nonempty": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.sum_zero": [
+    "propext"
+  ],
+  "T7.sum_single": [
+    "propext"
+  ],
+  "T7.full_numerator": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.full_coefficient_exact": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.reversal_corner_meaning": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.reversal_edge_meaning": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.reverse_edge_involution": [
+    "propext"
+  ],
+  "T7.reverse_corner_permutation": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.reverse_local_edges": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.moment_symmetric": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.perm_int_prod": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.reverse_term_reindex": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.relabel_involution": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7.reverse_nonzero_unique": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.reverse_canonical_numerator": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.reverse_full_numerator": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.reverse_full_coefficient_exact": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.signed_orbit_coefficient": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.product_common_denominator": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.sum_common_denominator": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.term_is_product": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.full_coefficient_is_sum_of_products": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.reverse_term_is_product": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.reverse_coefficient_is_sum_of_products": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.packet_constants": [],
+  "T7.normalized_orbit_dominance": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.interval_product_upper": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.unit_power": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.dilution_deficit": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.product_error_budget": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.scale_deficit": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.sum_rat_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.expectation_witness": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.finite_host_from_sampling_bounds": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.sufficient_host_size": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.rational_bernoulli": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.host_bernoulli": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.sum_rat_nonneg": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.tangent_remainder_nonneg": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.tangent_identity": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.tangent_inequality": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.expectation_affine": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.finite_jensen_30": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.density_quotient_nonneg": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.edge_density_nonneg": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.hom_density_nonneg": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.reciprocal_nat_unit": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7.finite_host_conditional": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.rat_sum_add": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.rat_sum_mul": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.cubeSum_add": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.cubeSum_mul": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.cubeSum_succ": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.cubeSum_const": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.char_mul": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.char_zero": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.char_sign": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.IsZero_succ": [
+    "propext"
+  ],
+  "T7Gap.cubeSum_char": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.cubeAvg_char": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.xor_zero_iff": [
+    "propext"
+  ],
+  "T7Gap.cubeAvg_const": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.rat_sum_div": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.tiltedExpectation_formula": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.tiltedWeight_nonnegative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.tilted_normalized": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.tilted_product": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.branch_bias_bounds": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.D_nonzero": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7Gap.activationWeight_nonnegative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.activationExpectation_split": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.activation_normalized": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.union_subset_iff": [
+    "propext"
+  ],
+  "T7Gap.tilted_phi_product": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.activation_moment_eq_formula": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.char_agree": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.agreement_cons": [
+    "propext"
+  ],
+  "T7Gap.cubeSum_agreement": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.cubeAvg_agreement": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.tilted_marginal": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.active_support_counts": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7Gap.activation_M_sign_marginal": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.activation_D_sign_marginal": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.stochastic_identity_eq_fullCoefficient": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.stochastic_reversal_eq_fullCoefficient": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.stochastic_identity_coefficient": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.stochastic_reversal_coefficient": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.stochastic_signed_orbit": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.activation_law_exists": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.FiniteLaw.mean_const": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.FiniteLaw.mean_add": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.FiniteLaw.mean_mul": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.FiniteLaw.mean_nonneg": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.FiniteLaw.mean_sum": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.FiniteLaw.mean_comm": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.rat_sum_flatMap": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.independentMean_succ": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.independentMean_const": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.productWeight_nonnegative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.coordinateProduct_one": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.coordinateProduct_nonneg": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.independent_product": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.independent_bipartite_product": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.activationKernel_nonnegative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.activationKernel_mean_one": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.incidentActivationKernel_mean": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.kernel_construction_has_instance": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.pair_sum": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.productLaw_mean": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.symmetricProduct_symmetric": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.symmetricProduct_nonnegative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.symmetricProduct_mean": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.rat_sum_pos": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.beta_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.reciprocal_beta_power_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.pointMass_nonnegative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.faceMass_nonnegative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.literal_face_norms": [
+    "propext"
+  ],
+  "T7Gap.pairScore_bound": [
+    "propext"
+  ],
+  "T7Gap.power_ge_one": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.thinning_bounds": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.cornerIndex_valid": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7Gap.pairKernel_nonnegative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.pairKernel_mean": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.thinnedPairKernel_nonnegative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.thinnedPairKernel_mean": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.constructedKernel_mean_one": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.constructed_symmetric_mean_one": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.boolean_constructed_mean": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.boolean_sign_values": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.independentLaw_succ_mean": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.fst_cons": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7Gap.snd_cons": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7Gap.independent_productLaw": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.coordinateProduct_mul": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.separated_four_means": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.symmetricProduct_density": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.bernoulli_mean": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.pairKernel_eq_expectation": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.thinnedPairKernel_eq_expectation": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.pairMoment_incident": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.pairMoment_nonincident": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.rat_prod_zero": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.rat_sum_zero": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.generalCoefficient_non_incidence": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.cornerIndex_corner": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7Gap.corners_incident": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7Gap.general_identity": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.general_reversal": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.general_signed_orbit": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.coordinateProduct_const": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.scaleKernel_mean": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.scaleKernel_density": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.rat_member_le_sum": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.kernelValues_nonnegative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.kernelBound_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.kernelBound_covers": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.boundedKernel_unit_interval": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.boundedKernel_mean": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.boundedKernel_density": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.boundedKernel_symmetric": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.boundedConstructed_mean_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.thinnedMoment_factor": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.rat_prod_mul": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.thinnedCoefficient_factor": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Gap.averagedCoefficient_exact": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.pointLoss_nonneg": [
+    "propext"
+  ],
+  "T7Weighted.pointLoss_zero_iff": [
+    "propext"
+  ],
+  "T7Weighted.pointLoss_gap": [
+    "propext"
+  ],
+  "T7Weighted.int_sum_nonneg": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.int_sum_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.int_member_le_sum": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.face_length": [
+    "propext"
+  ],
+  "T7Weighted.face_triple": [
+    "propext"
+  ],
+  "T7Weighted.three_image_face_bound": [
+    "propext"
+  ],
+  "T7Weighted.faceScore_le_seven": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.stable_faceScore_table": [
+    "propext"
+  ],
+  "T7Weighted.face_norm_total": [
+    "propext"
+  ],
+  "T7Weighted.stable_faceScore": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7Weighted.stable_points_degree": [
+    "propext"
+  ],
+  "T7Weighted.score_point_mismatch": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.faceDefect_nonneg": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.faceDefect_zero_iff": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.int_sum_sub": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.score_stable_exact": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.score_le_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.score_max_iff": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.score_identity": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.score_reversal": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.fin7": [
+    "propext"
+  ],
+  "T7Weighted.fin10": [
+    "propext"
+  ],
+  "T7Weighted.fin30": [
+    "propext"
+  ],
+  "T7Weighted.degree_0": [
+    "propext"
+  ],
+  "T7Weighted.degree_1": [
+    "propext"
+  ],
+  "T7Weighted.degree_2": [
+    "propext"
+  ],
+  "T7Weighted.degree_3": [
+    "propext"
+  ],
+  "T7Weighted.degree_4": [
+    "propext"
+  ],
+  "T7Weighted.degree_5": [
+    "propext"
+  ],
+  "T7Weighted.degree_6": [
+    "propext"
+  ],
+  "T7Weighted.sourceScore_eq_score": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.rat_sum_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.mean_mono": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.pairFeature_values": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.pairMoment_bounds": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.product_unit_bounds": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.rat_sum_const": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.flatMap_length_uniform": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.functions_length": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.labels_count_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.generalCoefficient_bounds": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.allTypeMaps_mem": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7Weighted.allTypeMaps_nodup": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7Weighted.allTypeMaps_length": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.allTypeMaps_count": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.identity_ne_reversal": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7Weighted.relativeWeight_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.relativeWeight_max": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.reciprocal_antitone": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.relativeWeight_lower_score": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.maximum_coefficient_support": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.non_orbit_term_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.rat_sum_single": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.finiteRemainder_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.normalizedWeightedSum_split": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.normalizedWeightedSum_negative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.int_sum_natCast": [
+    "propext"
+  ],
+  "T7Weighted.thinning_exponent_int": [
+    "propext",
+    "Quot.sound"
+  ],
+  "T7Weighted.exponentCost_sourceScore": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.exponentCost_gap": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.decay_zero": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.rat_pow_add": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.decay_add": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.decay_product": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.pointNormalizer_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.faceNormalizer_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.productWeight_decay": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.rawMapWeight_formula": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.averagedScale_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.actual_weight_relative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.averagedCoefficient_raw_sum": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.averagedCoefficient_normalized": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.eta_eq_scale": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.eta_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.averagedCoefficient_negative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.averagedCoefficient_lt_zero": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.pointNormalizer_source": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.faceNormalizer_source": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.eta_source": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.source_weighted_negativity": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.non_orbit_term_lower": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "T7Weighted.finiteRemainder_two_sided": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

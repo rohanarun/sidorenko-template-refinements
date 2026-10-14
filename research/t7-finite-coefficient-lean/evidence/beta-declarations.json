@@ -1,0 +1,316 @@
+{
+  "T7Publication.beta563_budget": {
+    "kind": "theorem",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "direct_type_dependencies": [
+      "Eq",
+      "Rat",
+      "HMul.hMul",
+      "instHMul",
+      "Rat.instMul",
+      "HPow.hPow",
+      "Nat",
+      "instHPow",
+      "Rat.instPowNat",
+      "OfNat.ofNat",
+      "Rat.instOfNat",
+      "instOfNatNat",
+      "HDiv.hDiv",
+      "instHDiv",
+      "Rat.instDiv"
+    ],
+    "direct_body_dependencies": [
+      "T7Publication.beta563_budget._proof_1_1"
+    ]
+  },
+  "T7Publication.beta563_exceeds_threshold": {
+    "kind": "theorem",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "direct_type_dependencies": [
+      "LT.lt",
+      "Rat",
+      "Rat.instLT",
+      "HDiv.hDiv",
+      "instHDiv",
+      "Rat.instDiv",
+      "OfNat.ofNat",
+      "Rat.instOfNat",
+      "HPow.hPow",
+      "Nat",
+      "instHPow",
+      "Rat.instPowNat",
+      "instOfNatNat",
+      "HMul.hMul",
+      "instHMul",
+      "Rat.instMul"
+    ],
+    "direct_body_dependencies": [
+      "T7Publication.beta563_exceeds_threshold._proof_1_1"
+    ]
+  },
+  "T7Publication.beta563_not_same_budget": {
+    "kind": "theorem",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "direct_type_dependencies": [
+      "Ne",
+      "Rat",
+      "HMul.hMul",
+      "instHMul",
+      "Rat.instMul",
+      "HPow.hPow",
+      "Nat",
+      "instHPow",
+      "Rat.instPowNat",
+      "OfNat.ofNat",
+      "Rat.instOfNat",
+      "instOfNatNat",
+      "HDiv.hDiv",
+      "instHDiv",
+      "Rat.instDiv"
+    ],
+    "direct_body_dependencies": [
+      "T7Publication.beta563_not_same_budget._proof_1_1"
+    ]
+  },
+  "T7Publication.beta564_budget": {
+    "kind": "theorem",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "direct_type_dependencies": [
+      "Eq",
+      "Rat",
+      "HMul.hMul",
+      "instHMul",
+      "Rat.instMul",
+      "HPow.hPow",
+      "Nat",
+      "instHPow",
+      "Rat.instPowNat",
+      "OfNat.ofNat",
+      "Rat.instOfNat",
+      "instOfNatNat",
+      "HDiv.hDiv",
+      "instHDiv",
+      "Rat.instDiv"
+    ],
+    "direct_body_dependencies": [
+      "T7Publication.beta564_budget._proof_1_1"
+    ]
+  },
+  "T7Publication.beta563_budget._proof_1_1": {
+    "kind": "theorem",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "direct_type_dependencies": [
+      "Eq",
+      "Rat",
+      "HMul.hMul",
+      "instHMul",
+      "Rat.instMul",
+      "HPow.hPow",
+      "Nat",
+      "instHPow",
+      "Rat.instPowNat",
+      "OfNat.ofNat",
+      "Rat.instOfNat",
+      "instOfNatNat",
+      "HDiv.hDiv",
+      "instHDiv",
+      "Rat.instDiv"
+    ],
+    "direct_body_dependencies": [
+      "of_decide_eq_true",
+      "Eq",
+      "Rat",
+      "HMul.hMul",
+      "instHMul",
+      "Rat.instMul",
+      "HPow.hPow",
+      "Nat",
+      "instHPow",
+      "Rat.instPowNat",
+      "OfNat.ofNat",
+      "Rat.instOfNat",
+      "instOfNatNat",
+      "HDiv.hDiv",
+      "instHDiv",
+      "Rat.instDiv",
+      "instDecidableEqRat",
+      "id",
+      "Bool",
+      "Decidable.decide",
+      "Bool.true",
+      "Eq.refl"
+    ]
+  },
+  "T7Publication.beta563_exceeds_threshold._proof_1_1": {
+    "kind": "theorem",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "direct_type_dependencies": [
+      "LT.lt",
+      "Rat",
+      "Rat.instLT",
+      "HDiv.hDiv",
+      "instHDiv",
+      "Rat.instDiv",
+      "OfNat.ofNat",
+      "Rat.instOfNat",
+      "HPow.hPow",
+      "Nat",
+      "instHPow",
+      "Rat.instPowNat",
+      "instOfNatNat",
+      "HMul.hMul",
+      "instHMul",
+      "Rat.instMul"
+    ],
+    "direct_body_dependencies": [
+      "of_decide_eq_true",
+      "LT.lt",
+      "Rat",
+      "Rat.instLT",
+      "HDiv.hDiv",
+      "instHDiv",
+      "Rat.instDiv",
+      "OfNat.ofNat",
+      "Rat.instOfNat",
+      "HPow.hPow",
+      "Nat",
+      "instHPow",
+      "Rat.instPowNat",
+      "instOfNatNat",
+      "HMul.hMul",
+      "instHMul",
+      "Rat.instMul",
+      "Rat.instDecidableLt",
+      "id",
+      "Eq",
+      "Bool",
+      "Decidable.decide",
+      "Bool.true",
+      "Eq.refl"
+    ]
+  },
+  "T7Publication.beta563_not_same_budget._proof_1_1": {
+    "kind": "theorem",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "direct_type_dependencies": [
+      "Ne",
+      "Rat",
+      "HMul.hMul",
+      "instHMul",
+      "Rat.instMul",
+      "HPow.hPow",
+      "Nat",
+      "instHPow",
+      "Rat.instPowNat",
+      "OfNat.ofNat",
+      "Rat.instOfNat",
+      "instOfNatNat",
+      "HDiv.hDiv",
+      "instHDiv",
+      "Rat.instDiv"
+    ],
+    "direct_body_dependencies": [
+      "of_decide_eq_true",
+      "Ne",
+      "Rat",
+      "HMul.hMul",
+      "instHMul",
+      "Rat.instMul",
+      "HPow.hPow",
+      "Nat",
+      "instHPow",
+      "Rat.instPowNat",
+      "OfNat.ofNat",
+      "Rat.instOfNat",
+      "instOfNatNat",
+      "HDiv.hDiv",
+      "instHDiv",
+      "Rat.instDiv",
+      "instDecidableNot",
+      "Eq",
+      "instDecidableEqRat",
+      "id",
+      "Bool",
+      "Decidable.decide",
+      "Bool.true",
+      "Eq.refl"
+    ]
+  },
+  "T7Publication.beta564_budget._proof_1_1": {
+    "kind": "theorem",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "direct_type_dependencies": [
+      "Eq",
+      "Rat",
+      "HMul.hMul",
+      "instHMul",
+      "Rat.instMul",
+      "HPow.hPow",
+      "Nat",
+      "instHPow",
+      "Rat.instPowNat",
+      "OfNat.ofNat",
+      "Rat.instOfNat",
+      "instOfNatNat",
+      "HDiv.hDiv",
+      "instHDiv",
+      "Rat.instDiv"
+    ],
+    "direct_body_dependencies": [
+      "of_decide_eq_true",
+      "Eq",
+      "Rat",
+      "HMul.hMul",
+      "instHMul",
+      "Rat.instMul",
+      "HPow.hPow",
+      "Nat",
+      "instHPow",
+      "Rat.instPowNat",
+      "OfNat.ofNat",
+      "Rat.instOfNat",
+      "instOfNatNat",
+      "HDiv.hDiv",
+      "instHDiv",
+      "Rat.instDiv",
+      "instDecidableEqRat",
+      "id",
+      "Bool",
+      "Decidable.decide",
+      "Bool.true",
+      "Eq.refl"
+    ]
+  }
+}

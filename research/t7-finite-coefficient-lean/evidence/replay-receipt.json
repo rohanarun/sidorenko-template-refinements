@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "scope": "Source section 6 finite coefficient bound with source-expanded eta; no density or counterexample claim",
+  "reviewed_proof_files_unchanged": 37,
+  "manifest_files_verified": 187,
+  "trust_level": 0,
+  "formal_modules": 37,
+  "formal_theorems": 312,
+  "formal_declarations": 1187,
+  "full_toolchain_hash_verified": true,
+  "source_packet_files_verified": 105,
+  "axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "paired_claims": [
+    "T7Weighted.source_weighted_negativity",
+    "T7Weighted.eta_source"
+  ],
+  "new_beta_control_lemmas": [
+    "T7Publication.beta563_budget",
+    "T7Publication.beta563_exceeds_threshold",
+    "T7Publication.beta563_not_same_budget",
+    "T7Publication.beta564_budget"
+  ],
+  "new_control_declarations_audited": 8,
+  "historical_InsufficientBeta_status": "INCONCLUSIVE_REDUCTION_NOT_A_SEMANTIC_REJECTION",
+  "beta_correction_status": "FOUR_KERNEL_PROVED_BUDGET_STATEMENTS_INCLUDING_DISEQUALITY",
+  "changed_beta_headline_disproved": false,
+  "opus_review_scope": "Unchanged finite core; static review only; new packaging/controls not Opus-reviewed",
+  "newer_RL_or_host_results_included": false,
+  "elapsed_seconds": 122.826,
+  "runs": [
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/build_offline.py"
+      ],
+      "log": "evidence/formal-build.log",
+      "exit_code": 0,
+      "elapsed_seconds": 90.756
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/review_dependencies.py"
+      ],
+      "log": "evidence/dependency-checks.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.069
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/negative_controls.py"
+      ],
+      "log": "evidence/author-negative-controls.log",
+      "exit_code": 0,
+      "elapsed_seconds": 15.881
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/controls/PublicationClaim.lean"
+      ],
+      "log": "evidence/paired-publication-claim.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.917
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "-R",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/controls",
+        "-o",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/build/controls/BetaMargin.olean",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/controls/BetaMargin.lean"
+      ],
+      "log": "evidence/beta-margin.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.119
+    },
+    {
+      "command": [
+        "/Users/artus/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "-t",
+        "0",
+        "/Users/artus/LocalData/Codex-LYTiQ/2026-10-11/task-5/t7-finite-coefficient-publication/controls/ControlAudit.lean"
+      ],
+      "log": "evidence/beta-all-declarations.log",
+      "exit_code": 0,
+      "elapsed_seconds": 14.06
+    }
+  ],
+  "external_actions": []
+}

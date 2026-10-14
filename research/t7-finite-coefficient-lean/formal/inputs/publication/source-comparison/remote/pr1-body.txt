@@ -1,0 +1,9 @@
+Tracking only per-vertex upper caps permits local dimensions that cannot occur on an active support. Require every supported local span to have dimension at least two, restrict caps to the induced allowed graph, and retain the global-span cap.
+
+The new proof and exact audit check all 8,192 vertex supports and 55,173 feasible relaxed defect-one cases. A separate convolution dynamic program confirms the convexity maximum of 978. This reduces the sufficient even dimension for this one residual step from 1034 to 980. The standard runner now reproduces the new certificate alongside the existing enumeration and obstructions.
+
+Validation: `python3 -B run_checks.py` passed the full enumeration through 13 points, all existing exact certificates and rejection controls, and every new support/DP check. The edited LaTeX proof compiled successfully.
+
+This is one internal counting refinement; the original residue and transverse thresholds remain required. It does not establish a smaller general Sidorenko counterexample or a new dimension for the full theorem.
+
+Original: [OpenAI's Sidorenko manuscript](https://github.com/openai/math/tree/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026).

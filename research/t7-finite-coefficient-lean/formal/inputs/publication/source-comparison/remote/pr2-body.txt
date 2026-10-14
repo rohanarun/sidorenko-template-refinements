@@ -1,0 +1,29 @@
+## Result
+
+The nondirect residual contribution in OpenAI's *Costs for the remaining profiles* lemma is now bounded by $O_D(q^{-D+189})$, so even dimension **190** suffices for this one counting step — down from 980 (PR #1), 1034 (initial draft) and 1642 (source).
+
+![progress](https://raw.githubusercontent.com/rohanarun/sidorenko-template-refinements/refine/sequential-basis-count/charts/progress.png)
+
+## Method
+
+The earlier bounds count the $m$ active pair spaces as free two-dimensional subspaces of the global span. The paper's own **direct-case** count is sharper: it places one basis vector at a time, and each new vector must be symplectically orthogonal to everything already placed at either endpoint. This PR runs that count for the nondirect case too:
+
+- each basis vector records whether it raises the global span and whether it raises each endpoint span (type $(g,\ell_i,\ell_j)$, with $\ell\ge g$);
+- the defect $d=\sum_i k_i-2k$ is exactly the number of vectors that raise a local span without raising the global one;
+- the identity $\sum_i\binom{k_i}{2}=\sum_x\sum_{\ell=1}v'_i(x)$ cancels the containment cross terms, leaving $R=-2m+\sum\pi_x+(\text{defect terms})$ where $\pi_x$ is the overlap of the two endpoint spans;
+- averaging $\pi\le\tfrac12(v'_i+v'_j)$ per vertex and using concavity gives $R\le\sum_i\deg(i)^2-3m+\lfloor(k_i+k_j-1)/2\rfloor=262-84+11=189$ for $d=1$, and $R/d\le122$ for $d\ge2$.
+
+In the direct case the same accounting reproduces the paper's exact exponent $-m$, which is a useful consistency check.
+
+## Verification
+
+- `audit_sequential.py` (standard library) reconstructs the allowed graph from the saved faces and cut bits, checks connectivity and the per-vertex concavity bound at every integer, exhausts all 8,192 supports and 55,173 relaxed defect-one strata with an integer convolution confirmed by an independent marginal-gain allocation, and checks the higher-defect ratio. Maximum: **189**, attained only on the full support with every local dimension at or one below full rank (spans 49–55), matching the closed form.
+- The combinatorial identities were also checked on random dependent subspace families over GF(3) (not included; the audit is exact and self-contained).
+- `python -B run_checks.py` passes locally end to end (plantri rebuild, enumeration, all earlier certificates, and the new audit); it is wired into CI.
+- `proof.tex` gains a section with the full argument and compiles (tectonic).
+
+## Scope
+
+Only this one counting step is lowered. The earlier residue and transverse thresholds of the full construction remain required and may dominate. This is an AI-generated research draft; mathematical priority and formal verification are not claimed. `progress.md` has the timeline and a tweet draft.
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)

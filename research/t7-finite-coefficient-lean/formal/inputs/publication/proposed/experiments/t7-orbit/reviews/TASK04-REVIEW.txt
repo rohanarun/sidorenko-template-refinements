@@ -1,0 +1,231 @@
+Round 2 Task 4: independent substantive orbit-transfer review
+Review date: 2026-10-11 UTC
+
+OUTCOME
+
+No substantive mathematical defect was found in the full 570-line theorem.
+The new finite integration is supported by conventional proof: replacing
+discrete incidence refinement by "every stable-color-preserving
+endomorphism is an automorphism" is valid under the retained sphere and
+Hamiltonian-coverage hypotheses. The argument genuinely handles the entire
+automorphism orbit and all competing maps, including repetitions.
+
+The analytic rank-layer input is an explicit dependency on the already
+recovered, conventionally reviewed L3 manuscript, not an unexplained
+unproved import. The bundled dependency is byte-identical to that
+manuscript. I rechecked the extraction of its analytic conclusion before
+the discrete-pinning step. This review does not claim a fresh formal
+verification or a numerical prime, kernel table or finite host.
+
+SOURCES AND EXACT BINDING
+
+All paths are workspace-relative; source-pins.json records full hashes.
+P below means:
+ source-artifacts/round2-unindexed-20261011/task-04/files/orbit_transfer/
+ orbit_transfer_theorem.md
+ 32,184 bytes, 570 lines; SHA256
+ 9afd06cf6911763965e15b57a83805828c0c680e9a88ae2942a4bb63ef346362.
+
+Complete answer:
+ task-04/round2-04-response.md, 22,548 bytes; SHA256
+ 30c82cd58b1d8c76f839da308aeffe75726c0f72e87409919d66ac87f856da99.
+The complete answer and theorem were read; the main equations agree.
+
+ZIP:
+ 7f1d1c8d14a8333ba8c0509289a76703b198f9d6687478dac77f9fde5f98ef9b.
+All task4 member hashes listed in its source pins were recomputed.
+
+L below means the included dependencies/template_transfer_proof.md:
+ 63,949 bytes; SHA256
+ 2d286841535e86965dd1af937a85c65ae11ed73281184636ccc5375b3526cba4.
+It exactly matches source-artifacts/l3-manuscript-transfer-20261010/
+template_transfer_proof.md. Prior local, tail and global manuscript
+reviews are independently pinned as historical review inputs.
+
+A. THE ANALYTIC EXTRACTION IS VALID, WITH ITS ORIGINAL DIMENSION
+
+P:15-104, equations (1)-(5), retains a simple sphere, n>=5, rational
+Hamiltonian cycle law, coverages a_e>=1/3. These give max point degree<=6,
+sum a_e=n, total excess sum(a_e-1/3)=2, connected face dual and n<f.
+Each cycle gives two fresh-point polygon exposures. Those are precisely
+the graph-dependent premises needed before L3's pinning step.
+
+L:112-560 derives local finite-field, transverse, ordered-orbit, planted
+and weighted profile results. The local three-point geometry is universal.
+L:231-260 expressly proves the joint determinant-sign statement for
+every fixed graph of maximum degree at most six; it does not require 13
+points, discrete refinement, minimum point degree four or a symmetry
+assumption. L:502-558 uses event containment for weighted cuts, not their
+independence, and the coverage denominator for the exponent lattice.
+
+L:561-842 establishes residual classification and direct/nondirect counts
+with:
+ M=4104 f(ell+1)^2, C=12M^2+2M, B=m^2+20m,
+ D even, D>=12, D>max(M+2fC,B).
+The proof only needs the structural quantities just listed. In particular
+it keeps possibly negative local slack until the global argument rules
+out nonresidual profiles. The arbitrary global span is not assumed
+isotropic; local endpoint spans are. The support-uniform nondirect bound
+is -D+B. The direct basis count divides a full basis family, not one
+fixed type-pattern class.
+
+The first mathematical use of discrete coloring is L:983-1006, after the
+rank-layer conclusion at L:834-842. Thus applying the analytic proof with
+a nondiscrete sphere is justified, rather than silently weakening the
+hypotheses of an opaque theorem statement.
+
+Averaging the independent edge signs in L3 (3.1) produces P (4): an edge
+has two face occurrences, and the independent sign survives only when all
+four corners are active. Its factor becomes 1+product of the four xi.
+Reversing differences multiplies every incidence sign by chi((-1)^r);
+the fourfold product is unchanged.
+
+This reuses the earlier conventional proof review; it is not a deduction
+from the Task 4 finite checker. Task6's 13-point numerical constants and
+Task9's two-template 189/197 improvements are not substituted here.
+
+B. EXACT MAXIMIZERS OVER ALL MAPS
+
+P:108-180, equations (6)-(10), is correct. Regrouping pair scores gives
+2 sum_u <h_t(z(u)),h_t(u)> whenever the map preserves prior colors, even
+with repeated images or nonedges. Subtracting the target histogram norms
+gives the displayed square loss. Old-color retention ensures zero loss
+means preservation of the next round.
+
+For an arbitrary map, vertex scores are >=-v Delta^2. Each source edge
+has pair score at most 4Delta, with at most vDelta/2 source edges, so
+-vDelta^2 <= F_t(z) <= 2vDelta^2. Together with
+0<=F_t(id)<=vDelta^2, M=2vDelta^2 bounds the absolute difference.
+L=M+2 makes the possible later-round gain strictly smaller than the first
+integer loss. Stable maps achieve exactly the identity score in all
+rounds. Adding -b_bad cannot improve any score and gives an additional
+integer loss for each nonincidence. Therefore the exact argmax is the
+stable-color-preserving endomorphism set. No injection constraint was
+smuggled into this maximization.
+
+C. FULL NEGATIVE COEFFICIENT AND AUTOMORPHISM MULTIPLICITY
+
+P:184-228 gives a normalized nonnegative rational probability law.
+The nonempty first moment indexed by Delta has opposing branch biases;
+every other nonempty first moment is zero in each branch. The full
+moment formula is its exact finite Fourier calculation. Disjoint,
+nonempty labels have zero moment, and all moments have absolute value<=1.
+
+The support identity P:240-248 is valid for a simple sphere triangulation.
+For a corner gamma, availability occupies the three corners of its face
+and two endpoint corners in each of two distinct opposite faces.
+The two opposite faces cannot both supply an edge's two endpoints through
+their available sets, whose intersection has just one point. This proves
+the fourfold support intersection. Nonzero identity terms consequently
+have alpha_e subset U_e, and the nonempty-intersection condition at all
+four corners forces equality. Thus the entire sum has one term:
+ C(id)=-4^(-k).
+It is not merely the selection of a negative summand from a possibly
+positive coefficient.
+
+P:259-269 uses the correct source reindexing. An incidence automorphism
+induces a point-edge permutation; substituting beta_{h(e)}=alpha_e and
+reindexing source corners converts C(h) exactly to C(id). Target coordinate
+subsets are not assumed to enjoy an invariance of the biased law.
+The distinguished negative corner can move. The unique labeling has
+alpha_e=U_{h(e)}, and the product meets the unique negative target corner
+once. There are |G| distinct type maps, so the leading coefficient is
+-|G|4^(-k), with no corner-stabilizer quotient.
+
+D. ALL COMPETITORS AND EXPLICIT FINITE PINNING
+
+P:275-336 counts exactly N=n^n f^f maps and at most
+B_label=(2^k-1)^m nonempty label tuples. These bounds include every map,
+whether or not it preserves incidence. Each summand is bounded by one.
+The common per-part priors and one thinning factor per source incidence
+give equation (20) exactly, with positive common orbit weight w.
+T=1+2 N B_label 4^k ensures the absolute lower-score contribution is <c/2.
+The integer score gap applies to every nonmaximal map, not just
+permutations. Therefore t0<-eta, eta=cw/2, is justified.
+
+All exponents, priors and thinning probabilities are rational. Negative
+score exponents do not change positivity or normalization. T is a finite
+symbolic choice, not a proposed feasible computation.
+
+E. INDEPENDENCE, TRANSPOSE, DILUTION AND ERROR
+
+P:340-363 correctly assigns independent variables to source vertices and
+independent activation draws to source incidences, even when target types
+or pairs repeat. The coordinate parity expansion gives two edge-label
+factors at each corner. Zero mixed moments and connected face dual force
+all labels empty or all nonempty. No correlated-prior reflection argument
+is used. The transpose includes every reversed type map, and its
+coefficient has the same absolute bound B_label without a sign claim.
+
+P:365-416 uses n<f and positive degrees to get powers epsilon^n and
+epsilon^f. The selected epsilon satisfies
+epsilon B_label(1+B_label)<eta/4. Since f-n>=1, the limiting product is
+<1-(3/4)eta epsilon^n; its stated weaker 1-eta epsilon^n/2 margin is safe.
+The telescoping density error k(2^m+1)^(k-1)e_q is uniform. Averaging
+probability weights introduces no extra map-count factor. The product
+error bound (3+2B_label)a_q is valid for a_q<=1. Fixing all finite
+parameters before q and taking a sufficiently large odd prime therefore
+preserves the strict margin. No numerical q threshold follows without the
+analytic prefactor, which the note explicitly does not evaluate.
+
+F. RATIONAL KERNEL AND ORDINARY FINITE HOSTS
+
+P:420-466 uses a product probability space. Forward and reverse factors
+in V=W(x,y')W(x',y) use disjoint independent variable families, proving
+the product identity without equal orientation densities.
+Each rank-sign event has at least one matrix, giving K<=q^b(D); support
+size<=7 gives V<=q^(14b(D)). Scaling preserves the strict homogeneous
+inequality and makes a rational [0,1] kernel. All masses already rational.
+
+The finite-host expectation comparison correctly counts all homomorphisms.
+Injective source maps use distinct Bernoulli edge trials. Colliding source
+maps have total fraction at most binom(v,2)/N and require no artificial
+independence. Bernoulli's inequality and Jensen give a strict negative
+expectation of t(H,G)-p(G)^k for the displayed N. An edgeless graph cannot
+supply that strict inequality. This proves existence without instantiating
+the finite host.
+
+G. CERTIFICATE AND ANCILLARY STRICTNESS EXAMPLE
+
+P:471-487 gives a sound complete decision-tree format: every color-domain
+image is included, and noninjective maps are never pruned merely for
+colliding. Complete valid leaves must be bijections; finite edge-set
+cardinality then upgrades endomorphisms to automorphisms.
+The local-neighbor uniqueness lemma is also sound: the induced neighbor
+map is a degree-preserving bijection, hence the image is neighbor-closed
+and connectedness forces surjectivity.
+
+The 18-vertex pendant-cycle example is correctly marked as outside the
+sphere-template class. Its finite results remain producer evidence in
+this review; they are not claimed as an independent execution. The
+substantive sphere example supplied by Task11 is reviewed separately.
+
+H. SUPPLIED CODE: STATIC REVIEW ONLY
+
+All 265 lines of check_orbit_transfer.py were read, not executed.
+SHA256 851794b2db1f6e49f5f25d45a623703acf0a2ceded88d55a74dd902c0b824c5d.
+It imports only standard-library modules and has no subprocess, network,
+eval/exec, installation or credential operations. Its certificate verifier
+recomputes colors, requires exhaustive distinct child domains, validates
+nonedge leaves, and checks bijective complete leaves; this matches the
+mathematical certificate specification. The moment calculation uses exact
+Fraction arithmetic. Its 35-vertex and 2^20-state caps are explicit.
+
+The default --out directory is the supplied script directory and writes
+three producer-named files non-atomically. Do not run against source copies.
+If later authorized, use the existing reviewed adapter and a fresh staged
+attempt directory, preserve all producer outputs, compare parsed output,
+and commit results through the runner's atomic envelope.
+Recommended initial replay budget: 15 CPU seconds, 30 wall seconds,
+128 MiB memory, 1 MiB output. No installation or cloud work needed.
+No supplied-code replay is authorized or performed by this report.
+
+CONCLUSION AND LIMITS
+
+The requested general orbit-transfer strengthening is supported at the
+conventional-proof level, retaining the exact recovered L3 analytic proof.
+No substantive counterexample or missing mathematical obligation was
+identified. The actual advance is quantitative integration of the weaker
+pinning hypothesis, not a smaller dimension or evaluated construction.
+The finite source checker's PASS is not promoted to independently replayed
+evidence. No global ledger, GUI, publication or source artifact was changed.

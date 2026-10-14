@@ -1,0 +1,39 @@
+Skeptical reviewer statement: T7 theorem and acceptance boundary
+2026-10-11 UTC — literal_supplier lane
+
+The clean independently reviewable implication is conditional on the analytic rank-layer statement A below. The campaign also has a supplied proof of A; accepting that entire proof gives the proposed unconditional corollary. These are different statements about proof dependence and review status, not different graphs or constructions.
+
+Exact statement
+
+Let Gamma have faces 012,013,023,124,134,235,245,346,356,456, and let H be its point–face incidence graph, with 17 vertices and 30 edges. For a fixed even D, let K_xi be the mean-one indicator of symmetric D by D matrices over F_q of rank D/2 and quotient determinant sign xi. For each point edge e let U_e be its four endpoint–face corners.
+
+Analytic input A says that, as q tends through odd primes, for every activity set B and incidence-sign assignment, independently uniform X_i,Y_j satisfy
+ E product_(i,j in B) K_xi_ij(X_i-Y_j)
+ = product_(e: U_e subset B) [1+product_(kappa in U_e) xi_kappa] + o(1),
+uniformly over these finitely many choices, with the same conclusion for reversed differences. The fixed-D kernel definitions and normalizations are part of A. No quantitative error rate is needed for the qualitative implication.
+
+Under A, Task4's finite transfer argument and Task11's literal template/negative-coefficient proof imply a finite rational probability space with a symmetric rational kernel 0<=U<=1, mean mu>0, and t(H,U)<mu^30. They then imply a finite simple graph G with at least one edge and t(H,G)<p(G)^30, using ordinary homomorphism densities, including noninjective source maps.
+
+The supplied L3 manuscript §§2–8 asserts a complete proof of A, with O(q^-1/6) error at any fixed even D>=103482288426242 for this T7. Its combined theorem statement includes discrete refinement because its original later pinning used that hypothesis. The extracted analytic proof does not use discreteness. If its full proof is accepted, A is discharged and the proposed 17-vertex corollary has no remaining conjectural analytic hypothesis. Calling a proof unpublished does not itself make its theorem mathematically conditional. Conversely, the current checks do not justify presenting A as an externally established black-box theorem without identifying this unpublished source.
+
+What this reviewer freshly checked
+
+I read the pinned proof sources and challenged their T7-specific interface: degree-three vertices and separating triangles; the use of maximum degree<=6 rather than a hidden lower degree; Hamiltonian polygon exposures, connected dual and total excess 2; coverage denominator 3; support-uniform residual counts and the constants M,C,B,D; the degree-three support-intersection corner case; stable maps with repeated images; full-sum negative orbit coefficients; independent source-incidence draws; reversed signs; common rational priors, thinning and the specialized eta; epsilon^7 versus epsilon^10 dilution; crossed-product independence; bounded scaling; and the 136/N collision allowance in the finite-host inequality. No concrete gap in this specialization was found.
+
+All 15 input-manifest records were hash/length checked, and Task4's L3 dependency matches the recovered manuscript byte for byte. I read the existing independent finite T7 result/receipt; I did not rerun it. Its finite checks establish the literal sphere/cycles/exposures, stable-map enumeration, support data and small parameter arithmetic. They do not establish A or measure a rank-layer density.
+
+What remains inherited or unaccepted by this bounded review
+
+The complete generic analytic proofs remain the supplied L3 text and its earlier separate AI proof reviews: symmetric-rank/sign asymptotics and restriction balance; transverse center normalization and joint determinant-character estimates; individual ordered symplectic-orbit lower bounds; matrix-chart comparison; planted common-space/lift counting, shared-form codimension and relaxed gain bounds; coercivity and global singular-profile classification. I checked the hypotheses and their use in T7, but did not freshly reconstruct every such local lemma from first principles or formally certify its algebra. Earlier local/tail/global reviews report no substantive gap; that is review evidence, not an independent human acceptance or formal proof certificate.
+
+The exact finite implication additionally depends on the supplied Task4 moment/support, integer-score domination, dilution and symmetrization proofs, and Task11's literal T7 and specialized-score proofs. Their relevant interfaces were rechecked here. The full Task11 n<=12 classification archive, any census minimum, the 13-point L2 effective constants, Task9 dimensions 7296/7644 and the separate support33 repair are not premises.
+
+No independent human referee acceptance, completed formalization, or external mathematical validation of the entire L3–Task4–Task11 chain is evidenced by this workspace. Separate AI-agent passes should be described as such. The signed-rank formula L3 (3.2) needs its positive-rank qualification; all uses here have D/2>=6, so it does not leave a T7 gap.
+
+Unevaluated parameters and construction limits
+
+The dimension is an explicit sufficient bound, not an optimized one. Priors, beta=2^564, eta and epsilon are finite rational symbolic choices fixed before q. The O(q^-1/6) prefactor is not evaluated, so the required sufficiently large prime is not bounded numerically or selected. The finite kernel table, its actual density, a host size as a numerical integer, and a host adjacency list are not computed. This does not obstruct the conditional existence implication, but rules out describing the result as a computed explicit counterexample or independently verified kernel-density certificate.
+
+No additional arithmetic obligation was uncovered in this boundary pass, so no redundant computation or supplied-code execution was performed. No publication action is authorized by this review.
+
+Draft wording review: the publication author's theorem.md and DEPENDENCIES.txt were not yet present when this boundary statement was completed. No unseen draft wording is approved by this review; a separate pinned draft inspection remains pending.

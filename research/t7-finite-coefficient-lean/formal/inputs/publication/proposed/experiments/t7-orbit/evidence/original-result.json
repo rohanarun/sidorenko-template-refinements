@@ -1,0 +1,171 @@
+{
+  "status": "PASS",
+  "input_sha256": "583719581922454280d360875e7cb0ef0178477a5084a8b222da86744e0c7f7e",
+  "source_response_sha256": "87944a5c592d904a1b79855e5bfc99d26a82e7cc07ec5f178daaec8743755914",
+  "n": 7,
+  "f": 10,
+  "point_edges": 15,
+  "incidence_edges": 30,
+  "stellar_construction_matches": true,
+  "coverage": {
+    "(0, 1)": "1",
+    "(0, 2)": "2/3",
+    "(0, 3)": "1/3",
+    "(1, 2)": "1/3",
+    "(1, 3)": "1/3",
+    "(1, 4)": "1/3",
+    "(2, 3)": "1/3",
+    "(2, 4)": "1/3",
+    "(2, 5)": "1/3",
+    "(3, 4)": "1/3",
+    "(3, 5)": "1/3",
+    "(3, 6)": "1/3",
+    "(4, 5)": "1/3",
+    "(4, 6)": "2/3",
+    "(5, 6)": "1"
+  },
+  "exposure_orders_checked": 6,
+  "refinement_cell_counts": [
+    2,
+    5,
+    9,
+    9
+  ],
+  "point_cells": [
+    [
+      0,
+      6
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      3
+    ]
+  ],
+  "face_cells": [
+    [
+      0,
+      9
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      4,
+      5
+    ]
+  ],
+  "stable_point_maps_checked": 64,
+  "noninjective_point_maps_checked": 56,
+  "all_stable_endomorphisms": [
+    {
+      "points": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "faces": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "points": [
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "faces": [
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ]
+    }
+  ],
+  "support_intersections_checked": 15,
+  "canonical_orbit_label_products": [
+    "-1/1152921504606846976",
+    "-1/1152921504606846976"
+  ],
+  "canonical_product_scope": "The full-sum uniqueness is a conventional support proof, not brute force.",
+  "score_values": {
+    "sum_degree_squares": 136,
+    "sum_histogram_squares": 34,
+    "max_local_error": 7,
+    "Qmax": 5066,
+    "max_pair_score": 446,
+    "beta_log2": 564,
+    "normalized_lower_map_bound_exponent": -60
+  },
+  "smaller_folds_checked": [
+    "T5",
+    "T6_st",
+    "T6_oct"
+  ],
+  "barycentric_fixed_set": [
+    [
+      3
+    ],
+    [
+      2,
+      4
+    ]
+  ],
+  "nonfixed_barycentric_vertices_connected": 30,
+  "dual_diameter": 3,
+  "L3_M": 656640,
+  "L3_C": 5174114388480,
+  "L3_B": 525,
+  "sufficient_fixed_even_D": 103482288426242,
+  "limits": {
+    "stable_point_maps": 64,
+    "vertices": 35,
+    "wall_seconds": 10,
+    "memory_MiB": 64,
+    "disk_MiB": 2
+  },
+  "not_verified": [
+    "full n<=12 census",
+    "producer standalone certificate",
+    "analytic rank-layer theorem by computation",
+    "numerical prime/kernel/host"
+  ]
+}

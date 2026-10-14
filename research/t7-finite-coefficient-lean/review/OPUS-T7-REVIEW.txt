@@ -1,0 +1,127 @@
+# T7 excerpt from the Opus review
+
+Verbatim Contribution B excerpt. The complete review also covered an unrelated P193 contribution. This excerpt excludes that contribution and is bound to the complete review by REVIEW-PROVENANCE.json. The reviewer performed a static source review and executed no Lean or checker commands.
+
+## CONTRIBUTION B — T7 weighted negative coefficient
+
+### B.1 Verdict
+
+**Publishable as a Lean formalization of source §6's finite coefficient bound.** I found no mathematical or formal defect in the headline theorem.
+
+There are no blockers. Two wording requirements apply:
+- State the headline together with `eta_source`, or prove a combined theorem whose statement shows the expanded constant.
+- Describe `averagedCoefficient` as the finite expectation (4) defined by the source priors and thinning. Do not call it the kernel-density coefficient.
+
+### B.2 Defects and weaknesses, most important first
+
+**1. Risk of interpretive overreach (wording, not a proof defect).**
+- `README.md:3` ("the actual type-averaged stochastic coefficient") is accurate inside the package.
+- Publicly, "actual coefficient" invites readers to treat it as the coefficient in the density expansion. That identification needs the all-mask expansion `E_g P(g) = 1+averagedCoefficient`, which is not formalized. `NEXT-RL.md:3,29` explicitly forbids relabelling it.
+- Public text must carry that qualifier.
+
+**2. `eta` is an opaque-looking definition in the headline.**
+- `Negativity.lean:39` defines `eta := decay 8314/(2^60*pointNormalizer^7*faceNormalizer^10)`.
+- The match to (5) with Z_I and Z_J expanded is a separate theorem, `eta_source` (`SourceConstants.lean:29-33`).
+- Both are proved. A reader of the headline alone has to trust the definition, so publish them together.
+
+**3. Weak control: `InsufficientBeta`.**
+- `controls/InsufficientBeta.lean` tests only the standalone identity 2^54·2^450/2^563 = 2^−60.
+- Its log (`InsufficientBeta.log:1-7`) shows `decide` *got stuck* during reduction. It never evaluated the statement to false.
+- Contrast `WrongScoreMaximum.log`, where "decide proved that the proposition … is false".
+- Under β = 2^563 the headline need not be false either; only the crude remainder bound fails.
+- It should be relabelled as a proof-margin control, or replaced by a `≠` proved by `decide +kernel`, or by a β-mutated build. The meaningful control is the 37→36 prior mutation failing at `ActualWeights:87`. I accept that one on receipt; I did not read its log.
+
+**4. Minor and benign items.**
+- `WeightedNumerator.lean:8` uses a classical `DecidableEq TypeMap`. This only affects the noncomputable `finiteRemainder` and is consistent with the reported axiom set.
+- Generic lemmas use auto-bound type variables, e.g. `ActualWeights.lean:12` `(xs : List α)`. These are harmless universally quantified types. The headline has no free variables, which `ExactHeadlineAndThinning.lean` confirms on receipt.
+
+### B.3 Source-to-claim correspondence and attacks on hidden assumptions
+
+Each item below checks the Lean definitions against `theorem.md:168-219`.
+
+**Headline statement**
+- `SourceConstants.lean:36-37`: `0 < eta ∧ averagedCoefficient < -eta`.
+- Closed, no binders, ordinary `Rat` order and negation.
+- My grep of the author `.lean`/`.toml` sources found no `sorry`, `admit`, `axiom`, `native_decide`, `implemented_by`, `extern`, `unsafe`, `opaque` or `autoImplicit`.
+
+**Laws are actual laws, not a proxy**
+- `averagedCoefficient` is a nested `FiniteLaw.mean` over `independentLaw pointPrior 7` and `facePrior 10` (`AveragedCoefficient.lean:51-52`). This means independent draws at every source vertex.
+- `productWeight` is indexed by source position (`FiniteProbability.lean:53-55`), so repeated target types do not merge draws.
+- Priors are `normalizedLaw` with raw masses β^(−37d²) and β^(−‖m‖²) (`Priors.lean:24-36,43-44,62-68`). `faceNorm` sums the squared histogram counts at degrees 3..6 (`Priors.lean:41`).
+- `FiniteLaw` carries proved nonnegativity and normalization.
+
+**Thinning: one Bernoulli trial per corner**
+- `thinnedActivationLaw = productLaw(bernoulli λ_ab, activationLaw)` (`ThinningLaw.lean:39-41`).
+- On failure the empty law applies: `thinnedFeature` is 1 only for the empty mask (`AveragedCoefficient.lean:7-8`).
+- `thinnedMoment_factor` gives exactly one λ per corner for nonempty labels. All labels in (2) are nonempty (`allLabelings = functions nonemptyMasks 15`).
+- λ = β^(−(446−s_ab)). The Nat subtraction is guarded by `pairScore_bound` (decided over 7×10 cases), and `thinning_exponent_int` converts it.
+
+**Activation law (baseline)**
+- Branch bias ±σ/2, i.e. θ = 1/2 (`Activation.lean:11-13`), with an M/D mixture of weight ½ each.
+- Lifting the signs to 30 coordinates is harmless because `phi` reads only signs inside the active set.
+- `activation_moment_eq_formula` derives (1) and is not assumed.
+
+**Score**
+- `sourceScore` is literally Σ s_a + Σ s_b + Σ_c s_ab with s_ab = 74d + 2m_b(d) (`Scores.lean:18-21`; `Priors.lean:72`).
+- `sourceScore_eq_score` proves the regrouped form with constant 5032 = 37·136.
+- Face terms are ≤ 7 (`three_image_face_bound`, decided over 3,430 cases).
+- A changed point degree gives ≤ 5032 − 37 + 70 = 5065.
+- Stable maps give 5066 − Σ faceDefect.
+- `score_max_iff`: score = 5066 ⟺ StablePoints ∧ StableFaces. This holds for arbitrary maps, including non-injective ones.
+- Point and face colours (`Finite.lean:79-80`) reproduce the stable cells in §4.
+
+**Exponent truncation**
+- `exponentCost_sourceScore` gives cost + Q = 13380 = 30·446.
+- `exponentCost_gap` gives cost = 8314 + (5066−Q).toNat. The `toNat` is safe because `score_le_max` is proved first.
+- Source (4) has the prefactor β^(−13380). 13380 − 5066 = 8314, which is consistent.
+
+**Maximum-score classification**
+- Maximum-score maps other than identity and reversal vanish via `generalCoefficient_non_incidence` + `stable_endomorphisms_exact` (`WeightedNumerator.lean:93-102`).
+- Identity and reversal each contribute −4^(−30) through the baseline `stochastic_signed_orbit` (`GeneralCoefficient.lean:93-94`). That is the full sum over labelings, not one selected term.
+
+**Tail estimate**
+- Features lie in {−1,0,1}, so |pairMoment| ≤ 1, and |C| ≤ #labelings ≤ (2^30)^15 = 2^450 (`CoefficientBounds.lean:87-116`).
+- Lower-score maps have relative weight ≤ 1/β.
+- The type-map list is exhaustive and duplicate-free, with length 7^7·10^10 = 8,235,430,000,000,000 < 2^54 ≈ 1.80·10^16.
+- Remainder < 2^54·2^450/2^564 = 2^(−60), strictly (`WeightedNumerator.lean:143-158`). It is also bounded below by −2^(−60).
+- So the normalized sum < −2^(−59) + 2^(−60) = −2^(−60).
+- Scaling by the positive `averagedScale` gives < −η.
+
+**Denominators**
+- Z_I, Z_J and β are proved positive, so Rat's x/0 = 0 cannot make the statement vacuous.
+- `eta_source` matches (5): Z_I = 2β^(−333) + 2β^(−592) + 2β^(−925) + β^(−1332), from degrees (3,4,5,6,5,4,3). Z_J = 8β^(−3) + 2β^(−5).
+
+**Boundary items**
+- No outside obligation (all-mask expansion, RL limit, density transfer, dilution and orientation, prime choice, iid host) is logically needed for the closed theorem. The theorem has no premises.
+- Those items determine only how the result should be interpreted downstream. `NEXT-RL.md` and `t7-independent/summary.json` state the boundary correctly.
+
+**Conclusion.** The Lean development proves what §6 says, for the expectation (4) it defines.
+
+### B.4 Safe claims and prohibited overclaims
+
+**Strongest safe claim:**
+> In Lean 4.33.0 (core and Std only; the audit reports transitive axioms {propext, Classical.choice, Quot.sound}), we prove without hypotheses that the source's finite type-averaged, thinned, all-nonempty coefficient t₀ — the expectation over independent normalized point and face priors and one Bernoulli thinning trial per source corner of the full labeling sum — satisfies t₀ < −η < 0. Here η = β^(−8314)/(2^60·Z_I^7·Z_J^10) and β = 2^564, with the exact source constants (`eta_source`). This formalizes theorem.md §6, formula (5).
+
+**Prohibited:**
+- "Lean proof of a non-Sidorenko graph" or "Lean-verified 17-vertex counterexample".
+- "Kernel-density deficit proved".
+- Calling `averagedCoefficient` the density-expansion coefficient without the all-mask identity.
+- "First", "smallest" or "priority".
+- Claiming the 35/66 → 17/30 reduction is established. Per `PUBLIC-NOVELTY-BOUNDARY.txt:31-36`, it remains "proposed" and conditional.
+
+### B.5 Novelty
+
+**Formal novelty relative to `t7-gap-repair`.** Eight `T7Weighted` modules and 85 new theorems, which I spot-read rather than counted. They add:
+- the score theory with exact maximum classification for arbitrary maps;
+- the uniform 2^450 coefficient bound;
+- the two-sided remainder bound;
+- the identification of the actual prior and thinning weights with score weights;
+- the final margin.
+
+This is substantive. It is not a renaming of the baseline orbit coefficient. The mathematics belongs to the source theorem.md §6.
+
+**Against the frozen public record:**
+- The refinement sources explicitly say their certificates are "not Lean proofs" (`refinement/README.md:33`; `proof.tex:121`).
+- I found no Lean formalization of this coefficient bound in the pinned OpenAI, refinement, PR3, PR4 or PR5 sources I grepped.
+- Bounded language: "no Lean formalization of this bound was found in the pinned comparison sources". That is not a priority claim.
+

@@ -1,0 +1,4 @@
+'T7Publication.beta564_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'T7Publication.beta563_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'T7Publication.beta563_exceeds_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+'T7Publication.beta563_not_same_budget' depends on axioms: [propext, Classical.choice, Quot.sound]

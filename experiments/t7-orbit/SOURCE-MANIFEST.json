@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "scope": "Exact inert source proofs, independent checker, literal inputs and historical reviews.",
+  "files": [
+    {
+      "original_workspace_path": "source-artifacts/l3-manuscript-transfer-20261010/template_transfer_proof.md",
+      "path": "dependencies/l3-template-transfer-proof.md",
+      "bytes": 63949,
+      "sha256": "2d286841535e86965dd1af937a85c65ae11ed73281184636ccc5375b3526cba4",
+      "copied_without_modification": true
+    },
+    {
+      "original_workspace_path": "source-artifacts/round2-unindexed-20261011/task-04/files/orbit_transfer/orbit_transfer_theorem.md",
+      "path": "dependencies/task04-orbit-transfer-theorem.md",
+      "bytes": 32184,
+      "sha256": "9afd06cf6911763965e15b57a83805828c0c680e9a88ae2942a4bb63ef346362",
+      "copied_without_modification": true
+    },
+    {
+      "original_workspace_path": "source-artifacts/round2-unindexed-20261011/task-11/round2-11-response.md",
+      "path": "dependencies/task11-response.md",
+      "bytes": 30579,
+      "sha256": "87944a5c592d904a1b79855e5bfc99d26a82e7cc07ec5f178daaec8743755914",
+      "copied_without_modification": true
+    },
+    {
+      "original_workspace_path": "upstream/round2-independent-20261011/orbit-transfer/checks/check_t7.py",
+      "path": "checks/check_t7.py",
+      "bytes": 8970,
+      "sha256": "66e4b0490ac03e727019f1047e14a09bbfca4bf0d440e090238c5d793454919f",
+      "copied_without_modification": true
+    },
+    {
+      "original_workspace_path": "upstream/round2-independent-20261011/orbit-transfer/inputs/t7-literals.json",
+      "path": "inputs/t7-literals.json",
+      "bytes": 3878,
+      "sha256": "583719581922454280d360875e7cb0ef0178477a5084a8b222da86744e0c7f7e",
+      "copied_without_modification": true
+    },
+    {
+      "original_workspace_path": "upstream/round2-independent-20261011/orbit-transfer/checks/result.json",
+      "path": "evidence/original-result.json",
+      "bytes": 2765,
+      "sha256": "4bb7495f02e996b412cb3dc8e87d6cb974dbfc0c9e3c440bdaefebb948710710",
+      "copied_without_modification": true
+    },
+    {
+      "original_workspace_path": "upstream/round2-independent-20261011/orbit-transfer/checks/execution-receipt.json",
+      "path": "evidence/original-execution-receipt.json",
+      "bytes": 285,
+      "sha256": "af76dd63ea0b5f1680805b9311fa9fa97a3b7616c55f214a57e9180c627253fd",
+      "copied_without_modification": true
+    },
+    {
+      "original_workspace_path": "upstream/round2-independent-20261011/orbit-transfer/INTEGRATION.txt",
+      "path": "reviews/integration.txt",
+      "bytes": 7247,
+      "sha256": "6e36dc193585633e5d1412db034fab0f8bc09dfadb153542089c8c47e2b61b43",
+      "copied_without_modification": true
+    },
+    {
+      "original_workspace_path": "upstream/round2-independent-20261011/orbit-transfer-challenge/REVIEW.txt",
+      "path": "reviews/t7-specialization-challenge.txt",
+      "bytes": 11952,
+      "sha256": "750fdb190a57d9e23328ac0a4d29781cec3e3841646a53368c36b34f24febf29",
+      "copied_without_modification": true
+    },
+    {
+      "original_workspace_path": "upstream/sidorenko/L3-manuscript-local-review.txt",
+      "path": "reviews/l3-local-review.txt",
+      "bytes": 16102,
+      "sha256": "a4305456c861bb646708ae813a9752a196a8d99e4104335bcf0c6632a1311fa5",
+      "copied_without_modification": true
+    },
+    {
+      "original_workspace_path": "upstream/sidorenko/L3-manuscript-tail-review.txt",
+      "path": "reviews/l3-tail-review.txt",
+      "bytes": 4398,
+      "sha256": "2213a713bf2e8c247bda4a7a14c0eb2661dc6bcb6ba5edf1ba506507156e4eca",
+      "copied_without_modification": true
+    },
+    {
+      "original_workspace_path": "upstream/sidorenko/L3-manuscript-global-review.txt",
+      "path": "reviews/l3-global-review.txt",
+      "bytes": 15316,
+      "sha256": "a8c7463b12b830afbe81d877a75e1804b32dbeed3a0417e567837ecfda43e57f",
+      "copied_without_modification": true
+    },
+    {
+      "original_workspace_path": "upstream/sidorenko/t7-publication/source-comparison/REVIEW.txt",
+      "path": "reviews/source-comparison.txt",
+      "bytes": 10999,
+      "sha256": "e26587679421730a5e483aab13fc4d42848ccd441367a7f125fc1bcb71d8b9b9",
+      "copied_without_modification": true
+    },
+    {
+      "original_workspace_path": "upstream/round2-independent-20261011/orbit-transfer/TASK04-REVIEW.txt",
+      "path": "reviews/TASK04-REVIEW.txt",
+      "bytes": 12256,
+      "sha256": "b612ddcb871877dbe0f639d9379eedb8780b3f946b3106f0682e47d28278990c",
+      "copied_without_modification": true
+    },
+    {
+      "original_workspace_path": "upstream/round2-independent-20261011/orbit-transfer/TASK11-REVIEW.txt",
+      "path": "reviews/TASK11-REVIEW.txt",
+      "bytes": 11634,
+      "sha256": "fc99bdbae897e9c1e5d0b8e76f514d685037b28e68b332a346f495f8de202f09",
+      "copied_without_modification": true
+    },
+    {
+      "original_workspace_path": "upstream/round2-independent-20261011/orbit-transfer/source-pins.json",
+      "path": "reviews/source-pins.json",
+      "bytes": 6391,
+      "sha256": "7e2477f15e97e1b1925dc457b6ad031a374a395c4cb418e9b86dc1256f212d47",
+      "copied_without_modification": true
+    },
+    {
+      "original_workspace_path": "upstream/sidorenko/t7-publication/review/BOUNDARY-REVIEW.txt",
+      "path": "reviews/acceptance-boundary.txt",
+      "bytes": 6276,
+      "sha256": "dd7451549808df0588f427d54e4a4aa98d6fb8159cc3a36643b75e8c5ff75eba",
+      "copied_without_modification": true
+    },
+    {
+      "original_workspace_path": "upstream/sidorenko/t7-publication/PUBLIC-NOVELTY-BOUNDARY.txt",
+      "path": "reviews/public-novelty-boundary.txt",
+      "bytes": 2256,
+      "sha256": "7ccaa104c02136c7a4a6067877f29c9e6d84b5c36c7d0218121ea145afe905fe",
+      "copied_without_modification": true
+    }
+  ],
+  "source_program_execution": false,
+  "classification_archive_included": false,
+  "note": "Original workspace paths in historical reviews are custody references, not portable dependencies. This manifest maps included exact bytes to portable paths."
+}

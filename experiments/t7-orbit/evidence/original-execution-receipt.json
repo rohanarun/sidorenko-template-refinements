@@ -1,0 +1,9 @@
+{
+  "checker_sha256": "66e4b0490ac03e727019f1047e14a09bbfca4bf0d440e090238c5d793454919f",
+  "returncode": 0,
+  "wall_seconds": 0.0330594580154866,
+  "user_seconds": 0.021703999999999998,
+  "system_seconds": 0.008813,
+  "peak_rss_bytes": 21200896,
+  "source_program_execution": false
+}

@@ -1,0 +1,59 @@
+{
+  "draft_available": {
+    "DEPENDENCIES.txt": false,
+    "theorem.md": false
+  },
+  "files": [
+    {
+      "bytes": 6276,
+      "path": "upstream/sidorenko/t7-publication/review/BOUNDARY-REVIEW.txt",
+      "sha256": "dd7451549808df0588f427d54e4a4aa98d6fb8159cc3a36643b75e8c5ff75eba"
+    },
+    {
+      "bytes": 11952,
+      "path": "upstream/round2-independent-20261011/orbit-transfer-challenge/REVIEW.txt",
+      "sha256": "750fdb190a57d9e23328ac0a4d29781cec3e3841646a53368c36b34f24febf29"
+    },
+    {
+      "bytes": 2936,
+      "path": "upstream/round2-independent-20261011/orbit-transfer-challenge/source-pins.json",
+      "sha256": "f43027f9b6a522e3a39aefd68cc53d38cb834dbcc2114f81cd81799a36dcf3e5"
+    },
+    {
+      "bytes": 63949,
+      "path": "source-artifacts/l3-manuscript-transfer-20261010/template_transfer_proof.md",
+      "sha256": "2d286841535e86965dd1af937a85c65ae11ed73281184636ccc5375b3526cba4"
+    },
+    {
+      "bytes": 32184,
+      "path": "source-artifacts/round2-unindexed-20261011/task-04/files/orbit_transfer/orbit_transfer_theorem.md",
+      "sha256": "9afd06cf6911763965e15b57a83805828c0c680e9a88ae2942a4bb63ef346362"
+    },
+    {
+      "bytes": 30579,
+      "path": "source-artifacts/round2-unindexed-20261011/task-11/round2-11-response.md",
+      "sha256": "87944a5c592d904a1b79855e5bfc99d26a82e7cc07ec5f178daaec8743755914"
+    },
+    {
+      "bytes": 16102,
+      "path": "upstream/sidorenko/L3-manuscript-local-review.txt",
+      "sha256": "a4305456c861bb646708ae813a9752a196a8d99e4104335bcf0c6632a1311fa5"
+    },
+    {
+      "bytes": 4398,
+      "path": "upstream/sidorenko/L3-manuscript-tail-review.txt",
+      "sha256": "2213a713bf2e8c247bda4a7a14c0eb2661dc6bcb6ba5edf1ba506507156e4eca"
+    },
+    {
+      "bytes": 15316,
+      "path": "upstream/sidorenko/L3-manuscript-global-review.txt",
+      "sha256": "a8c7463b12b830afbe81d877a75e1804b32dbeed3a0417e567837ecfda43e57f"
+    }
+  ],
+  "fresh_finite_run": false,
+  "generated_at": "2026-10-11T05:38:24.865041+00:00",
+  "publication": false,
+  "schema": "T7-skeptical-boundary-review/1",
+  "status": "boundary statement complete; unseen publication draft inspection pending",
+  "supplied_program_execution": false
+}

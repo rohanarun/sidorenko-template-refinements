@@ -1,0 +1,47 @@
+CHECKED T7.Finite
+CHECKED T7.Maps
+CHECKED T7.Automorphisms
+CHECKED T7.Coefficient
+CHECKED T7.Enumeration
+CHECKED T7.Orbit
+CHECKED T7.MomentBridge
+CHECKED T7.Transfer
+CHECKED T7.FiniteHost
+CHECKED T7.ProbabilityBounds
+CHECKED T7.HostConclusion
+CHECKED T7
+CHECKED T7Gap.Hypercube
+CHECKED T7Gap.TiltedLaw
+CHECKED T7Gap.Activation
+CHECKED T7Gap.Marginal
+CHECKED T7Gap.StochasticCoefficient
+CHECKED T7Gap.FiniteProbability
+CHECKED T7Gap.ActivationKernel
+CHECKED T7Gap.ProductLaw
+CHECKED T7Gap.Priors
+CHECKED T7Gap.TypedKernel
+CHECKED T7Gap.KernelDensity
+CHECKED T7Gap.ThinningLaw
+CHECKED T7Gap.GeneralCoefficient
+CHECKED T7Gap.KernelScale
+CHECKED T7Gap.AveragedCoefficient
+CHECKED T7Gap
+CHECKED T7Weighted.Scores
+CHECKED T7Weighted.ScoreCorrespondence
+CHECKED T7Weighted.CoefficientBounds
+CHECKED T7Weighted.WeightedNumerator
+CHECKED T7Weighted.ActualWeights
+CHECKED T7Weighted.Negativity
+CHECKED T7Weighted.SourceConstants
+CHECKED T7Weighted.RemainderBounds
+CHECKED T7Weighted
+{
+  "status": "PASS",
+  "trust_level": 0,
+  "theorem_count": 312,
+  "axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "version": "1.2.0",
+  "packagesDir": ".lake/packages",
+  "packages": [],
+  "name": "t7weighted",
+  "lakeDir": ".lake",
+  "fixedToolchain": false
+}

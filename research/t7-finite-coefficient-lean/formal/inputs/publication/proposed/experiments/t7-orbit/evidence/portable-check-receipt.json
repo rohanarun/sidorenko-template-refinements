@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "purpose": "Portable path and byte-identical output validation; not a new analytic proof or distinct finite theorem.",
+  "created_at": "2026-10-11T05:45:03.492209+00:00",
+  "command": [
+    "python3",
+    "-I",
+    "-B",
+    "experiments/t7-orbit/checks/check_t7.py"
+  ],
+  "python_version": "3.14.8 (main, Sep 30 2026, 17:55:09) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "host": "Tintagel",
+  "checker_and_input_sha256": {
+    "checks/check_t7.py": "66e4b0490ac03e727019f1047e14a09bbfca4bf0d440e090238c5d793454919f",
+    "inputs/t7-literals.json": "583719581922454280d360875e7cb0ef0178477a5084a8b222da86744e0c7f7e"
+  },
+  "returncode": 0,
+  "stdout_sha256": "4bb7495f02e996b412cb3dc8e87d6cb974dbfc0c9e3c440bdaefebb948710710",
+  "stdout_matches_original_exactly": true,
+  "stderr_bytes": 0,
+  "wall_seconds": 0.04653912503272295,
+  "user_seconds": 0.026851,
+  "system_seconds": 0.012322,
+  "peak_rss_bytes": 21331968,
+  "source_program_execution": false,
+  "resource_estimate_before_run": "<1 second, <64 MiB, <20 KiB output; timeout5 seconds; no cloud resources",
+  "restartability": "One tiny bounded unit; rerun from immutable inputs. Historical positive receipt remains unchanged."
+}

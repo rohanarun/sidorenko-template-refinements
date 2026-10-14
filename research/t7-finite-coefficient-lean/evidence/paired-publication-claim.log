@@ -1,0 +1,8 @@
+T7Weighted.source_weighted_negativity : 0 < T7Weighted.eta ∧ T7Gap.averagedCoefficient < -T7Weighted.eta
+T7Weighted.eta_source :
+  T7Weighted.eta =
+    1 / T7Gap.beta ^ 8314 /
+      (2 ^ 60 * (2 / T7Gap.beta ^ 333 + 2 / T7Gap.beta ^ 592 + 2 / T7Gap.beta ^ 925 + 1 / T7Gap.beta ^ 1332) ^ 7 *
+        (8 / T7Gap.beta ^ 3 + 2 / T7Gap.beta ^ 5) ^ 10)
+'T7Weighted.source_weighted_negativity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'T7Weighted.eta_source' depends on axioms: [propext, Classical.choice, Quot.sound]

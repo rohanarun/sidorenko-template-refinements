@@ -1,0 +1,160 @@
+Task4 + Task11 + recovered L3: source-bound theorem integration
+Review date: 2026-10-11 UTC
+
+COMPLETED ADVANCE
+
+At the conventional mathematical proof level, the completed ingredients
+give a non-Sidorenko bipartite graph H on 17 vertices and 30 edges:
+the point-face incidence graph of the seven-point sphere with faces
+ 012,013,023,124,134,235,245,346,356,456.
+
+More precisely, for sufficiently large fixed even D as specified below,
+there exists a symmetric rational [0,1] kernel U on a finite rational
+probability space with positive mean mu and
+ t(H,U) < mu^30.
+Consequently some finite simple host G with an edge satisfies
+ t(H,G) < p(G)^30.
+
+This is a conventional proof corollary of explicitly pinned manuscripts,
+with independently checked finite template data. It is not a finite
+kernel-density computation, formal verification, evaluated prime choice,
+or adjacency-list construction. No historical novelty or minimum over
+all non-Sidorenko graphs is claimed.
+
+The original Task11 response itself stops conditionally at RL(T7);
+this integration is a separate deduction, not a rewrite of its source
+status. Task4 supplies the finite orbit-transfer theorem, while the
+analytic RL premise is supplied by the recovered L3 proof, not by the
+invalid Task11 classification archive.
+
+DEPENDENCY CHAIN
+
+1. Task11 R:58-133:
+   The three face-stellar insertions give the exact sphere.
+   Three literal Hamiltonian cycles, each of weight 1/3, give coverages
+   >=1/3, total excess 2 and coverage denominator Q=3.
+   Every point degree is <=6 and all six exposure orders are valid.
+   Independent check: inputs/t7-literals.json and checks/result.json.
+
+2. Task11 R:135-197:
+   Stable refinement has four point cells and five face cells. The
+   forcing proof, and exhaustive check of all 64 stable point maps with
+   repeated images permitted, show End_stable(H)={id,reversal}=Aut(H).
+   No discrete refinement is claimed; its failure is the reason Task4
+   is a substantive strengthening here.
+
+3. L3 §§2-8, especially lines 231-274, 502-558, 561-842:
+   The analytic rank-layer derivation uses sphere exposures, connected
+   dual, max degree six, total excess two, local finite-field geometry
+   and a sufficiently large fixed even D. It does not use discrete
+   coloring, which first appears at lines 983-1006 in finite pinning.
+   Task4 P:59-104 extracts exactly this analytic result and preserves
+   its conservative bound. Reversed differences are included.
+
+4. Task4 P:108-336:
+   Integer histogram scores plus nonincidence penalties expose exactly
+   the stable endomorphism orbit among ALL part maps. Support forcing
+   and source reindexing give every orbit coefficient -4^(-30), including
+   a distinguished negative corner not invariant under reversal.
+   Its explicit finite domination handles all lower-scoring assignments
+   and all nonempty coordinate labels.
+
+   Alternatively Task11's explicit scores and beta=2^564 already establish
+   a valid common-prior negative coefficient for this particular template.
+   No generic negative-summand classification is assumed.
+
+5. Task4 P:338-466:
+   Independent source-incidence activation draws, the transpose bound,
+   n=7<f=10 dilution, fixed-before-q parameters, rational crossed-product
+   symmetrization, bounded scaling and collision-aware finite-host sampling
+   complete the theorem.
+
+EXPLICIT CONSERVATIVE DIMENSION
+
+The independent literal-data check computes face-dual diameter ell=3.
+For n=7, f=10, m=15:
+ M = 4104*10*(3+1)^2 = 656640,
+ C = 12*M^2+2*M = 5174114388480,
+ B = m^2+20m = 525,
+ M+2*f*C = 103482288426240.
+
+Thus
+ D = 103482288426242
+is an even sufficient choice satisfying D>=12 and the strict L3 bound.
+Every even D at least this value works under the same argument.
+The rate is O_{T7,D,lambda}(q^(-1/6)).
+These integers are parameter arithmetic, not an instruction to allocate
+matrices of this dimension or build its finite field/kernel.
+
+EXPLICIT FINITE PINNING CHOICE, STILL SYMBOLIC
+
+Using Task11's specialized scores, let beta=2^564 and
+ Z_I=2 beta^(-333)+2 beta^(-592)+2 beta^(-925)+beta^(-1332),
+ Z_J=8 beta^(-3)+2 beta^(-5).
+Its proof gives
+ t0 < -eta,
+ eta = beta^(-8314)/(2^60 Z_I^7 Z_J^10) > 0.
+Here all type draws are independent and use the same prior on each part;
+each source incidence gets an independent draw from its type-pair law.
+
+Set B_label=(2^30-1)^15 and choose
+ epsilon = 1/[2+ceil(4 B_label(1+B_label)/eta)].
+Then Task4's proof gives a limiting oriented-density product
+<1-eta epsilon^7/2.
+
+If e_q denotes the maximum absolute single-coordinate rank-layer error,
+including reversal, put
+ a_q=30(2^15+1)^29 e_q.
+Choosing an odd prime sufficiently large that
+ e_q<=1, a_q<=1,
+ a_q < eta epsilon^7/[4(3+2 B_label)]
+gives the finite rational product deficit >eta epsilon^7/4.
+Such primes exist from the retained fixed-D analytic estimate.
+Its hidden prefactor is not evaluated, so this is not a numerical q bound.
+
+With b(D)=D(D+1)/2 and L_q=q^(14b(D)), U=V/L_q satisfies
+ mu=1/L_q,
+ mu^30-t(H,U) > eta epsilon^7/(4 L_q^30).
+For example an integer host size
+ N > 4[136 L_q^30+30]/(eta epsilon^7)
+suffices for the expectation/convexity existence argument.
+No such enormous values or host are instantiated.
+
+WHY THE OTHER CAMPAIGN RESULTS DO NOT SILENTLY CLOSE OR CHANGE THIS PROOF
+
+L2's effective constants and Task6's explicit finite-field interface
+were source-bound to the original 13-point/22-face template. Task6 retains
+its separate tail input. Their numerical C_D, 2^170 D and 2^299 factors
+cannot be imported as a numerical prime threshold for T7 without a new
+parameter audit. They are not needed for this qualitative fixed-D
+corollary.
+
+Task9 supplies a more efficient energy route and exact matrix
+certificates for two specified 13-point templates. Its dimensions
+7296/7644 and residual constants 189/197 are not T7 certificates.
+No T7 energy certificate was computed here. Likewise the later PR3
+constant-28 gap and separate support-33 repair do not affect this proof:
+the retained L3 count uses the support-uniform m^2+20m bound instead.
+
+L3 §§3-6 were conventionally reviewed in
+upstream/sidorenko/L3-manuscript-local-review.txt; §§7-8 in
+L3-manuscript-tail-review.txt; §§9-12 in L3-manuscript-global-review.txt.
+The present pass rechecks the exact hypothesis extraction and new finite
+integration, not a claim that a tiny finite checker proves those analytic
+sections.
+
+REMAINING DELIVERABLES AND NONCLAIMS
+
+- Recover and review a complete Task11 archive for the full n<=12 census.
+  Its absence does not block the literal T7 proof or elementary n=5,6
+  minimality argument.
+- No producer Task4 program was executed. The finite reports in its ZIP
+  remain source evidence unless a separate authorized replay is performed.
+- No evaluated prime, complete kernel, explicit host, proof assistant
+  formalization, new dimension optimization or priority search is supplied.
+- This lane makes no publication or global-ledger change. Any later
+  publication decision should use the requested independent review process.
+
+The precise minimum established is n=7 among the specified simple sphere
+templates with properties A and B, starting at n=5. It is not a statement
+that 17 is the minimum possible order of a non-Sidorenko graph.

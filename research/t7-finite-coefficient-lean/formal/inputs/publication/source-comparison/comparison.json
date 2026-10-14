@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-11",
+  "comparison": "bounded exact-source and current PR-body novelty",
+  "finding": "No T7 supersession in reviewed pinned repositories or current PR1-5 bodies; original discrete-template classification does not exclude nondiscrete orbit-pinnable T7.",
+  "original": {
+    "point_count": 13,
+    "face_count": 22,
+    "point_pairs": 33,
+    "H_vertices": 35,
+    "H_edges": 66,
+    "pinning": "discrete refinement"
+  },
+  "T7": {
+    "point_count": 7,
+    "face_count": 10,
+    "point_pairs": 15,
+    "H_vertices": 17,
+    "H_edges": 30,
+    "pinning": "all stable-color-preserving endomorphisms are automorphisms",
+    "point_color_cells": 4,
+    "face_color_cells": 5,
+    "automorphism_count": 2
+  },
+  "n13_source_counts": {
+    "all_spheres": 49566,
+    "maximum_degree_6": 115,
+    "discrete": 49,
+    "obstructions": 47,
+    "feasible": 2
+  },
+  "source_classification_replayed": false,
+  "new_analytic_reaudit": false,
+  "remote_writes": false,
+  "supplied_code_executed": false,
+  "PR_collection_count": 5,
+  "PR_collection_limit": 100,
+  "metadata_collection_consistent": true,
+  "PRs": [
+    {
+      "number": 1,
+      "head": "e68124868f55bba9ed791ff4379c7a42ab48955b",
+      "base": "9e6e659656cf31a059d65b8c0b3140d243afbc2d",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "updated_at": "2026-10-09T15:02:00Z",
+      "title": "Tighten the Sidorenko residual constant from 1032 to 978",
+      "ours": false
+    },
+    {
+      "number": 2,
+      "head": "b513fb4576b30443d0f41df556d378b676723e06",
+      "base": "4e1b9b60c2d08eb38d92d6e24415f0a724ad8987",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "updated_at": "2026-10-10T12:41:40Z",
+      "title": "Cut the Sidorenko residual constant from 978 to 189 (even D \u2265 190)",
+      "ours": false
+    },
+    {
+      "number": 3,
+      "head": "9aecdfbd987ecda60b7c5e0b382849d67c6bbc2f",
+      "base": "d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "updated_at": "2026-10-10T17:55:29Z",
+      "title": "Cut the Sidorenko residual constant from 189 to 28 (even D \u2265 30)",
+      "ours": false
+    },
+    {
+      "number": 4,
+      "head": "9922b05bf2c3418e1a46378d4ebac60e8a34ce51",
+      "base": "d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "updated_at": "2026-10-11T05:09:59Z",
+      "title": "Prove rank-layer dimensions 7296 and 7644 using global edge energy",
+      "ours": true
+    },
+    {
+      "number": 5,
+      "head": "c3088e0bf0d5e694d84e00ff6c9b9e852e32ae97",
+      "base": "9aecdfbd987ecda60b7c5e0b382849d67c6bbc2f",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "updated_at": "2026-10-11T05:10:45Z",
+      "title": "Correct the overlap residual bound across active supports",
+      "ours": true
+    }
+  ],
+  "limitations": [
+    "repository-relative comparison only; parent owns broader literature search",
+    "no claim of minimum over arbitrary non-Sidorenko graphs",
+    "no full census recovery/replay",
+    "no numerical prime, instantiated kernel or host construction",
+    "separate review records not fetched; metadata reports zero issue and inline comments"
+  ]
+}

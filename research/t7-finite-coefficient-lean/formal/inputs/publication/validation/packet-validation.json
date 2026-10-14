@@ -1,0 +1,228 @@
+{
+  "status": "PASS",
+  "base_commit": "d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d",
+  "patch_apply_check": true,
+  "applied_file_bytes_equal_proposal": true,
+  "files": 33,
+  "copied_source_records_rehashed": 18,
+  "publication_prose_links_checked": [
+    {
+      "from": "README.md",
+      "to": "t7-orbit-theorem.md",
+      "target": "proposed file"
+    },
+    {
+      "from": "README.md",
+      "to": "experiments/t7-orbit/README.md",
+      "target": "proposed file"
+    },
+    {
+      "from": "README.md",
+      "to": "sequential-refinement.md",
+      "target": "unchanged base repository"
+    },
+    {
+      "from": "README.md",
+      "to": "support-refinement.md",
+      "target": "unchanged base repository"
+    },
+    {
+      "from": "README.md",
+      "to": "proof.tex",
+      "target": "unchanged base repository"
+    },
+    {
+      "from": "README.md",
+      "to": "experiments/cut-obstructions/summary.json",
+      "target": "unchanged base repository"
+    },
+    {
+      "from": "README.md",
+      "to": "experiments/minimality-independent.json",
+      "target": "unchanged base repository"
+    },
+    {
+      "from": "README.md",
+      "to": "experiments/order-13-classification-independent.json",
+      "target": "unchanged base repository"
+    },
+    {
+      "from": "README.md",
+      "to": "experiments/order-13-cuts/",
+      "target": "unchanged base repository"
+    },
+    {
+      "from": "README.md",
+      "to": "experiments/residual-expected.json",
+      "target": "unchanged base repository"
+    },
+    {
+      "from": "README.md",
+      "to": "experiments/support-expected.json",
+      "target": "unchanged base repository"
+    },
+    {
+      "from": "README.md",
+      "to": "audit_support.py",
+      "target": "unchanged base repository"
+    },
+    {
+      "from": "README.md",
+      "to": "experiments/sequential-expected.json",
+      "target": "unchanged base repository"
+    },
+    {
+      "from": "README.md",
+      "to": "audit_sequential.py",
+      "target": "unchanged base repository"
+    },
+    {
+      "from": "README.md",
+      "to": "progress.md",
+      "target": "unchanged base repository"
+    },
+    {
+      "from": "README.md",
+      "to": "verify_minimality.py",
+      "target": "unchanged base repository"
+    },
+    {
+      "from": "README.md",
+      "to": "check_complex.py",
+      "target": "unchanged base repository"
+    },
+    {
+      "from": "README.md",
+      "to": "source-manifest.json",
+      "target": "unchanged base repository"
+    },
+    {
+      "from": "README.md",
+      "to": "vendor/plantri/LICENSE-2.0.txt",
+      "target": "unchanged base repository"
+    },
+    {
+      "from": "README.md",
+      "to": "vendor/plantri/provenance.json",
+      "target": "unchanged base repository"
+    },
+    {
+      "from": "t7-orbit-theorem.md",
+      "to": "experiments/t7-orbit/README.md",
+      "target": "proposed file"
+    },
+    {
+      "from": "t7-orbit-theorem.md",
+      "to": "experiments/t7-orbit/DEPENDENCIES.txt",
+      "target": "proposed file"
+    },
+    {
+      "from": "experiments/t7-orbit/README.md",
+      "to": "../../t7-orbit-theorem.md",
+      "target": "proposed file"
+    },
+    {
+      "from": "experiments/t7-orbit/README.md",
+      "to": "dependencies/task04-orbit-transfer-theorem.md",
+      "target": "proposed file"
+    },
+    {
+      "from": "experiments/t7-orbit/README.md",
+      "to": "dependencies/task11-response.md",
+      "target": "proposed file"
+    },
+    {
+      "from": "experiments/t7-orbit/README.md",
+      "to": "DEPENDENCIES.txt",
+      "target": "proposed file"
+    },
+    {
+      "from": "experiments/t7-orbit/README.md",
+      "to": "reviews/acceptance-boundary.txt",
+      "target": "proposed file"
+    },
+    {
+      "from": "experiments/t7-orbit/README.md",
+      "to": "reviews/exact-draft-review.txt",
+      "target": "proposed file"
+    },
+    {
+      "from": "experiments/t7-orbit/README.md",
+      "to": "reviews/positive-class-screen/REVIEW.md",
+      "target": "proposed file"
+    },
+    {
+      "from": "experiments/t7-orbit/README.md",
+      "to": "evidence/original-result.json",
+      "target": "proposed file"
+    },
+    {
+      "from": "experiments/t7-orbit/README.md",
+      "to": "evidence/original-execution-receipt.json",
+      "target": "proposed file"
+    },
+    {
+      "from": "experiments/t7-orbit/README.md",
+      "to": "dependencies/l3-template-transfer-proof.md",
+      "target": "proposed file"
+    },
+    {
+      "from": "experiments/t7-orbit/README.md",
+      "to": "dependencies/task04-orbit-transfer-theorem.md",
+      "target": "proposed file"
+    },
+    {
+      "from": "experiments/t7-orbit/README.md",
+      "to": "dependencies/task11-response.md",
+      "target": "proposed file"
+    },
+    {
+      "from": "experiments/t7-orbit/README.md",
+      "to": "SOURCE-MANIFEST.json",
+      "target": "proposed file"
+    },
+    {
+      "from": "experiments/t7-orbit/README.md",
+      "to": "reviews/source-comparison.txt",
+      "target": "proposed file"
+    },
+    {
+      "from": "experiments/t7-orbit/README.md",
+      "to": "reviews/public-novelty-boundary.txt",
+      "target": "proposed file"
+    }
+  ],
+  "finite_packaging_replay": {
+    "schema_version": 1,
+    "status": "PASS",
+    "purpose": "Portable path and byte-identical output validation; not a new analytic proof or distinct finite theorem.",
+    "created_at": "2026-10-11T05:45:03.492209+00:00",
+    "command": [
+      "python3",
+      "-I",
+      "-B",
+      "experiments/t7-orbit/checks/check_t7.py"
+    ],
+    "python_version": "3.14.8 (main, Sep 30 2026, 17:55:09) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "host": "Tintagel",
+    "checker_and_input_sha256": {
+      "checks/check_t7.py": "66e4b0490ac03e727019f1047e14a09bbfca4bf0d440e090238c5d793454919f",
+      "inputs/t7-literals.json": "583719581922454280d360875e7cb0ef0178477a5084a8b222da86744e0c7f7e"
+    },
+    "returncode": 0,
+    "stdout_sha256": "4bb7495f02e996b412cb3dc8e87d6cb974dbfc0c9e3c440bdaefebb948710710",
+    "stdout_matches_original_exactly": true,
+    "stderr_bytes": 0,
+    "wall_seconds": 0.04653912503272295,
+    "user_seconds": 0.026851,
+    "system_seconds": 0.012322,
+    "peak_rss_bytes": 21331968,
+    "source_program_execution": false,
+    "resource_estimate_before_run": "<1 second, <64 MiB, <20 KiB output; timeout5 seconds; no cloud resources",
+    "restartability": "One tiny bounded unit; rerun from immutable inputs. Historical positive receipt remains unchanged."
+  },
+  "root_theorem_review": "Complete finite conditional proof read; no new finite-side defect found. Generic L3 analytics remain explicit supplied proof dependencies.",
+  "no_source_worktree_changed": true,
+  "no_remote_write": true,
+  "no_formal_or_independent_human_validation": true
+}

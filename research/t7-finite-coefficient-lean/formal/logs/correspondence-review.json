@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "method": "Executable constant-dependency closure checks supplement the semantic source correspondence review in COVERAGE.md. Type and proof-body dependencies are recorded separately.",
+  "checks": [
+    {
+      "theorem": "T7Weighted.source_weighted_negativity",
+      "required_dependencies_found": [
+        "T7Weighted.averagedCoefficient_negative",
+        "T7Gap.averagedCoefficient",
+        "T7Weighted.sourceScore_eq_score",
+        "T7Weighted.actual_weight_relative",
+        "T7Weighted.finiteRemainder_bound",
+        "T7Gap.activation_moment_eq_formula",
+        "T7Gap.pointPrior",
+        "T7Gap.facePrior"
+      ],
+      "dependency_closure_count": 1143,
+      "status": "PASS"
+    },
+    {
+      "theorem": "T7Weighted.finiteRemainder_two_sided",
+      "required_dependencies_found": [
+        "T7Weighted.generalCoefficient_bounds",
+        "T7Weighted.score_max_iff",
+        "T7.stable_endomorphisms_exact",
+        "T7Gap.generalCoefficient_non_incidence"
+      ],
+      "dependency_closure_count": 800,
+      "status": "PASS"
+    },
+    {
+      "theorem": "T7Weighted.eta_source",
+      "required_dependencies_found": [
+        "T7Weighted.pointNormalizer_source",
+        "T7Weighted.faceNormalizer_source"
+      ],
+      "dependency_closure_count": 124,
+      "status": "PASS"
+    },
+    {
+      "theorem": "T7Gap.stochastic_signed_orbit",
+      "required_dependencies_found": [
+        "T7Gap.activation_moment_eq_formula",
+        "T7Gap.activationMoment",
+        "T7Gap.activationWeight",
+        "T7Gap.FiniteLaw.mean",
+        "T7.signed_orbit_coefficient"
+      ],
+      "dependency_closure_count": 614,
+      "status": "PASS"
+    },
+    {
+      "theorem": "T7Gap.general_signed_orbit",
+      "required_dependencies_found": [
+        "T7Gap.stochastic_signed_orbit",
+        "T7Gap.pairMoment"
+      ],
+      "dependency_closure_count": 650,
+      "status": "PASS"
+    },
+    {
+      "theorem": "T7Gap.averagedCoefficient_exact",
+      "required_dependencies_found": [
+        "T7Gap.thinnedCoefficient_factor",
+        "T7Gap.thinnedMoment_factor",
+        "T7Gap.bernoulliLaw",
+        "T7Gap.pointPrior",
+        "T7Gap.facePrior"
+      ],
+      "dependency_closure_count": 565,
+      "status": "PASS"
+    },
+    {
+      "theorem": "T7Gap.constructedKernel_mean_one",
+      "required_dependencies_found": [
+        "T7Gap.activationKernel_mean_one",
+        "T7Gap.SignedBase.mean_one",
+        "T7Gap.FiniteLaw.mean"
+      ],
+      "dependency_closure_count": 574,
+      "status": "PASS"
+    },
+    {
+      "theorem": "T7Gap.symmetricProduct_density",
+      "required_dependencies_found": [
+        "T7Gap.independent_productLaw",
+        "T7Gap.RationalBipartiteKernel.density"
+      ],
+      "dependency_closure_count": 264,
+      "status": "PASS"
+    },
+    {
+      "theorem": "T7Gap.boundedConstructed_mean_positive",
+      "required_dependencies_found": [
+        "T7Gap.constructed_symmetric_mean_one",
+        "T7Gap.kernelBound_positive"
+      ],
+      "dependency_closure_count": 603,
+      "status": "PASS"
+    }
+  ],
+  "host_not_connected_to_new_kernel": true,
+  "host_not_dependent_on_signed_coefficient": true,
+  "reviewed_open_gaps": [
+    "RL-to-actual-density transfer",
+    "kernel deficit",
+    "sampling estimates"
+  ],
+  "all_decl_count": 1187,
+  "all_decl_axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ]
+}

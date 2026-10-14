@@ -1,0 +1,584 @@
+T7.vertex_count : T7.vertices.length = 17
+T7.incidence_edge_count : T7.incidenceEdges.length = 30
+T7.vertices_nodup : T7.vertices.Nodup
+T7.incidence_edges_nodup : T7.incidenceEdges.Nodup
+T7.all_corners : List.ofFn T7.corner = List.flatMap (fun j => List.map (fun p => (p, j)) (T7.face j)) (List.finRange 10)
+T7.corner_bijection :
+  (∀ (c d : Fin 30), T7.corner c = T7.corner d → c = d) ∧
+    ∀ (p : T7.Point) (j : T7.Face), T7.incident p j = true ↔ ∃ c, T7.corner c = (p, j)
+T7.adjacency_symmetric (u v : T7.Vertex) : T7.adjacent u v = T7.adjacent v u
+T7.adjacency_irreflexive (u : T7.Vertex) : T7.adjacent u u = false
+T7.degrees : List.ofFn T7.degree = [3, 4, 5, 6, 5, 4, 3]
+T7.point_cells_by_degree (p q : T7.Point) : T7.pointColor p = T7.pointColor q ↔ T7.degree p = T7.degree q
+T7.stable_partition :
+  (∀ (p q : T7.Point), T7.pointColor p = T7.pointColor q → T7.pointSignature p = T7.pointSignature q) ∧
+    ∀ (j k : T7.Face), T7.faceColor j = T7.faceColor k → T7.faceSignature j = T7.faceSignature k
+T7.face_cells_by_point_signature (j k : T7.Face) :
+  T7.faceColor j = T7.faceColor k ↔ T7.faceSignature j = T7.faceSignature k
+T7.reversal_incidence (p : T7.Point) (j : T7.Face) :
+  T7.incident (T7.reversePoint p) (T7.reverseFace j) = T7.incident p j
+T7.reversal_involutions :
+  (∀ (p : T7.Point), T7.reversePoint (T7.reversePoint p) = p) ∧ ∀ (j : T7.Face), T7.reverseFace (T7.reverseFace j) = j
+T7.candidate_classification (b0 b1 b2 b4 b5 b6 : Bool) :
+  T7.HasExtension (T7.candidate b0 b1 b2 b4 b5 b6) →
+    (∀ (p : T7.Point), T7.candidate b0 b1 b2 b4 b5 b6 p = p) ∨
+      ∀ (p : T7.Point), T7.candidate b0 b1 b2 b4 b5 b6 p = T7.reversePoint p
+T7.candidate_representation (a : T7.Point → T7.Point) (h : T7.StablePoints a) :
+  a = T7.candidate (a 0 == 6) (a 1 == 5) (a 2 == 4) (a 4 == 4) (a 5 == 5) (a 6 == 6)
+T7.stable_points_classified (a : T7.Point → T7.Point) (h : T7.StablePoints a) (he : T7.HasExtension a) :
+  a = id ∨ a = T7.reversePoint
+T7.identity_face_unique (j k : T7.Face) : (∀ (p : T7.Point), T7.incident p j = true → T7.incident p k = true) → k = j
+T7.reversal_face_unique (j k : T7.Face) :
+  (∀ (p : T7.Point), T7.incident p j = true → T7.incident (T7.reversePoint p) k = true) → k = T7.reverseFace j
+T7.stable_endomorphisms_exact (a : T7.Point → T7.Point) (b : T7.Face → T7.Face) (ha : T7.StablePoints a)
+  (hb : T7.StableFaces b) (he : T7.IncidenceEndomorphism a b) :
+  a = id ∧ b = id ∨ a = T7.reversePoint ∧ b = T7.reverseFace
+T7.identity_is_stable_endomorphism : T7.StablePoints id ∧ T7.StableFaces id ∧ T7.IncidenceEndomorphism id id
+T7.reversal_is_stable_endomorphism :
+  T7.StablePoints T7.reversePoint ∧
+    T7.StableFaces T7.reverseFace ∧ T7.IncidenceEndomorphism T7.reversePoint T7.reverseFace
+T7.enumeration_size : T7.allPointMaps.length = 64
+T7.enumeration_unique : T7.allPointMaps.Nodup
+T7.noninjective_count : (List.filter (fun l => !decide l.Nodup) T7.allPointMaps).length = 56
+T7.vertices_complete (v : T7.Vertex) : v ∈ T7.vertices
+T7.automorphism_perm (f : T7.GraphAutomorphism) : (List.map f.toFun T7.vertices).Perm T7.vertices
+T7.automorphism_count (f : T7.GraphAutomorphism) (p q : T7.Vertex → Bool) (h : ∀ (v : T7.Vertex), p (f.toFun v) = q v) :
+  (List.filter p T7.vertices).length = (List.filter q T7.vertices).length
+T7.automorphism_degree (f : T7.GraphAutomorphism) (v : T7.Vertex) : T7.graphDegree (f.toFun v) = T7.graphDegree v
+T7.automorphism_neighbor_degree (f : T7.GraphAutomorphism) (v : T7.Vertex) (d : Nat) :
+  T7.neighborDegreeCount (f.toFun v) d = T7.neighborDegreeCount v d
+T7.signature_color (u v : T7.Vertex) : T7.graphSignature u = T7.graphSignature v → T7.graphColor u = T7.graphColor v
+T7.automorphism_color (f : T7.GraphAutomorphism) (v : T7.Vertex) : T7.graphColor (f.toFun v) = T7.graphColor v
+T7.point_color_lt_four (p : T7.Point) : T7.pointColor p < 4
+T7.auto_point_meaning (f : T7.GraphAutomorphism) (p : T7.Point) : f.toFun (Sum.inl p) = Sum.inl (T7.autoPoint f p)
+T7.auto_face_meaning (f : T7.GraphAutomorphism) (j : T7.Face) : f.toFun (Sum.inr j) = Sum.inr (T7.autoFace f j)
+T7.all_automorphisms_exact (f : T7.GraphAutomorphism) : f.toFun = id ∨ f.toFun = T7.reverseVertex
+T7.support_incidence (e : T7.Edge) (c : T7.Corner) : T7.support e c = true ↔ T7.leftEdge c = e ∨ T7.rightEdge c = e
+T7.supports_intersect (c d : T7.Corner) :
+  T7.support (T7.leftEdge c) d = true ∧ T7.support (T7.rightEdge c) d = true ↔ d = c
+T7.support_intersection (e : T7.Edge) (d : T7.Corner) :
+  (∀ (c : T7.Corner), T7.support e c = true → T7.M c d = true) ↔ T7.support e d = true
+T7.support_sizes (e : T7.Edge) : (List.filter (T7.support e) (List.finRange 30)).length = 4
+T7.law_sizes (c : T7.Corner) :
+  (List.filter (T7.M c) (List.finRange 30)).length = 7 ∧ (List.filter (T7.D c) (List.finRange 30)).length = 6
+T7.diff_subset_union (c : T7.Corner) : T7.SubsetMask (T7.D c) (T7.M c)
+T7.diff_nonempty (c : T7.Corner) : T7.NonemptyMask (T7.D c)
+T7.canonical_moment (c : T7.Corner) :
+  T7.momentNumerator c (T7.support (T7.leftEdge c)) (T7.support (T7.rightEdge c)) = T7.sigma c
+T7.canonical_product : T7.term T7.support = -(1 / 4 ^ 30)
+T7.canonical_numerator : T7.termNumerator T7.support = -1
+T7.moment_support (c : T7.Corner) (a b : T7.Mask) (h : T7.momentNumerator c a b ≠ 0) :
+  T7.SubsetMask (T7.unionMask a b) (T7.M c)
+T7.disjoint_moment_zero (c : T7.Corner) (a b : T7.Mask) (hne : T7.NonemptyMask (T7.unionMask a b))
+  (hd : ∀ (d : T7.Corner), a d = true → b d = false) : T7.momentNumerator c a b = 0
+T7.moment_overlap (c : T7.Corner) (a b : T7.Mask) (ha : T7.NonemptyMask a) (hm : T7.momentNumerator c a b ≠ 0) :
+  ∃ d, a d = true ∧ b d = true
+T7.factor_ne_zero (l : List Int) (hp : l.prod ≠ 0) (x : Int) (hx : x ∈ l) : x ≠ 0
+T7.term_factors_nonzero (a : T7.Labeling) (h : T7.termNumerator a ≠ 0) (c : T7.Corner) :
+  T7.momentNumerator c (a (T7.leftEdge c)) (a (T7.rightEdge c)) ≠ 0
+T7.term_support (a : T7.Labeling) (h : T7.termNumerator a ≠ 0) (e : T7.Edge) : T7.SubsetMask (a e) (T7.support e)
+T7.nonzero_labeling_unique (a : T7.Labeling) (hne : ∀ (e : T7.Edge), T7.NonemptyMask (a e))
+  (h : T7.termNumerator a ≠ 0) : a = T7.support
+T7.noncanonical_term_zero (a : T7.Labeling) (hne : ∀ (e : T7.Edge), T7.NonemptyMask (a e)) (h : a ≠ T7.support) :
+  T7.termNumerator a = 0
+T7.functions_mem.{u_1} {α : Type u_1} (values : List α) (n : Nat) (f : Fin n → α) :
+  f ∈ T7.functions values n ↔ ∀ (i : Fin n), f i ∈ values
+T7.functions_nodup.{u_1} {α : Type u_1} (values : List α) (hv : values.Nodup) (n : Nat) : (T7.functions values n).Nodup
+T7.all_masks_complete (a : T7.Mask) : a ∈ T7.allMasks
+T7.nonempty_masks_mem (a : T7.Mask) : a ∈ T7.nonemptyMasks ↔ T7.NonemptyMask a
+T7.labelings_mem (a : T7.Labeling) : a ∈ T7.allLabelings ↔ ∀ (e : T7.Edge), T7.NonemptyMask (a e)
+T7.labelings_nodup : T7.allLabelings.Nodup
+T7.support_nonempty (e : T7.Edge) : T7.NonemptyMask (T7.support e)
+T7.sum_zero.{u_1} {α : Type u_1} (l : List α) (f : α → Int) (h : ∀ (a : α), a ∈ l → f a = 0) : (List.map f l).sum = 0
+T7.sum_single.{u_1} {α : Type u_1} (l : List α) (f : α → Int) (s : α) (hn : l.Nodup) (hs : s ∈ l)
+  (hz : ∀ (a : α), a ∈ l → a ≠ s → f a = 0) : (List.map f l).sum = f s
+T7.full_numerator : (List.map T7.termNumerator T7.allLabelings).sum = -1
+T7.full_coefficient_exact : T7.fullCoefficient = -(1 / 4 ^ 30)
+T7.reversal_corner_meaning (c : Fin 30) :
+  T7.corner (T7.reverseCorner c) = (T7.reversePoint (T7.corner c).fst, T7.reverseFace (T7.corner c).snd)
+T7.reversal_edge_meaning (e : Fin 15) :
+  T7.pointEdge (T7.reverseEdge e) = (T7.reversePoint (T7.pointEdge e).snd, T7.reversePoint (T7.pointEdge e).fst)
+T7.reverse_edge_involution (e : Fin 15) : T7.reverseEdge (T7.reverseEdge e) = e
+T7.reverse_corner_permutation : (List.map T7.reverseCorner (List.finRange 30)).Perm (List.finRange 30)
+T7.reverse_local_edges (c : Fin 30) :
+  T7.reverseEdge (T7.leftEdge (T7.reverseCorner c)) = T7.leftEdge c ∧
+      T7.reverseEdge (T7.rightEdge (T7.reverseCorner c)) = T7.rightEdge c ∨
+    T7.reverseEdge (T7.leftEdge (T7.reverseCorner c)) = T7.rightEdge c ∧
+      T7.reverseEdge (T7.rightEdge (T7.reverseCorner c)) = T7.leftEdge c
+T7.moment_symmetric (c : T7.Corner) (a b : T7.Mask) : T7.momentNumerator c a b = T7.momentNumerator c b a
+T7.perm_int_prod {l k : List Int} (h : l.Perm k) : l.prod = k.prod
+T7.reverse_term_reindex (a : T7.Labeling) : T7.reverseTermNumerator a = T7.termNumerator (T7.relabel a)
+T7.relabel_involution (a : T7.Labeling) : T7.relabel (T7.relabel a) = a
+T7.reverse_nonzero_unique (a : T7.Labeling) (hne : ∀ (e : T7.Edge), T7.NonemptyMask (a e))
+  (h : T7.reverseTermNumerator a ≠ 0) : a = T7.reverseCanonical
+T7.reverse_canonical_numerator : T7.reverseTermNumerator T7.reverseCanonical = -1
+T7.reverse_full_numerator : (List.map T7.reverseTermNumerator T7.allLabelings).sum = -1
+T7.reverse_full_coefficient_exact : T7.reverseFullCoefficient = -(1 / 4 ^ 30)
+T7.signed_orbit_coefficient : T7.fullCoefficient + T7.reverseFullCoefficient = -(1 / 2 ^ 59)
+T7.product_common_denominator (xs : List Int) : (List.map (fun x => ↑x / 4) xs).prod = ↑xs.prod / 4 ^ xs.length
+T7.sum_common_denominator (xs : List Int) (den : Rat) : (List.map (fun x => ↑x / den) xs).sum = ↑xs.sum / den
+T7.term_is_product (a : T7.Labeling) :
+  T7.term a = (List.map (fun c => T7.moment c (a (T7.leftEdge c)) (a (T7.rightEdge c))) (List.finRange 30)).prod
+T7.full_coefficient_is_sum_of_products :
+  T7.fullCoefficient =
+    (List.map
+        (fun a => (List.map (fun c => T7.moment c (a (T7.leftEdge c)) (a (T7.rightEdge c))) (List.finRange 30)).prod)
+        T7.allLabelings).sum
+T7.reverse_term_is_product (a : T7.Labeling) :
+  T7.reverseTerm a =
+    (List.map (fun c => T7.moment (T7.reverseCorner c) (a (T7.leftEdge c)) (a (T7.rightEdge c)))
+        (List.finRange 30)).prod
+T7.reverse_coefficient_is_sum_of_products :
+  T7.reverseFullCoefficient =
+    (List.map
+        (fun a =>
+          (List.map (fun c => T7.moment (T7.reverseCorner c) (a (T7.leftEdge c)) (a (T7.rightEdge c)))
+              (List.finRange 30)).prod)
+        T7.allLabelings).sum
+T7.packet_constants :
+  7 ^ 7 * 10 ^ 10 < 2 ^ 54 ∧
+    (2 ^ 30 - 1) ^ 15 < 2 ^ 450 ∧
+      37 * 136 + 34 = 5066 ∧
+        30 * 446 - 5066 = 8314 ∧
+          4104 * 10 * (3 + 1) ^ 2 = 656640 ∧
+            12 * 656640 ^ 2 + 2 * 656640 = 5174114388480 ∧
+              656640 + 20 * 5174114388480 = 103482288426240 ∧ 103482288426242 % 2 = 0
+T7.normalized_orbit_dominance (remainder : Rat) (h : remainder < 1 / 2 ^ 60) :
+  T7.fullCoefficient + T7.reverseFullCoefficient + remainder < -(1 / 2 ^ 60)
+T7.interval_product_upper (a b B : Rat) (hB : 0 ≤ B) (ha0 : -B ≤ a) (ha1 : a ≤ B) (hb0 : -B ≤ b) (hb1 : b ≤ B) :
+  a * b ≤ B * B
+T7.unit_power (x : Rat) (hx0 : 0 ≤ x) (hx1 : x ≤ 1) (n : Nat) : 0 ≤ x ^ n ∧ x ^ n ≤ 1
+T7.dilution_deficit (t0 t1 B eta eps : Rat) (hB : 0 ≤ B) (heps0 : 0 < eps) (heps1 : eps ≤ 1) (ht0 : t0 ≤ -eta)
+  (ht0lo : -B ≤ t0) (ht0hi : t0 ≤ B) (ht1lo : -B ≤ t1) (ht1hi : t1 ≤ B) (hsmall : eps ^ 3 * B * (1 + B) < eta / 4) :
+  (1 + eps ^ 7 * t0) * (1 + eps ^ 10 * t1) < 1 - 3 * eta * eps ^ 7 / 4
+T7.product_error_budget (limit actual eta eps error : Rat) (hl : limit ≤ 1 - eta * eps ^ 7 / 2)
+  (ha : actual ≤ limit + error) (he : error < eta * eps ^ 7 / 4) : actual < 1 - eta * eps ^ 7 / 4
+T7.scale_deficit (density L : Rat) (hL : 0 < L) (hd : density < 1) : density / L ^ 30 < (1 / L) ^ 30
+T7.sum_rat_le.{u_1} {α : Type u_1} (l : List α) (f g : α → Rat) (h : ∀ (x : α), x ∈ l → f x ≤ g x) :
+  (List.map f l).sum ≤ (List.map g l).sum
+T7.expectation_witness.{u_1} {α : Type u_1} (outcomes : List α) (weight f g : α → Rat)
+  (hw : ∀ (x : α), x ∈ outcomes → 0 ≤ weight x)
+  (hgap : T7.expectation outcomes weight f < T7.expectation outcomes weight g) : ∃ x, x ∈ outcomes ∧ f x < g x
+T7.finite_host_from_sampling_bounds {n : Nat} (outcomes : List (T7.SimpleHost n)) (weight : T7.SimpleHost n → Rat)
+  (mu kernelDensity delta invN : Rat) (hw : ∀ (G : T7.SimpleHost n), G ∈ outcomes → 0 ≤ weight G)
+  (hdelta : delta = mu ^ 30 - kernelDensity) (hsize : (136 + 30 * mu ^ 30) * invN < delta)
+  (hcollision : T7.expectation outcomes weight T7.SimpleHost.homDensity ≤ kernelDensity + 136 * invN)
+  (hmean : T7.expectation outcomes weight T7.SimpleHost.edgeDensity = (1 - invN) * mu)
+  (hbernoulli : (1 - 30 * invN) * mu ^ 30 ≤ ((1 - invN) * mu) ^ 30)
+  (hjensen :
+    T7.expectation outcomes weight T7.SimpleHost.edgeDensity ^ 30 ≤
+      T7.expectation outcomes weight fun G => G.edgeDensity ^ 30) :
+  ∃ G, G ∈ outcomes ∧ G.homDensity < G.edgeDensity ^ 30
+T7.sufficient_host_size (mu delta N : Rat) (hdelta : 0 < delta) (hN : 0 < N)
+  (hsize : (136 + 30 * mu ^ 30) / delta < N) : (136 + 30 * mu ^ 30) * (1 / N) < delta
+T7.rational_bernoulli (u : Rat) (hu0 : 0 ≤ u) (hu1 : u ≤ 1) (n : Nat) : 1 - ↑n * u ≤ (1 - u) ^ n
+T7.host_bernoulli (mu u : Rat) (hmu : 0 ≤ mu) (hu0 : 0 ≤ u) (hu1 : u ≤ 1) : (1 - 30 * u) * mu ^ 30 ≤ ((1 - u) * mu) ^ 30
+T7.sum_rat_nonneg.{u_1} {α : Type u_1} (l : List α) (f : α → Rat) (h : ∀ (x : α), x ∈ l → 0 ≤ f x) :
+  0 ≤ (List.map f l).sum
+T7.tangent_remainder_nonneg (x y : Rat) (hx : 0 ≤ x) (hy : 0 ≤ y) : 0 ≤ T7.tangentRemainder x y
+T7.tangent_identity (x y : Rat) : x ^ 30 - y ^ 30 - 30 * y ^ 29 * (x - y) = (x - y) ^ 2 * T7.tangentRemainder x y
+T7.tangent_inequality (x y : Rat) (hx : 0 ≤ x) (hy : 0 ≤ y) : y ^ 30 + 30 * y ^ 29 * (x - y) ≤ x ^ 30
+T7.expectation_affine.{u_1} {α : Type u_1} (l : List α) (w f : α → Rat) (a b : Rat) :
+  (T7.expectation l w fun x => a + b * f x) = a * (List.map w l).sum + b * T7.expectation l w f
+T7.finite_jensen_30.{u_1} {α : Type u_1} (l : List α) (w f : α → Rat) (hw : ∀ (x : α), x ∈ l → 0 ≤ w x)
+  (hf : ∀ (x : α), x ∈ l → 0 ≤ f x) (hnorm : (List.map w l).sum = 1) :
+  T7.expectation l w f ^ 30 ≤ T7.expectation l w fun x => f x ^ 30
+T7.density_quotient_nonneg (count n power : Nat) (hn : 0 < n) : 0 ≤ ↑count / ↑n ^ power
+T7.edge_density_nonneg {n : Nat} (G : T7.SimpleHost n) (hn : 0 < n) : 0 ≤ G.edgeDensity
+T7.hom_density_nonneg {n : Nat} (G : T7.SimpleHost n) (hn : 0 < n) : 0 ≤ G.homDensity
+T7.reciprocal_nat_unit (n : Nat) (hn : 0 < n) : 0 ≤ 1 / ↑n ∧ 1 / ↑n ≤ 1
+T7.finite_host_conditional {n : Nat} (hn : 0 < n) (outcomes : List (T7.SimpleHost n)) (weight : T7.SimpleHost n → Rat)
+  (mu kernelDensity delta : Rat) (hw : ∀ (G : T7.SimpleHost n), G ∈ outcomes → 0 ≤ weight G)
+  (hnorm : (List.map weight outcomes).sum = 1) (hmu : 0 ≤ mu) (hdelta : delta = mu ^ 30 - kernelDensity)
+  (hdeltaPos : 0 < delta) (hsize : (136 + 30 * mu ^ 30) / delta < ↑n)
+  (hcollision : T7.expectation outcomes weight T7.SimpleHost.homDensity ≤ kernelDensity + 136 * (1 / ↑n))
+  (hmean : T7.expectation outcomes weight T7.SimpleHost.edgeDensity = (1 - 1 / ↑n) * mu) :
+  ∃ G, G ∈ outcomes ∧ G.homDensity < G.edgeDensity ^ 30 ∧ 0 < G.edgeDensity
+T7Gap.rat_sum_add.{u_1} {α : Type u_1} (xs : List α) (f g : α → Rat) :
+  (List.map (fun x => f x + g x) xs).sum = (List.map f xs).sum + (List.map g xs).sum
+T7Gap.rat_sum_mul.{u_1} {α : Type u_1} (xs : List α) (r : Rat) (f : α → Rat) :
+  (List.map (fun x => r * f x) xs).sum = r * (List.map f xs).sum
+T7Gap.cubeSum_add {n : Nat} (f g : T7Gap.Bits n → Rat) :
+  (T7Gap.cubeSum n fun s => f s + g s) = T7Gap.cubeSum n f + T7Gap.cubeSum n g
+T7Gap.cubeSum_mul {n : Nat} (r : Rat) (f : T7Gap.Bits n → Rat) :
+  (T7Gap.cubeSum n fun s => r * f s) = r * T7Gap.cubeSum n f
+T7Gap.cubeSum_succ {n : Nat} (f : T7Gap.Bits (n + 1) → Rat) :
+  T7Gap.cubeSum (n + 1) f =
+    (T7Gap.cubeSum n fun s => f fun i => Fin.cases false s i) + T7Gap.cubeSum n fun s => f fun i => Fin.cases true s i
+T7Gap.cubeSum_const (n : Nat) (r : Rat) : (T7Gap.cubeSum n fun x => r) = 2 ^ n * r
+T7Gap.char_mul {n : Nat} (a b s : T7Gap.Bits n) : T7Gap.char a s * T7Gap.char b s = T7Gap.char (T7Gap.xorBits a b) s
+T7Gap.char_zero {n : Nat} (s : T7Gap.Bits n) : T7Gap.char (T7Gap.zeroBits n) s = 1
+T7Gap.char_sign {n : Nat} (a s : T7Gap.Bits n) : T7Gap.char a s = 1 ∨ T7Gap.char a s = -1
+T7Gap.IsZero_succ {n : Nat} (a : T7Gap.Bits (n + 1)) : T7Gap.IsZero a ↔ a 0 = false ∧ T7Gap.IsZero fun i => a i.succ
+T7Gap.cubeSum_char (n : Nat) (a : T7Gap.Bits n) : T7Gap.cubeSum n (T7Gap.char a) = if T7Gap.IsZero a then 2 ^ n else 0
+T7Gap.cubeAvg_char {n : Nat} (a : T7Gap.Bits n) : T7Gap.cubeAvg n (T7Gap.char a) = if T7Gap.IsZero a then 1 else 0
+T7Gap.xor_zero_iff {n : Nat} (a b : T7Gap.Bits n) : T7Gap.IsZero (T7Gap.xorBits a b) ↔ T7Gap.BitsEq a b
+T7Gap.cubeAvg_const (n : Nat) (r : Rat) : (T7Gap.cubeAvg n fun x => r) = r
+T7Gap.rat_sum_div.{u_1} {α : Type u_1} (xs : List α) (f : α → Rat) (den : Rat) :
+  (List.map (fun s => f s / den) xs).sum = (List.map f xs).sum / den
+T7Gap.tiltedExpectation_formula {n : Nat} (d : T7Gap.Bits n) (bias : Rat) (f : T7Gap.Bits n → Rat) :
+  T7Gap.tiltedExpectation d bias f = T7Gap.cubeAvg n f + bias * T7Gap.cubeAvg n fun s => T7Gap.char d s * f s
+T7Gap.tiltedWeight_nonnegative {n : Nat} (d : T7Gap.Bits n) (bias : Rat) (hlo : -1 ≤ bias) (hhi : bias ≤ 1)
+  (s : T7Gap.Bits n) : 0 ≤ T7Gap.tiltedWeight d bias s
+T7Gap.tilted_normalized {n : Nat} (d : T7Gap.Bits n) (bias : Rat) (hd : ¬T7Gap.IsZero d) :
+  (T7Gap.tiltedExpectation d bias fun x => 1) = 1
+T7Gap.tilted_product {n : Nat} (d a b : T7Gap.Bits n) (bias : Rat) :
+  (T7Gap.tiltedExpectation d bias fun s => T7Gap.char a s * T7Gap.char b s) =
+    (if T7Gap.IsZero (T7Gap.xorBits a b) then 1 else 0) + bias * if T7Gap.BitsEq (T7Gap.xorBits a b) d then 1 else 0
+T7Gap.branch_bias_bounds (c : T7.Corner) (b : Bool) : -1 ≤ T7Gap.branchBias c b ∧ T7Gap.branchBias c b ≤ 1
+T7Gap.D_nonzero (c : T7.Corner) : ¬T7Gap.IsZero (T7.D c)
+T7Gap.activationWeight_nonnegative (c : T7.Corner) (o : T7Gap.ActivationOutcome) : 0 ≤ T7Gap.activationWeight c o
+T7Gap.activationExpectation_split (c : T7.Corner) (f : T7Gap.ActivationOutcome → Rat) :
+  T7Gap.activationExpectation c f =
+    (1 / 2 * T7Gap.tiltedExpectation (T7.D c) (↑(T7.sigma c) / 2) fun s => f (true, s)) +
+      1 / 2 * T7Gap.tiltedExpectation (T7.D c) (-↑(T7.sigma c) / 2) fun s => f (false, s)
+T7Gap.activation_normalized (c : T7.Corner) : (List.map (T7Gap.activationWeight c) T7Gap.activationOutcomes).sum = 1
+T7Gap.union_subset_iff (a b s : T7.Mask) : T7.SubsetMask (T7.unionMask a b) s ↔ T7.SubsetMask a s ∧ T7.SubsetMask b s
+T7Gap.tilted_phi_product (c : T7.Corner) (a b : T7.Mask) (branch : Bool) :
+  (T7Gap.tiltedExpectation (T7.D c) (T7Gap.branchBias c branch) fun s =>
+      T7Gap.phi c a (branch, s) * T7Gap.phi c b (branch, s)) =
+    if T7.SubsetMask (T7.unionMask a b) (T7Gap.activationSupport c branch) then
+      (if T7.maskEq (T7.diffMask a b) T7.emptyMask then 1 else 0) +
+        T7Gap.branchBias c branch * if T7.maskEq (T7.diffMask a b) (T7.D c) then 1 else 0
+    else 0
+T7Gap.activation_moment_eq_formula (c : T7.Corner) (a b : T7.Mask) : T7Gap.activationMoment c a b = T7.moment c a b
+T7Gap.char_agree {n : Nat} (support d s t : T7Gap.Bits n) (hd : T7Gap.SubsetBits d support)
+  (ha : T7Gap.AgreeOn support s t) : T7Gap.char d s = T7Gap.char d t
+T7Gap.agreement_cons {n : Nat} (support : T7Gap.Bits (n + 1)) (s : T7Gap.Bits n) (t : T7Gap.Bits (n + 1)) (b : Bool) :
+  T7Gap.AgreeOn support (fun i => Fin.cases b s i) t ↔
+    (support 0 = true → b = t 0) ∧ T7Gap.AgreeOn (fun i => support i.succ) s fun i => t i.succ
+T7Gap.cubeSum_agreement (n : Nat) (support t : T7Gap.Bits n) :
+  (T7Gap.cubeSum n fun s => if T7Gap.AgreeOn support s t then 1 else 0) = 2 ^ n * (1 / 2) ^ T7Gap.bitCount support
+T7Gap.cubeAvg_agreement {n : Nat} (support t : T7Gap.Bits n) :
+  (T7Gap.cubeAvg n fun s => if T7Gap.AgreeOn support s t then 1 else 0) = (1 / 2) ^ T7Gap.bitCount support
+T7Gap.tilted_marginal {n : Nat} (support d t : T7Gap.Bits n) (bias : Rat) (hd : T7Gap.SubsetBits d support) :
+  (T7Gap.tiltedExpectation d bias fun s => if T7Gap.AgreeOn support s t then 1 else 0) =
+    (1 / 2) ^ T7Gap.bitCount support * (1 + bias * T7Gap.char d t)
+T7Gap.active_support_counts (c : T7.Corner) : T7Gap.bitCount (T7.M c) = 7 ∧ T7Gap.bitCount (T7.D c) = 6
+T7Gap.activation_M_sign_marginal (c : T7.Corner) (t : T7Gap.Bits 30) :
+  (T7Gap.activationExpectation c fun o => if o.fst = true ∧ T7Gap.AgreeOn (T7.M c) o.snd t then 1 else 0) =
+    1 / 2 * (1 / 2) ^ 7 * (1 + ↑(T7.sigma c) / 2 * T7Gap.char (T7.D c) t)
+T7Gap.activation_D_sign_marginal (c : T7.Corner) (t : T7Gap.Bits 30) :
+  (T7Gap.activationExpectation c fun o => if o.fst = false ∧ T7Gap.AgreeOn (T7.D c) o.snd t then 1 else 0) =
+    1 / 2 * (1 / 2) ^ 6 * (1 - ↑(T7.sigma c) / 2 * T7Gap.char (T7.D c) t)
+T7Gap.stochastic_identity_eq_fullCoefficient : T7Gap.stochasticCoefficient id = T7.fullCoefficient
+T7Gap.stochastic_reversal_eq_fullCoefficient : T7Gap.stochasticCoefficient T7.reverseCorner = T7.reverseFullCoefficient
+T7Gap.stochastic_identity_coefficient : T7Gap.stochasticCoefficient id = -(1 / 4 ^ 30)
+T7Gap.stochastic_reversal_coefficient : T7Gap.stochasticCoefficient T7.reverseCorner = -(1 / 4 ^ 30)
+T7Gap.stochastic_signed_orbit :
+  T7Gap.stochasticCoefficient id + T7Gap.stochasticCoefficient T7.reverseCorner = -(1 / 2 ^ 59)
+T7Gap.activation_law_exists (c : T7.Corner) :
+  ∃ law,
+    law.outcomes = T7Gap.activationOutcomes ∧
+      law.weight = T7Gap.activationWeight c ∧
+        ∀ (a b : T7.Mask), (law.mean fun o => T7Gap.phi c a o * T7Gap.phi c b o) = T7.moment c a b
+T7Gap.FiniteLaw.mean_const {α : Type} (law : T7Gap.FiniteLaw α) (r : Rat) : (law.mean fun x => r) = r
+T7Gap.FiniteLaw.mean_add {α : Type} (law : T7Gap.FiniteLaw α) (f g : α → Rat) :
+  (law.mean fun s => f s + g s) = law.mean f + law.mean g
+T7Gap.FiniteLaw.mean_mul {α : Type} (law : T7Gap.FiniteLaw α) (r : Rat) (f : α → Rat) :
+  (law.mean fun s => r * f s) = r * law.mean f
+T7Gap.FiniteLaw.mean_nonneg {α : Type} (law : T7Gap.FiniteLaw α) (f : α → Rat)
+  (hf : ∀ (s : α), s ∈ law.outcomes → 0 ≤ f s) : 0 ≤ law.mean f
+T7Gap.FiniteLaw.mean_sum.{u_1} {α : Type} {β : Type u_1} (law : T7Gap.FiniteLaw α) (xs : List β) (f : β → α → Rat) :
+  (law.mean fun s => (List.map (fun i => f i s) xs).sum) = (List.map (fun i => law.mean (f i)) xs).sum
+T7Gap.FiniteLaw.mean_comm {α β : Type} (left : T7Gap.FiniteLaw α) (right : T7Gap.FiniteLaw β) (f : α → β → Rat) :
+  (left.mean fun x => right.mean (f x)) = right.mean fun y => left.mean fun x => f x y
+T7Gap.rat_sum_flatMap.{u_1} {α : Type u_1} (xs : List α) (f : α → List Rat) :
+  (List.flatMap f xs).sum = (List.map (fun x => (f x).sum) xs).sum
+T7Gap.independentMean_succ {α : Type} {n : Nat} (law : T7Gap.FiniteLaw α) (f : (Fin (n + 1) → α) → Rat) :
+  T7Gap.independentMean law (n + 1) f =
+    law.mean fun x => T7Gap.independentMean law n fun s => f fun i => Fin.cases x s i
+T7Gap.independentMean_const {α : Type} (law : T7Gap.FiniteLaw α) (n : Nat) (r : Rat) :
+  (T7Gap.independentMean law n fun x => r) = r
+T7Gap.productWeight_nonnegative {α : Type} {n : Nat} (law : T7Gap.FiniteLaw α) (s : Fin n → α)
+  (hs : ∀ (i : Fin n), s i ∈ law.outcomes) : 0 ≤ T7Gap.productWeight law s
+T7Gap.coordinateProduct_one (n : Nat) : (T7Gap.coordinateProduct fun x => 1) = 1
+T7Gap.coordinateProduct_nonneg {n : Nat} (f : Fin n → Rat) (h : ∀ (i : Fin n), 0 ≤ f i) : 0 ≤ T7Gap.coordinateProduct f
+T7Gap.independent_product {α : Type} (law : T7Gap.FiniteLaw α) (n : Nat) (f : Fin n → α → Rat) :
+  ((T7Gap.independentLaw law n).mean fun s => T7Gap.coordinateProduct fun i => f i (s i)) =
+    T7Gap.coordinateProduct fun i => law.mean (f i)
+T7Gap.independent_bipartite_product {X Y : Type} (left : T7Gap.FiniteLaw X) (right : T7Gap.FiniteLaw Y) (n : Nat)
+  (f : Fin n → X → Y → Rat) :
+  ((T7Gap.independentLaw left n).mean fun x =>
+      (T7Gap.independentLaw right n).mean fun y => T7Gap.coordinateProduct fun i => f i (x i) (y i)) =
+    T7Gap.coordinateProduct fun i => left.mean fun x => right.mean (f i x)
+T7Gap.activationKernel_nonnegative {X Y : Type} (base : T7Gap.SignedBase X Y) (c : T7.Corner) (x : Fin 30 → X)
+  (y : Fin 30 → Y) : 0 ≤ T7Gap.activationKernel base c x y
+T7Gap.activationKernel_mean_one {X Y : Type} (base : T7Gap.SignedBase X Y) (c : T7.Corner) :
+  ((T7Gap.independentLaw base.left 30).mean fun x =>
+      (T7Gap.independentLaw base.right 30).mean (T7Gap.activationKernel base c x)) =
+    1
+T7Gap.incidentActivationKernel_mean {X Y : Type} (base : T7Gap.SignedBase X Y) (c : T7.Corner) :
+  (T7Gap.incidentActivationKernel base c).mean = 1
+T7Gap.kernel_construction_has_instance (c : T7.Corner) :
+  (T7Gap.incidentActivationKernel T7Gap.unitSignedBase c).mean = 1
+T7Gap.pair_sum {X Y : Type} (left : T7Gap.FiniteLaw X) (right : T7Gap.FiniteLaw Y) (f : X × Y → Rat) :
+  (List.map (fun p => T7Gap.pairWeight left right p * f p) (T7Gap.pairOutcomes left right)).sum =
+    left.mean fun x => right.mean fun y => f (x, y)
+T7Gap.productLaw_mean {X Y : Type} (left : T7Gap.FiniteLaw X) (right : T7Gap.FiniteLaw Y) (f : X × Y → Rat) :
+  (T7Gap.productLaw left right).mean f = left.mean fun x => right.mean fun y => f (x, y)
+T7Gap.symmetricProduct_symmetric {X Y : Type} (W : T7Gap.RationalBipartiteKernel X Y) (p q : X × Y) :
+  T7Gap.symmetricProductValue W p q = T7Gap.symmetricProductValue W q p
+T7Gap.symmetricProduct_nonnegative {X Y : Type} (W : T7Gap.RationalBipartiteKernel X Y) (p q : X × Y) :
+  0 ≤ T7Gap.symmetricProductValue W p q
+T7Gap.symmetricProduct_mean {X Y : Type} (W : T7Gap.RationalBipartiteKernel X Y) :
+  (T7Gap.symmetricProductKernel W).mean = W.mean * W.mean
+T7Gap.rat_sum_pos.{u_1} {α : Type u_1} (xs : List α) (w : α → Rat) (hn : ∀ (x : α), x ∈ xs → 0 ≤ w x)
+  (hp : ∃ x, x ∈ xs ∧ 0 < w x) : 0 < (List.map w xs).sum
+T7Gap.beta_positive : 0 < T7Gap.beta
+T7Gap.reciprocal_beta_power_positive (n : Nat) : 0 < 1 / T7Gap.beta ^ n
+T7Gap.pointMass_nonnegative (p : T7.Point) : 0 ≤ T7Gap.pointRawMass p
+T7Gap.faceMass_nonnegative (j : T7.Face) : 0 ≤ T7Gap.faceRawMass j
+T7Gap.literal_face_norms : List.ofFn T7Gap.faceNorm = [3, 3, 3, 5, 3, 3, 5, 3, 3, 3]
+T7Gap.pairScore_bound (p : T7.Point) (j : T7.Face) : T7Gap.pairScore p j ≤ 446
+T7Gap.power_ge_one (x : Rat) (hx : 1 ≤ x) (n : Nat) : 1 ≤ x ^ n
+T7Gap.thinning_bounds (p : T7.Point) (j : T7.Face) : 0 < T7Gap.thinning p j ∧ T7Gap.thinning p j ≤ 1
+T7Gap.cornerIndex_valid (p : T7.Point) (j : T7.Face) :
+  T7.incident p j = true → T7.corner (T7Gap.cornerIndex p j) = (p, j)
+T7Gap.pairKernel_nonnegative {X Y : Type} (base : T7Gap.SignedBase X Y) (p : T7.Point) (j : T7.Face) (x : Fin 30 → X)
+  (y : Fin 30 → Y) : 0 ≤ T7Gap.pairKernel base p j x y
+T7Gap.pairKernel_mean {X Y : Type} (base : T7Gap.SignedBase X Y) (p : T7.Point) (j : T7.Face) :
+  ((T7Gap.independentLaw base.left 30).mean fun x =>
+      (T7Gap.independentLaw base.right 30).mean (T7Gap.pairKernel base p j x)) =
+    1
+T7Gap.thinnedPairKernel_nonnegative {X Y : Type} (base : T7Gap.SignedBase X Y) (p : T7.Point) (j : T7.Face)
+  (x : Fin 30 → X) (y : Fin 30 → Y) : 0 ≤ T7Gap.thinnedPairKernel base p j x y
+T7Gap.thinnedPairKernel_mean {X Y : Type} (base : T7Gap.SignedBase X Y) (p : T7.Point) (j : T7.Face) :
+  ((T7Gap.independentLaw base.left 30).mean fun x =>
+      (T7Gap.independentLaw base.right 30).mean (T7Gap.thinnedPairKernel base p j x)) =
+    1
+T7Gap.constructedKernel_mean_one {X Y : Type} (base : T7Gap.SignedBase X Y) : (T7Gap.constructedKernel base).mean = 1
+T7Gap.constructed_symmetric_mean_one {X Y : Type} (base : T7Gap.SignedBase X Y) :
+  (T7Gap.symmetricProductKernel (T7Gap.constructedKernel base)).mean = 1
+T7Gap.boolean_constructed_mean : (T7Gap.constructedKernel T7Gap.booleanSignedBase).mean = 1
+T7Gap.boolean_sign_values :
+  T7Gap.booleanSignedBase.value false false false = 2 ∧
+    T7Gap.booleanSignedBase.value false false true = 0 ∧
+      T7Gap.booleanSignedBase.value true false false = 0 ∧ T7Gap.booleanSignedBase.value true false true = 2
+T7Gap.independentLaw_succ_mean {α : Type} {n : Nat} (law : T7Gap.FiniteLaw α) (f : (Fin (n + 1) → α) → Rat) :
+  (T7Gap.independentLaw law (n + 1)).mean f =
+    law.mean fun x => (T7Gap.independentLaw law n).mean fun s => f fun i => Fin.cases x s i
+T7Gap.fst_cons.{u_1, u_2} {X : Type u_1} {Y : Type u_2} {n : Nat} (p : X × Y) (s : Fin n → X × Y) :
+  (fun i => (Fin.cases p s i).fst) = fun i => Fin.cases p.fst (fun i => (s i).fst) i
+T7Gap.snd_cons.{u_1, u_2} {X : Type u_1} {Y : Type u_2} {n : Nat} (p : X × Y) (s : Fin n → X × Y) :
+  (fun i => (Fin.cases p s i).snd) = fun i => Fin.cases p.snd (fun i => (s i).snd) i
+T7Gap.independent_productLaw {X Y : Type} (left : T7Gap.FiniteLaw X) (right : T7Gap.FiniteLaw Y) (n : Nat)
+  (f : (Fin n → X) → (Fin n → Y) → Rat) :
+  ((T7Gap.independentLaw (T7Gap.productLaw left right) n).mean fun s => f (fun i => (s i).fst) fun i => (s i).snd) =
+    (T7Gap.independentLaw left n).mean fun x => (T7Gap.independentLaw right n).mean (f x)
+T7Gap.coordinateProduct_mul {n : Nat} (f g : Fin n → Rat) :
+  (T7Gap.coordinateProduct fun i => f i * g i) = T7Gap.coordinateProduct f * T7Gap.coordinateProduct g
+T7Gap.separated_four_means {α β γ δ : Type} (A : T7Gap.FiniteLaw α) (B : T7Gap.FiniteLaw β) (C : T7Gap.FiniteLaw γ)
+  (D : T7Gap.FiniteLaw δ) (f : α → δ → Rat) (g : β → γ → Rat) :
+  (A.mean fun a => B.mean fun b => C.mean fun c => D.mean fun d => f a d * g b c) =
+    (A.mean fun a => D.mean (f a)) * B.mean fun b => C.mean (g b)
+T7Gap.symmetricProduct_density {X Y : Type} (W : T7Gap.RationalBipartiteKernel X Y) :
+  (T7Gap.symmetricProductKernel W).density = W.density * (T7Gap.transposeKernel W).density
+T7Gap.bernoulli_mean (p : Rat) (hp : 0 ≤ p) (h1 : p ≤ 1) (f : Bool → Rat) :
+  (T7Gap.bernoulliLaw p hp h1).mean f = p * f true + (1 - p) * f false
+T7Gap.pairKernel_eq_expectation {X Y : Type} (base : T7Gap.SignedBase X Y) (p : T7.Point) (j : T7.Face) (x : Fin 30 → X)
+  (y : Fin 30 → Y) :
+  T7Gap.pairKernel base p j x y = (T7Gap.activationLaw (T7Gap.cornerIndex p j)).mean (T7Gap.pairObservable base p j x y)
+T7Gap.thinnedPairKernel_eq_expectation {X Y : Type} (base : T7Gap.SignedBase X Y) (p : T7.Point) (j : T7.Face)
+  (x : Fin 30 → X) (y : Fin 30 → Y) :
+  T7Gap.thinnedPairKernel base p j x y = (T7Gap.thinnedActivationLaw p j).mean (T7Gap.thinnedObservable base p j x y)
+T7Gap.pairMoment_incident (p : T7.Point) (j : T7.Face) (h : T7.incident p j = true) (a b : T7.Mask) :
+  T7Gap.pairMoment p j a b = T7Gap.activationMoment (T7Gap.cornerIndex p j) a b
+T7Gap.pairMoment_nonincident (p : T7.Point) (j : T7.Face) (h : T7.incident p j = false) (a b : T7.Mask)
+  (ha : T7.NonemptyMask a) : T7Gap.pairMoment p j a b = 0
+T7Gap.rat_prod_zero (xs : List Rat) (h : 0 ∈ xs) : xs.prod = 0
+T7Gap.rat_sum_zero.{u_1} {α : Type u_1} (xs : List α) (f : α → Rat) (h : ∀ (x : α), x ∈ xs → f x = 0) :
+  (List.map f xs).sum = 0
+T7Gap.generalCoefficient_non_incidence (a : T7.Point → T7.Point) (b : T7.Face → T7.Face)
+  (h : ¬T7.IncidenceEndomorphism a b) : T7Gap.generalCoefficient a b = 0
+T7Gap.cornerIndex_corner (c : Fin 30) : T7Gap.cornerIndex (T7.corner c).fst (T7.corner c).snd = c
+T7Gap.corners_incident (c : Fin 30) : T7.incident (T7.corner c).fst (T7.corner c).snd = true
+T7Gap.general_identity : T7Gap.generalCoefficient id id = T7Gap.stochasticCoefficient id
+T7Gap.general_reversal :
+  T7Gap.generalCoefficient T7.reversePoint T7.reverseFace = T7Gap.stochasticCoefficient T7.reverseCorner
+T7Gap.general_signed_orbit :
+  T7Gap.generalCoefficient id id + T7Gap.generalCoefficient T7.reversePoint T7.reverseFace = -(1 / 2 ^ 59)
+T7Gap.coordinateProduct_const (r : Rat) (n : Nat) : (T7Gap.coordinateProduct fun x => r) = r ^ n
+T7Gap.scaleKernel_mean {X Y : Type} (W : T7Gap.RationalBipartiteKernel X Y) (r : Rat) (hr : 0 ≤ r) :
+  (T7Gap.scaleKernel W r hr).mean = r * W.mean
+T7Gap.scaleKernel_density {X Y : Type} (W : T7Gap.RationalBipartiteKernel X Y) (r : Rat) (hr : 0 ≤ r) :
+  (T7Gap.scaleKernel W r hr).density = r ^ 30 * W.density
+T7Gap.rat_member_le_sum (xs : List Rat) (hn : ∀ (x : Rat), x ∈ xs → 0 ≤ x) (x : Rat) (hx : x ∈ xs) : x ≤ xs.sum
+T7Gap.kernelValues_nonnegative {X Y : Type} (W : T7Gap.RationalBipartiteKernel X Y) (r : Rat) :
+  r ∈ T7Gap.kernelValues W → 0 ≤ r
+T7Gap.kernelBound_positive {X Y : Type} (W : T7Gap.RationalBipartiteKernel X Y) : 0 < T7Gap.kernelBound W
+T7Gap.kernelBound_covers {X Y : Type} (W : T7Gap.RationalBipartiteKernel X Y) (x : X) (y : Y) (hx : x ∈ W.left.outcomes)
+  (hy : y ∈ W.right.outcomes) : W.value x y ≤ T7Gap.kernelBound W
+T7Gap.boundedKernel_unit_interval {X Y : Type} (W : T7Gap.RationalBipartiteKernel X Y) (x : X) (y : Y)
+  (hx : x ∈ W.left.outcomes) (hy : y ∈ W.right.outcomes) :
+  0 ≤ (T7Gap.boundedKernel W).value x y ∧ (T7Gap.boundedKernel W).value x y ≤ 1
+T7Gap.boundedKernel_mean {X Y : Type} (W : T7Gap.RationalBipartiteKernel X Y) :
+  (T7Gap.boundedKernel W).mean = (T7Gap.kernelBound W)⁻¹ * W.mean
+T7Gap.boundedKernel_density {X Y : Type} (W : T7Gap.RationalBipartiteKernel X Y) :
+  (T7Gap.boundedKernel W).density = (T7Gap.kernelBound W)⁻¹ ^ 30 * W.density
+T7Gap.boundedKernel_symmetric {X : Type} (W : T7Gap.RationalBipartiteKernel X X)
+  (h : ∀ (x y : X), W.value x y = W.value y x) (x y : X) :
+  (T7Gap.boundedKernel W).value x y = (T7Gap.boundedKernel W).value y x
+T7Gap.boundedConstructed_mean_positive {X Y : Type} (base : T7Gap.SignedBase X Y) :
+  0 < (T7Gap.boundedConstructedKernel base).mean
+T7Gap.thinnedMoment_factor (p : T7.Point) (j : T7.Face) (a b : T7.Mask) (ha : T7.NonemptyMask a) :
+  T7Gap.thinnedMoment p j a b = T7Gap.thinning p j * T7Gap.pairMoment p j a b
+T7Gap.rat_prod_mul.{u_1} {α : Type u_1} (xs : List α) (f g : α → Rat) :
+  (List.map (fun x => f x * g x) xs).prod = (List.map f xs).prod * (List.map g xs).prod
+T7Gap.thinnedCoefficient_factor (a : T7.Point → T7.Point) (b : T7.Face → T7.Face) :
+  T7Gap.thinnedCoefficient a b =
+    (List.map (fun c => T7Gap.thinning (a (T7.corner c).fst) (b (T7.corner c).snd)) (List.finRange 30)).prod *
+      T7Gap.generalCoefficient a b
+T7Gap.averagedCoefficient_exact :
+  T7Gap.averagedCoefficient =
+    (List.map
+        (fun a =>
+          T7Gap.productWeight T7Gap.pointPrior a *
+            (List.map
+                (fun b =>
+                  T7Gap.productWeight T7Gap.facePrior b *
+                    ((List.map (fun c => T7Gap.thinning (a (T7.corner c).fst) (b (T7.corner c).snd))
+                          (List.finRange 30)).prod *
+                      T7Gap.generalCoefficient a b))
+                (T7.functions T7Gap.facePrior.outcomes 10)).sum)
+        (T7.functions T7Gap.pointPrior.outcomes 7)).sum
+T7Weighted.pointLoss_nonneg (p q : T7.Point) : 0 ≤ T7Weighted.pointLoss p q
+T7Weighted.pointLoss_zero_iff (p q : T7.Point) : T7Weighted.pointLoss p q = 0 ↔ T7.degree q = T7.degree p
+T7Weighted.pointLoss_gap (p q : T7.Point) : T7.degree q ≠ T7.degree p → 37 ≤ T7Weighted.pointLoss p q
+T7Weighted.int_sum_nonneg.{u_1} {α : Type u_1} (xs : List α) (f : α → Int) (h : ∀ (x : α), x ∈ xs → 0 ≤ f x) :
+  0 ≤ (List.map f xs).sum
+T7Weighted.int_sum_le.{u_1} {α : Type u_1} (xs : List α) (f g : α → Int) (h : ∀ (x : α), x ∈ xs → f x ≤ g x) :
+  (List.map f xs).sum ≤ (List.map g xs).sum
+T7Weighted.int_member_le_sum.{u_1} {α : Type u_1} (xs : List α) (f : α → Int) (h : ∀ (x : α), x ∈ xs → 0 ≤ f x) (x : α)
+  (hx : x ∈ xs) : f x ≤ (List.map f xs).sum
+T7Weighted.face_length (j : Fin 10) : (T7.face j).length = 3
+T7Weighted.face_triple (j : Fin 10) :
+  T7.face j = [T7Weighted.faceFirst j, T7Weighted.faceSecond j, T7Weighted.faceThird j]
+T7Weighted.three_image_face_bound (p q r : T7.Point) (k : T7.Face) :
+  2 * ↑(T7Gap.faceHistogram k (T7.degree p)) + 2 * ↑(T7Gap.faceHistogram k (T7.degree q)) +
+        2 * ↑(T7Gap.faceHistogram k (T7.degree r)) -
+      ↑(T7Gap.faceNorm k) ≤
+    7
+T7Weighted.faceScore_le_seven (a : T7.Point → T7.Point) (j k : T7.Face) : T7Weighted.faceScore a j k ≤ 7
+T7Weighted.stable_faceScore_table (j k : T7.Face) :
+  T7Weighted.faceScore id j k ≤ ↑(T7Gap.faceNorm j) ∧
+    (T7Weighted.faceScore id j k = ↑(T7Gap.faceNorm j) ↔ T7.faceColor k = T7.faceColor j)
+T7Weighted.face_norm_total : (List.map (fun j => ↑(T7Gap.faceNorm j)) (List.finRange 10)).sum = 34
+T7Weighted.stable_faceScore (a : T7.Point → T7.Point) (h : ∀ (p : T7.Point), T7.degree (a p) = T7.degree p)
+  (j k : T7.Face) : T7Weighted.faceScore a j k = T7Weighted.faceScore id j k
+T7Weighted.stable_points_degree (a : T7.Point → T7.Point) :
+  T7.StablePoints a ↔ ∀ (p : T7.Point), T7.degree (a p) = T7.degree p
+T7Weighted.score_point_mismatch (a : T7.Point → T7.Point) (b : T7.Face → T7.Face) (h : ¬T7.StablePoints a) :
+  T7Weighted.score a b ≤ 5065
+T7Weighted.faceDefect_nonneg (j k : T7.Face) : 0 ≤ T7Weighted.faceDefect j k
+T7Weighted.faceDefect_zero_iff (j k : T7.Face) : T7Weighted.faceDefect j k = 0 ↔ T7.faceColor k = T7.faceColor j
+T7Weighted.int_sum_sub.{u_1} {α : Type u_1} (xs : List α) (f g : α → Int) :
+  (List.map (fun x => f x - g x) xs).sum = (List.map f xs).sum - (List.map g xs).sum
+T7Weighted.score_stable_exact (a : T7.Point → T7.Point) (b : T7.Face → T7.Face) (ha : T7.StablePoints a) :
+  T7Weighted.score a b = 5066 - (List.map (fun j => T7Weighted.faceDefect j (b j)) (List.finRange 10)).sum
+T7Weighted.score_le_max (a : T7.Point → T7.Point) (b : T7.Face → T7.Face) : T7Weighted.score a b ≤ 5066
+T7Weighted.score_max_iff (a : T7.Point → T7.Point) (b : T7.Face → T7.Face) :
+  T7Weighted.score a b = 5066 ↔ T7.StablePoints a ∧ T7.StableFaces b
+T7Weighted.score_identity : T7Weighted.score id id = 5066
+T7Weighted.score_reversal : T7Weighted.score T7.reversePoint T7.reverseFace = 5066
+T7Weighted.fin7 : List.finRange 7 = [0, 1, 2, 3, 4, 5, 6]
+T7Weighted.fin10 : List.finRange 10 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+T7Weighted.fin30 :
+  List.finRange 30 =
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+T7Weighted.degree_0 : T7.degree 0 = 3
+T7Weighted.degree_1 : T7.degree 1 = 4
+T7Weighted.degree_2 : T7.degree 2 = 5
+T7Weighted.degree_3 : T7.degree 3 = 6
+T7Weighted.degree_4 : T7.degree 4 = 5
+T7Weighted.degree_5 : T7.degree 5 = 4
+T7Weighted.degree_6 : T7.degree 6 = 3
+T7Weighted.sourceScore_eq_score (a : T7.Point → T7.Point) (b : T7.Face → T7.Face) :
+  T7Weighted.sourceScore a b = T7Weighted.score a b
+T7Weighted.rat_sum_le.{u_1} {α : Type u_1} (xs : List α) (f g : α → Rat) (h : ∀ (x : α), x ∈ xs → f x ≤ g x) :
+  (List.map f xs).sum ≤ (List.map g xs).sum
+T7Weighted.mean_mono {α : Type} (law : T7Gap.FiniteLaw α) (f g : α → Rat)
+  (h : ∀ (x : α), x ∈ law.outcomes → f x ≤ g x) : law.mean f ≤ law.mean g
+T7Weighted.pairFeature_values (p : T7.Point) (j : T7.Face) (a : T7.Mask) (o : T7Gap.ActivationOutcome) :
+  T7Gap.pairFeature p j a o = -1 ∨ T7Gap.pairFeature p j a o = 0 ∨ T7Gap.pairFeature p j a o = 1
+T7Weighted.pairMoment_bounds (p : T7.Point) (j : T7.Face) (a b : T7.Mask) :
+  -1 ≤ T7Gap.pairMoment p j a b ∧ T7Gap.pairMoment p j a b ≤ 1
+T7Weighted.product_unit_bounds (xs : List Rat) (h : ∀ (x : Rat), x ∈ xs → -1 ≤ x ∧ x ≤ 1) : -1 ≤ xs.prod ∧ xs.prod ≤ 1
+T7Weighted.rat_sum_const.{u_1} {α : Type u_1} (xs : List α) (r : Rat) : (List.map (fun x => r) xs).sum = ↑xs.length * r
+T7Weighted.flatMap_length_uniform.{u_1, u_2} {α : Type u_1} {β : Type u_2} (xs : List α) (f : α → List β) (n : Nat)
+  (h : ∀ (x : α), x ∈ xs → (f x).length = n) : (List.flatMap f xs).length = xs.length * n
+T7Weighted.functions_length.{u_1} {α : Type u_1} (xs : List α) (n : Nat) : (T7.functions xs n).length = xs.length ^ n
+T7Weighted.labels_count_bound : T7.allLabelings.length ≤ 2 ^ 450
+T7Weighted.generalCoefficient_bounds (a : T7.Point → T7.Point) (b : T7.Face → T7.Face) :
+  -2 ^ 450 ≤ T7Gap.generalCoefficient a b ∧ T7Gap.generalCoefficient a b ≤ 2 ^ 450
+T7Weighted.allTypeMaps_mem (g : T7Weighted.TypeMap) : g ∈ T7Weighted.allTypeMaps
+T7Weighted.allTypeMaps_nodup : T7Weighted.allTypeMaps.Nodup
+T7Weighted.allTypeMaps_length : T7Weighted.allTypeMaps.length = 7 ^ 7 * 10 ^ 10
+T7Weighted.allTypeMaps_count : ↑T7Weighted.allTypeMaps.length < 2 ^ 54
+T7Weighted.identity_ne_reversal : T7Weighted.identityMap ≠ T7Weighted.reversalMap
+T7Weighted.relativeWeight_positive (g : T7Weighted.TypeMap) : 0 < T7Weighted.relativeWeight g
+T7Weighted.relativeWeight_max (g : T7Weighted.TypeMap) (h : T7Weighted.score g.fst g.snd = 5066) :
+  T7Weighted.relativeWeight g = 1
+T7Weighted.reciprocal_antitone (a b : Rat) (ha : 0 < a) (hab : a ≤ b) : 1 / b ≤ 1 / a
+T7Weighted.relativeWeight_lower_score (g : T7Weighted.TypeMap) (h : T7Weighted.score g.fst g.snd < 5066) :
+  T7Weighted.relativeWeight g ≤ 1 / T7Gap.beta
+T7Weighted.maximum_coefficient_support (g : T7Weighted.TypeMap) (hmax : T7Weighted.score g.fst g.snd = 5066)
+  (hi : g ≠ T7Weighted.identityMap) (hr : g ≠ T7Weighted.reversalMap) : T7Gap.generalCoefficient g.fst g.snd = 0
+T7Weighted.non_orbit_term_bound (g : T7Weighted.TypeMap) (hi : g ≠ T7Weighted.identityMap)
+  (hr : g ≠ T7Weighted.reversalMap) : T7Weighted.weightedTerm g ≤ 2 ^ 450 / T7Gap.beta
+T7Weighted.rat_sum_single.{u_1} {α : Type u_1} (xs : List α) (f : α → Rat) (s : α) (hn : xs.Nodup) (hs : s ∈ xs)
+  (hz : ∀ (x : α), x ∈ xs → x ≠ s → f x = 0) : (List.map f xs).sum = f s
+T7Weighted.finiteRemainder_bound : T7Weighted.finiteRemainder < 1 / 2 ^ 60
+T7Weighted.normalizedWeightedSum_split :
+  T7Weighted.normalizedWeightedSum =
+    T7Gap.generalCoefficient id id + T7Gap.generalCoefficient T7.reversePoint T7.reverseFace +
+      T7Weighted.finiteRemainder
+T7Weighted.normalizedWeightedSum_negative : T7Weighted.normalizedWeightedSum < -(1 / 2 ^ 60)
+T7Weighted.int_sum_natCast.{u_1} {α : Type u_1} (xs : List α) (f : α → Nat) :
+  ↑(List.map f xs).sum = (List.map (fun x => ↑(f x)) xs).sum
+T7Weighted.thinning_exponent_int (p : T7.Point) (j : T7.Face) :
+  ↑(446 - T7Gap.pairScore p j) = 446 - ↑(T7Gap.pairScore p j)
+T7Weighted.exponentCost_sourceScore (a : T7.Point → T7.Point) (b : T7.Face → T7.Face) :
+  ↑(T7Weighted.exponentCost a b) + T7Weighted.sourceScore a b = 13380
+T7Weighted.exponentCost_gap (a : T7.Point → T7.Point) (b : T7.Face → T7.Face) :
+  T7Weighted.exponentCost a b = 8314 + (5066 - T7Weighted.score a b).toNat
+T7Weighted.decay_zero : T7Weighted.decay 0 = 1
+T7Weighted.rat_pow_add (x : Rat) (m n : Nat) : x ^ (m + n) = x ^ m * x ^ n
+T7Weighted.decay_add (m n : Nat) : T7Weighted.decay (m + n) = T7Weighted.decay m * T7Weighted.decay n
+T7Weighted.decay_product.{u_1} {α : Type u_1} (xs : List α) (f : α → Nat) :
+  (List.map (fun x => T7Weighted.decay (f x)) xs).prod = T7Weighted.decay (List.map f xs).sum
+T7Weighted.pointNormalizer_positive : 0 < T7Weighted.pointNormalizer
+T7Weighted.faceNormalizer_positive : 0 < T7Weighted.faceNormalizer
+T7Weighted.productWeight_decay {α : Type} (law : T7Gap.FiniteLaw α) (f : α → Nat) (Z : Rat)
+  (h : ∀ (x : α), law.weight x = T7Weighted.decay (f x) / Z) (n : Nat) (s : Fin n → α) :
+  T7Gap.productWeight law s = T7Weighted.decay (List.map (fun i => f (s i)) (List.finRange n)).sum / Z ^ n
+T7Weighted.rawMapWeight_formula (g : T7Weighted.TypeMap) :
+  T7Weighted.rawMapWeight g =
+    T7Weighted.decay (T7Weighted.exponentCost g.fst g.snd) /
+      (T7Weighted.pointNormalizer ^ 7 * T7Weighted.faceNormalizer ^ 10)
+T7Weighted.averagedScale_positive : 0 < T7Weighted.averagedScale
+T7Weighted.actual_weight_relative (g : T7Weighted.TypeMap) :
+  T7Weighted.rawMapWeight g = T7Weighted.averagedScale * T7Weighted.relativeWeight g
+T7Weighted.averagedCoefficient_raw_sum :
+  T7Gap.averagedCoefficient =
+    (List.map (fun g => T7Weighted.rawMapWeight g * T7Gap.generalCoefficient g.fst g.snd) T7Weighted.allTypeMaps).sum
+T7Weighted.averagedCoefficient_normalized :
+  T7Gap.averagedCoefficient = T7Weighted.averagedScale * T7Weighted.normalizedWeightedSum
+T7Weighted.eta_eq_scale : T7Weighted.eta = T7Weighted.averagedScale * (1 / 2 ^ 60)
+T7Weighted.eta_positive : 0 < T7Weighted.eta
+T7Weighted.averagedCoefficient_negative : T7Gap.averagedCoefficient < -T7Weighted.eta
+T7Weighted.averagedCoefficient_lt_zero : T7Gap.averagedCoefficient < 0
+T7Weighted.pointNormalizer_source :
+  T7Weighted.pointNormalizer =
+    2 * T7Weighted.decay 333 + 2 * T7Weighted.decay 592 + 2 * T7Weighted.decay 925 + T7Weighted.decay 1332
+T7Weighted.faceNormalizer_source : T7Weighted.faceNormalizer = 8 * T7Weighted.decay 3 + 2 * T7Weighted.decay 5
+T7Weighted.eta_source :
+  T7Weighted.eta =
+    1 / T7Gap.beta ^ 8314 /
+      (2 ^ 60 * (2 / T7Gap.beta ^ 333 + 2 / T7Gap.beta ^ 592 + 2 / T7Gap.beta ^ 925 + 1 / T7Gap.beta ^ 1332) ^ 7 *
+        (8 / T7Gap.beta ^ 3 + 2 / T7Gap.beta ^ 5) ^ 10)
+T7Weighted.source_weighted_negativity : 0 < T7Weighted.eta ∧ T7Gap.averagedCoefficient < -T7Weighted.eta
+T7Weighted.non_orbit_term_lower (g : T7Weighted.TypeMap) (hi : g ≠ T7Weighted.identityMap)
+  (hr : g ≠ T7Weighted.reversalMap) : -(2 ^ 450 / T7Gap.beta) ≤ T7Weighted.weightedTerm g
+T7Weighted.finiteRemainder_two_sided :
+  -(1 / 2 ^ 60) < T7Weighted.finiteRemainder ∧ T7Weighted.finiteRemainder < 1 / 2 ^ 60

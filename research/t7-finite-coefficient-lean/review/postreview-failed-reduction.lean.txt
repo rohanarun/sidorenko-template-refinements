@@ -1,0 +1,5 @@
+import T7Weighted
+set_option maxRecDepth 100000
+set_option maxHeartbeats 0
+-- Deliberately false proof-budget equality: replay requires a conclusive rejection.
+example : (2^54 : Rat)*(2^450/(2^563)) = 1/2^60 := by decide +kernel

@@ -1,0 +1,80 @@
+Bounded independent challenge: Task4 + Task11 + L3 integration
+Date: 2026-10-11 UTC
+Reviewer: literal_supplier lane, independently of the integration author
+
+Outcome
+
+No concrete dependency gap was found in the proposed T7 specialization. The degree-three vertices, nondiscrete stable colors, separating triangles, and unequal part sizes do not invalidate the reviewed arguments. The integration supports the stated 17-vertex, 30-edge non-Sidorenko corollary at the conventional mathematical proof level, using the complete recovered L3 analytic derivation and Task4's replacement of discrete pinning by orbit pinning. This is not formal verification, a fresh finite-field experiment, or an evaluated kernel/host construction.
+
+Scope and evidence boundary
+
+I read the pinned proof sources directly: L3 sections 1–8 and the relevant support/expansion passages; Task4's theorem, analytic extraction, scores, full coefficient, dilution and host transfer; and Task11's literal T7 construction, stable-map proof, specialized scores and explicit stopping boundary. This was a bounded dependency challenge of the new corollary, not a new campaign-wide scan or full rederivation of every local finite-field lemma.
+
+All 15 records in the integration lane's source-pins.json match their declared byte lengths and SHA-256 hashes. The recovered L3 manuscript is byte-identical to Task4's bundled dependency. The integration snapshot reviewed has SHA-256 6e36dc193585633e5d1412db034fab0f8bc09dfadb153542089c8c47e2b61b43. The existing finite result and execution receipt were read and pinned; their checker was not rerun. No supplied program, network request, GUI action, global edit or publication occurred.
+
+Source abbreviations
+
+L = source-artifacts/l3-manuscript-transfer-20261010/template_transfer_proof.md
+    SHA-256 2d286841535e86965dd1af937a85c65ae11ed73281184636ccc5375b3526cba4.
+P = source-artifacts/round2-unindexed-20261011/task-04/files/orbit_transfer/orbit_transfer_theorem.md
+    SHA-256 9afd06cf6911763965e15b57a83805828c0c680e9a88ae2942a4bb63ef346362.
+R = source-artifacts/round2-unindexed-20261011/task-11/round2-11-response.md
+    SHA-256 87944a5c592d904a1b79855e5bfc99d26a82e7cc07ec5f178daaec8743755914.
+
+1. The analytic specialization does not import discrete coloring
+
+The theorem statement L:31–74 combines its analytic conclusion with a discrete-refinement hypothesis needed for its original downstream construction. It would be incorrect simply to cite that combined theorem after removing the hypothesis. The integration instead extracts and reviews its proof through L:842, before the discrete-pinning argument at L:983–1006. That extraction is justified by the actual premises used:
+
+* L:88–108 requires a simple triangulated sphere, Hamiltonian polygon exposures, coverage a_e>=1/3, connected face dual and total excess2. T7's stellar construction and three cycles supply exactly these facts. Degree-three vertices and separating triangles cause no problem for the ear-removal exposure argument. Each Hamiltonian side is a polygon without interior vertices, even in this stacked sphere.
+* L:112–229 is local one-, two- or three-point geometry. A face always has three distinct point vertices; their global degrees do not enter those counts. The activity set can omit any subset of corners.
+* L:233–260 proves joint determinant-sign balance for a fixed graph of maximum degree at most6. Its selected-edge degree s is allowed to be any integer from1 through6; it never assumes s>=4 or that every vertex has degree6. D>=12 gives D-1-s>=5 even at the worst case. T7 has degree vector (3,4,5,6,5,4,3).
+* L:264–271 telescopes bounded transverse face factors without assuming independent faces. L:358–379 bounds the unsigned singular matrix expectation by the Lagrangian model with a fixed-graph chart factor; the number of independent variables is n+f=17 here, not35.
+* L:300–500 depends on ordered local Lagrangian triples and finitely relaxed local integer profiles, not graph size, coloring or a minimum graph degree. The individual-orbit lower bound and shared difference-form constraint remain the same local statements.
+* L:504–556 uses fresh-point polygon exposures and event containment in each cut-side event. It does not assume independent cut-side events. With T7's coverage denominator3, strict cost gaps lie on the 1/6 lattice.
+
+No discrete-color, minimum-degree-four, 13-point, 22-face, four-connectedness or no-separating-triangle premise occurs in this analytic chain. The graph-dependent constants are carried by f, m, the maximum degree and dual diameter. The prior domain qualification for L:(3.2) is harmless here: signed-rank counts are used at r=D/2>=6, not rank zero. Zero-dimensional residual form spaces are separately handled in L:346.
+
+2. Singular-profile and support corner cases
+
+The classification L:563–778 retains possibly negative local slack until the global argument. Its propagation uses nonnegative excess weights, their sum2, and a connected dual with diameter ell. It does not require every edge to have strict excess. This matters for T7: eleven edges have coverage exactly1/3. The four higher-coverage edges force residual h_e=0 there; other edges may remain in the residual support. The proof keeps those possibilities rather than silently dropping them.
+
+Lower activity is allowed in L:(7.2), and the common-dimension-one equality component is eliminated by dual connectivity and positive total excess, not by degrees or refinement. A zero residual support is the transverse profile, while every singular direct residual has at least one supported edge and hence a q^-1 saving.
+
+For nondirect residuals, L:782–816 uses a simple graph to obtain delta_0>=1 and only the upper bound a_i<=6 to obtain sum_i binom(d_i,2)<=22s. Vertices of degree3 or smaller supported degree satisfy the same upper bound. The proof does not make the entire global span isotropic; only endpoint spans must be isotropic. The remaining exponent is bounded by -D+(m^2+20m), uniformly over support. This avoids importing the original template's189 or the separate support33 repair.
+
+For direct residuals, L:818–832 relies on globally independent chosen bases and orthogonality only for spaces sharing endpoints; it requires no lower degree. The full basis-family quotient and local containment counts cancel as stated.
+
+The most delicate degree-three support case occurs at gamma=(0,F0), F0=012. Its opposite faces across01 and02 are F1=013 and F2=023; these two faces share the extra point3. This does not create an extra allowed label. Gamma's available corners in F1 have endpoint set {0,1}, and those in F2 have endpoint set {0,2}; point3 is unavailable in both. To contain both endpoints of a point edge through these two faces would require a two-element subset of {0,1} intersect {0,2}={0}, impossible. Thus P:246 uses available endpoint sets, not an incorrect claim that the opposite faces themselves meet in only one point. The argument proves the fourfold support identity even at degree3.
+
+Consequently the unique full nonempty identity labeling is alpha_e=U_e, not merely a selected negative summand. The first-moment cancellation and U_e intersections exclude diagonal-label alternatives. For reversal, source reindexing is a bijection of every label tuple; the distinguished negative target corner need not be invariant. Both automorphisms contribute -4^-30. No reflection-positivity obstruction or census-wide sign classification is imported.
+
+3. Nondiscrete orbit pinning and specialized constants
+
+R:187–195 proves the stable endomorphism statement without injectivity: normalize f(0)=0 using reversal, force points1 and2 from F0, then4 from F4,5 from F5 and6 from F7. Only identity remains after normalization. Distinct fixed image points force each image face. The stable partition need not be discrete.
+
+P:120–173 exposes stable-color-preserving endomorphisms among all part maps with arbitrary repetitions. Earlier-color preservation is exactly the premise needed for its histogram square identity, and the integer first-failed-round gap dominates all later scores. Its nonincidence penalty cannot create a higher score. Stable maps that are not endomorphisms are removed either by the penalty or, in R's specialized construction, by a zero full-nonempty coefficient at the nonincident type pair. No injective-map-only bound is used.
+
+R's specialized maximum score5066, maximum pair score446 and beta=2^564 are compatible with P's subsequent construction. The normalizing factors are common per-part priors, not source-dependent priors. The full nonempty coefficient receives exactly30 thinning factors. Its leading exponent is 5066-30*446=-8314. Two orbit terms contribute -2^-59 after normalization, and the coarse lower-score bound is strictly below2^-60. Thus the eta quoted in INTEGRATION.txt is the guaranteed negative margin from that complete sum. This review does not infer it from one negative summand.
+
+4. Dimension, error, symmetrization and finite host
+
+With f=10, m=15 and ell=3, L's constants specialize to
+ M=656640,
+ C=5174114388480,
+ B=525,
+ M+2fC=103482288426240.
+Therefore D=103482288426242 is even, >=12, and strictly exceeds both bounds. No smaller two-template dimension or effective prime constant was imported. The dimension is fixed before q tends to infinity. Finitely many activity/sign choices then give a common O(q^-1/6) error with an unevaluated fixed-parameter constant.
+
+Reversal sends K_xi(-Z) to K_(c0 xi)(Z), where c0=chi((-1)^r). Four active corners contribute c0^4=1. There is no missing orientation sign in the parity product.
+
+P:340–363 retains independent variables for source vertices and independent activation draws for source incidences even when type images coincide. The transpose has all reversed type maps and an absolute coefficient bound; it is not assumed to have the same signed coefficient. Dilution uses positive degrees and n=7<f=10, giving epsilon^7 versus epsilon^10. The proposed epsilon and a_q bounds leave a strict product margin. Parameters, priors and epsilon are chosen before q, so their enormous size does not negate the qualitative asymptotic conclusion.
+
+The crossed-product factors in P:420–429 use disjoint X/Y variable families, proving the density product identity. Every signed rank-r layer is nonempty at odd primes; the crude bound K<=q^b(D) and support size<=7 give V<=q^(14b(D)). Scaling by L_q preserves the homogeneous30-edge inequality and yields mean1/L_q.
+
+The finite-host transfer counts all source maps. Injective maps use distinct host-edge trials; the at most binom(17,2)/N=136/N colliding maps require only the [0,1] bound. Independent host labels may still coincide as atoms, as kernel sampling requires. Jensen's inequality for the30th power and the displayed symbolic N give a negative expectation of t(H,G)-p(G)^30, hence some finite simple nonempty host. No bipartite-orientation density is confused with the ordinary symmetric host density.
+
+Retained inputs and nonclaims
+
+The analytic premise here is the complete recovered L3 proof, with its previously reviewed local finite-field counting lemmas; this challenge found no missing T7-specific hypothesis in its specialization. The literal sphere/cycle/refinement facts are supported by the existing independent T7 check and hand proofs; no new finite run was performed. The unavailable full Task11 classification archive is irrelevant to this existence corollary and is not validated by it.
+
+No numerical prime bound, instantiated finite field, full rational kernel table, sampled host adjacency list, optimal dimension, minimum order among all non-Sidorenko graphs, historical novelty, or proof-assistant verification follows from this review. The original Task11 answer remains conditional on RL(T7); the integration is a separate deduction supplying that premise from L3 rather than changing the original answer's status.

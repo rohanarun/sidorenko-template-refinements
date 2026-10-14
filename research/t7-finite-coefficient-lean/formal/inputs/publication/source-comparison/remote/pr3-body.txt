@@ -1,0 +1,34 @@
+## Result
+
+The nondirect residual contribution in OpenAI's *Costs for the remaining profiles* lemma is now bounded by $O_D(q^{-D+28})$, so even dimension **30** suffices for this one counting step — down from 190 (PR #2), 980, 1034 and the source's 1642. Defect-one strata in fact contribute $O_D(q^{-D-11})$.
+
+![progress](https://raw.githubusercontent.com/rohanarun/sidorenko-template-refinements/refine/defect-overlaps/charts/progress.png)
+
+## Method
+
+PR #2 wrote the remainder as $R=-2m+\sum_x\pi(x)+(\text{defect terms})$, with $\pi(x)=\dim(V'_i\cap V'_j)$ the overlap of the two endpoint spans when basis vector $x$ is placed, and bounded $\pi$ by the smaller span. This PR proves the overlap is controlled by the defect alone:
+
+**Lemma.** $\pi(x)\le\sum_{y}\tau_{a(y)}(y)+[x=w_t](\varepsilon(u_t)+g(u_t))$, summing over earlier vectors $y$ at pairs sharing a point $a(y)$ with $x$'s pair, where $\tau_a=\ell_a-g$.
+
+*Proof sketch.* Globally new vectors are jointly linearly independent and those at neighbouring pairs lie in $V'_i+V'_j$, so $\dim(V'_i+V'_j)\ge\#\{g=1\}$; subtract from $v'_i+v'_j=\sum\ell$.
+
+So vectors of type $(1,1,1)$ and $(0,0,0)$ never create overlap; only defect vectors do, and only at pairs through the point they raised. With a fixed order of the 28 active pairs (points listed $2,1,4,3,0,9,11,10,7,6,12,8,5$, at most five open at once), the bound depends on the type sequence only through per-point counts of defect raises, the previous vector's $g$, and the defect so far. An exact dynamic program maximizes it for every defect $d\le38$:
+
+| d | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| max R | −11 | 38 | 54 | 101 | 116 | 163 | 177 | 222 | 235 | 280 | 292 | 335 |
+
+The ratio $R/d$ peaks at **28** at $d=10$ and decreases afterwards; for $d>38$ the averaging bound of PR #2 (sharpened by $w'\le2m-n_1-n_2$) stays below 28. The surviving cost is entirely the rarer defect type that is new at both endpoints.
+
+## Verification
+
+- `audit_overlap.py` (standard library, ~45 s, ≤2.2M states) reconstructs the pair order from the saved faces and cut bits, runs the DP for $d\le38$, checks the tail bound, and is wired into `run_checks.py` / CI with pinned expected output.
+- An independent HiGHS integer program over the same vector types, keeping the exact local-dimension accounting instead of the DP's relaxations, returned identical maxima for every defect tried up to 26 (exploration only; the DP is the certificate).
+- The overlap lemma was additionally checked on random dependent subspace families over GF(3) in both high- and low-defect regimes.
+- `python -B run_checks.py` passes locally end to end; `proof.tex` compiles.
+
+## Scope
+
+Only this one counting step is lowered; the residue and transverse thresholds elsewhere in the proof are unchanged and may dominate. AI-generated research draft; no claim of priority or formal verification. `progress.md` has the timeline and a tweet draft.
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)

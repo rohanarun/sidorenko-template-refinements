@@ -1,0 +1,30 @@
+{
+  "status": "actual_weighted_negativity_proved",
+  "closed_theorem": "T7Weighted.source_weighted_negativity",
+  "closed_theorem_hypotheses": [],
+  "proved": {
+    "source_score_correspondence": "T7Weighted.sourceScore_eq_score",
+    "score_maximizers": "T7Weighted.score_max_iff",
+    "coefficient_bounds": "T7Weighted.generalCoefficient_bounds",
+    "concrete_finite_remainder": "T7Weighted.finiteRemainder_two_sided",
+    "actual_weight_identification": "T7Weighted.actual_weight_relative",
+    "actual_average_identification": "T7Weighted.averagedCoefficient_normalized",
+    "actual_average_negative": "T7Weighted.averagedCoefficient_negative",
+    "source_rational_margin": "T7Weighted.eta_source"
+  },
+  "open": [
+    "finite parity all-mask expansion",
+    "precise RL formalization and rank-layer instantiation",
+    "RL to actual kernel density limit",
+    "dilution and symmetric density deficit",
+    "finite-host sampling"
+  ],
+  "axiom_allowlist": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "new_custom_axioms": [],
+  "missing_current_build_prerequisites": [],
+  "external_actions": []
+}

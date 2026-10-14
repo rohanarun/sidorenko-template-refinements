@@ -2,7 +2,15 @@
 
 An independent, AI-generated research draft prepared with Codex, following OpenAI's *A counterexample to Sidorenko's conjecture*. This repository contains three refinements of its method, proofs, exact certificates, and a reproducible enumeration.
 
-**Scope:** a computer-assisted minimum within a specified finite construction template, and a smaller constant in one counting step. This is **not** a minimum for all Sidorenko counterexamples, a smaller general counterexample, or a verified bound on the full construction's dimension. The results depend on the stated source arguments and, for enumeration completeness, plantri. Mathematical priority and formal verification are not claimed.
+**Scope of the original finite-template results:** a computer-assisted minimum within a specified discrete-refinement template, and a smaller constant in one counting step. Those results do not establish a minimum among all Sidorenko counterexamples or a verified bound on the full construction's dimension. They depend on the stated source arguments and, for enumeration completeness, plantri. The separate orbit-pinning proposal below states its analytic dependency explicitly. Mathematical priority and formal verification are not claimed.
+
+## Seven-point orbit-pinning proposal
+
+The [new theorem note](t7-orbit-theorem.md) studies the incidence graph of a literal seven-point sphere: **17 vertices and 30 edges**. Its stable refinement is nondiscrete, but its only stable-color-preserving endomorphisms are identity and reversal. Orbit pinning replaces the discrete identity-pinning hypothesis.
+
+The main theorem is conditional on the specified uniform rank-layer limit. A separate proposed unconditional corollary uses the complete supplied L3 analytic proof, if accepted, with conservative sufficient even dimension `103482288426242`. The [focused review package](experiments/t7-orbit/README.md) includes the exact proof dependencies and independent finite checker. The finite check is not an analytic proof or an instantiated numerical counterexample. External mathematical review remains pending.
+
+The existing 13-point minimum below assumes discrete refinement and remains consistent with this example. The unverified larger classification census from the supplied Task 11 archive is not a premise of the new theorem. No global minimum or broad priority is claimed.
 
 ## Results and proof ideas
 

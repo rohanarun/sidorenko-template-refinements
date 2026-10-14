@@ -1,0 +1,46 @@
+{
+  "status": "prepared_local_not_published",
+  "base_commit": "d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d",
+  "generated_at": "2026-10-11T06:02:22.820018+00:00",
+  "archive": {
+    "path": "t7-publication-packet.zip",
+    "bytes": 279602,
+    "sha256": "c573db7aa5dc62f0fc893c1c1bc348f7b1f776e24724b09034fcefd112948136"
+  },
+  "patch": {
+    "path": "proposed.patch",
+    "bytes": 351046,
+    "sha256": "3b7c59940e8427da615e56bc59536d6b84f09a78666a5122f78c6cb4f271cbf1"
+  },
+  "manifest": {
+    "path": "PROPOSED-MANIFEST.json",
+    "bytes": 6183,
+    "sha256": "9b32c874a66feba64c2816e3784cf334badc18230314e2177f52ff44e8b71445"
+  },
+  "theorem": {
+    "path": "theorem.md",
+    "bytes": 21920,
+    "sha256": "a4996ac29fdc54e31f7ebb25bffe233fe4f4caa164d557ad9e7dd7fbd89fb960"
+  },
+  "dependencies": {
+    "path": "DEPENDENCIES.txt",
+    "bytes": 20758,
+    "sha256": "22510d9b0fe49b2cb4864f07c9cae3777be3da46712ed0ec3259c1bf9cd3b47a"
+  },
+  "draft_review": {
+    "path": "review/DRAFT-REVIEW.txt",
+    "bytes": 4235,
+    "sha256": "d8ebe302bb8bb9f31f3fa47d44e8b9a3822ede9750facdbc872d97dfec425b7c"
+  },
+  "validation": {
+    "path": "validation/packet-validation.json",
+    "bytes": 6747,
+    "sha256": "5e4ff8d7575cb2dc29f63c26d9d6769da0484881c14d45fa3e314f075010cc88"
+  },
+  "publication_files": 33,
+  "publication_bytes": 345135,
+  "claim_boundary": "Exact RL-conditional theorem; proposed source-dependent unconditional corollary if complete L3 analytics accepted. Finite arithmetic, proof review and publication are separate.",
+  "unverified_census_included_as_evidence": false,
+  "external_publication_authorized_by_prior_three_draft_approval": false,
+  "remote_write": false
+}

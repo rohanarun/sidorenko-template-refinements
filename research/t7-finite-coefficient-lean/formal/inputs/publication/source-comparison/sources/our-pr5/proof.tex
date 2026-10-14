@@ -1,0 +1,506 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\title{Finite-template refinements for the Sidorenko construction}
+\author{AI-generated research draft prepared with Codex}
+\date{October 10, 2026}
+\begin{document}
+\maketitle
+\paragraph{Scope and attribution.}
+This is an independent follow-up to
+\href{https://github.com/openai/math/tree/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026}{OpenAI's original manuscript},
+pinned at commit \texttt{fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb}.
+It is not an official OpenAI publication. Mathematical priority and
+independent formal verification are not claimed. Exact checks supplement
+the proofs below and do not verify the imported source lemmas.
+\section{Sidorenko: a structural reduction and a certified finite minimum}
+\label{sec:sidorenko-minimum}
+This section refers to OpenAI's
+\href{https://github.com/openai/math/tree/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026}{Sidorenko manuscript},
+particularly its finite-complex proposition and the exposure and pinning arguments.
+We now allow any finite probability distribution on admissible cuts,
+not just three equally weighted cuts. All faces remain distinct triples.
+An admissible cut partitions the faces into two classes, each exposing
+all $n$ points by starting with one triangle and successively adding a
+triangle sharing a pair with the existing complex and introducing one
+new point. Every point pair occurring in the full complex belongs to
+exactly two faces.
+
+\begin{lemma}\label{lem:hamilton-reduction}
+The existence of one admissible cut makes the complex a simple
+triangulation of the sphere with $2n-4$ faces and $3n-6$ point pairs.
+The point pairs crossed by each admissible cut form a Hamiltonian cycle
+in its point graph. Conversely every Hamiltonian cycle in this sphere
+triangulation gives an admissible cut.
+\end{lemma}
+\begin{proof}
+In one exposure class, the shared edge of an added face is on the boundary:
+an interior edge already has its two incident faces and cannot belong to
+another face. Its third vertex is new. Starting from a triangle, this
+operation preserves a triangulated disk whose boundary contains every
+vertex exactly once. The class has $n-2$ triangles and a boundary cycle
+of length $n$. An edge is internal to this disk if and only if its two
+incident faces are in this class. The two classes therefore have exactly
+the same boundary edges and no shared interior edges. Gluing the disks
+along their common boundary gives a triangulated sphere. Distinct triples
+and pairs give a simple point graph; the usual sphere counts follow.
+The common boundary is precisely the cut's crossing set.
+Conversely a Hamiltonian cycle separates the sphere into two triangulated
+polygons without interior vertices. The dual graph of each polygon's
+triangulation is a tree. Removing leaf triangles and then reversing that
+order gives the required exposure. Each removed leaf has a vertex which
+occurs in no remaining triangle, so each reverse step introduces one
+new point.
+\end{proof}
+
+Let $a_e$ be the probability that a random admissible cut crosses $e$.
+Every boundary cycle has degree two at each point, whence
+\[
+ \sum_{e\ni v}a_e=2,\qquad \sum_ea_e=n.
+\]
+The source's requirement $a_e\ge1/3$ consequently implies
+$\deg(v)\le6$. At a degree-six point every incident edge must have
+$a_e=1/3$. Also
+\[
+ \sum_e(a_e-1/3)=n-(3n-6)/3=2,
+\]
+so strict inequality somewhere follows automatically.
+
+\begin{proposition}[Computer-assisted minimum within the finite template]
+Subject to completeness of the plantri enumeration and the exact checks
+described below, no distinct-triple complex on fewer than $13$ points
+simultaneously has the paired exposure property, two occurrences of every
+point pair, a distribution of cuts with $a_e\ge1/3$, and discrete color
+refinement of its incidence graph starting from its two part colors.
+Thus the smallest incidence graph in this template has $35$ vertices.
+The original $13$-point, $22$-face certificate attains that size.
+\end{proposition}
+\begin{proof}[Enumeration and certificate argument]
+By Lemma~\ref{lem:hamilton-reduction}, it suffices to enumerate simple
+sphere triangulations, first filter by maximum degree six, and then
+apply incidence color refinement. For $n\le3$ there cannot be the
+required distinct $2n-4$ faces with every pair in two faces. For
+$4\le n\le12$, plantri 5.8 gives the following counts:
+\begin{center}\small
+\begin{tabular}{@{}rrrrr@{}}
+\toprule
+$n$&All triangulations&Degree at most six&Discrete refinement&Obstructions\\
+\midrule
+4&1&1&0&0\\
+5&1&1&0&0\\
+6&2&2&0&0\\
+7&5&5&0&0\\
+8&14&10&0&0\\
+9&50&15&1&1\\
+10&233&30&4&4\\
+11&1249&44&12&12\\
+12&7595&77&23&23\\
+\bottomrule
+\end{tabular}
+\end{center}
+For each of the $40$ surviving graphs, a rational vector $y_e\ge0$,
+$\sum_ey_e=1$, satisfies
+\[
+ \max_{C\text{ Hamiltonian}}\sum_{e\in C}y_e<1/3.
+\]
+A putative cut distribution would instead give
+$\mathbb E_C\sum_{e\in C}y_e=\sum_ey_ea_e\ge1/3$, a contradiction.
+The smallest verified separation margin is $1/75$.
+
+The proposal computation enumerates cycles and uses floating-point linear
+programming only to suggest edge weights. A separate verifier uses exact
+rational arithmetic and Held--Karp dynamic programming to maximize cycle
+weight and count all Hamiltonian cycles, without importing the proposal
+or exposure code. It checks $16{,}941$ cycles in aggregate, reconstructs
+faces independently from rotations, repeats refinement by partition
+splitting, and rejects a corrupted witness. Generator output counts and
+hashes are retained. This is a computer-assisted certificate conditional
+on the generator's completeness, not a Lean proof or a minimality theorem
+for arbitrary Sidorenko counterexamples.
+\end{proof}
+
+The enumeration also inspected all $49{,}566$ triangulations at $n=13$.
+Of $115$ with degree at most six, $49$ have discrete incidence refinement.
+The cut feasibility pass produced $47$ exact obstruction witnesses and
+two exactly checked feasible finite objects. One is isomorphic to the
+original complex; the other is not, as distinguished by the canonical
+adjacency encoding from their discrete refinement colors. Both have
+$35$ incidence vertices and $66$ edges. The alternative has not undergone
+an independent transfer of the full analytic kernel argument and is not
+claimed here as a newly proved Sidorenko counterexample.
+
+\section{Sidorenko: a smaller nondirect residual bound}
+\label{sec:residual-improvement}
+The original tail section's lemma ``Costs for the remaining profiles''
+bounds the nondirect contribution by $O_D(q^{-D+1641})$. Its equality
+profiles already require the excess-separation term
+\[
+ \mathcal E=\tfrac12\sum_e(a_e-1/3)b(h_e)
+\]
+to vanish, with every $h_e$ either zero or two. Hence $h_e=0$ whenever
+$a_e>1/3$. For the original manuscript's exact three bit cuts, those
+five excluded pairs are
+\[
+ \{0,2\},\ \{7,12\},\ \{4,8\},\ \{5,6\},\ \{5,10\}.
+\]
+Only $28$ pairs can therefore be active. The degrees in this allowed
+pair graph, in the original point order, are
+\[
+ (3,6,3,6,4,2,4,4,4,6,4,6,4).
+\]
+This uses the published cuts, without changing the graph or its laws.
+
+\begin{proposition}\label{prop:residual-1032}
+Within the source's nondirect residual stratum, for fixed even
+$D\ge1032$, the contribution is $O_D(q^{-D+1032})$.
+In particular that stratum vanishes for even $D\ge1034$.
+All other dimension thresholds in the source remain required.
+\end{proposition}
+\begin{proof}
+Retain the source's notation: $m$ active pairs, global span dimension $k$,
+local span dimensions $k_i$, and defect
+$d=\sum_i k_i-2k\ge1$. Including the source's gain bound $2m$, its
+counting exponent is
+\[
+ -Dd+R,\qquad
+ R=-k^2+2mk-2m+\sum_i\binom{k_i}{2}.
+\]
+Nondirectness implies $2\le k\le2m-1$, and now $m\le28$.
+The local caps are twice the displayed degrees, so
+\[
+ \sum_i\binom{k_i}{2}\le468,\qquad
+ R\le m^2-2m+468\le1196.
+\]
+For $d\ge2$ this is already sufficient, since for $D\ge1032$,
+$-Dd+R\le-2D+1196\le-D+1032$.
+
+It remains to handle $d=1$, when $\sum_i k_i=2k+1$.
+Sort the local caps into
+\[
+ c=(12,12,12,12,8,8,8,8,8,8,6,6,4).
+\]
+For total $S$, let $G(S)$ be the sum of $\binom{x_i}{2}$ obtained by
+filling these caps in order until total $S$ is reached. This bounds every
+feasible local sum: the sorted greedy vector majorizes any vector with
+these caps and total, and $x\mapsto\binom{x}{2}$ is convex.
+Since $2k-2>0$, replacing $m$ by $28$ only increases the remainder.
+Consequently
+\[
+ R\le-k^2+56k-56+G(2k+1)\le1032
+ \quad(2\le k\le55).
+\]
+The last inequality is a finite integer calculation over $54$ cases;
+its maxima occur at $k=31,32$. For example $G(63)=313$ and $G(65)=320$,
+giving $1032$ in both cases. The exact audit checks every case and
+independently computes $G$ by integer dynamic programming for every
+possible total. It also exhausts all relaxed positive defects, obtaining
+the same maximum $R/d=1032$. Thus each stratum has the asserted exponent.
+There are only finitely many strata for fixed $D$, as in the source.
+\end{proof}
+
+This improves the sufficient threshold for this one counting step from
+$1642$ to $1034$ among even dimensions. It is not a sufficient dimension
+for the entire rank-layer theorem, whose earlier residue and transverse
+thresholds may dominate. The arithmetic certificate is supplementary to
+the proof and does not verify those imported arguments.
+
+
+\section{Active-support refinement of the residual bound}
+Let $S$ consist of the vertices incident to an active pair space, and
+let $m_S$ count allowed graph edges induced by $S$. Each active pair
+space has dimension two. Therefore
+\[
+ m\le m_S,\qquad 2\le k_i\le\min\{k,2\deg_S(i)\}\quad(i\in S),
+ \qquad k_i=0\quad(i\notin S).
+\]
+For defect one, $\sum_i k_i=2k+1$. Since $2k-2>0$, the remainder is
+at most $-k^2+2m_Sk-2m_S+\sum_i\binom{k_i}{2}$.
+Sort the caps decreasingly, start each supported coordinate at two,
+then fill the largest caps first to the required total. This vector
+majorizes every feasible vector: the first $j$ sorted entries are bounded
+by both the first-$j$ cap sum and the total minus two for each remaining
+entry. The greedy vector attains these bounds. Convexity gives the
+maximum binomial sum. An independent integer convolution confirms it.
+
+The support audit checks all $8192$ vertex subsets and $55{,}173$
+feasible relaxed defect-one cases, obtaining a maximum remainder of
+$978$. A maximizing relaxation has full support, $m_S=28$, $k=33$,
+and dimensions $(12,12,12,12,3,2,2,2,2,2,2,2,2)$; its binomial sum
+is $275$, so $-33^2+56\cdot33-56+275=978$.
+Realizability of the maximizing relaxation is not required for an upper
+bound. For defect at least two, the earlier bound $1196$ yields
+$-2D+1196\le-D+978$ when $D\ge978$. Consequently this one residual
+contribution is $O_D(q^{-D+978})$ and vanishes for even $D\ge980$.
+All earlier thresholds in the original analytic argument remain required.
+The detailed derivation is in \texttt{support-refinement.md}; the audit
+is \texttt{audit\_support.py}, now included in the standard check runner.
+
+\section{Sequential basis count for the nondirect residual}
+\label{sec:sequential}
+The two preceding bounds count the $m$ active pair spaces as free
+two-dimensional subspaces of the global span. The original direct-case
+count is sharper: it places one basis vector at a time and uses that every
+new vector is symplectically orthogonal to everything already placed at
+either endpoint. That count extends to nondirect families once each basis
+vector records whether it raises the global span and whether it raises the
+two endpoint spans. The orthogonality conditions then cancel the
+containment cross terms exactly as in the direct case, and the defect
+$d=\sum_ik_i-2k$ counts the vectors that raise a local span without raising
+the global one.
+
+Fix an active pair set $E'$ with $|E'|=m$, an order $e_1,\dots,e_m$ on it,
+and a family $H_t\subseteq L_i\cap L_j$ of two-dimensional subspaces,
+$e_t=\{i,j\}$. Choose an ordered basis $(u_t,w_t)$ of each $H_t$ and list
+the vectors as $u_1,w_1,u_2,w_2,\dots$. For a vector $x$ of $H_t$ let
+$W'(x)$ be the span of all earlier vectors in this list, and for an endpoint
+$i$ of $e_t$ let $V'_i(x)$ be the span of the earlier vectors belonging to
+pairs containing $i$. Write $w'(x)$, $v'_i(x)$, $v'_j(x)$ for their
+dimensions and $\pi(x)=\dim(V'_i(x)\cap V'_j(x))$. The \emph{type} of $x$ is
+$(g,\ell_i,\ell_j)\in\{0,1\}^3$, where $g=1$ if $x\notin W'(x)$ and
+$\ell_i=1$ if $x\notin V'_i(x)$.
+
+\begin{lemma}\label{lem:sequential-accounting}
+With this notation, $\ell_i,\ell_j\ge g$ for every vector,
+\[
+ k=\#\{x:g(x)=1\},\qquad k_i=\#\{x\text{ at }i:\ell_i(x)=1\},\qquad
+ d=\sum_x\bigl(\ell_i(x)+\ell_j(x)-2g(x)\bigr),
+\]
+and
+\begin{equation}\label{eq:sequential-identity}
+ \sum_i\binom{k_i}{2}=\sum_x\sum_{\text{endpoints }i\text{ of }x\text{ with }\ell_i(x)=1}v'_i(x).
+\end{equation}
+Every vector is orthogonal to $V'_i(x)+V'_j(x)$, and
+$\pi(x)\le\min\{v'_i(x),v'_j(x)\}$.
+\end{lemma}
+\begin{proof}
+Since $V'_i(x)\subseteq W'(x)$, a vector inside the earlier global span may
+still be outside an earlier local span, but not conversely. Each vector
+with $g=1$ raises the global span by exactly one, and each vector with
+$\ell_i=1$ raises the span at $i$ by exactly one; the other vectors change
+nothing. This gives the three counts, and the defect formula is their
+combination. At a vertex $i$, the vectors with $\ell_i=1$ see earlier local
+dimensions $0,1,\dots,k_i-1$ in order, whose sum is $\binom{k_i}{2}$;
+summing over vertices gives Equation~\eqref{eq:sequential-identity}.
+Orthogonality holds because $x$ and $V'_i(x)$ lie in the Lagrangian
+$L_i$, and likewise at $j$. The intersection bound is trivial.
+\end{proof}
+
+\begin{proposition}\label{prop:residual-189}
+Within the source's nondirect residual stratum, for fixed even $D\ge189$,
+the contribution is $O_D(q^{-D+189})$. In particular that stratum vanishes
+for even $D\ge190$. All other dimension thresholds in the source remain
+required.
+\end{proposition}
+\begin{proof}
+Fix a profile, the activity data, and the stratum $(k,k_i)$. Refine it by
+the sequence of types, a finite set of patterns independent of $D$. Count
+the vector lists of a fixed pattern by choosing the vectors in order.
+A vector of type $(1,1,1)$ is orthogonal to $V'_i(x)+V'_j(x)$, a space of
+dimension $v'_i+v'_j-\pi$, so by nondegeneracy there are exactly
+$q^{2D-v'_i-v'_j+\pi}$ candidates. A vector of type $(0,0,0)$ lies in
+$V'_i\cap V'_j$: at most $q^{\pi}$ candidates. A vector of type $(0,0,1)$
+lies in $V'_i$: at most $q^{v'_i}$ candidates, and symmetrically for
+$(0,1,0)$. A vector of type $(0,1,1)$ lies in $W'$: at most $q^{w'}\le q^k$
+candidates. Each pair space has at least $\tfrac38q^4$ ordered bases, so
+the number of families with this pattern is at most $(8/3)^mq^{-4m}$
+times the product of these counts. Multiplying by the containment
+probabilities $O_D(q^{-Dk_i+\binom{k_i}{2}})$ for the isotropic local spans,
+as in the source, and by the gain $q^{2m}$, the exponent is
+$2Dk-D\sum_ik_i$ plus
+\[
+ R=\sum_i\binom{k_i}{2}-2m
+ -\sum_{(1,1,1)}(v'_i+v'_j-\pi)
+ +\sum_{(0,0,0)}\pi+\sum_{(0,0,1)}v'_i+\sum_{(0,1,1)}w',
+\]
+where the $(0,1,0)$ terms are included in the third sum by symmetry.
+Equation~\eqref{eq:sequential-identity} evaluates
+$\sum_{(1,1,1)}(v'_i+v'_j)$ as $\sum_i\binom{k_i}{2}$ minus
+$\sum_{(0,0,1)}v'_j$ minus $\sum_{(0,1,1)}(v'_i+v'_j)$. Hence
+\begin{equation}\label{eq:sequential-remainder}
+ R=-2m+\sum_{(1,1,1),(0,0,0)}\pi
+ +\sum_{(0,0,1)}(v'_i+v'_j)+\sum_{(0,1,1)}(w'+v'_i+v'_j).
+\end{equation}
+The defect is the number of $(0,0,1)$ vectors plus twice the number of
+$(0,1,1)$ vectors, so the exponent is $-Dd+R$ and the first two sums run
+over all but $d$ vectors at most.
+
+Bound $\pi\le\tfrac12(v'_i+v'_j)$ on every vector. At a vertex $i$ of
+active degree $\delta_i$, the $k_i$ vectors with $\ell_i=1$ contribute
+$\binom{k_i}{2}$ to $\sum_xv'_i(x)$, and the remaining $2\delta_i-k_i$
+vectors contribute at most $k_i$ each. Therefore
+\[
+ \sum_x\bigl(v'_i(x)+v'_j(x)\bigr)
+ \le\sum_i\varphi_i(k_i),\qquad
+ \varphi_i(x)=\binom{x}{2}+(2\delta_i-x)x
+ \le\delta_i(2\delta_i-1),
+\]
+the last inequality by concavity, with equality exactly at
+$x\in\{2\delta_i-1,2\delta_i\}$. For $d=1$ the single defect vector has
+type $(0,0,1)$ and its endpoints see $v'_i\le k_i$ and $v'_j\le k_j-1$. So
+\[
+ R\le-2m+\frac12\sum_i\delta_i(2\delta_i-1)+\frac{k_i+k_j-1}{2}
+ =\sum_i\delta_i^2-3m+\frac{k_i+k_j-1}{2}.
+\]
+Adding a pair whose endpoints currently have degrees $a,b$ changes
+$\sum_i\delta_i^2-3m$ by $2a+2b-1$, which is negative only when both
+endpoints are isolated. The allowed graph is connected, so the full
+allowed graph maximizes this quantity: with degrees
+$(3,6,3,6,4,2,4,4,4,6,4,6,4)$ and $m=28$ it equals $262-84=178$. The
+defect pair joins two points of degree at most six, so
+$k_i+k_j-1\le23$. As $R$ is an integer, $R\le178+11=189$.
+
+For $d\ge2$, write $d=n_1+2n_2$ with $n_1$ vectors of type $(0,0,1)$ and
+$n_2$ of type $(0,1,1)$. The same averaging gives
+$R\le178+\tfrac{23}{2}n_1+(k+11)n_2$ with $k\le2m-1=55$, so $R/d\le122$.
+Thus $-Dd+R\le-D+189$ for every $d\ge1$ once $D\ge189$. There are finitely
+many strata and patterns at fixed $D$, as in the source.
+\end{proof}
+
+The exact audit \texttt{audit\_sequential.py} reconstructs the allowed
+graph from the saved faces and cut bits, checks its connectivity and the
+per-vertex concavity bound, and exhausts all $8192$ supports and
+$55{,}173$ relaxed defect-one strata, computing the local maximum by an
+integer convolution and independently by a marginal-gain allocation. Its
+maximum remainder is $189$, attained only on the full support with every
+local dimension at or one below full rank, matching the closed form. It
+also verifies the defect-at-least-two ratio $122$. Even dimension $190$
+therefore suffices for this one counting step, instead of $980$.
+
+\section{Overlaps come only from defect vectors}
+\label{sec:overlap}
+The averaging step at the end of Section~\ref{sec:sequential} bounds the
+overlap $\pi(x)=\dim(V'_i(x)\cap V'_j(x))$ by the smaller endpoint span.
+The overlap is in fact controlled by the defect alone. For a vector $y$ at a
+pair containing the point $a$ write $\tau_a(y)=\ell_a(y)-g(y)\in\{0,1\}$,
+so that $\varepsilon(y)=\tau_i(y)+\tau_j(y)$ is its contribution to $d$.
+
+\begin{lemma}\label{lem:overlap}
+Let $x$ be a basis vector of the pair $e_t=\{i,j\}$ and let $F$ be the set
+of earlier pairs sharing a point with $e_t$. Then
+\[
+ \pi(x)\le\sum_{y\in F}\tau_{a(y)}(y)
+ +\bigl[x=w_t\bigr]\bigl(\varepsilon(u_t)+g(u_t)\bigr),
+\]
+where $a(y)$ is the point that the pair of $y$ shares with $e_t$ and the sum
+runs over both basis vectors of every pair in $F$.
+\end{lemma}
+\begin{proof}
+No earlier pair contains both $i$ and $j$, so $F$ splits as $F_i\sqcup F_j$
+and $V_{i,t}$ is spanned by the vectors of $F_i$, with
+$v_{i,t}=\sum_{y\in F_i}\ell_i(y)$. The vectors with $g=1$ are linearly
+independent, because each lies outside the span of all its predecessors,
+and those belonging to pairs in $F$ lie in $V_{i,t}+V_{j,t}$. Hence
+$\dim(V_{i,t}+V_{j,t})\ge\#\{y\in F:g(y)=1\}$ and
+\[
+ \dim(V_{i,t}\cap V_{j,t})
+ =v_{i,t}+v_{j,t}-\dim(V_{i,t}+V_{j,t})
+ \le\sum_{y\in F}\bigl(\ell_{a(y)}(y)-g(y)\bigr).
+\]
+This is the claim for $u_t$. For $w_t$ the spans gain $u_t$: the dimensions
+of $V'_i,V'_j$ grow by $\ell_i(u_t),\ell_j(u_t)$, and the dimension of the
+sum grows by at least $g(u_t)$, which adds $\varepsilon(u_t)+g(u_t)$.
+\end{proof}
+
+In particular a vector of type $(1,1,1)$ or $(0,0,0)$ creates no overlap
+at any later pair; only defect vectors do, and only at pairs through the
+point whose span they raised. In the direct case the lemma gives
+$\pi(u_t)=0$ and $\pi(w_t)\le1$, recovering the exact exponent $-m$.
+
+\begin{proposition}\label{prop:residual-33}
+Within the source's nondirect residual stratum, for fixed even $D\ge34$,
+the contribution is $O_D(q^{-D+33})$ and therefore vanishes as $q\to\infty$.
+The defect-one strata contribute $O_D(q^{-D+17})$.
+All other dimension thresholds in the source remain required.
+\end{proposition}
+\begin{proof}
+Order the full allowed graph by the vertex sequence
+$2,1,4,3,0,9,11,10,7,6,12,8,5$, taking each pair at its later endpoint,
+earlier endpoints first. Order any active subset by restriction.
+For an active set $E'$ of size $m$, write $B_{E'}$ for the relaxed bound
+\begin{align*}
+ B_{E'}={}&-2m+\sum_{x\notin\mathcal D}
+ \min\{N_i(x),N_j(x),T_i(x)+T_j(x)+[x=w_t]g(u_t)\}\\
+ &+\sum_{x\in\mathcal D}\left(N_i(x)+N_j(x)
+ +[\text{type }(0,1,1)]\bigl(p(x)-\lceil d(x)/2\rceil\bigr)\right),
+\end{align*}
+where $N_a$ counts earlier vectors at $a$, $T_a$ their accumulated
+$\ell_a-g$, $p$ is the zero-based position, and $d(x)$ is the earlier
+defect. Equation~\eqref{eq:sequential-remainder} and
+Lemma~\ref{lem:overlap} give $R\le B_{E'}$.
+
+To compare supports, insert two consecutive type-$(1,1,1)$ vectors at
+each missing pair's position in the full order. This is a completion of
+a relaxed type sequence; no geometric realization of the added vectors
+is asserted. The inserted vectors add no defect and do not change any old
+$T_a$. At every old vector the earlier defect and the first vector's $g$
+within its pair are unchanged, while $N_i,N_j$ and $p$ can only increase.
+Every old summand therefore stays the same or increases. For an inserted
+pair its first summand is nonnegative and its second is at least one,
+because both endpoint counts are at least one and its first vector has
+$g=1$. Its two summands, after the new $-2$ pair cost, contribute at least
+$-1$. If $M_d$ denotes the maximum relaxed bound at defect $d$ for the
+full allowed graph, it follows that
+\[
+ R\le B_{E'}\le M_d+(28-m)\le M_d+28.
+\]
+
+The full-graph dynamic program retains exactly the live $T_a$ values,
+the previous vector's $g$, and accumulated defect. It discards additional
+realizability constraints, so the completed sequences are included.
+Defect never decreases; truncation at $26$ thus retains every path ending
+with defect at most $26$. An independent bounded replay of the pinned
+program gives
+\[
+ (M_1,M_2,M_3,M_4,M_5)=(-11,38,54,101,116),
+\]
+and $M_d\le28d$ for $6\le d\le26$. The first five values plus $28$ are
+$17,66,82,129,144$, each at most $33d$. For $6\le d\le26$,
+$M_d+28\le28d+28\le33d$. This also gives the stated defect-one bound.
+The implementation can transiently retain six vertices when opening a
+new zero coordinate; no claim of five vertices at every intermediate
+instant is needed.
+
+For $d\ge27$ use the support-uniform averaging bound directly. The
+connected full allowed graph maximizes $\sum_i\delta_i^2-3m$ among
+nonempty subgraphs, with value $178$: missing edges can first be added
+along paths from an existing edge, so each increment $2a+2b-1$ is
+positive, and then the remaining edges are added. Endpoint degrees are
+at most six. If there are $n_1$ one-defect and $n_2$ two-defect vectors,
+then $d=n_1+2n_2$ and $k\le2m-n_1-n_2\le56-n_1-n_2$.
+Section~\ref{sec:sequential}'s averaging argument gives
+\[
+ R\le178+\tfrac{23}{2}n_1+(67-n_1-n_2)n_2.
+\]
+Putting $t=n_2$, the right side is
+$178+\tfrac{23}{2}d+(44-d)t+t^2$. This convex quadratic has its maximum
+on $0\le t\le\lfloor d/2\rfloor$ at an endpoint. At $t=0$ it is at most
+$33d$ for $d\ge9$. At the other endpoint, for even $d=2t\ge28$ the
+required inequality is $t^2-t-178\ge0$, true for $t\ge14$; for odd
+$d=2t+1\ge27$ it is $t^2\ge313/2$, true for $t\ge13$.
+Thus $R\le33d$ for every active support and every $d\ge1$.
+
+For the counting passage, sum the bounds on ordered vector lists over
+all complete type patterns before dividing by the common lower bound
+for the number of ordered bases of each pair-space family. The finite
+number of patterns is absorbed into the fixed-$D$ constant. Together
+with the source's retained gain and containment estimates this yields
+$-Dd+R\le-(D-33)d\le-D+33$ when $D\ge34$. This is a bound for this
+residual counting step only.
+\end{proof}
+
+The source program \texttt{audit\_overlap.py} computes full-support relaxed
+maxima. Those maxima do not themselves quantify over all active subsets;
+the support-completion argument above supplies that missing implication.
+A separately hash-pinned, standard-library replay through defect $26$
+checks every needed maximum and the inequalities $M_d+28\le33d$.
+No claim is made that $33$ is optimal or that a support-uniform bound $28$
+is false; the original defect-one assertion $-11$ does not follow.
+
+\paragraph{Reproducibility.}
+The accompanying README documents \texttt{python -B run\_checks.py}.
+The scripts, source manifest, and test expectations are in this repository.
+The LaTeX source was compiled successfully with the Codex document editor.
+\end{document}

@@ -1,0 +1,35 @@
+{
+  "reviewed_core_proof_files_unchanged": 37,
+  "changed_formal_nonproof_files": [
+    {
+      "path": "formal/README.md",
+      "reviewed_sha256": "274950c0fa409ac9f3e2934bf2f69a9a11fcf1124284b813e6cd3531e21320af",
+      "publication_sha256": "8fa6a4de1d4fac88cc4ee6febf712cc8c1440ece2ee1d96cf25b3eeaf737ce43",
+      "reason": "publication wording and portable explicit-toolchain invocation; no reviewed Lean proof edits"
+    },
+    {
+      "path": "formal/scripts/build_offline.py",
+      "reviewed_sha256": "a3ba9aa99c20e60faa97bc137ee581952d7ec94ccb63c27007d6b74413f63484",
+      "publication_sha256": "aaaad4fe2465db0f5ade4e86686ef195946be0ef79367140111ec79b3ef2452e",
+      "reason": "publication wording and portable explicit-toolchain invocation; no reviewed Lean proof edits"
+    },
+    {
+      "path": "formal/scripts/negative_controls.py",
+      "reviewed_sha256": "5fa68ad339f5e1fc20e89337bdca47c7e40c328d278f773f6f54da459a79b0b3",
+      "publication_sha256": "bbbe325870d63c06939f1ca77092ec6f00779c49a3b392fa31b8ec0a3dc18508",
+      "reason": "publication wording and portable explicit-toolchain invocation; no reviewed Lean proof edits"
+    }
+  ],
+  "removed_delivery_helpers": [
+    "formal/scripts/package_delivery.py",
+    "formal/scripts/offline_replay.py",
+    "formal/scripts/verify_manifest.py",
+    "formal/MANIFEST.json"
+  ],
+  "removed_optional_provisioning_request": "formal/provisioning (finite build needs no mathlib)",
+  "new_positive_control_module": "controls/BetaMargin.lean",
+  "new_control_theorems": 4,
+  "new_control_owned_declarations_including_generated": 8,
+  "scope": "No change to finite coefficient theorem; no RL or host extension imports",
+  "new_controls_or_packaging_reviewed_by_Opus": false
+}

@@ -1,0 +1,511 @@
+{
+  "status": "PASS_INDEPENDENT_FINITE_AND_DEPENDENCY_CHECKS",
+  "geometry": {
+    "points": 7,
+    "faces": 10,
+    "corners": 30,
+    "point_edges": 15,
+    "degrees": [
+      3,
+      4,
+      5,
+      6,
+      5,
+      4,
+      3
+    ],
+    "face_norms": [
+      3,
+      3,
+      3,
+      5,
+      3,
+      3,
+      5,
+      3,
+      3,
+      3
+    ],
+    "support_intersections_verified": 15
+  },
+  "actual_activation_local_laws": [
+    {
+      "corner": [
+        0,
+        0
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "-1/4"
+    },
+    {
+      "corner": [
+        1,
+        0
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        2,
+        0
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        0,
+        1
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        1,
+        1
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        3,
+        1
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        0,
+        2
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        2,
+        2
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        3,
+        2
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        1,
+        3
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        2,
+        3
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        4,
+        3
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        1,
+        4
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        3,
+        4
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        4,
+        4
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        2,
+        5
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        3,
+        5
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        5,
+        5
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        2,
+        6
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        4,
+        6
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        5,
+        6
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        3,
+        7
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        4,
+        7
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        6,
+        7
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        3,
+        8
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        5,
+        8
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        6,
+        8
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        4,
+        9
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        5,
+        9
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    },
+    {
+      "corner": [
+        6,
+        9
+      ],
+      "total_mass": "1",
+      "distinguished_first_moment": "0",
+      "canonical_pair_moment": "1/4"
+    }
+  ],
+  "score_table_checks": 3430,
+  "stable_point_maps": 64,
+  "noninjective_stable_point_maps": 56,
+  "stable_incidence_extensions": [
+    [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    ],
+    [
+      [
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      [
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ]
+    ]
+  ],
+  "repeated_map": {
+    "point": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "face": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "score": 4359,
+    "included_in_universal_type_map_domain": true
+  },
+  "all_type_map_count": 8235430000000000,
+  "source_exponent_constants": {
+    "maximum_score": 5066,
+    "all_pair_baseline": 13380,
+    "scale_exponent": 8314,
+    "beta_power_of_two": 564,
+    "label_bound_power": 450,
+    "map_bound_power": 54,
+    "remainder_bound_power": -60
+  },
+  "headline_project_dependency_count": 603,
+  "headline_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "headline_elaborated_type": "And (LT.lt.{0} Rat Rat.instLT (OfNat.ofNat.{0} Rat 0 (Rat.instOfNat 0)) T7Weighted.eta) (LT.lt.{0} Rat Rat.instLT T7Gap.averagedCoefficient (Neg.neg.{0} Rat Rat.instNeg T7Weighted.eta))",
+  "fixed_definition_dependency_closures": {
+    "T7Gap.beta": [
+      "T7Gap.beta"
+    ],
+    "T7Gap.pointPrior": [
+      "T7.Face",
+      "T7.Point",
+      "T7.degree",
+      "T7.face",
+      "T7.face._proof_1",
+      "T7.face.match_1",
+      "T7.incident",
+      "T7.sum_rat_nonneg",
+      "T7.sum_rat_nonneg._proof_1_1",
+      "T7Gap.FiniteLaw",
+      "T7Gap.FiniteLaw.mk",
+      "T7Gap.beta",
+      "T7Gap.beta_positive",
+      "T7Gap.beta_positive._proof_1_1",
+      "T7Gap.normalizedLaw",
+      "T7Gap.normalizedLaw._proof_1",
+      "T7Gap.normalizedLaw._proof_2",
+      "T7Gap.normalizedLaw._proof_3",
+      "T7Gap.normalizedLaw._proof_4",
+      "T7Gap.pointMass_nonnegative",
+      "T7Gap.pointMass_nonnegative._proof_1_1",
+      "T7Gap.pointPrior",
+      "T7Gap.pointPrior._proof_1",
+      "T7Gap.pointRawMass",
+      "T7Gap.rat_sum_div",
+      "T7Gap.rat_sum_div._proof_1_1",
+      "T7Gap.rat_sum_pos",
+      "T7Gap.rat_sum_pos._proof_1_1",
+      "T7Gap.rat_sum_pos._proof_1_2",
+      "T7Gap.reciprocal_beta_power_positive"
+    ],
+    "T7Gap.facePrior": [
+      "T7.Face",
+      "T7.Point",
+      "T7.degree",
+      "T7.face",
+      "T7.face._proof_1",
+      "T7.face.match_1",
+      "T7.incident",
+      "T7.sum_rat_nonneg",
+      "T7.sum_rat_nonneg._proof_1_1",
+      "T7Gap.FiniteLaw",
+      "T7Gap.FiniteLaw.mk",
+      "T7Gap.beta",
+      "T7Gap.beta_positive",
+      "T7Gap.beta_positive._proof_1_1",
+      "T7Gap.faceHistogram",
+      "T7Gap.faceMass_nonnegative",
+      "T7Gap.faceMass_nonnegative._proof_1_1",
+      "T7Gap.faceNorm",
+      "T7Gap.facePrior",
+      "T7Gap.facePrior._proof_1",
+      "T7Gap.faceRawMass",
+      "T7Gap.normalizedLaw",
+      "T7Gap.normalizedLaw._proof_1",
+      "T7Gap.normalizedLaw._proof_2",
+      "T7Gap.normalizedLaw._proof_3",
+      "T7Gap.normalizedLaw._proof_4",
+      "T7Gap.rat_sum_div",
+      "T7Gap.rat_sum_div._proof_1_1",
+      "T7Gap.rat_sum_pos",
+      "T7Gap.rat_sum_pos._proof_1_1",
+      "T7Gap.rat_sum_pos._proof_1_2",
+      "T7Gap.reciprocal_beta_power_positive"
+    ],
+    "T7Gap.pairScore": [
+      "T7.Face",
+      "T7.Point",
+      "T7.degree",
+      "T7.face",
+      "T7.face._proof_1",
+      "T7.face.match_1",
+      "T7.incident",
+      "T7Gap.faceHistogram",
+      "T7Gap.pairScore"
+    ],
+    "T7Weighted.score": [
+      "T7.Face",
+      "T7.Point",
+      "T7.degree",
+      "T7.face",
+      "T7.face._proof_1",
+      "T7.face.match_1",
+      "T7.incident",
+      "T7Gap.faceHistogram",
+      "T7Gap.faceNorm",
+      "T7Weighted.faceScore",
+      "T7Weighted.pointLoss",
+      "T7Weighted.score"
+    ],
+    "T7Weighted.eta": [
+      "T7.Face",
+      "T7.Point",
+      "T7.degree",
+      "T7.face",
+      "T7.face._proof_1",
+      "T7.face.match_1",
+      "T7.incident",
+      "T7Gap.beta",
+      "T7Gap.faceHistogram",
+      "T7Gap.faceNorm",
+      "T7Gap.faceRawMass",
+      "T7Gap.pointRawMass",
+      "T7Weighted.decay",
+      "T7Weighted.eta",
+      "T7Weighted.faceNormalizer",
+      "T7Weighted.pointNormalizer"
+    ]
+  },
+  "scope": "Finite stochastic coefficient only. No field size q appears in the fixed score/prior model; this is not an encoded RL or graph-density limit theorem."
+}
