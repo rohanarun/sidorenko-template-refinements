@@ -1,0 +1,214 @@
+{
+  "original_archive": {
+    "filename": "public-research-sources-20261011(3).zip",
+    "sha256": "0fdb243cadcf1a85028f1126dd92f0c2707137a9f160c018e5d5908dbedd0ee3",
+    "zip_entries": 393,
+    "manifest_entries_checked": 389,
+    "group_counts": {
+      "openai-math-fd4aeeb": 17,
+      "pr390-0e790f2": 43,
+      "pr397-a4e0135": 13,
+      "sussman-f010392": 316
+    },
+    "sidorenko_entries": []
+  },
+  "sources": [
+    {
+      "repository": "openai/math",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "path": "preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/complex.tex",
+      "git_blob_sha1": "178b0e9da21867a727ea847dae8e537b9d719a70",
+      "equation_or_result_labels": [
+        "tab:complex",
+        "tab:complex-orders",
+        "eq:complex-separation",
+        "prop:complex"
+      ],
+      "role": "source construction and equations, reconstructed in PROOF.md",
+      "immutable_url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/complex.tex",
+      "access": "read-only GitHub connector at the stated commit",
+      "blob_provenance": "identifier returned by the connector; no claim of independently hashing locally materialized full source bytes",
+      "present_in_uploaded_archive": false
+    },
+    {
+      "repository": "openai/math",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "path": "preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/kernel.tex",
+      "git_blob_sha1": "bbe11be8fffe968012060ec43e6aff597e922831",
+      "equation_or_result_labels": [
+        "eq:kernel-rank-definition",
+        "eq:kernel-parity-model",
+        "eq:kernel-activation",
+        "eq:kernel-zero-moments",
+        "eq:kernel-base-moment",
+        "eq:kernel-pinning-square",
+        "eq:kernel-thinning",
+        "eq:kernel-crossed-product",
+        "lem:finite-host"
+      ],
+      "role": "source construction and equations, reconstructed in PROOF.md",
+      "immutable_url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/kernel.tex",
+      "access": "read-only GitHub connector at the stated commit",
+      "blob_provenance": "identifier returned by the connector; no claim of independently hashing locally materialized full source bytes",
+      "present_in_uploaded_archive": false
+    },
+    {
+      "repository": "openai/math",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "path": "preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/transverse.tex",
+      "git_blob_sha1": "d4991976e630f117c8d85a7e22deb60643a2450d",
+      "equation_or_result_labels": [
+        "eq:transverse-signed-rank",
+        "eq:transverse-projection",
+        "eq:transverse-center-parametrization",
+        "eq:transverse-three-normalization",
+        "eq:transverse-two-normalization",
+        "eq:transverse-good-minors",
+        "eq:transverse-fourier-tv"
+      ],
+      "role": "source construction and equations, reconstructed in PROOF.md",
+      "immutable_url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/transverse.tex",
+      "access": "read-only GitHub connector at the stated commit",
+      "blob_provenance": "identifier returned by the connector; no claim of independently hashing locally materialized full source bytes",
+      "present_in_uploaded_archive": false
+    },
+    {
+      "repository": "openai/math",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "path": "preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/orbits.tex",
+      "git_blob_sha1": "7da7ee247b4be60c3baf545a2e0f78309a667ee0",
+      "equation_or_result_labels": [
+        "eq:orbits-containment",
+        "eq:orbits-pair-probability",
+        "eq:orbits-chart-comparison",
+        "eq:orbits-forced-splitting",
+        "eq:orbits-residual-mass",
+        "eq:orbits-explicit-lower-bound"
+      ],
+      "role": "source construction and equations, reconstructed in PROOF.md",
+      "immutable_url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/orbits.tex",
+      "access": "read-only GitHub connector at the stated commit",
+      "blob_provenance": "identifier returned by the connector; no claim of independently hashing locally materialized full source bytes",
+      "present_in_uploaded_archive": false
+    },
+    {
+      "repository": "openai/math",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "path": "preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/planted.tex",
+      "git_blob_sha1": "e1a4636e66361dae0f5918e1245950060535a83c",
+      "equation_or_result_labels": [
+        "eq:planted-orbit-ratio",
+        "eq:planted-quotient-intersection",
+        "eq:planted-lift-parametrization",
+        "eq:planted-pair-exact-sequence",
+        "eq:planted-difference-image",
+        "eq:planted-gain",
+        "eq:planted-feasibility",
+        "eq:planted-two-active-gain"
+      ],
+      "role": "source construction and equations, reconstructed in PROOF.md",
+      "immutable_url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/planted.tex",
+      "access": "read-only GitHub connector at the stated commit",
+      "blob_provenance": "identifier returned by the connector; no claim of independently hashing locally materialized full source bytes",
+      "present_in_uploaded_archive": false
+    },
+    {
+      "repository": "openai/math",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "path": "preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/tail.tex",
+      "git_blob_sha1": "dc11e07a592e70d3a13e3a005c72378c88edc351",
+      "equation_or_result_labels": [
+        "eq:global-cost",
+        "eq:tail-profile-bound"
+      ],
+      "role": "source construction and equations, reconstructed in PROOF.md",
+      "immutable_url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/tail.tex",
+      "access": "read-only GitHub connector at the stated commit",
+      "blob_provenance": "identifier returned by the connector; no claim of independently hashing locally materialized full source bytes",
+      "present_in_uploaded_archive": false
+    },
+    {
+      "repository": "openai/math",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "path": "lean/docs/161.md",
+      "git_blob_sha1": "b395e0eaa2462cf72aeea576d6c614cd544da2ec",
+      "role": "Family 161 scope",
+      "immutable_url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/docs/161.md",
+      "access": "read-only GitHub connector at the stated commit",
+      "blob_provenance": "identifier returned by the connector; no claim of independently hashing locally materialized full source bytes",
+      "present_in_uploaded_archive": false
+    },
+    {
+      "repository": "openai/math",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "path": "lean/ComparatorChallenges/SidorenkoCounterexample.lean",
+      "git_blob_sha1": "3f4fa1074f812e2e823350ea50ff1a786e4a1927",
+      "role": "pattern and all-map density statement; challenge main is a sorry stub, not a proof input",
+      "immutable_url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/ComparatorChallenges/SidorenkoCounterexample.lean",
+      "access": "read-only GitHub connector at the stated commit",
+      "blob_provenance": "identifier returned by the connector; no claim of independently hashing locally materialized full source bytes",
+      "present_in_uploaded_archive": false
+    },
+    {
+      "repository": "openai/math",
+      "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "path": "lean/ComparatorChallenges/SidorenkoCounterexample.json",
+      "git_blob_sha1": "3fdb7a849e7b1df1fc07013c901e1052b35170f8",
+      "role": "maps comparator to OAI.Combinatorics.Sidorenko.RandomHost; that solution closure was not audited or compiled",
+      "immutable_url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/ComparatorChallenges/SidorenkoCounterexample.json",
+      "access": "read-only GitHub connector at the stated commit",
+      "blob_provenance": "identifier returned by the connector; no claim of independently hashing locally materialized full source bytes",
+      "present_in_uploaded_archive": false
+    },
+    {
+      "repository": "rohanarun/sidorenko-template-refinements",
+      "commit": "d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d",
+      "path": "proof.tex",
+      "git_blob_sha1": "66fc5eb655e6471df0c266c986c0ab47d943fe0f",
+      "role": "inspected refinement draft; per-pattern basis multiplicity obstruction in residual-189 argument, not a premise of the main theorem",
+      "equation_or_result_labels": [
+        "prop:residual-189",
+        "eq:sequential-remainder"
+      ],
+      "immutable_url": "https://github.com/rohanarun/sidorenko-template-refinements/blob/d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d/proof.tex",
+      "access": "read-only GitHub connector at the stated commit",
+      "blob_provenance": "identifier returned by the connector; no claim of independently hashing locally materialized full source bytes",
+      "present_in_uploaded_archive": false
+    }
+  ],
+  "prior_evidence": [
+    {
+      "name": "certificate(1).md",
+      "sha256": "301e9d75a412522661e7e833a581b6d01a0dd3c3325d20e8362107240a061653",
+      "bytes": 49248,
+      "role": "recovered untrusted prior evidence; no prior program executed; universal arguments reconstructed",
+      "bundled": false
+    },
+    {
+      "name": "global_energy_adversarial_review.md",
+      "sha256": "57afe3ab729129122fafe1f22b0eae995f08cd9fb6d817475c3bea6e1ea27dc1",
+      "bytes": 37755,
+      "role": "recovered untrusted prior evidence; no prior program executed; universal arguments reconstructed",
+      "bundled": false
+    }
+  ],
+  "missing_from_upload": [
+    "openai/math@fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/complex.tex",
+    "openai/math@fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/kernel.tex",
+    "openai/math@fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/transverse.tex",
+    "openai/math@fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/orbits.tex",
+    "openai/math@fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/planted.tex",
+    "openai/math@fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/tail.tex",
+    "openai/math@fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/docs/161.md",
+    "openai/math@fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/ComparatorChallenges/SidorenkoCounterexample.lean",
+    "openai/math@fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/ComparatorChallenges/SidorenkoCounterexample.json",
+    "rohanarun/sidorenko-template-refinements@d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d/proof.tex"
+  ],
+  "recovery_status": "All listed source texts needed for the argument were recovered read-only; no required mathematical artifact remains unavailable for this theorem.",
+  "not_obtained_or_not_run": [
+    "locally materialized full upstream source-byte bundle",
+    "full Lean solution dependency audit or compiler run",
+    "huge field, full kernel, prime, or host instantiation"
+  ],
+  "attribution": "Original graph, kernel and proof architecture: pinned OpenAI manuscript. Quantitative composition/energy proposals: recovered predecessor documents. This package reconstructs and audits those arguments and supplies a bounded prime search, fixed-order theorem and independent exact checker. No claim of novelty or priority."
+}

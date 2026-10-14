@@ -1,0 +1,92 @@
+[
+  {
+    "path": "upstream/complex.tex",
+    "bytes": 7236,
+    "sha256": "b7023c77ec390b3392617c51b1ca3d3ee70d707af6c71e82b0b56547513bbe8a",
+    "git_blob_sha1": "178b0e9da21867a727ea847dae8e537b9d719a70",
+    "repository": "openai/math",
+    "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+    "upstream_path": "preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/complex.tex"
+  },
+  {
+    "path": "upstream/kernel.tex",
+    "bytes": 28526,
+    "sha256": "ad58e1e12522ae296a6ff7213afee0098338577013f15e152d6ccc2990df2742",
+    "git_blob_sha1": "bbe11be8fffe968012060ec43e6aff597e922831",
+    "repository": "openai/math",
+    "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+    "upstream_path": "preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/kernel.tex"
+  },
+  {
+    "path": "upstream/transverse.tex",
+    "bytes": 27978,
+    "sha256": "fa9b058eb9a2b9b35c2fc479ee4367bd4ba6e4fdc01994180fc10af26a5a13c3",
+    "git_blob_sha1": "d4991976e630f117c8d85a7e22deb60643a2450d",
+    "repository": "openai/math",
+    "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+    "upstream_path": "preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/transverse.tex"
+  },
+  {
+    "path": "upstream/orbits.tex",
+    "bytes": 24078,
+    "sha256": "2092e51b78953d3fce5fa30fb1c5b5436f0cd158a291a5aeb180c98133b5333f",
+    "git_blob_sha1": "7da7ee247b4be60c3baf545a2e0f78309a667ee0",
+    "repository": "openai/math",
+    "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+    "upstream_path": "preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/orbits.tex"
+  },
+  {
+    "path": "upstream/planted.tex",
+    "bytes": 21612,
+    "sha256": "2336147f1d032c3d8b114883c593a2d98d03598d190256667ded2a4aee0c6c46",
+    "git_blob_sha1": "e1a4636e66361dae0f5918e1245950060535a83c",
+    "repository": "openai/math",
+    "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+    "upstream_path": "preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/planted.tex"
+  },
+  {
+    "path": "upstream/tail.tex",
+    "bytes": 29882,
+    "sha256": "fd2417f6efa4394fc8ba410f0ecb79f260a204c911957c9789a7d9d1ae0e6150",
+    "git_blob_sha1": "dc11e07a592e70d3a13e3a005c72378c88edc351",
+    "repository": "openai/math",
+    "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+    "upstream_path": "preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/build/sections/tail.tex"
+  },
+  {
+    "path": "upstream/161.md",
+    "bytes": 946,
+    "sha256": "a1da28a997a9a27cad57f0862cd18e7502aa3129730d3bc7fd7a45fde14d3b1d",
+    "git_blob_sha1": "b395e0eaa2462cf72aeea576d6c614cd544da2ec",
+    "repository": "openai/math",
+    "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+    "upstream_path": "lean/docs/161.md"
+  },
+  {
+    "path": "upstream/SidorenkoCounterexample.lean",
+    "bytes": 1764,
+    "sha256": "489688f5c4eb60c6dd8cfe0ef69663aaf11e795d6252e9626972764a50187de9",
+    "git_blob_sha1": "3f4fa1074f812e2e823350ea50ff1a786e4a1927",
+    "repository": "openai/math",
+    "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+    "upstream_path": "lean/ComparatorChallenges/SidorenkoCounterexample.lean"
+  },
+  {
+    "path": "upstream/SidorenkoCounterexample.json",
+    "bytes": 338,
+    "sha256": "2d3ce04f40de12d67424f8597bf3ea9cbb6f262c9e6e58edbc5ab6f690de52ec",
+    "git_blob_sha1": "3fdb7a849e7b1df1fc07013c901e1052b35170f8",
+    "repository": "openai/math",
+    "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+    "upstream_path": "lean/ComparatorChallenges/SidorenkoCounterexample.json"
+  },
+  {
+    "path": "upstream/proof-refinement.tex",
+    "bytes": 18382,
+    "sha256": "925da34d72debee26551c1b0110ada0c8e70afa6bfd7877c2258aad0fe2a8a5b",
+    "git_blob_sha1": "66fc5eb655e6471df0c266c986c0ab47d943fe0f",
+    "repository": "rohanarun/sidorenko-template-refinements",
+    "commit": "d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d",
+    "upstream_path": "proof.tex"
+  }
+]

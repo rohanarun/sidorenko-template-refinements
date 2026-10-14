@@ -1,0 +1,36 @@
+{
+  "upstream_base_commit": "d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d",
+  "original_openai_source_commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "recovered_archive_sha256": "b9ef98c4e1d89a3531f075fe307eea2932c9673a92123135242e05d2f9e884e3",
+  "recovered_manuscript_sha256": "20c917f8fbab9cc51a92d0a4c853ca2080541a9a15c116bd3343150993aaf031",
+  "original_independent_review_sha256": "eab05404d730a63588202e91633ed5dff052a58d27ecffb28c553f130d068d28",
+  "independent_checker_portability_changes": [
+    {
+      "file": "independent/own_geometry_audit.py",
+      "audited_source_sha256": "026fa567af9c106f32c5c5c6509fa09dab1c938a1ba0969a58c92321b4b69dae",
+      "publication_sha256": "306f1a62d025635c2f7a81d4c4dfa9fdfaeda5e91abaf23dfb27514ee966a75d",
+      "changes": "Only package-relative input/output roots; mathematical code and cases retained."
+    },
+    {
+      "file": "independent/own_data_audit.py",
+      "audited_source_sha256": "c3bfa7526870b96edb696456354e2f735c0edb5dfbe323a698450432ffc50ca1",
+      "publication_sha256": "13a5b2542f1cc8988257eb9c0cb159ebb79dbc1e11b41a2bfb544ae1ccc7c1cf",
+      "changes": "Only package-relative input/output roots; mathematical code and cases retained."
+    },
+    {
+      "file": "independent/own_algebra_audit.py",
+      "audited_source_sha256": "d8309c1250a5dd23a44ec4431d05423318f383ee1d3592cfb94d652fd166cbe1",
+      "publication_sha256": "25324f1d798fbf3812785f635b37929e5a69f537696f4ab2a8df1f1ecf331453",
+      "changes": "Only package-relative input/output roots; mathematical code and cases retained."
+    }
+  ],
+  "recovered_files_changed": false,
+  "attribution": "Original graph, kernels and analytic architecture: pinned OpenAI manuscript. Finite-template and residual work: credited refinement repository authors. Prior global-energy improvement: GPT-6 Pro, as credited in PR4. Recovered manuscript/checkers: user-directed AI research. Independent exact checkers, mathematical review and publication packaging: Codex. AI-generated and AI-reviewed; no independent human or formal acceptance is claimed.",
+  "prior_review_publication_changes": "Only local path/replay references and publication/model-assisted attribution annotations; audit mathematics retained.",
+  "license": {
+    "original_openai_sources": "Apache-2.0; unchanged files with exact blob hashes; full license bundled.",
+    "license_git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+    "refinement_proof_snapshot": "Unchanged snapshot of this repository proof.tex at the exact base commit, solely for source binding and isolation of the unused inference."
+  },
+  "no_priority_claim": true
+}

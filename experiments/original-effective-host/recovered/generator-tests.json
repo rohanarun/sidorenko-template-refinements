@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "small_hosts_compared_to_full_map_enumeration": 8,
+  "original_H_hom_count_to_K2": 2,
+  "original_H_maps_to_K2_are_all_noninjective": true,
+  "empty_host_hom_count": 0,
+  "huge_generator_executed": false
+}

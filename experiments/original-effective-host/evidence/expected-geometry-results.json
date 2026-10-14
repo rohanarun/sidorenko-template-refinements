@@ -1,0 +1,378 @@
+{
+  "ordered_orbits_and_planted": {
+    "q": 3,
+    "D": 2,
+    "lagrangians": 40,
+    "ordered_triples": 64000,
+    "symplectic_transvection_generators": 40,
+    "individual_orbits": 20,
+    "profiles": 15,
+    "actual_planted_tuples": 1728,
+    "distinct_planted_tuples": 12,
+    "orbits": [
+      {
+        "profile": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "size": 40,
+        "cost": 6,
+        "center_count": 12,
+        "gain": 2,
+        "planted_factor": "100/9"
+      },
+      {
+        "profile": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "size": 480,
+        "cost": 4,
+        "center_count": 2,
+        "gain": 2,
+        "planted_factor": "50/27"
+      },
+      {
+        "profile": [
+          0,
+          0,
+          0,
+          2
+        ],
+        "size": 1080,
+        "cost": 3,
+        "center_count": 4,
+        "gain": 1,
+        "planted_factor": "100/27"
+      },
+      {
+        "profile": [
+          1,
+          1,
+          2,
+          1
+        ],
+        "size": 480,
+        "cost": 4,
+        "center_count": 2,
+        "gain": 2,
+        "planted_factor": "50/27"
+      },
+      {
+        "profile": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "size": 480,
+        "cost": 4,
+        "center_count": 2,
+        "gain": 2,
+        "planted_factor": "50/27"
+      },
+      {
+        "profile": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "size": 480,
+        "cost": 3,
+        "center_count": 1,
+        "gain": 2,
+        "planted_factor": "25/27"
+      },
+      {
+        "profile": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "size": 4320,
+        "cost": 1,
+        "center_count": 1,
+        "gain": 0,
+        "planted_factor": "25/27"
+      },
+      {
+        "profile": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "size": 4320,
+        "cost": 2,
+        "center_count": 0,
+        "gain": null,
+        "planted_factor": "0"
+      },
+      {
+        "profile": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "size": 4320,
+        "cost": 2,
+        "center_count": 0,
+        "gain": null,
+        "planted_factor": "0"
+      },
+      {
+        "profile": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "size": 4320,
+        "cost": 1,
+        "center_count": 1,
+        "gain": 0,
+        "planted_factor": "25/27"
+      },
+      {
+        "profile": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "size": 480,
+        "cost": 3,
+        "center_count": 1,
+        "gain": 2,
+        "planted_factor": "25/27"
+      },
+      {
+        "profile": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "size": 1080,
+        "cost": 3,
+        "center_count": 4,
+        "gain": 1,
+        "planted_factor": "100/27"
+      },
+      {
+        "profile": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "size": 4320,
+        "cost": 1,
+        "center_count": 1,
+        "gain": 0,
+        "planted_factor": "25/27"
+      },
+      {
+        "profile": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "size": 4320,
+        "cost": 1,
+        "center_count": 1,
+        "gain": 0,
+        "planted_factor": "25/27"
+      },
+      {
+        "profile": [
+          0,
+          2,
+          0,
+          0
+        ],
+        "size": 1080,
+        "cost": 3,
+        "center_count": 4,
+        "gain": 1,
+        "planted_factor": "100/27"
+      },
+      {
+        "profile": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "size": 4320,
+        "cost": 1,
+        "center_count": 1,
+        "gain": 0,
+        "planted_factor": "25/27"
+      },
+      {
+        "profile": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "size": 4320,
+        "cost": 1,
+        "center_count": 1,
+        "gain": 0,
+        "planted_factor": "25/27"
+      },
+      {
+        "profile": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "size": 12960,
+        "cost": 0,
+        "center_count": 2,
+        "gain": 0,
+        "planted_factor": "50/27"
+      },
+      {
+        "profile": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "size": 6480,
+        "cost": 0,
+        "center_count": 0,
+        "gain": 0,
+        "planted_factor": "0"
+      },
+      {
+        "profile": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "size": 4320,
+        "cost": 2,
+        "center_count": 0,
+        "gain": null,
+        "planted_factor": "0"
+      }
+    ]
+  },
+  "correlated_difference_image": {
+    "q": 3,
+    "ambient_center_dimension": 3,
+    "common_zero_center_line_triples": 2184,
+    "cyclic_image_rank_profiles": [
+      [
+        [
+          1,
+          1,
+          1
+        ],
+        0,
+        3,
+        1404
+      ],
+      [
+        [
+          1,
+          1,
+          1
+        ],
+        1,
+        2,
+        312
+      ],
+      [
+        [
+          1,
+          1,
+          2
+        ],
+        1,
+        4,
+        156
+      ],
+      [
+        [
+          1,
+          2,
+          1
+        ],
+        1,
+        4,
+        156
+      ],
+      [
+        [
+          2,
+          1,
+          1
+        ],
+        1,
+        4,
+        156
+      ]
+    ],
+    "pair_exact_sequences_checked": 6552
+  },
+  "half_rank_centers": {
+    "q": 3,
+    "D": 2,
+    "symmetric_matrices": 27,
+    "rank_sign_counts": [
+      [
+        [
+          0,
+          1
+        ],
+        1
+      ],
+      [
+        [
+          1,
+          -1
+        ],
+        4
+      ],
+      [
+        [
+          1,
+          1
+        ],
+        4
+      ],
+      [
+        [
+          2,
+          -1
+        ],
+        12
+      ],
+      [
+        [
+          2,
+          1
+        ],
+        6
+      ]
+    ],
+    "translated_transverse_triples": 210,
+    "signed_center_counts": 1680
+  },
+  "huge_field_or_host_materialized": false
+}

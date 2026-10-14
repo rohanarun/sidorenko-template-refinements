@@ -1,0 +1,209 @@
+{
+  "theorem": "T in PROOF.md",
+  "components": [
+    {
+      "id": "template",
+      "claim": "Literal original graph, six exposure orders, support intersections and discrete refinement",
+      "status": "exact finite certificate",
+      "depends_on": [
+        "pinned complex.tex literal data"
+      ],
+      "proof_sections": "1, 8, 9"
+    },
+    {
+      "id": "counts",
+      "claim": "Elementary symmetric and symplectic finite counts with explicit constants",
+      "status": "proved",
+      "depends_on": [
+        "basis counts",
+        "finite products",
+        "Schur complements"
+      ],
+      "proof_sections": "2"
+    },
+    {
+      "id": "orbits",
+      "claim": "Every individual ordered orbit has mass at least 2^(-D-15) q^(-C)",
+      "status": "proved",
+      "depends_on": [
+        "counts",
+        "symplectic block splitting",
+        "separate avoidance and uniform quotient laws"
+      ],
+      "proof_sections": "2.3"
+    },
+    {
+      "id": "planted",
+      "claim": "Uniform relaxed-gain face multiplier A_D=2^(D+47)(D+1)^5",
+      "status": "proved",
+      "depends_on": [
+        "orbits",
+        "exact quotient identity",
+        "correlated cyclic-difference image"
+      ],
+      "proof_sections": "3"
+    },
+    {
+      "id": "energy",
+      "claim": "Universal quadratic and anchored energy inequalities",
+      "status": "proved; rational identities separately checked",
+      "depends_on": [
+        "actual source gain polynomial",
+        "four regional nonnegative identities",
+        "all lower-activity branches"
+      ],
+      "proof_sections": "4"
+    },
+    {
+      "id": "inverse",
+      "claim": "Every nonsaving integer profile has max h <= 608",
+      "status": "exact rational certificate plus ellipsoid proof",
+      "depends_on": [
+        "energy",
+        "33 by 33 inverse and 33 strict margins"
+      ],
+      "proof_sections": "4.3"
+    },
+    {
+      "id": "residual",
+      "claim": "Relaxed-gain residual classification for every even D>=7296",
+      "status": "proved; former admission condition discharged",
+      "depends_on": [
+        "inverse",
+        "exact mode removal",
+        "integer equality cases",
+        "connectedness and excess"
+      ],
+      "proof_sections": "5"
+    },
+    {
+      "id": "transverse",
+      "claim": "Uniform joint-sign and normalized transverse error <=2^170 D q^(-1/2)",
+      "status": "proved",
+      "depends_on": [
+        "counts",
+        "half-rank projection",
+        "restriction-sign second moment",
+        "quadratic Gauss bound"
+      ],
+      "proof_sections": "6"
+    },
+    {
+      "id": "tail",
+      "claim": "Singular tail, including nondirect bound 2^63 q^(-D+1196)",
+      "status": "proved",
+      "depends_on": [
+        "planted",
+        "residual",
+        "six exposure orders",
+        "strict span defect",
+        "all-family counts"
+      ],
+      "proof_sections": "7"
+    },
+    {
+      "id": "rank_layer",
+      "claim": "Uniform C_D q^(-1/6) error for every activity/sign pattern",
+      "status": "proved",
+      "depends_on": [
+        "transverse",
+        "tail",
+        "chart comparison"
+      ],
+      "proof_sections": "6.4, 7"
+    },
+    {
+      "id": "activation",
+      "claim": "Exact moments and identity coefficient -2^-132",
+      "status": "proved and exact finite-law checks",
+      "depends_on": [
+        "template",
+        "specified source activation law"
+      ],
+      "proof_sections": "8"
+    },
+    {
+      "id": "pinning",
+      "claim": "Source-realizable rational priors and t0 <= -2^-Z over all repeated type maps",
+      "status": "proved and exact score checks",
+      "depends_on": [
+        "activation",
+        "four-round color refinement",
+        "whole-law thinning"
+      ],
+      "proof_sections": "9"
+    },
+    {
+      "id": "orientations",
+      "claim": "Both orientations and explicit q>Q0 error budget",
+      "status": "proved",
+      "depends_on": [
+        "pinning",
+        "rank_layer",
+        "inactive-type dilution",
+        "difference reversal"
+      ],
+      "proof_sections": "10"
+    },
+    {
+      "id": "kernel",
+      "claim": "Bounded symmetric rational kernel deficit Delta_q",
+      "status": "proved",
+      "depends_on": [
+        "orientations",
+        "crossed product",
+        "specified scaling"
+      ],
+      "proof_sections": "11"
+    },
+    {
+      "id": "rationalization",
+      "claim": "Exact clone and edge-coin denominators, zero approximation loss",
+      "status": "proved",
+      "depends_on": [
+        "kernel",
+        "rational common priors and source-law probabilities"
+      ],
+      "proof_sections": "11"
+    },
+    {
+      "id": "host",
+      "claim": "Finite simple host loss <=661/n, all homomorphisms counted",
+      "status": "proved",
+      "depends_on": [
+        "kernel",
+        "finite sampling",
+        "Jensen inequality",
+        "collision union bound"
+      ],
+      "proof_sections": "12"
+    },
+    {
+      "id": "fixed_order",
+      "claim": "N=2^7866423844799423288734694969; deficit >=1024/N and bounded deterministic search",
+      "status": "proved; exponent arithmetic checked",
+      "depends_on": [
+        "host",
+        "elementary large-input prime lemma"
+      ],
+      "proof_sections": "13"
+    }
+  ],
+  "retained_research_hypotheses": [],
+  "universal_proof_method": "conventional mathematical proof, not proof-assistant formalization",
+  "finite_checks_do_not_prove": [
+    "all-domain inequalities without their domain arguments",
+    "large-field evaluation",
+    "a materialized adjacency-list certificate"
+  ],
+  "not_dependencies": [
+    "refinement numerical remainder 189",
+    "candidate 49243",
+    "assumed negativity",
+    "assumed moment identity",
+    "assumed finite-host existence",
+    "a comparator sorry stub",
+    "a formal axiom allowlist"
+  ],
+  "additional_obstruction": "A source-template geometric configuration refutes the per-pattern full-basis multiplicity premise; sum-before-division is the repair. The main theorem bypasses the sharper 189 bound."
+}

@@ -1,0 +1,124 @@
+{
+  "status": "PASS",
+  "scope": "finite data and exact algebra only; universal proofs are in PROOF.md",
+  "counts": {
+    "points": 13,
+    "faces": 22,
+    "incidences": 66,
+    "point_edges": 33,
+    "exposure_orders": 6,
+    "matrix_entries": 1089,
+    "coordinate_bounds": 33,
+    "activation_identities": 4628,
+    "polynomial_identities": 16
+  },
+  "polynomial_identities": [
+    "S0_square_completion",
+    "common_gain",
+    "edge_energy",
+    "first_mode_bracket",
+    "linear_loss",
+    "lower_activity_beta",
+    "mode_removal",
+    "negative_delta_chord",
+    "negative_delta_first_interval",
+    "positive_delta_chord",
+    "positive_delta_first_interval",
+    "quadratic_linear_split",
+    "second_mode_bracket",
+    "source_gain_to_exact_slack",
+    "two_active_even",
+    "two_active_odd"
+  ],
+  "inverse_mutation_rejected": true,
+  "refinement_obstruction": {
+    "status": "PASS",
+    "geometric_q": 13,
+    "geometric_D": 4,
+    "positive_point_graph_intersections": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        7,
+        2
+      ]
+    ],
+    "extra_nonedge_intersection": [
+      0,
+      7,
+      1
+    ],
+    "common_dimensions_all_zero": true,
+    "global_span": 3,
+    "sum_local_spans": 7,
+    "basis_counts": [
+      {
+        "q": 3,
+        "bases_per_space": 48,
+        "selected_second_bases": 12,
+        "pattern_bases": 576,
+        "full_family_bases": 2304,
+        "proportion": "1/4"
+      },
+      {
+        "q": 13,
+        "bases_per_space": 26208,
+        "selected_second_bases": 1872,
+        "pattern_bases": 49061376,
+        "full_family_bases": 686859264,
+        "proportion": "1/14"
+      }
+    ],
+    "source_lower_divisor_q13_numerator": 7341576489,
+    "source_lower_divisor_q13_denominator": 64,
+    "scope": "multiplicity inference obstruction, not refutation of the repaired numerical 189 bound"
+  },
+  "parameters": {
+    "D": 7296,
+    "r": 3648,
+    "bD": 26619456,
+    "C_power_of_two": 235520,
+    "C_polynomial_power": 256,
+    "A_D_power_of_two": 7343,
+    "A_D_polynomial_power": 5,
+    "Z": 3807386006623258,
+    "epsilon_exponent": 3807386006625439,
+    "A0": 53303404092753965,
+    "Lambda": 53303404092753966,
+    "rank_error_exponent_denominator": 6,
+    "H_coordinate_power_of_two": 2210,
+    "J_power_of_two": 53303404092991701,
+    "J_multiplier": 66,
+    "J_polynomial_base": 7297,
+    "J_polynomial_power": 256,
+    "Q_addend": 116736,
+    "J_log2_upper": 53303404092995036,
+    "Q_log2_upper": 319820424557970217,
+    "q_log2_upper": 319820424557970218,
+    "kernel_scale_exponent": 372672384,
+    "kernel_gap_q_exponent": 24596377344,
+    "fixed_host_log2_order": 7866423844799423288734694969,
+    "fixed_gap_exponent": 7866423844799423288734694959,
+    "ell_max": 25601296520,
+    "source_atom_denominator_log2_upper": 1123774834967853447267918484,
+    "source_coin_denominator_log2_upper": 357564720215858629205464514,
+    "source_normalizer_enumeration_log2_upper": 8513445719422207667361408,
+    "fixed_host_acceptance": "(2*edges)^66 - hom(H,G)*N^97 >= 1024*N^131"
+  },
+  "archive_audit": {
+    "sha256": "0fdb243cadcf1a85028f1126dd92f0c2707137a9f160c018e5d5908dbedd0ee3",
+    "zip_entries": 393,
+    "manifest_entries_checked": 389,
+    "group_counts": {
+      "openai-math-fd4aeeb": 17,
+      "pr390-0e790f2": 43,
+      "pr397-a4e0135": 13,
+      "sussman-f010392": 316
+    },
+    "sidorenko_entries": []
+  }
+}

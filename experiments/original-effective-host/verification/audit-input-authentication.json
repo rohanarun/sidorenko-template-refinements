@@ -1,0 +1,71 @@
+{
+  "archive_sha256": "b9ef98c4e1d89a3531f075fe307eea2932c9673a92123135242e05d2f9e884e3",
+  "archive_member_count": 13,
+  "checked_internal_manifest_entries": [
+    {
+      "path": "PROOF.md",
+      "sha256": "20c917f8fbab9cc51a92d0a4c853ca2080541a9a15c116bd3343150993aaf031",
+      "bytes": 80925
+    },
+    {
+      "path": "README.md",
+      "sha256": "00094f69546f268baec060894d814dadac0b1853c1ce49805b59f03b0afa14cd",
+      "bytes": 5650
+    },
+    {
+      "path": "SOURCE_GENERATOR.md",
+      "sha256": "7d85e445de006180cf0f50614cd4503528e799e0b2c4e45018b944bb41e6e34c",
+      "bytes": 6011
+    },
+    {
+      "path": "certificate.json",
+      "sha256": "c69f0ce403e229ea81d72f1b6e3aab085b35cbe9ae7ca19941dba3895abb1302",
+      "bytes": 63929
+    },
+    {
+      "path": "check_certificate.py",
+      "sha256": "3eff0fad4d46c3bc105443619c72baaa256cc6ac1d6889be1f28d5e834e78cb1",
+      "bytes": 25223
+    },
+    {
+      "path": "dependency-ledger.json",
+      "sha256": "d25554abd7d0c02a7bb4fab7fc58255fcb9f0e78130e9dc78dc61ee1f3eae24c",
+      "bytes": 6063
+    },
+    {
+      "path": "generator-spec.json",
+      "sha256": "9cf26a0e920c4dd4ee2b14be7db2631bbef916909655d09c38540b83b9c0aeef",
+      "bytes": 383
+    },
+    {
+      "path": "generator-tests.json",
+      "sha256": "b538ac658eedf4431344b49b6e12b3510182c42d5338c27dd55d2c9ead122517",
+      "bytes": 230
+    },
+    {
+      "path": "generator.py",
+      "sha256": "efe9d02bc70a77431fcc088649b2bf00e45dd41c0b5cd8879f6096252ed0754d",
+      "bytes": 7108
+    },
+    {
+      "path": "replay.json",
+      "sha256": "f8b787d6fe7872c30cc22f461c8f924feb199fe63e175ce4705906f57cd9c335",
+      "bytes": 3429
+    },
+    {
+      "path": "source-pins.json",
+      "sha256": "f54513802e76e3a22069561aee42c609a429fbd1972c73c3179dd3f414ca69aa",
+      "bytes": 12627
+    },
+    {
+      "path": "template.json",
+      "sha256": "1be4c79236bc00ad20888f4e1fc2bbe599e132a2bc72268a534f7e597b3f0eea",
+      "bytes": 4961
+    }
+  ],
+  "proof_sha256": "20c917f8fbab9cc51a92d0a4c853ca2080541a9a15c116bd3343150993aaf031",
+  "proof_line_count": 1573,
+  "root_inputs_unchanged_since_snapshot": true,
+  "prior_review_sha256": "e9327058421732dc5558ac0015bb4e972511031b47142e5f5868fbc785857869",
+  "prior_review_copied_not_executed": true
+}

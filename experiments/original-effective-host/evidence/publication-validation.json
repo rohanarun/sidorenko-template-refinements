@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "command": "python3 -I -B experiments/original-effective-host/verify_package.py",
+  "result": {
+    "status": "PASS",
+    "package_hashes_verified": true,
+    "recovered_manifest_entries": 12,
+    "recovered_proof_lines": 1573,
+    "pinned_source_files_verified": 10,
+    "dependency_audit_components": 18,
+    "independent_checkers": {
+      "geometry": "PASS",
+      "data": "PASS",
+      "algebra": "PASS"
+    },
+    "recovered_programs_executed": false,
+    "huge_prime_field_kernel_or_host_materialized": false,
+    "Lean_run": false
+  },
+  "negative_controls": {
+    "optimized_python_rejected": true,
+    "corrupted_recovered_input_rejected_before_replay": true
+  },
+  "checker_sha256": {
+    "own_data_audit.py": "13a5b2542f1cc8988257eb9c0cb159ebb79dbc1e11b41a2bfb544ae1ccc7c1cf",
+    "own_geometry_audit.py": "306f1a62d025635c2f7a81d4c4dfa9fdfaeda5e91abaf23dfb27514ee966a75d",
+    "own_algebra_audit.py": "25324f1d798fbf3812785f635b37929e5a69f537696f4ab2a8df1f1ecf331453"
+  },
+  "wrapper_sha256": "2d8da7d34d9860ab1afa6ec1a3254144fb072305d449744bb1ff3173ee0f9626",
+  "unchanged_existing_files_except_README": 38,
+  "original_reference_programs_executed": false,
+  "full_repository_runner_executed": false,
+  "Lean_compilation_performed": false,
+  "installation_performed": false,
+  "CI_approval_performed": false
+}

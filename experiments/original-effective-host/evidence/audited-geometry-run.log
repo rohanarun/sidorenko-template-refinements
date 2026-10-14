@@ -1,0 +1,64 @@
+{
+  "ordered_orbits_and_planted": {
+    "q": 3,
+    "D": 2,
+    "lagrangians": 40,
+    "ordered_triples": 64000,
+    "symplectic_transvection_generators": 40,
+    "individual_orbits": 20,
+    "profiles": 15,
+    "actual_planted_tuples": 1728,
+    "distinct_planted_tuples": 12
+  },
+  "correlated_difference_image": {
+    "q": 3,
+    "ambient_center_dimension": 3,
+    "common_zero_center_line_triples": 2184,
+    "pair_exact_sequences_checked": 6552
+  },
+  "half_rank_centers": {
+    "q": 3,
+    "D": 2,
+    "symmetric_matrices": 27,
+    "rank_sign_counts": [
+      [
+        [
+          0,
+          1
+        ],
+        1
+      ],
+      [
+        [
+          1,
+          -1
+        ],
+        4
+      ],
+      [
+        [
+          1,
+          1
+        ],
+        4
+      ],
+      [
+        [
+          2,
+          -1
+        ],
+        12
+      ],
+      [
+        [
+          2,
+          1
+        ],
+        6
+      ]
+    ],
+    "translated_transverse_triples": 210,
+    "signed_center_counts": 1680
+  },
+  "huge_field_or_host_materialized": false
+}

@@ -1,8 +1,8 @@
 # Sidorenko: finite-template minimum and a smaller residual bound
 
-An independent, AI-generated research draft prepared with Codex, following OpenAI's *A counterexample to Sidorenko's conjecture*. This repository contains three refinements of its method, proofs, exact certificates, and a reproducible enumeration.
+An independent, AI-generated research draft prepared with Codex, following OpenAI's *A counterexample to Sidorenko's conjecture*. This repository contains finite-template refinements, exact certificates and a reproducible enumeration, together with a separate fully quantified theorem for the original pattern.
 
-**Scope:** a computer-assisted minimum within a specified finite construction template, and a smaller constant in one counting step. This is **not** a minimum for all Sidorenko counterexamples, a smaller general counterexample, or a verified bound on the full construction's dimension. The results depend on the stated source arguments and, for enumeration completeness, plantri. Mathematical priority and formal verification are not claimed.
+**Scope:** the finite-template minimum and residual refinements retain their stated source and enumeration dependencies, including plantri for completeness. The separate [effective original-pattern theorem](experiments/original-effective-host/) gives a conventional proof with an explicit host order and deficit for the original 35-vertex graph. No global minimum, smaller pattern, practical host, mathematical priority or formal certification is claimed.
 
 ## Results and proof ideas
 
@@ -36,6 +36,8 @@ At 13 points, a further enumeration leaves exactly two feasible isomorphism clas
 
 ### Residual constant: 1641 to 189
 
+**Counting-scope note:** the [effectiveness dependency review](experiments/original-effective-host/review/dependency-review.md) identifies a per-pattern basis-division inference in the sequential argument that needs summation before division. The standalone fixed-order theorem uses its separate all-family `1196` count and does not require acceptance of this sharper argument as written. That review does not refute the numerical `189` bound after a suitable repair.
+
 The latest refinement redoes the nondirect residual count one basis vector at a time, as the original paper already does in its direct case. Every new vector is symplectically orthogonal to everything already placed at either endpoint, which cancels the containment cross terms, and the defect $d=\sum_i k_i-2k$ counts exactly the vectors that raise a local span without raising the global one. Averaging the remaining intersection terms over the 28-pair allowed graph gives
 
 $$R\le\sum_i\deg(i)^2-3m+\left\lfloor\tfrac{k_i+k_j-1}{2}\right\rfloor=262-84+11=189,$$
@@ -59,6 +61,24 @@ The new caps first bound the remainder by 1196. The earlier relaxation gave 1032
 $$O_D(q^{-D+978})\qquad(D\ge978).$$
 
 Even dimension **980** sufficed for this one step at that stage; the sequential count above now lowers it to 190.
+
+### An effective host for the original 35-vertex pattern
+
+The [standalone effectiveness package](experiments/original-effective-host/) gives the full conventional proof for the original 35-vertex, 66-edge graph. With
+
+```text
+N = 2^7866423844799423288734694969
+```
+
+some nonempty simple host of order exactly `N` has `p(G)^66 - hom(H,G)/N^35 >= 1024/N`, counting all homomorphisms including repetitions. A bounded deterministic search uses an exact integer acceptance test. The proof quantifies the complete orbit, planted-center, rank-layer, rational-pinning, orientation, prime-search and finite-host chain at `D=7296`.
+
+It credits the earlier global energy work in [PR4](https://github.com/rohanarun/sidorenko-template-refinements/pull/4) and uses a separate sufficient `1196` residual count. The pattern-specific basis-division inference in the sharper sequential refinement is documented and unused; the result does not require the separate `189`, `28` or `33` bounds. The package includes the unchanged full proof, an 18-component dependency audit, complete pinned-source authentication and three independent small checkers. The enormous prime, field and host were not materialized; there is no Lean certification or practical-generator claim.
+
+This optional standard-library replay runs independently of the full enumeration runner:
+
+```sh
+python3 -I -B experiments/original-effective-host/verify_package.py
+```
 
 ## Reproduce
 

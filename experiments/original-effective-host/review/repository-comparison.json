@@ -1,0 +1,199 @@
+{
+  "checked_at_utc": "2026-10-12T18:02:26.581Z",
+  "upstream_main": "d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d",
+  "openai_main": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "pull_requests": [
+    {
+      "url": "https://github.com/rohanarun/sidorenko-template-refinements/pull/1",
+      "number": 1,
+      "title": "Tighten the Sidorenko residual constant from 1032 to 978",
+      "state": "closed",
+      "merged": true,
+      "draft": false,
+      "base": "main",
+      "base_sha": "9e6e659656cf31a059d65b8c0b3140d243afbc2d",
+      "head": "refine/active-support-bound",
+      "head_sha": "e68124868f55bba9ed791ff4379c7a42ab48955b",
+      "head_repo_full_name": "rohanarun/sidorenko-template-refinements",
+      "created_at": "2026-10-09T12:28:15Z",
+      "updated_at": "2026-10-09T15:02:00Z",
+      "merged_at": "2026-10-09T15:01:59Z",
+      "body_sha256": "3755ff2bb7aec771b556b8e5aeec7a55bb74c2e7984c072774b2f825af802ff1"
+    },
+    {
+      "url": "https://github.com/rohanarun/sidorenko-template-refinements/pull/2",
+      "number": 2,
+      "title": "Cut the Sidorenko residual constant from 978 to 189 (even D \u2265 190)",
+      "state": "closed",
+      "merged": true,
+      "draft": false,
+      "base": "main",
+      "base_sha": "4e1b9b60c2d08eb38d92d6e24415f0a724ad8987",
+      "head": "refine/sequential-basis-count",
+      "head_sha": "b513fb4576b30443d0f41df556d378b676723e06",
+      "head_repo_full_name": "rohanarun/sidorenko-template-refinements",
+      "created_at": "2026-10-10T06:42:11Z",
+      "updated_at": "2026-10-10T12:41:40Z",
+      "merged_at": "2026-10-10T12:41:39Z",
+      "body_sha256": "030ba28c63ad47ba478b31e49144c0ad8363638b7b6d69cd0e33fa389f09d38c"
+    },
+    {
+      "url": "https://github.com/rohanarun/sidorenko-template-refinements/pull/3",
+      "number": 3,
+      "title": "Cut the Sidorenko residual constant from 189 to 28 (even D \u2265 30)",
+      "state": "open",
+      "merged": false,
+      "draft": false,
+      "base": "main",
+      "base_sha": "d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d",
+      "head": "refine/defect-overlaps",
+      "head_sha": "9aecdfbd987ecda60b7c5e0b382849d67c6bbc2f",
+      "head_repo_full_name": "rohanarun/sidorenko-template-refinements",
+      "created_at": "2026-10-10T17:55:29Z",
+      "updated_at": "2026-10-10T17:55:29Z",
+      "merged_at": null,
+      "body_sha256": "f1d61464d0c11f2bc1f3285ab2c2a7e01484574afefc737dfe0777b851362831"
+    },
+    {
+      "url": "https://github.com/rohanarun/sidorenko-template-refinements/pull/4",
+      "number": 4,
+      "title": "Prove rank-layer dimensions 7296 and 7644 using global edge energy",
+      "state": "open",
+      "merged": false,
+      "draft": true,
+      "base": "main",
+      "base_sha": "d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d",
+      "head": "codex/global-residual-dimension-20261011",
+      "head_sha": "9922b05bf2c3418e1a46378d4ebac60e8a34ce51",
+      "head_repo_full_name": "artuskg/sidorenko-template-refinements",
+      "created_at": "2026-10-11T05:09:59Z",
+      "updated_at": "2026-10-11T05:09:59Z",
+      "merged_at": null,
+      "body_sha256": "5e4f39502731db27ef0b0a151aebbacc3261e86a663d110132e87b97a8c5c75d"
+    },
+    {
+      "url": "https://github.com/rohanarun/sidorenko-template-refinements/pull/5",
+      "number": 5,
+      "title": "Correct the overlap residual bound across active supports",
+      "state": "open",
+      "merged": false,
+      "draft": true,
+      "base": "refine/defect-overlaps",
+      "base_sha": "9aecdfbd987ecda60b7c5e0b382849d67c6bbc2f",
+      "head": "codex/support33-correction-20261011",
+      "head_sha": "c3088e0bf0d5e694d84e00ff6c9b9e852e32ae97",
+      "head_repo_full_name": "artuskg/sidorenko-template-refinements",
+      "created_at": "2026-10-11T05:10:45Z",
+      "updated_at": "2026-10-11T05:10:45Z",
+      "merged_at": null,
+      "body_sha256": "d589ff2342c83aa87ca3b05a64050c114406578612ef0fe86aac875c3fd69c72"
+    },
+    {
+      "url": "https://github.com/rohanarun/sidorenko-template-refinements/pull/6",
+      "number": 6,
+      "title": "Add seven-point orbit pinning and a conditional 17-vertex theorem",
+      "state": "open",
+      "merged": false,
+      "draft": true,
+      "base": "main",
+      "base_sha": "d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d",
+      "head": "codex/t7-orbit-conditional-20261011",
+      "head_sha": "cfc4ecfaffbdfb3f2bb08edcef1a6fe7cbfa40e3",
+      "head_repo_full_name": "artuskg/sidorenko-template-refinements",
+      "created_at": "2026-10-11T06:21:48Z",
+      "updated_at": "2026-10-11T09:27:00Z",
+      "merged_at": null,
+      "body_sha256": "9c73d19a9c90208d9bc1477e00f9a619234d7de50cd498c76560c79c35074116"
+    }
+  ],
+  "branches": {
+    "upstream": [
+      {
+        "name": "main",
+        "commit": {
+          "sha": "d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d",
+          "url": "https://api.github.com/repos/rohanarun/sidorenko-template-refinements/commits/d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d"
+        },
+        "protected": false
+      },
+      {
+        "name": "refine/active-support-bound",
+        "commit": {
+          "sha": "e68124868f55bba9ed791ff4379c7a42ab48955b",
+          "url": "https://api.github.com/repos/rohanarun/sidorenko-template-refinements/commits/e68124868f55bba9ed791ff4379c7a42ab48955b"
+        },
+        "protected": false
+      },
+      {
+        "name": "refine/defect-overlaps",
+        "commit": {
+          "sha": "9aecdfbd987ecda60b7c5e0b382849d67c6bbc2f",
+          "url": "https://api.github.com/repos/rohanarun/sidorenko-template-refinements/commits/9aecdfbd987ecda60b7c5e0b382849d67c6bbc2f"
+        },
+        "protected": false
+      },
+      {
+        "name": "refine/sequential-basis-count",
+        "commit": {
+          "sha": "b513fb4576b30443d0f41df556d378b676723e06",
+          "url": "https://api.github.com/repos/rohanarun/sidorenko-template-refinements/commits/b513fb4576b30443d0f41df556d378b676723e06"
+        },
+        "protected": false
+      }
+    ],
+    "fork": [
+      {
+        "name": "codex/global-residual-dimension-20261011",
+        "commit": {
+          "sha": "9922b05bf2c3418e1a46378d4ebac60e8a34ce51",
+          "url": "https://api.github.com/repos/artuskg/sidorenko-template-refinements/commits/9922b05bf2c3418e1a46378d4ebac60e8a34ce51"
+        },
+        "protected": false
+      },
+      {
+        "name": "codex/support33-correction-20261011",
+        "commit": {
+          "sha": "c3088e0bf0d5e694d84e00ff6c9b9e852e32ae97",
+          "url": "https://api.github.com/repos/artuskg/sidorenko-template-refinements/commits/c3088e0bf0d5e694d84e00ff6c9b9e852e32ae97"
+        },
+        "protected": false
+      },
+      {
+        "name": "codex/t7-orbit-conditional-20261011",
+        "commit": {
+          "sha": "cfc4ecfaffbdfb3f2bb08edcef1a6fe7cbfa40e3",
+          "url": "https://api.github.com/repos/artuskg/sidorenko-template-refinements/commits/cfc4ecfaffbdfb3f2bb08edcef1a6fe7cbfa40e3"
+        },
+        "protected": false
+      },
+      {
+        "name": "main",
+        "commit": {
+          "sha": "d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d",
+          "url": "https://api.github.com/repos/artuskg/sidorenko-template-refinements/commits/d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d"
+        },
+        "protected": false
+      }
+    ]
+  },
+  "source_documents": [
+    {
+      "name": "base-README.md",
+      "sha": "15fe6b3eb77a0da749e7958549001e9d97017693"
+    },
+    {
+      "name": "pr4-global-residual-dimension.md",
+      "sha": "dcc39f4f593460cbad663ab168e1e68bf9c0146d"
+    },
+    {
+      "name": "pr6-experiment-README.md",
+      "sha": "fa391ce4e3b8fb480871395479f27409f5461441"
+    },
+    {
+      "name": "pr6-formal-README.md",
+      "sha": "709042d9e61a2be0f4a1b682b0a3f8855a6348a7"
+    }
+  ],
+  "decision": "New standalone draft against main; preserve PR4 original/candidate dimension contribution, PR5 support correction, and PR6 distinct T7 campaign.",
+  "public_search_boundary": "Exact exponent/7296-effective searches returned no matches; broader queries returned unrelated sources. These searches are inconclusive about global priority. Current-source/branch/PR comparison supports repository nonduplication only."
+}

@@ -1,0 +1,10 @@
+{
+  "order": "2^7866423844799423288734694969",
+  "certified_deficit": "2^-7866423844799423288734694959",
+  "acceptance": "(2*edge_count)^66 - hom(H,G)*N^97 >= 1024*N^131",
+  "max_graph_tests": "2^(N*(N-1)/2)",
+  "max_point_assignments_per_test": "N^13",
+  "all_homomorphisms_included": true,
+  "field_q_log2_upper": 319820424557970218,
+  "huge_integers_or_graphs_allocated": false
+}

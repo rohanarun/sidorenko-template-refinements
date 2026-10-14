@@ -1,0 +1,29 @@
+{
+  "degree_two_identity_names": [
+    "gain_minus_slack",
+    "homogeneous_and_linear_parts",
+    "mode_removal",
+    "completed_square",
+    "linear_loss",
+    "pair_energy",
+    "center_common_gain",
+    "first_bracket",
+    "second_bracket",
+    "subspace_count_exponent"
+  ],
+  "degree_two_unisolvent_evaluations": 780,
+  "regional_and_other_identity_evaluations": 303,
+  "domain_stress": {
+    "fully_enumerated_relaxed_integer_tuples_by_D": {
+      "2": 12,
+      "4": 95,
+      "6": 514,
+      "8": 2132,
+      "10": 7279
+    },
+    "total_tuples": 10032,
+    "minimum_six_times_local_slack_at_small_D": -15,
+    "real_noninteger_counterprofile_global_delta": "-7/4"
+  },
+  "universal_inequality_signs_certified_by_finite_sweep": false
+}
